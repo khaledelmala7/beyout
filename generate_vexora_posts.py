@@ -246,7 +246,7 @@ with ThreadPoolExecutor(max_workers=10) as executor:
 # Compile HTML
 html_cards = []
 for p in vexora_posts:
-    p['caption'] += "\n\n🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com"
+    p['caption'] += "\n\n🌐 لمعرفة المزيد، زوروا موقعنا: vexora-ochre.vercel.app"
     card_html = f"""
     <div class="card">
         <div class="card-header">
