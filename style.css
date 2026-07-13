@@ -224,6 +224,27 @@ body {
     box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: var(--transition-smooth);
+}
+
 /* Glassmorphism Cards */
 .glass-card {
     background: var(--glass-bg);
@@ -1778,24 +1799,92 @@ input:checked + .slider:before {
     .header-container {
         height: 75px;
     }
-    .nav-links {
-        display: none;
+    
+    /* Mobile Hamburger and Drawer Overlay Menu */
+    .menu-toggle {
+        display: flex;
     }
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.96);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 100px 32px 32px 32px;
+        gap: 24px;
+        border-left: 1px solid var(--glass-border);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        align-items: flex-start;
+    }
+    
+    [dir="ltr"] .nav-links {
+        right: auto;
+        left: -100%;
+        border-left: none;
+        border-right: 1px solid var(--glass-border);
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    [dir="ltr"] .nav-links.active {
+        left: 0;
+        right: auto;
+    }
+    
+    /* Layout details & padding adjustments */
     .hero-portal-section {
         padding-top: 110px;
     }
     .portal-main-title {
-        font-size: 32px;
+        font-size: 26px;
+        line-height: 1.4;
+    }
+    .portal-subtitle {
+        font-size: 13px;
+    }
+    .portal-desc {
+        font-size: 12px;
     }
     .brand-portal-card {
-        padding: 32px;
+        padding: 24px 16px;
     }
+    .logo-backdrop {
+        padding: 10px 20px;
+    }
+    .brand-card-title {
+        font-size: 20px;
+    }
+    .brand-card-desc {
+        font-size: 13px;
+    }
+    
     .brand-card-actions {
         flex-direction: column;
         gap: 12px;
     }
     .cards-select-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
     .form-fields-grid {
         grid-template-columns: 1fr;
@@ -1808,9 +1897,69 @@ input:checked + .slider:before {
         gap: 32px;
     }
     .form-wrapper {
-        padding: 24px;
+        padding: 24px 16px;
     }
-    .progress-labels {
-        font-size: 10px;
+    
+    /* Simulators mobile optimization */
+    .device-mockup {
+        padding: 16px;
+        margin: 0 -8px;
+    }
+    .home-stat-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    .stat-card {
+        padding: 8px;
+    }
+    .stat-value {
+        font-size: 13px;
+    }
+    .stat-label {
+        font-size: 9px;
+    }
+    .mock-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .home-canvas {
+        height: 200px;
+    }
+    .house-svg {
+        max-height: 180px;
+    }
+    
+    .camera-feed-container {
+        height: 180px;
+    }
+    .camera-video-mock {
+        height: 140px;
+    }
+    .svg-video-mock {
+        height: 100%;
+    }
+    .ai-analytics-panel {
+        padding: 12px;
+    }
+    .alert-log-container {
+        max-height: 100px;
+    }
+    .phone-alert-mockup {
+        width: 100%;
+        max-width: 280px;
+        margin: 16px auto 0 auto;
+    }
+    
+    /* Form progress items */
+    .progress-labels span {
+        display: none;
+    }
+    .form-progress {
+        margin-bottom: 24px;
+    }
+    .step-node {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
     }
 }

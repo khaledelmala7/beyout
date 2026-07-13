@@ -563,6 +563,27 @@ function toggleLanguage() {
     setLanguage(currentLanguage);
 }
 
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.getElementById('menu-toggle-btn');
+    if (navLinks) navLinks.classList.toggle('active');
+    if (menuToggle) menuToggle.classList.toggle('open');
+}
+
+// Close menu when clicking on any nav link
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.getElementById('menu-toggle-btn');
+            if (navLinks && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                if (menuToggle) menuToggle.classList.remove('open');
+            }
+        });
+    });
+});
+
 function setLanguage(lang) {
     currentLanguage = lang;
     document.documentElement.lang = lang;
