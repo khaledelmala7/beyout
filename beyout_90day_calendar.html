@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة النشر لـ 90 يوماً بالصور | شركة بيوت</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --text-primary: #f5f5f7;
+            --text-secondary: #9ca3af;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.02);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Cairo', sans-serif;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        header h1 {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        
+        header p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+        
+        .print-btn {
+            display: inline-block;
+            background-color: #10b981;
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        
+        .print-btn:hover {
+            background-color: #059669;
+        }
+        
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(12px);
+            page-break-inside: avoid;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .card-header h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .platform-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-color);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        
+        .post-image-container {
+            width: 100%;
+            max-width: 420px;
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        .post-creative-img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        
+        .card-body p {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        
+        .caption-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-right: 4px solid var(--accent-color);
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        
+        .caption-box strong {
+            display: block;
+            font-size: 13px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        
+        .copy-text {
+            font-size: 13.5px;
+            white-space: pre-wrap;
+            color: #e5e7eb;
+            margin-bottom: 8px;
+        }
+        
+        .copy-btn-caption {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 4px 10px;
+            font-size: 11px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .copy-btn-caption:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .hashtags {
+            font-size: 12px;
+            color: #10b981;
+            font-weight: 600;
+        }
+        
+        /* Print styling overrides */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                padding: 0 !important;
+            }
+            .container {
+                max-width: 100% !important;
+            }
+            .print-btn, .copy-btn-caption {
+                display: none !important;
+            }
+            .card {
+                background: none !important;
+                border: 1px solid #e5e7eb !important;
+                color: #000000 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+            .card-header h3 {
+                color: #000000 !important;
+            }
+            .platform-tag {
+                border: 1px solid #cbd5e1 !important;
+                color: #0f172a !important;
+                background: none !important;
+            }
+            .post-image-container {
+                max-width: 300px !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+            .caption-box {
+                border-right: 4px solid #2563eb !important;
+                background: #f8fafc !important;
+            }
+            .caption-box strong {
+                color: #000000 !important;
+            }
+            .copy-text {
+                color: #1f2937 !important;
+            }
+            .hashtags {
+                color: #047857 !important;
+            }
+        }
+    </style>
+    <script>
+        function copyText(elementId) {
+            var textElement = document.getElementById(elementId);
+            var range = document.createRange();
+            range.selectNode(textElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            try {
+                document.execCommand('copy');
+                alert('تم النسخ بنجاح! 📋');
+            } catch (err) {
+                alert('فشل النسخ تلقائياً، يرجى النسخ يدوياً.');
+            }
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📅 جدول المحتوى والنشر لـ 90 يوماً بالصور | شركة بيوت</h1>
+            <p>خطة تسويقية مصورة متكاملة (3 أشهر متواصلة دون تكرار) لبراندات لومورا للأفراد وفيكسورا للشركات.</p>
+            <button class="print-btn" onclick="window.print()">🖨️ حفظ كملف PDF / طباعة الخطة</button>
+        </header>
+        
+        <main>
+            
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 1 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> توفير استهلاك التكييف الذكي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_1.jpg" alt="Creative for توفير استهلاك التكييف الذكي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-1">التكييف شغال طول الصيف وفاتورة الكهرباء صدمة؟ 💸 مع نظام لومورا، التكييف بيعدل حرارته تلقائياً حسب الجو الخارجي وحركتك في الأوضة عشان يوفرلك لحد 30% من الكهرباء!</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-1')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 2 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد التسلل الليلي بالذكاء الاصطناعي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_2.jpg" alt="Creative for رصد التسلل الليلي بالذكاء الاصطناعي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-2">احمِ بضائعك ومخازنك من السرقات! 🚨 نظام فيكسورا بيكتشف أي تسلل غريب في محيط منشأتك بالليل ويبعتلك تنبيه فوري وصور حية لمنع الجريمة فوراً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-2')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 3 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم بلمسة واحدة من السرير</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_3.jpg" alt="Creative for التحكم بلمسة واحدة من السرير" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-3">مكسل تقوم من السرير تطفي النور؟ 🛌 مع لومورا، تقدر تطفي وتتحكم في كل أجهزة وإضاءة البيت بلمسة واحدة من موبايلك أو مفتاحك الزجاجي جنب السرير.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-3')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 4 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> الخريطة الحرارية للمحلات التجارية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_4.jpg" alt="Creative for الخريطة الحرارية للمحلات التجارية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-4">عايز تزود مبيعات محلك؟ 🗺️ فيكسورا بتحلل سلوك زوار محلك التجاري وتوضحلك الخريطة الحرارية (Heatmap) للأقسام الأكثر زيارة لتنظيم البضائع بذكاء.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-4')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 5 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مستشعر تسريب الغاز الذكي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_5.jpg" alt="Creative for مستشعر تسريب الغاز الذكي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-5">الأمان أولاً! 🔐 مستشعر الغاز الذكي من لومورا مش بس بينبهك لو حصل تسريب، ده بيقفل محبس الغاز الرئيسي تلقائياً ويبعتلك إشعار عاجل على موبايلك لإنقاذ الموقف.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-5')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 6 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> كشف الدخان والحرائق فورياً بالكاميرات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_6.jpg" alt="Creative for كشف الدخان والحرائق فورياً بالكاميرات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-6">سرعة الاستجابة بتنقذ ملايين! 🔥 الكاميرات الذكية بترصد بداية انبعاث الدخان وتنبّه الأمن في ثوانٍ معدودة قبل انتشار الحريق ووصوله للمخازن.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-6')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 7 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> قصة نجاح فيلا بالتجمع الخامس مع لومورا</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_7.jpg" alt="Creative for قصة نجاح فيلا بالتجمع الخامس مع لومورا" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-7">بيت بيفهم احتياجاتك! 🏡 قمنا بتحويل فيلا بالكامل في التجمع الخامس لنظام لومورا الذكي. المالك وفر 25% من الكهرباء وبقى بيتحكم في فيلته بالكامل بصوته ومن موبايله وهو مسافر!</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-7')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 8 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> إضاءة الممرات التلقائية ليلاً</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_8.jpg" alt="Creative for إضاءة الممرات التلقائية ليلاً" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-8">بتصحى بالليل والظلام بيضايقك؟ 🚶‍♂️ مع لومورا، مستشعرات الحركة الذكية بتنور ممرات البيت بالإضاءة الهادئة تلقائياً بمجرد حركتك، وبتطفي بعدها عشان توفر الطاقة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-8')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 9 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد ارتداء خوذة السلامة للعمال</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_9.jpg" alt="Creative for رصد ارتداء خوذة السلامة للعمال" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-9">حافظ على سلامة عمالك وامنع الغرامات! 👷‍♂️ نظام فيكسورا بيكتشف فوراً لو في عامل مش مرتدي خوذة السلامة أو الصديري الفسفوري ويرسل تنبيه للمشرف.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-9')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 10 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> فتح بوابة الفيلا بالهاتف</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_10.jpg" alt="Creative for فتح بوابة الفيلا بالهاتف" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-10">ليه تنزل من العربية تفتح البوابة؟ 🚗 بلمسة واحدة من شاشة موبايلك أو عبر نظام التتبع الذكي، بوابة الفيلا بتفتح لوحدها بمجرد اقترابك، وترجع تقفل لتأمين البيت.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-10')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 11 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> حساب عدد الزوار وقمم أوقات الذروة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_11.jpg" alt="Creative for حساب عدد الزوار وقمم أوقات الذروة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-11">اعرف أوقات ذروة عملك بالدقة! 📊 فيكسورا بتعد العملاء الداخلين والخارجين وتديلك تقارير يومية عشان تظبط فترات عمل موظفيك وتحسن خدمة العملاء.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-11')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 12 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> وضع السينما المنزلية (Cinema Mode)</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_12.jpg" alt="Creative for وضع السينما المنزلية (Cinema Mode)" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-12">حول صالتك لسينما حقيقية! 🍿🎬 بضغطة زر واحدة على موبايلك، الستائر بتتقفل، الإضاءة بتهدأ وتتحول لألوان دافئة، والساوند سيستم بيشتغل تلقائياً لعرض فيلمك المفضّل.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-12')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 13 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> حماية الأصول القيمة من النقل</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_13.jpg" alt="Creative for حماية الأصول القيمة من النقل" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-13">تأمين تام للأصول الهامة! 📦 تقدر ترسم مربع أمني حول بضاعة معينة أو خزنة، ولو تم تحريكها من مكانها بيشتغل إنذار فوري وتنبيه على موبايلك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-13')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 14 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> كيف قمنا بتأمين مخازن شركة لوجستية كبرى</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_14.jpg" alt="Creative for كيف قمنا بتأمين مخازن شركة لوجستية كبرى" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-14">تأمين تام يمنع السرقات! 📦 نجحنا في ترقية وتأمين مخازن شركة شحن كبرى في مصر بدمج نظام فيكسورا مع كاميراتهم القديمة، ورصد وتفادي 3 محاولات تسلل بنجاح.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-14')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 15 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مستشعر تسريب المياه والفيضان</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_15.jpg" alt="Creative for مستشعر تسريب المياه والفيضان" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-15">احمِ بيتك من الغرق وتلف الأثاث! 💧 مستشعر المياه الذكي بيكتشف أي تسريب تحت الغسالة أو في الحمام وبيقفل المحبس الرئيسي للبيت فوراً مع تنبيهك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-15')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 16 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد التسكع والوقوف المشبوه خارج المنشأة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_16.jpg" alt="Creative for رصد التسكع والوقوف المشبوه خارج المنشأة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-16">امنع التهديدات قبل ما تبدأ! 🚶‍♂️ النظام بيرصد لو في شخص واقف في منطقة محظورة أو جنب السور الخارجي للشركة لفترة طويلة ويبعت تنبيه للأمن.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-16')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 17 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> أتمتة الستائر الذكية مع الشمس</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_17.jpg" alt="Creative for أتمتة الستائر الذكية مع الشمس" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-17">اصحى على نور ربنا الطبيعي ☀️ الستائر الذكية من لومورا بتفتح تلقائياً مع شروق الشمس عشان تصحيك بهدوء، وتقفل بالليل لحفظ الخصوصية بدون أي تدخل منك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-17')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 18 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تتبع فترات بقاء الشاحنات بالمخازن</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_18.jpg" alt="Creative for تتبع فترات بقاء الشاحنات بالمخازن" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-18">سرّع عمليات الشحن والتفريغ! 🚛 فيكسورا بتسجل وقت دخول وخروج كل شاحنة من بوابات المخازن وتديلك تقارير لتحسين سلاسل الإمداد وتقليل الهدر.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-18')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 19 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> وضع السفر ومحاكاة الوجود</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_19.jpg" alt="Creative for وضع السفر ومحاكاة الوجود" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-19">مسافر ومش عايز حد يحس بغيابك؟ ✈️🔒 وضع السفر الذكي بيقوم بتشغيل وإطفاء أنوار غرف مختلفة بشكل عشوائي عشان يبان إن البيت فيه حركة ويحمي فيلتك من اللصوص.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-19')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 20 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التعرف على لوحات السيارات المصرحة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_20.jpg" alt="Creative for التعرف على لوحات السيارات المصرحة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-20">بوابة ذكية تفتح أوتوماتيكياً! 🚗 الكاميرا بتتعرف على أرقام لوحات سيارات الموظفين والعملاء المصرحين وتفتح البوابة فوراً لتسهيل الدخول.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-20')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 21 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مستشارو شركة بيوت في خدمتك لتشطيب بيتك</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_21.jpg" alt="Creative for مستشارو شركة بيوت في خدمتك لتشطيب بيتك" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-21">بتشطب فيلتك أو شقتك؟ 📐 فريق مهندسي بيوت بيقوم بتصميم وتجهيز مخططات السمارت هوم والإضاءة لبيتك مجاناً لضمان تشطيب متناسق ومريح لأقصى درجة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-21')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 22 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في فيلتك وأنت مسافر برا مصر</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_22.jpg" alt="Creative for التحكم في فيلتك وأنت مسافر برا مصر" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-22">بيتك تحت عينك من أي مكان في العالم! 🌍 حتى لو كنت مسافر خارج مصر، تقدر تطمن على فيلتك، تفتح الأبواب لضيوفك، وتتحكم في ري الحديقة بضغطة زر.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-22')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 23 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في طوابير الانتظار والـ Queues</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_23.jpg" alt="Creative for التحكم في طوابير الانتظار والـ Queues" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-23">لا تدع عميلك يغضب من الانتظار! 🛒 فيكسورا بتراقب الطوابير وتنبّه مدير الفرع لو الطابور زاد عن 5 أشخاص لفتح كاشير إضافي فوراً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-23')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 24 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> نظام ري الحديقة الذكي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_24.jpg" alt="Creative for نظام ري الحديقة الذكي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-24">وفر مياه وحافظ على حديقتك! 🌿 رشاشات المياه الذكية بتشتغل تلقائياً في المواعيد المحددة وبتفصل لوحدها لو التربة رطبة أو الجو ممطر عشان توفر المياه.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-24')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 25 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> الدمج مع كاميرات المراقبة الحالية للشركة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_25.jpg" alt="Creative for الدمج مع كاميرات المراقبة الحالية للشركة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-25">وفر تكاليف شراء كاميرات جديدة! 🔌 فيكسورا بتشتغل وتندمج مع شبكة الكاميرات الحالية لشركتك (سواء كانت IP أو Analog) وتحولها لكاميرات ذكية.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-25')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 26 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> المفاتيح الزجاجية الذكية الفاخرة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_26.jpg" alt="Creative for المفاتيح الزجاجية الذكية الفاخرة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-26">وداعاً للمفاتيح البلاستيكية القديمة! 💎 ارتقِ بديكور بيتك مع مفاتيح لومورا الزجاجية التي تعمل باللمس، وتتميز بتصميم زجاجي فاخر وإضاءة خافتة لتسهيل العثور عليها بالظلام.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-26')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 27 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين غرف السيرفرات والأجهزة الحساسة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_27.jpg" alt="Creative for تأمين غرف السيرفرات والأجهزة الحساسة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-27">حماية قلب شركتك النابض 🖥️ أمن غرف السيرفرات والشبكات من الدخول غير المصرح ورصد أي تغيرات في شكل المعدات أو انبعاث الدخان فوراً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-27')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 28 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> لماذا تختار شركة بيوت لحلول الذكاء الاصطناعي؟</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_28.jpg" alt="Creative for لماذا تختار شركة بيوت لحلول الذكاء الاصطناعي؟" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-28">ليه بيوت هي اختيارك الأول؟ 🏆 لأننا بنقدملك حلول حقيقية مجربة وذكية (لومورا للأفراد وفيكسورا للشركات) مع ضمان كامل لمدة 5 سنوات وصيانة دورية وسرعة استجابة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-28')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 29 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين غرف الأطفال والتحكم بالإضاءة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_29.jpg" alt="Creative for تأمين غرف الأطفال والتحكم بالإضاءة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-29">سهل على أولادك المذاكرة والنوم 📚 في وقت الدراسة، لومورا بتظبط إضاءة غرفة الأطفال للون الأبيض المحفز للتركيز، ومع وقت النوم بتتحول لإضاءة دافئة هادئة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-29')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 30 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مراقبة الصيدليات وصرف الأدوية الهامة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_30.jpg" alt="Creative for مراقبة الصيدليات وصرف الأدوية الهامة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-30">منع الخسائر في الصيدليات 💊 فيكسورا بتراقب رفوف الأدوية والمستحضرات الثمينة وتنبهك لو تم سحب أو تحريك بضائع معينة خارج أوقات العمل.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-30')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 31 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رعاية كبار السن وحركة البيت</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_31.jpg" alt="Creative for رعاية كبار السن وحركة البيت" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-31">اطمن على والديك طول الوقت 👴🧓 نظام لومورا بيكتشف لو مفيش أي حركة في البيت لفترة طويلة ويبعتلك تنبيه فوراً عشان تتصل بيهم وتتأكد إنهم بخير.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-31')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 32 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد التسلل في جراجات الشركات والمولات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_32.jpg" alt="Creative for رصد التسلل في جراجات الشركات والمولات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-32">تأمين تام لجراج السيارات 🚗 الكاميرا الذكية بترصد أي حركة مشبوهة أو شخص يتجول بين السيارات في أوقات متأخرة وتبعت تنبيه فوري للأمن.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-32')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 33 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> سيناريو وضع الترحيب (Welcome Home)</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_33.jpg" alt="Creative for سيناريو وضع الترحيب (Welcome Home)" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-33">بيتك بيرحب بيك بطريقتك! 👋 بمجرد وصولك وفتح قفل الباب، بيشتغل وضع الترحيب: التكييف بيظبط الجو، الإضاءة بتنور، والموسيقى الهادئة بتشتغل تلقائياً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-33')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 34 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تحليل سلوك زوار المطاعم وتوزيع الطاولات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_34.jpg" alt="Creative for تحليل سلوك زوار المطاعم وتوزيع الطاولات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-34">طور خدمة عملاء مطعمك! 🍔 اعرف الطاولات الأكثر استخداماً والأوقات اللي بيكون فيها العميل محتاج انتظار عشان تنظم الخدمة وتزود المبيعات.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-34')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 35 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> موعد لحضور الديمو الحي في معرضنا</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_35.jpg" alt="Creative for موعد لحضور الديمو الحي في معرضنا" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-35">تعال جرب التكنولوجيا بنفسك! 🎬 احجز موعد دلوقتي لزيارة معرضنا وتجربة كل سيناريوهات لومورا الذكية وكاميرات فيكسورا على الطبيعة وتحدث مع مهندسينا.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-35')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 36 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> توفير 30% من فواتير الكهرباء</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_36.jpg" alt="Creative for توفير 30% من فواتير الكهرباء" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-36">المنزل الذكي مش مجرد رفاهية.. هو استثمار بيوفرلك فلوسك! 💰 الحساسات الذكية بتضمن إن مفيش لمبة أو تكييف يفضل شغال في مكان مفيش فيه حد.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-36')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 37 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين بوابات المستشفيات والعيادات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_37.jpg" alt="Creative for تأمين بوابات المستشفيات والعيادات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-37">أمان تام للمناطق الطبية الحساسة 🏥 احمِ غرف العمليات والعناية المركزة والمستودعات الطبية من دخول الأشخاص غير المصرح لهم بالذكاء الاصطناعي.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-37')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 38 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في سخانات المياه الذكية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_38.jpg" alt="Creative for التحكم في سخانات المياه الذكية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-38">مياه دافئة جاهزة في وقتك المحدد 🛁 تقدر تظبط سخان المياه يشتغل قبل ما تصحى بنصف ساعة ويقفل لوحده عشان يوفر استهلاك الكهرباء ويكون جاهز دايماً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-38')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 39 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد السرقة وشغب الزبائن في محلات التجزئة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_39.jpg" alt="Creative for رصد السرقة وشغب الزبائن في محلات التجزئة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-39">امنع السرقات في محلك فورياً 🛍️ نظام فيكسورا بيرصد الحركات السريعة أو محاولات إخفاء البضائع ويرسل إشعار فوري لمدير المحل للتدخل الهادئ.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-39')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 40 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> قفل البوابة الذكي بالبصمة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_40.jpg" alt="Creative for قفل البوابة الذكي بالبصمة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-40">وداعاً لمشكلة ضياع المفاتيح! 🔑 افتح باب بيتك ببصمة صباعك، أو كود سري، أو من موبايلك، واعرف مين دخل البيت ووقت دخوله بالدقيقة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-40')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 41 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين معارض السيارات الفاخرة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_41.jpg" alt="Creative for تأمين معارض السيارات الفاخرة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-41">أقصى حماية لمعارض السيارات 🏎️ ارسم حدوداً افتراضية حول السيارات الفاخرة المعروضة، وسيتم تنبيهك فوراً لو اقترب أي شخص منها خارج أوقات العمل.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-41')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 42 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> الضمان الشامل وخدمة ما بعد البيع لمدة 5 سنوات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_42.jpg" alt="Creative for الضمان الشامل وخدمة ما بعد البيع لمدة 5 سنوات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-42">استثمارك آمن ومضمون! 🛡️ كل مشاريع وأنظمة بيوت بتشمل ضمان شامل وحقيقي لمدة 5 سنوات على الأجهزة والتركيبات، مع خدمة دعم فني وصيانة سريعة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-42')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 43 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في الإضاءة الخارجية والديكور</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_43.jpg" alt="Creative for التحكم في الإضاءة الخارجية والديكور" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-43">برز جمال فيلتك بالليل! ✨ تحكّم في إضاءة اللاندسكيب والواجهة الخارجية بلمسة واحدة، أو اظبطها تنور تدريجياً أول ما الشمس تغيب وتطفي الصبح.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-43')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 44 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين البنوك والمقرات الإدارية الكبرى</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_44.jpg" alt="Creative for تأمين البنوك والمقرات الإدارية الكبرى" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-44">أعلى مستويات الأمان لمقرات البنوك 🏦 تحليلات فيكسورا بتضمن عدم عبور أي شخص بوابات الدخول دون تصريح أو التعرف البصري الفوري.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-44')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 45 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في فيلتك بدون تكسير حوائط</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_45.jpg" alt="Creative for التحكم في فيلتك بدون تكسير حوائط" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-45">تشطيب بيتك خلص وخايف من التكسير؟ 🛠️ أنظمة لومورا اللاسلكية بتركب مكان المفاتيح القديمة بدون أي تكسير في الحوائط أو تغيير في الديكور الحالي.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-45')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 46 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> إشراف ذكي على مستودعات البترول والغاز</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_46.jpg" alt="Creative for إشراف ذكي على مستودعات البترول والغاز" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-46">سلامة كاملة في قطاع الطاقة والغاز ⛽ الكاميرات الحرارية والذكية بترصد أي تسريب للغازات أو ارتفاع خطر في درجات حرارة الأنابيب فوراً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-46')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 47 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> سيناريو الحفلات والضيوف</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_47.jpg" alt="Creative for سيناريو الحفلات والضيوف" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-47">استقبل ضيوفك بأجواء مبهرة! 🎉 وضع الحفلة بيغير ألوان الإضاءة في الصالون لإضاءة ديناميكية تفاعلية وبيشغل الساوند سيستم ليناسب التجمعات العائلية.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-47')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 48 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد عدم الالتزام بمسارات الحركة في المصانع</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_48.jpg" alt="Creative for رصد عدم الالتزام بمسارات الحركة في المصانع" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-48">تقليل الحوادث الصناعية للمصانع 🏗️ فيكسورا بتنبّه لو خرج أحد العمال عن مسار الحركة المخصص أو دخل منطقة قريبة من الآلات الخطرة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-48')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 49 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> أتمتة الشركات لزيادة الإنتاجية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_49.jpg" alt="Creative for أتمتة الشركات لزيادة الإنتاجية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-49">أدر أعمالك وعملك بكفاءة 📈 أنظمة بيوت بتوفرلك راحة البال من الناحية الأمنية والتشغيلية لتفرغ وقتك ومجهودك بالكامل لتكبير وتوسيع مشروعك وأرباحك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-49')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 50 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> أتمتة مروحة الحمام وتهوية البيت</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_50.jpg" alt="Creative for أتمتة مروحة الحمام وتهوية البيت" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-50">تهوية ذكية ونظيفة 🌬️ مروحة شفط الحمام بتشتغل تلقائياً بمجرد ارتفاع نسبة الرطوبة وتفصل لوحدها بمجرد عودة الهواء لطبيعته لمنع تكون الروائح والعفن.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-50')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 51 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تقليل الإنذارات الكاذبة من الكاميرات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_51.jpg" alt="Creative for تقليل الإنذارات الكاذبة من الكاميرات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-51">وداعاً للإشعارات المزعجة والإنذارات الكاذبة! 🐱❌ نظام فيكسورا الذكي بيفرق بين حركة قطة أو شجرة بتتحرك وبين حركة إنسان حقيقي، وينبهك للتهديد الفعلي فقط.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-51')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 52 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مراقبة حيواناتك الأليفة عن بُعد</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_52.jpg" alt="Creative for مراقبة حيواناتك الأليفة عن بُعد" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-52">اطمن على أليفك وأنت بره البيت 🐾 تحكّم في تشغيل كاميرات التتبع الذكية وموزع الطعام التلقائي واظبط تكييف الغرفة ليكون مناسب ليهم دايماً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-52')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 53 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين مدارس الأطفال والمؤسسات التعليمية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_53.jpg" alt="Creative for تأمين مدارس الأطفال والمؤسسات التعليمية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-53">أولادنا في أمان تام بالمدارس 🏫 فيكسورا بتراقب بوابات المدارس وتكتشف فوراً لو في غرباء أو عربيات مريبة واقفة في محيط المدرسة لمنع المخاطر.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-53')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 54 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في سيناريو المطبخ الآمن</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_54.jpg" alt="Creative for التحكم في سيناريو المطبخ الآمن" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-54">مطبخك آمن حتى لو خرجت ونسيت! 🍳 تقدر تتأكد إن الفرن أو مكواة الملابس مطفيين عن بُعد بفضل الأفياش الذكية اللي بتقطع الكهرباء تماماً بضغطة زر.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-54')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 55 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد سقوط الأشخاص المفاجئ والـ Fall Detection</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_55.jpg" alt="Creative for رصد سقوط الأشخاص المفاجئ والـ Fall Detection" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-55">إنقاذ فوري للعمال في حالات الطوارئ! 🚑 لو تعرض عامل للسقوط أو الإغماء في المستودع، الكاميرا الذكية بترصد الحادث فوراً وتنبه الإسعاف والأمن.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-55')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 56 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> قصة نجاح فيلا بالتجمع الخامس مع لومورا</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_56.jpg" alt="Creative for قصة نجاح فيلا بالتجمع الخامس مع لومورا" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-56">بيت بيفهم احتياجاتك! 🏡 قمنا بتحويل فيلا بالكامل في التجمع الخامس لنظام لومورا الذكي. المالك وفر 25% من الكهرباء وبقى بيتحكم في فيلته بالكامل بصوته ومن موبايله وهو مسافر!</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-56')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 57 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> السيناريو الصباحي الذكي (Morning Mode)</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_57.jpg" alt="Creative for السيناريو الصباحي الذكي (Morning Mode)" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-57">ابدأ يومك بنشاط! ☕ وضع الصباح بيفتح الستائر بالتدريج، بيشغل ماكينة القهوة لتبدأ التحضير، وبيشغل تكييف المطبخ عشان تستقبل يومك براحة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-57')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 58 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مراقبة المخزون ونقص المنتجات بالرفوف</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_58.jpg" alt="Creative for مراقبة المخزون ونقص المنتجات بالرفوف" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-58">رفوفك دايماً مليانة بضاعة! 🥫 فيكسورا بتراقب رفوف السوبرماركت والمحلات وتنبه الموظفين لو بضاعة معينة خلصت لإعادة ملئها لعدم خسارة أي بيعة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-58')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 59 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> زيادة قيمة العقار عند إعادة البيع</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_59.jpg" alt="Creative for زيادة قيمة العقار عند إعادة البيع" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-59">المنزل الذكي استثمار للمستقبل! 📈 الفلل المجهزة بأنظمة السمارت هوم الكاملة بتتباع بأسعار أعلى وبتجذب المشترين أسرع لأنها جاهزة للمستقبل.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-59')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 60 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> أمان وحماية محطات الوقود والخدمة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_60.jpg" alt="Creative for أمان وحماية محطات الوقود والخدمة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-60">سلامة تامة لمحطات البنزين ⛽ فيكسورا بتراقب بوابات ومضخات البنزين وترصد أي تدخين أو مخاطر اشتعال وتتعرف على لوحات العربيات الهاربة بدون دفع.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-60')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 61 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التوافق مع براندات الأجهزة العالمية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_61.jpg" alt="Creative for التوافق مع براندات الأجهزة العالمية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-61">تحكم مرن يجمع أجهزتك المفضلة! 📱 نظام لومورا متوافق بالكامل مع كل الأنظمة العالمية (Apple, Google, Amazon) لتتحكم في بيتك بالطريقة اللي تريحك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-61')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 62 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تحليل تفاعل العملاء مع المنتجات المعروضة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_62.jpg" alt="Creative for تحليل تفاعل العملاء مع المنتجات المعروضة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-62">اعرف إيه اللي بيعجب عميلك! 💄 فيكسورا بتقيس عدد المرات اللي العملاء بيمسكوا فيها منتج معين من على الرف، عشان تعرف مدى نجاح حملاتك التسويقية.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-62')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 63 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> كيف قمنا بتأمين مخازن شركة لوجستية كبرى</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_63.jpg" alt="Creative for كيف قمنا بتأمين مخازن شركة لوجستية كبرى" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-63">تأمين تام يمنع السرقات! 📦 نجحنا في ترقية وتأمين مخازن شركة شحن كبرى في مصر بدمج نظام فيكسورا مع كاميراتهم القديمة، ورصد وتفادي 3 محاولات تسلل بنجاح.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-63')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 64 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مراقبة الأطفال داخل فيلتك</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_64.jpg" alt="Creative for مراقبة الأطفال داخل فيلتك" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-64">أولادك تحت عينك وفي أمان 👶 تقدر تشوف غرف ألعاب الأطفال وتطمن عليهم وهم بيلعبوا من شاشة مطبخك أو من موبايلك وأنت شغال في مكتبك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-64')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 65 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين صالات الجيم ومراكز اللياقة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_65.jpg" alt="Creative for تأمين صالات الجيم ومراكز اللياقة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-65">إدارة ذكية للجيم والأندية 🏋️‍♂️ تابع الكثافة وعدد المشتركين داخل الصالة، وأمن الخزائن وممرات الدخول لمنع أي سرقات أو دخول غير مصرح.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-65')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 66 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> إضاءة ديكورية تفاعلية وذكية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_66.jpg" alt="Creative for إضاءة ديكورية تفاعلية وذكية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-66">إضاءة تتفاعل مع مزاجك 🌈 شريط الإضاءة الذكي خلف التلفزيون بيتفاعل مع ألوان الفيلم أو الموسيقى ليمنحك تجربة بصرية سينمائية غامرة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-66')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 67 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> حماية وتأمين محلات المجوهرات الثمينة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_67.jpg" alt="Creative for حماية وتأمين محلات المجوهرات الثمينة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-67">أقصى تأمين للذهب والمجوهرات 💎 فيكسورا بتراقب صالات معارض المجوهرات بدقة عالية وترصد أي حركة غريبة قريبة من الواجهات الثمينة وتنبّه الشرطة والأمن.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-67')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 68 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> توفير مياه المسبح والفلترة الذكية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_68.jpg" alt="Creative for توفير مياه المسبح والفلترة الذكية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-68">مسبح نظيف وموفر 🏊‍♂️ تحكم في مواعيد فلترة وتنظيف حمام السباحة أوتوماتيكياً في أوقات التعرفة المنخفضة للكهرباء ووفر تكاليف الصيانة اليومية.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-68')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 69 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد دخول المناطق المحظورة بالشركات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_69.jpg" alt="Creative for رصد دخول المناطق المحظورة بالشركات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-69">حماية سرية البيانات والملفات 🔒 امنع الموظفين أو الغرباء من دخول الغرف المحظورة والأرشيف، واعرف فوراً بالدقيقة لو حد حاول يتجاوز الباب.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-69')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 70 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مستشارو شركة بيوت في خدمتك لتشطيب بيتك</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_70.jpg" alt="Creative for مستشارو شركة بيوت في خدمتك لتشطيب بيتك" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-70">بتشطب فيلتك أو شقتك؟ 📐 فريق مهندسي بيوت بيقوم بتصميم وتجهيز مخططات السمارت هوم والإضاءة لبيتك مجاناً لضمان تشطيب متناسق ومريح لأقصى درجة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-70')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 71 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> أتمتة تهوية الجراج وسحب العوادم</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_71.jpg" alt="Creative for أتمتة تهوية الجراج وسحب العوادم" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-71">جراج خالي من عوادم السيارات! 🚗 بمجرد دخول سيارتك الجراج، مستشعرات الكربونات بتشغل الشفاطات تلقائياً لسحب العوادم وتأمين تنفسك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-71')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 72 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين الفنادق والمنتجعات السياحية الكبرى</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_72.jpg" alt="Creative for تأمين الفنادق والمنتجعات السياحية الكبرى" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-72">نزلاء الفندق في أمان تام 🏖️ فيكسورا بتأمن حدود الشواطئ وحمامات السباحة والممرات الخارجية للفندق وتنبّه لو في متسلل بيحاول الدخول للغرف.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-72')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 73 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم الذكي في الروف والبرجولات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_73.jpg" alt="Creative for التحكم الذكي في الروف والبرجولات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-73">استمتع بالروف في كل الفصول! 🌦️ البرجولة الذكية بتقفل لوحدها بمجرد رصد مستشعرات المطر لأي قطرات مياه، وتفتح في الجو المشمس لتستمتع بالهواء.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-73')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 74 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تحليلات البيانات الأمنية الشهرية للشركات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_74.jpg" alt="Creative for تحليلات البيانات الأمنية الشهرية للشركات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-74">تقارير أمنية شاملة لمتخذي القرار 📈 احصل على تقرير أمني شهري يوضح معدل الإنذارات، كفاءة الحراس، وأكثر الثغرات الأمنية تكراراً لتعديلها.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-74')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 75 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> سيناريو القراءة والمطالعة الهادئة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_75.jpg" alt="Creative for سيناريو القراءة والمطالعة الهادئة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-75">أجواء مثالية للتركيز 📚 وضع القراءة بيظبط إضاءة الأباجورة للون الأصفر الدافئ المريح للعين وبيطفي التلفزيون والأنوار الجانبية لتقرأ في هدوء.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-75')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 76 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> حماية بضائع النقل السريع والشحن اللوجستي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_76.jpg" alt="Creative for حماية بضائع النقل السريع والشحن اللوجستي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-76">تأمين الطرود والشحنات 📦 فيكسورا بتتابع وتعد الكراتين والطرود وتنبّه لو تم سحب أو إخفاء أي طرد أثناء عملية الفرز والشحن.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-76')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 77 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> لماذا تختار شركة بيوت لحلول الذكاء الاصطناعي؟</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_77.jpg" alt="Creative for لماذا تختار شركة بيوت لحلول الذكاء الاصطناعي؟" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-77">ليه بيوت هي اختيارك الأول؟ 🏆 لأننا بنقدملك حلول حقيقية مجربة وذكية (لومورا للأفراد وفيكسورا للشركات) مع ضمان كامل لمدة 5 سنوات وصيانة دورية وسرعة استجابة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-77')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 78 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> الإنذار المبكر لأعطال الأجهزة الكهربائية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_78.jpg" alt="Creative for الإنذار المبكر لأعطال الأجهزة الكهربائية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-78">احمِ أجهزتك من التلف المفاجئ! 🔌 لومورا بتراقب سحب الطاقة للأجهزة وتنبهك لو في جهاز بيسحب كهرباء بشكل غير طبيعي للصيانة قبل ما يبوظ.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-78')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 79 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد الوقوف الخاطئ للشاحنات بالمصانع</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_79.jpg" alt="Creative for رصد الوقوف الخاطئ للشاحنات بالمصانع" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-79">حافظ على مسارات الطوارئ مفتوحة 🚒 فيكسورا بتكتشف أوتوماتيكياً لو شاحنة أو عربية ركنت في مسار الطوارئ أو مخرج الحريق وتنبه المالك فوراً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-79')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 80 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في منزلك عبر الساعة الذكية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_80.jpg" alt="Creative for التحكم في منزلك عبر الساعة الذكية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-80">بيتك على معصم يدك! ⌚ بلمسة سريعة من ساعتك الذكية، تقدر تفتح البوابة، تطفي الأنوار، أو تفعل وضع الأمان وأنت خارج من البيت.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-80')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 81 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> جلسة فحص أمني مجانية لكاميرات شركتك</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_81.jpg" alt="Creative for جلسة فحص أمني مجانية لكاميرات شركتك" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-81">راجع أمان شركتك مجاناً! 📐 تواصل معانا دلوقتي واطلب جلسة تقييم مجانية لكاميرات المراقبة الحالية لشركتك، وسيقوم مهندسونا بتقديم تقرير مفصل.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-81')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 82 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> سيناريو الطهي الذكي في المطبخ</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_82.jpg" alt="Creative for سيناريو الطهي الذكي في المطبخ" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-82">طهي مريح بلا روائح مزعجة! 🍳 شفاط المطبخ بيشتغل تلقائياً بمجرد بدء الطهي ورصد الحرارة والروائح لتظل تهوية مطبخك نقية دايماً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-82')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 83 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد التسلل الليلي بالذكاء الاصطناعي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_83.jpg" alt="Creative for رصد التسلل الليلي بالذكاء الاصطناعي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-83">احمِ بضائعك ومخازنك من السرقات! 🚨 نظام فيكسورا بيكتشف أي تسلل غريب في محيط منشأتك بالليل ويبعتلك تنبيه فوري وصور حية لمنع الجريمة فوراً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-83')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 84 | بيوت (Beyout - حلول ذكية وأمنية)</h3>
+            <span class="platform-tag">جميع المنصات</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> موعد لحضور الديمو الحي في معرضنا</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_84.jpg" alt="Creative for موعد لحضور الديمو الحي في معرضنا" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-84">تعال جرب التكنولوجيا بنفسك! 🎬 احجز موعد دلوقتي لزيارة معرضنا وتجربة كل سيناريوهات لومورا الذكية وكاميرات فيكسورا على الطبيعة وتحدث مع مهندسينا.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-84')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #شركة_بيوت #ذكاء_اصطناعي #مصر #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 85 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> وضع التوفير التلقائي أثناء السفر الطويل</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_85.jpg" alt="Creative for وضع التوفير التلقائي أثناء السفر الطويل" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-85">توفير حتى وأنت مش موجود! 🔌 وضع السفر الطويل بيقفل كل مقابس الكهرباء غير الضرورية (Standby Power) عشان يمنع هدر الكهرباء تماماً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-85')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 86 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> الخريطة الحرارية للمحلات التجارية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_86.jpg" alt="Creative for الخريطة الحرارية للمحلات التجارية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-86">عايز تزود مبيعات محلك؟ 🗺️ فيكسورا بتحلل سلوك زوار محلك التجاري وتوضحلك الخريطة الحرارية (Heatmap) للأقسام الأكثر زيارة لتنظيم البضائع بذكاء.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-86')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 87 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مستشارو لومورا في خدمتك مجاناً</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_87.jpg" alt="Creative for مستشارو لومورا في خدمتك مجاناً" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-87">بنصمم بيتك الذكي حسب احتياجك وميزانيتك! 📐 تواصل مع مهندسينا دلوقتي واحصل على استشارة ومخطط ذكي مجاني لتشطيب فيلتك أو شقتك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-87')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 88 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> كشف الدخان والحرائق فورياً بالكاميرات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_88.jpg" alt="Creative for كشف الدخان والحرائق فورياً بالكاميرات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-88">سرعة الاستجابة بتنقذ ملايين! 🔥 الكاميرات الذكية بترصد بداية انبعاث الدخان وتنبّه الأمن في ثوانٍ معدودة قبل انتشار الحريق ووصوله للمخازن.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-88')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 89 | لومورا (Lumora - سمارت هوم للأفراد)</h3>
+            <span class="platform-tag">إنستغرام + تيك توك + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> توفير استهلاك التكييف الذكي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_89.jpg" alt="Creative for توفير استهلاك التكييف الذكي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-89">التكييف شغال طول الصيف وفاتورة الكهرباء صدمة؟ 💸 مع نظام لومورا، التكييف بيعدل حرارته تلقائياً حسب الجو الخارجي وحركتك في الأوضة عشان يوفرلك لحد 30% من الكهرباء!</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-89')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#لومورا #منزل_ذكي #سمارت_هوم #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 90 | فيكسورا (Vexora - تحليل الكاميرات للشركات)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد ارتداء خوذة السلامة للعمال</p>
+            
+            <div class="post-image-container">
+                <img src="assets/post_day_90.jpg" alt="Creative for رصد ارتداء خوذة السلامة للعمال" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-90">حافظ على سلامة عمالك وامنع الغرامات! 👷‍♂️ نظام فيكسورا بيكتشف فوراً لو في عامل مش مرتدي خوذة السلامة أو الصديري الفسفوري ويرسل تنبيه للمشرف.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-90')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #مصر</div>
+        </div>
+    </div>
+    
+        </main>
+    </div>
+</body>
+</html>

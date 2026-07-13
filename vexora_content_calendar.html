@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة محتوى السوشيال ميديا لـ 30 يوماً بالصور | شركة فيكسورا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --text-primary: #f5f5f7;
+            --text-secondary: #9ca3af;
+            --accent-color: #22d3ee;
+            --accent-hover: #0891b2;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.02);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Cairo', sans-serif;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        header h1 { font-size: 30px; font-weight: 800; margin-bottom: 12px; color: #ffffff; }
+        header p { color: var(--text-secondary); font-size: 15px; }
+        .print-btn {
+            display: inline-block;
+            background-color: #10b981;
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        .print-btn:hover { background-color: #059669; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(12px);
+            page-break-inside: avoid;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .card-header h3 { font-size: 18px; font-weight: 700; color: #ffffff; }
+        .platform-tag {
+            background: rgba(34, 211, 238, 0.1);
+            color: var(--accent-color);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .post-image-container {
+            width: 100%;
+            max-width: 420px;
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        .post-creative-img { width: 100%; display: block; object-fit: cover; }
+        .caption-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-right: 4px solid var(--accent-color);
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        .caption-box strong { display: block; font-size: 13px; color: #ffffff; margin-bottom: 8px; }
+        .copy-text { font-size: 13.5px; white-space: pre-wrap; color: #e5e7eb; margin-bottom: 8px; }
+        .copy-btn-caption {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 4px 10px;
+            font-size: 11px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .copy-btn-caption:hover { background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.3); }
+        .hashtags { font-size: 12px; color: #10b981; font-weight: 600; }
+        
+        @media print {
+            body { background-color: #ffffff !important; color: #000000 !important; padding: 0 !important; }
+            .container { max-width: 100% !important; }
+            .print-btn, .copy-btn-caption { display: none !important; }
+            .card {
+                background: none !important;
+                border: 1px solid #e5e7eb !important;
+                color: #000000 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+            .card-header h3 { color: #000000 !important; }
+            .platform-tag { border: 1px solid #cbd5e1 !important; color: #0f172a !important; background: none !important; }
+            .post-image-container { max-width: 300px !important; border: 1px solid #cbd5e1 !important; }
+            .caption-box { border-right: 4px solid #22d3ee !important; background: #f8fafc !important; }
+            .caption-box strong { color: #000000 !important; }
+            .copy-text { color: #1f2937 !important; }
+            .hashtags { color: #047857 !important; }
+        }
+    </style>
+    <script>
+        function copyText(elementId) {
+            var textElement = document.getElementById(elementId);
+            var range = document.createRange();
+            range.selectNode(textElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            try {
+                document.execCommand('copy');
+                alert('تم النسخ بنجاح! 📋');
+            } catch (err) {
+                alert('فشل النسخ تلقائياً، يرجى النسخ يدوياً.');
+            }
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📅 خطة محتوى السوشيال ميديا لـ 30 يوماً | شركة فيكسورا (Vexora)</h1>
+            <p>خطة تسويقية مصورة ومكتوبة بالكامل وموجهة للشركات والأعمال (B2B AI Camera Security) في مصر.</p>
+            <button class="print-btn" onclick="window.print()">🖨️ حفظ كملف PDF / طباعة الخطة</button>
+        </header>
+        <main>
+            
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 1 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد التسلل الليلي بالذكاء الاصطناعي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_1.jpg" alt="Creative for رصد التسلل الليلي بالذكاء الاصطناعي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-1">احمِ بضائعك ومخازنك من السرقات! 🚨 نظام فيكسورا بيكتشف أي تسلل غريب في محيط منشأتك بالليل ويبعتلك تنبيه فوري وصور حية لمنع الجريمة فوراً.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-1')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 2 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> الخريطة الحرارية للمحلات التجارية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_2.jpg" alt="Creative for الخريطة الحرارية للمحلات التجارية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-2">عايز تزود مبيعات محلك؟ 🗺️ فيكسورا بتحلل سلوك زوار محلك التجاري وتوضحلك الخريطة الحرارية (Heatmap) للأقسام الأكثر زيارة لتنظيم البضائع بذكاء.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-2')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 3 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> كشف الدخان والحرائق فورياً بالكاميرات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_3.jpg" alt="Creative for كشف الدخان والحرائق فورياً بالكاميرات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-3">سرعة الاستجابة بتنقذ ملايين! 🔥 الكاميرات الذكية من فيكسورا بترصد بداية انبعاث الدخان وتنبّه الأمن في ثوانٍ معدودة قبل انتشار الحريق ووصوله للمخازن.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-3')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 4 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد ارتداء خوذة السلامة للعمال</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_4.jpg" alt="Creative for رصد ارتداء خوذة السلامة للعمال" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-4">حافظ على سلامة عمالك وامنع الغرامات! 👷‍♂️ نظام فيكسورا بيكتشف فوراً لو في عامل مش مرتدي خوذة السلامة أو الصديري الفسفوري ويرسل تنبيه للمشرف.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-4')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 5 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> حساب عدد الزوار وقمم أوقات الذروة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_5.jpg" alt="Creative for حساب عدد الزوار وقمم أوقات الذروة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-5">اعرف أوقات ذروة عملك بالدقة! 📊 فيكسورا بتعد العملاء الداخلين والخارجين وتديلك تقارير يومية عشان تظبط فترات عمل موظفيك وتحسن خدمة العملاء.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-5')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 6 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> حماية الأصول القيمة من النقل</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_6.jpg" alt="Creative for حماية الأصول القيمة من النقل" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-6">تأمين تام للأصول الهامة! 📦 تقدر ترسم مربع أمني حول بضاعة معينة أو خزنة، ولو تم تحريكها من مكانها بيشتغل إنذار فوري وتنبيه على موبايلك.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-6')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 7 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد التسكع والوقوف المشبوه خارج المنشأة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_7.jpg" alt="Creative for رصد التسكع والوقوف المشبوه خارج المنشأة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-7">امنع التهديدات قبل ما تبدأ! 🚶‍♂️ النظام بيرصد لو في شخص واقف في منطقة محظورة أو جنب السور الخارجي للشركة لفترة طويلة ويبعت تنبيه للأمن.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-7')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 8 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تتبع فترات بقاء الشاحنات بالمخازن</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_8.jpg" alt="Creative for تتبع فترات بقاء الشاحنات بالمخازن" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-8">سرّع عمليات الشحن والتفريغ! 🚛 فيكسورا بتسجل وقت دخول وخروج كل شاحنة من بوابات المخازن وتديلك تقارير لتحسين سلاسل الإمداد وتقليل الهدر.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-8')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 9 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التعرف على لوحات السيارات المصرحة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_9.jpg" alt="Creative for التعرف على لوحات السيارات المصرحة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-9">بوابة ذكية تفتح أوتوماتيكياً! 🚗 الكاميرا بتتعرف على أرقام لوحات سيارات الموظفين والعملاء المصرحين وتفتح البوابة فوراً لتسهيل الدخول.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-9')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 10 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في طوابير الانتظار والـ Queues</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_10.jpg" alt="Creative for التحكم في طوابير الانتظار والـ Queues" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-10">لا تدع عميلك يغضب من الانتظار! 🛒 فيكسورا بتراقب الطوابير وتنبّه مدير الفرع لو الطابور زاد عن 5 أشخاص لفتح كاشير إضافي فوراً.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-10')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 11 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> الدمج مع كاميرات المراقبة الحالية للشركة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_11.jpg" alt="Creative for الدمج مع كاميرات المراقبة الحالية للشركة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-11">وفر تكاليف شراء كاميرات جديدة! 🔌 فيكسورا بتشتغل وتندمج مع شبكة الكاميرات الحالية لشركتك (سواء كانت IP أو Analog) وتحولها لكاميرات ذكية.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-11')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 12 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين غرف السيرفرات والأجهزة الحساسة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_12.jpg" alt="Creative for تأمين غرف السيرفرات والأجهزة الحساسة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-12">حماية قلب شركتك النابض 🖥️ أمن غرف السيرفرات والشبكات من الدخول غير المصرح ورصد أي تغيرات في شكل المعدات أو انبعاث الدخان فوراً.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-12')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 13 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مراقبة الصيدليات وصرف الأدوية الهامة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_13.jpg" alt="Creative for مراقبة الصيدليات وصرف الأدوية الهامة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-13">منع الخسائر في الصيدليات 💊 فيكسورا بتراقب رفوف الأدوية والمستحضرات الثمينة وتنبهك لو تم سحب أو تحريك بضائع معينة خارج أوقات العمل.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-13')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 14 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد التسلل في جراجات الشركات والمولات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_14.jpg" alt="Creative for رصد التسلل في جراجات الشركات والمولات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-14">تأمين تام لجراج السيارات 🚗 الكاميرا الذكية بترصد أي حركة مشبوهة أو شخص يتجول بين السيارات في أوقات متأخرة وتبعت تنبيه فوري للأمن.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-14')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 15 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تحليل سلوك زوار المطاعم وتوزيع الطاولات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_15.jpg" alt="Creative for تحليل سلوك زوار المطاعم وتوزيع الطاولات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-15">طور خدمة عملاء مطعمك! 🍔 اعرف الطاولات الأكثر استخداماً والأوقات اللي بيكون فيها العميل محتاج انتظار عشان تنظم الخدمة وتزود المبيعات.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-15')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 16 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين بوابات المستشفيات والعيادات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_16.jpg" alt="Creative for تأمين بوابات المستشفيات والعيادات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-16">أمان تام للمناطق الطبية الحساسة 🏥 احمِ غرف العمليات والعناية المركزة والمستودعات الطبية من دخول الأشخاص غير المصرح لهم بالذكاء الاصطناعي.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-16')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 17 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد السرقة وشغب الزبائن في محلات التجزئة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_17.jpg" alt="Creative for رصد السرقة وشغب الزبائن في محلات التجزئة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-17">امنع السرقات في محلك فورياً 🛍️ نظام فيكسورا بيرصد الحركات السريعة أو محاولات إخفاء البضائع ويرسل إشعار فوري لمدير المحل للتدخل الهادئ.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-17')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 18 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين معارض السيارات الفاخرة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_18.jpg" alt="Creative for تأمين معارض السيارات الفاخرة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-18">أقصى حماية لمعارض السيارات 🏎️ ارسم حدوداً افتراضية حول السيارات الفاخرة المعروضة، وسيتم تنبيهك فوراً لو اقترب أي شخص منها خارج أوقات العمل.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-18')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 19 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين البنوك والمقرات الإدارية الكبرى</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_19.jpg" alt="Creative for تأمين البنوك والمقرات الإدارية الكبرى" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-19">أعلى مستويات الأمان لمقرات البنوك 🏦 تحليلات فيكسورا بتضمن عدم عبور أي شخص بوابات الدخول دون تصريح أو التعرف البصري الفوري.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-19')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 20 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> إشراف ذكي على مستودعات البترول والغاز</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_20.jpg" alt="Creative for إشراف ذكي على مستودعات البترول والغاز" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-20">سلامة كاملة في قطاع الطاقة والغاز ⛽ الكاميرات الحرارية والذكية بترصد أي تسريب للغازات أو ارتفاع خطر في درجات حرارة الأنابيب فوراً.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-20')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 21 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد عدم الالتزام بمسارات الحركة في المصانع</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_21.jpg" alt="Creative for رصد عدم الالتزام بمسارات الحركة في المصانع" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-21">تقليل الحوادث الصناعية للمصانع 🏗️ فيكسورا بتنبّه لو خرج أحد العمال عن مسار الحركة المخصص أو دخل منطقة قريبة من الآلات الخطرة.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-21')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 22 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تقليل الإنذارات الكاذبة من الكاميرات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_22.jpg" alt="Creative for تقليل الإنذارات الكاذبة من الكاميرات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-22">وداعاً للإشعارات المزعجة والإنذارات الكاذبة! 🐱❌ نظام فيكسورا الذكي بيفرق بين حركة قطة أو شجرة بتتحرك وبين حركة إنسان حقيقي، وينبهك للتهديد الفعلي فقط.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-22')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 23 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين مدارس الأطفال والمؤسسات التعليمية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_23.jpg" alt="Creative for تأمين مدارس الأطفال والمؤسسات التعليمية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-23">أولادنا في أمان تام بالمدارس 🏫 فيكسورا بتراقب بوابات المدارس وتكتشف فوراً لو في غرباء أو عربيات مريبة واقفة في محيط المدرسة لمنع المخاطر.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-23')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 24 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد سقوط الأشخاص المفاجئ والـ Fall Detection</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_24.jpg" alt="Creative for رصد سقوط الأشخاص المفاجئ والـ Fall Detection" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-24">إنقاذ فوري للعمال في حالات الطوارئ! 🚑 لو تعرض عامل للسقوط أو الإغماء في المستودع، الكاميرا الذكية بترصد الحادث فوراً وتنبه الإسعاف والأمن.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-24')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 25 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مراقبة المخزون ونقص المنتجات بالرفوف</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_25.jpg" alt="Creative for مراقبة المخزون ونقص المنتجات بالرفوف" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-25">رفوفك دايماً مليانة بضاعة! 🥫 فيكسورا بتراقب رفوف السوبرماركت والمحلات وتنبه الموظفين لو بضاعة معينة خلصت لإعادة ملئها لعدم خسارة أي بيعة.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-25')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 26 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> أمان وحماية محطات الوقود والخدمة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_26.jpg" alt="Creative for أمان وحماية محطات الوقود والخدمة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-26">سلامة تامة لمحطات البنزين ⛽ فيكسورا بتراقب بوابات ومضخات البنزين وترصد أي تدخين أو مخاطر اشتعال وتتعرف على لوحات العربيات الهاربة بدون دفع.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-26')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 27 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تحليل تفاعل العملاء مع المنتجات المعروضة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_27.jpg" alt="Creative for تحليل تفاعل العملاء مع المنتجات المعروضة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-27">اعرف إيه اللي بيعجب عميلك! 💄 فيكسورا بتقيس عدد المرات اللي العملاء بيمسكوا فيها منتج معين من على الرف، عشان تعرف مدى نجاح حملاتك التسويقية.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-27')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 28 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين صالات الجيم ومراكز اللياقة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_28.jpg" alt="Creative for تأمين صالات الجيم ومراكز اللياقة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-28">إدارة ذكية للجيم والأندية 🏋️‍♂️ تابع الكثافة وعدد المشتركين داخل الصالة، وأمن الخزائن وممرات الدخول لمنع أي سرقات أو دخول غير مصرح.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-28')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 29 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> حماية وتأمين محلات المجوهرات الثمينة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_29.jpg" alt="Creative for حماية وتأمين محلات المجوهرات الثمينة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-29">أقصى تأمين للذهب والمجوهرات 💎 فيكسورا بتراقب صالات معارض المجوهرات بدقة عالية وترصد أي حركة غريبة قريبة من الواجهات الثمينة وتنبّه الشرطة والأمن.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-29')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 30 | فيكسورا (Vexora - ذكاء اصطناعي أمني)</h3>
+            <span class="platform-tag">لينكد إن + فيسبوك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رصد دخول المناطق المحظورة بالشركات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/vexora_day_30.jpg" alt="Creative for رصد دخول المناطق المحظورة بالشركات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-30">حماية سرية البيانات والملفات 🔒 امنع الموظفين أو الغرباء من دخول الغرف المحظورة والأرشيف، واعرف فوراً بالدقيقة لو حد حاول يتجاوز الباب.
+
+🌐 لمعرفة المزيد، زوروا موقعنا: vexorame.com</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-30')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#فيكسورا #ذكاء_اصطناعي #أمن_شركات #كاميرات_مراقبة #تأمين #مصر</div>
+        </div>
+    </div>
+    
+        </main>
+    </div>
+</body>
+</html>

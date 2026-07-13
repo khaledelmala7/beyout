@@ -1,0 +1,32 @@
+{
+  "rewrites": [
+    {
+      "source": "/(beyout_content_calendar.html|vexora_content_calendar.html|beyout_90day_calendar.html)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "vexorame.com"
+        }
+      ],
+      "destination": "/vexora/:path*"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vexorame.com"
+        }
+      ],
+      "destination": "/vexora/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/beyout/:path*"
+    }
+  ]
+}

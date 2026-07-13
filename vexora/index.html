@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="vexora_page_title">فيكسورا | أنظمة حماية وتحليل كاميرات المراقبة بالذكاء الاصطناعي</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="فيكسورا تقدم أنظمة تحليل كاميرات المراقبة بالذكاء الاصطناعي الفوري للشركات والمصانع والمستودعات لمنع السرقات وتوفير الأمان المطلق.">
+    <meta name="keywords" content="كاميرات مراقبة ذكية, أمن شركات, فيكسورا, Vexora, ذكاء اصطناعي أمني">
+    
+    <!-- Google Fonts: Cairo & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css?v=1.0.4">
+</head>
+<body class="theme-vexora">
+
+    <!-- Apple-style Frosted Glass Navigation Bar -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <a href="#"><img src="logo_vexora.png" alt="VEXORA" class="header-logo"></a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#about" class="nav-link" data-i18n="nav_about">من نحن</a>
+                <a href="#vexora-showcase" class="nav-link" data-i18n="nav_features_vex">تحليل الفيديو</a>
+                <a href="#vexora-sandbox" class="nav-link" data-i18n="nav_simulator_vex">كاميرات البث المباشر</a>
+                <a href="#demo-section" class="nav-link" data-i18n="nav_demo">حجز ديمو</a>
+                <a href="https://beyout-ochre.vercel.app" class="nav-link link-external"><span data-i18n="nav_to_beyout">بيوت للمنازل الذكية (B2C)</span> →</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="lang-btn" id="lang-switch-btn" onclick="toggleLanguage()">English</button>
+                <a href="#demo-section" class="cta-button" data-i18n="nav_btn_demo">طلب ديمو مجاني</a>
+                <button class="menu-toggle" id="menu-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro Corporate Title (Minimalist Apple style) -->
+    <section class="intro-section" id="about">
+        <div class="container text-center">
+            <h1 class="portal-main-title" data-i18n="vexora_hero_title_page">أنظمة فيكسورا للتحليل الأمني</h1>
+            <p class="portal-subtitle" data-i18n="vexora_hero_subtitle_page">الذكاء الاصطناعي الأقوى لحماية منشآتك وحساب حركة زوارك</p>
+        </div>
+    </section>
+
+    <!-- Apple-style Main Banner -->
+    <section class="apple-banner vexora-banner" id="vexora-hero">
+        <div class="banner-overlay-glow"></div>
+        <div class="container banner-container">
+            <div class="banner-text text-center">
+                <div class="logo-backdrop small">
+                    <img src="logo_vexora.png" alt="Vexora Logo">
+                </div>
+                <h2 class="banner-title" data-i18n="vexora_banner_title">فيكسورا | أمن أعمالك بذكاء خارق</h2>
+                <p class="banner-subtitle" data-i18n="vexora_banner_desc">قم بترقية كاميرات المراقبة الحالية لشركتك إلى نظام أمان رقمي فوري يكتشف التسلل والحرائق وسرقة الأصول لحظياً.</p>
+                <div class="banner-links">
+                    <a href="#vexora-showcase" class="apple-link" data-i18n="vexora_btn_explore">شاهد الكاميرا الحية &gt;</a>
+                    <a href="#demo-section" class="apple-link secondary" data-i18n="vexora_btn_demo">طلب ديمو الشركات &gt;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vexora Showcase Section (Interactive Simulator) -->
+    <section class="brand-showcase-section vexora-theme" id="vexora-showcase">
+        <div class="container">
+            <div class="showcase-grid">
+                <!-- Showcase Info Column -->
+                <div class="showcase-info">
+                    <h3 class="showcase-title" data-i18n="vexora_showcase_title">عيون رقمية لا تنام لحماية منشآتك</h3>
+                    <p class="showcase-desc" data-i18n="vexora_showcase_desc">نظام فيكسورا يقوم بمراقبة وتحليل الفيديوهات الصادرة من كاميراتك الحالية فورياً. يتعرف النظام على الأنشطة المشبوهة، الغرباء المتسللين، والحرائق، ويرسل تنبيهاً أمنياً لجوالك.</p>
+                    
+                    <!-- B2B Lead Magnet Widget -->
+                    <div class="magnet-widget glass-card">
+                        <div class="magnet-icon">🔒</div>
+                        <div class="magnet-details">
+                            <h4 data-i18n="vexora_magnet_title">جلسة فحص وتقييم أمني مجاني لكاميراتك</h4>
+                            <p data-i18n="vexora_magnet_desc">دع مهندسينا يراجعون نظام حمايتك الحالي ويقدمون لك خطة ترقية مجانية.</p>
+                            <a href="#demo-section" class="magnet-action-link" onclick="selectLeadMagnet('تقييم أمني مجاني فيكسورا')" data-i18n="vexora_magnet_btn">احجز الجلسة المجانية الآن ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Simulator Column -->
+                <div class="showcase-simulator">
+                    <div class="device-mockup glass-card">
+                        <div class="mockup-header">
+                            <div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                            <div class="mockup-title" data-i18n="vexora_mockup_title">نظام رصد كاميرات فيكسورا الذكي</div>
+                        </div>
+                        <div class="mockup-body active">
+                            <div class="camera-preview">
+                                <div class="camera-feed-container">
+                                    <div class="camera-header">
+                                        <span class="cam-name" id="hero-cam-name" data-i18n="vexora_cam_name">CAM 01 - المستودع الرئيسي</span>
+                                        <span class="rec-dot">● LIVE</span>
+                                    </div>
+                                    <div class="camera-video-mock">
+                                        <div class="scanner-line"></div>
+                                        <div class="detection-overlay" id="hero-mock-detection-box" style="display:none;">
+                                            <span class="detection-label">INTRUDER (94%)</span>
+                                        </div>
+                                        <div class="feed-grid">
+                                            <div class="feed-corner top-left"></div>
+                                            <div class="feed-corner top-right"></div>
+                                            <div class="feed-corner bottom-left"></div>
+                                            <div class="feed-corner bottom-right"></div>
+                                        </div>
+                                        <svg viewBox="0 0 400 220" class="svg-video-mock">
+                                            <rect width="100%" height="100%" fill="#111827"/>
+                                            <line x1="50" y1="200" x2="350" y2="200" stroke="#374151" stroke-width="4"/>
+                                            <rect x="80" y="100" width="80" height="100" fill="#1f2937" stroke="#4b5563"/>
+                                            <rect x="240" y="80" width="100" height="120" fill="#1f2937" stroke="#4b5563"/>
+                                            <circle id="hero-ai-target-circle" cx="120" cy="140" r="15" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" stroke-width="2" style="display:none;"/>
+                                            <line id="hero-ai-target-line" x1="120" y1="140" x2="120" y2="180" stroke="#ef4444" stroke-dasharray="3,3" style="display:none;"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ai-analytics-panel">
+                                    <div class="log-title" data-i18n="vexora_alert_logs_lbl">سجل التنبيهات الأمنية</div>
+                                    <div class="alert-log-container" id="hero-alert-logs">
+                                        <div class="log-entry normal">
+                                            <span class="time">19:40:15</span>
+                                            <span class="msg" data-i18n="vexora_log_vehicle">مرور مركبة مصرحة - لوحة رقم 4829</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mock-controls">
+                                    <button class="mock-btn danger" onclick="triggerHeroIncident()" data-i18n="vexora_btn_incident_toggle">محاكاة اختراق أمني (تنبيه)</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sandbox Testing Ground (Playground) -->
+    <section class="simulator-sandbox" id="vexora-sandbox">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle" data-i18n="sandbox_subtitle">منطقة المحاكاة المتكاملة</span>
+                <h2 class="section-title" data-i18n="sandbox_title_vexora">جرّب لوحات تحكم التحليل الأمني بنفسك</h2>
+                <p class="section-desc max-w-600" data-i18n="sandbox_desc_vexora">اختبر تحليلات فيكسورا ورصد المتسللين ومخاطر الحريق لحظياً على البث المباشر.</p>
+            </div>
+
+            <div class="sandbox-container glass-card">
+                <!-- Vexora Sandbox -->
+                <div class="sandbox-content active" id="sandbox-vexora">
+                    <div class="sandbox-grid">
+                        <div class="simulator-visual">
+                            <div class="vexora-camera-view glass-card">
+                                <div class="camera-lens-overlay">
+                                    <span class="fps">FPS: 30.00</span>
+                                    <span class="cam-id">VEXORA-SECURITY-CAM-02</span>
+                                </div>
+                                <div class="camera-canvas">
+                                    <svg viewBox="0 0 500 300" class="camera-svg">
+                                        <rect width="100%" height="100%" fill="#090d16"/>
+                                        <line x1="50" y1="250" x2="450" y2="250" stroke="#1e293b" stroke-width="2"/>
+                                        <rect x="360" y="160" width="70" height="90" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+                                        <circle cx="395" cy="205" r="10" fill="#0f172a" stroke="#334155"/>
+                                        <text x="395" y="240" font-family="Cairo" font-size="10" fill="#64748b" text-anchor="middle">Asset Safe</text>
+                                        <g id="camera-target" style="display:none;">
+                                            <rect id="target-box" x="120" y="100" width="60" height="130" fill="none" stroke="#ef4444" stroke-width="2" class="pulse-border"/>
+                                            <line x1="120" y1="100" x2="135" y2="100" stroke="#ef4444" stroke-width="4"/>
+                                            <line x1="120" y1="100" x2="120" y2="115" stroke="#ef4444" stroke-width="4"/>
+                                            <line x1="180" y1="230" x2="165" y2="230" stroke="#ef4444" stroke-width="4"/>
+                                            <line x1="180" y1="230" x2="180" y2="215" stroke="#ef4444" stroke-width="4"/>
+                                            <rect x="120" y="80" width="85" height="20" fill="#ef4444"/>
+                                            <text x="125" y="94" font-family="Outfit" font-size="10" fill="#ffffff" font-weight="bold">INTRUDER 98%</text>
+                                            <circle cx="150" cy="120" r="12" fill="#ef4444"/>
+                                            <line x1="150" y1="132" x2="150" y2="190" stroke="#ef4444" stroke-width="4"/>
+                                            <line x1="150" y1="150" x2="130" y2="170" stroke="#ef4444" stroke-width="3"/>
+                                            <line x1="150" y1="150" x2="170" y2="170" stroke="#ef4444" stroke-width="3"/>
+                                            <line x1="150" y1="190" x2="135" y2="225" stroke="#ef4444" stroke-width="3"/>
+                                            <line x1="150" y1="190" x2="165" y2="225" stroke="#ef4444" stroke-width="3"/>
+                                        </g>
+                                        <g id="camera-fire" style="display:none;">
+                                            <rect x="350" y="140" width="90" height="115" fill="none" stroke="#f59e0b" stroke-width="2" class="pulse-border"/>
+                                            <rect x="350" y="120" width="80" height="20" fill="#f59e0b"/>
+                                            <text x="355" y="134" font-family="Outfit" font-size="10" fill="#ffffff" font-weight="bold">FIRE/SMOKE 91%</text>
+                                            <path d="M380 230c-10-10 0-30 10-40 5 10 15 15 10 30z" fill="#ef4444" opacity="0.8"/>
+                                            <path d="M390 230c-5-5 0-20 5-25 3 5 8 8 5 20z" fill="#f59e0b" opacity="0.9"/>
+                                        </g>
+                                        <line id="laser-line" x1="0" y1="40" x2="500" y2="40" stroke="rgba(34, 211, 238, 0.4)" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="simulator-controls">
+                            <h3 data-i18n="sandbox_vex_ctrl_title">أدوات اختبار التحليل الذكي Vexora</h3>
+                            <p class="small-desc" data-i18n="sandbox_vex_ctrl_desc">تحكم بالكاميرا وقم بمحاكاة سيناريوهات حقيقية لرؤية رد فعل الذكاء الاصطناعي ورصد المخالفات.</p>
+                            
+                            <div class="scenario-buttons">
+                                <button class="scen-btn active" id="btn-scen-clear" onclick="runVexoraScenario('clear')" data-i18n="sandbox_vex_scen_clear">الوضع الطبيعي (تصفير الكاميرا)</button>
+                                <button class="scen-btn danger" id="btn-scen-intruder" onclick="runVexoraScenario('intruder')" data-i18n="sandbox_vex_scen_intruder">محاكاة متسلل بعد ساعات العمل</button>
+                                <button class="scen-btn danger" id="btn-scen-fire" onclick="runVexoraScenario('fire')" data-i18n="sandbox_vex_scen_fire">محاكاة خطر حريق/دخان</button>
+                            </div>
+
+                            <!-- Phone alert mockup -->
+                            <div class="phone-alert-mockup" id="phone-alert">
+                                <div class="phone-header">
+                                    <span class="carrier">Vexora Alert System</span>
+                                    <span class="battery">⚡ 98%</span>
+                                </div>
+                                <div class="phone-body">
+                                    <div class="app-icon-small">V</div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">🚨 Alert!</div>
+                                        <div class="alert-msg" id="phone-alert-msg">Intruder detected in the secure zone. Camera 02.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sim-feedback-msg" id="sim-feedback-vexora" data-i18n="sandbox_vex_feedback_msg">اضغط على السيناريوهات أعلاه لرؤية كيف يقوم الذكاء الاصطناعي بتحليل البث وتنبيه صاحب العمل.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Step Demo Booking Form Section -->
+    <section class="demo-booking-section" id="demo-section">
+        <div class="container">
+            <div class="form-wrapper glass-card">
+                <div class="form-header text-center">
+                    <h2 class="form-title" data-i18n="form_section_title">ابدأ رحلتك معنا اليوم</h2>
+                    <p class="form-subtitle" data-i18n="form_section_subtitle">احجز نسختك التجريبية والمجانية (Demo) وسيتواصل معك مستشارونا فورياً</p>
+                    
+                    <div class="form-progress">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <div class="progress-steps">
+                            <div class="step-node active" data-step="1">1</div>
+                            <div class="step-node" data-step="2">2</div>
+                            <div class="step-node" data-step="3">3</div>
+                            <div class="step-node" data-step="4">✓</div>
+                        </div>
+                        <div class="progress-labels">
+                            <span data-i18n="form_step1_lbl">المنتج المطلوب</span>
+                            <span data-i18n="form_step2_lbl">بياناتك</span>
+                            <span data-i18n="form_step3_lbl">التفاصيل والوقت</span>
+                            <span data-i18n="form_step4_lbl">تأكيد الطلب</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="demoForm" onsubmit="handleFormSubmit(event)" data-netlify="true" name="demo-requests">
+                    <input type="hidden" name="form-name" value="demo-requests">
+                    <input type="hidden" name="target_product" value="vexora">
+                    
+                    <!-- Step 1 -->
+                    <div class="form-step active" data-step="1">
+                        <h3 class="step-section-title" data-i18n="form_step1_title_vexora">ترقية نظام الأمان لشركتك؟</h3>
+                        <div class="cards-select-grid single-card-center">
+                            <div class="select-card selected" id="select-card-vexora">
+                                <div class="select-card-logo"><img src="logo_vexora.png" alt="Vexora" class="form-select-logo"></div>
+                                <h4>فيكسورا (Vexora)</h4>
+                                <p data-i18n="form_product_vexora_desc">للشركات والمصانع ومراقبة وتحليل الكاميرات بالذكاء الاصطناعي.</p>
+                                <span class="badge">B2B</span>
+                            </div>
+                        </div>
+                        <div class="form-actions-row">
+                            <span></span>
+                            <button type="button" class="btn-next" onclick="nextStep(2)" data-i18n="form_btn_next">التالي ←</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="form-step" data-step="2">
+                        <h3 class="step-section-title" data-i18n="form_step2_title">أخبرنا بالمزيد عنك لنتمكن من التواصل معك</h3>
+                        <div class="form-fields-grid">
+                            <div class="input-group">
+                                <label for="cust_name"><span data-i18n="form_lbl_name">الاسم بالكامل </span><span class="required">*</span></label>
+                                <input type="text" id="cust_name" name="name" required placeholder="أدخل اسمك الكريم" data-placeholder-ar="أدخل اسمك الكريم" data-placeholder-en="Enter your full name">
+                            </div>
+                            <div class="input-group">
+                                <label for="cust_email"><span data-i18n="form_lbl_email">البريد الإلكتروني </span><span class="required">*</span></label>
+                                <input type="email" id="cust_email" name="email" required placeholder="name@company.com" data-placeholder-ar="name@company.com" data-placeholder-en="name@company.com">
+                            </div>
+                            <div class="input-group">
+                                <label for="cust_phone"><span data-i18n="form_lbl_phone">رقم الهاتف / الواتساب </span><span class="required">*</span></label>
+                                <input type="tel" id="cust_phone" name="phone" required placeholder="+20 100 000 0000" data-placeholder-ar="+20 100 000 0000" data-placeholder-en="+20 100 000 0000">
+                            </div>
+                            <div class="input-group" id="company-field-group">
+                                <label for="company_name"><span data-i18n="form_lbl_company">اسم الشركة والنشاط </span><span class="required">*</span></label>
+                                <input type="text" id="company_name" name="company" required placeholder="اسم شركتك أو نشاطك التجاري" data-placeholder-ar="اسم شركتك أو نشاطك التجاري" data-placeholder-en="Your company name or field">
+                            </div>
+                        </div>
+                        <div class="form-actions-row">
+                            <button type="button" class="btn-prev" onclick="prevStep(1)" data-i18n="form_btn_prev">→ السابق</button>
+                            <button type="button" class="btn-next" onclick="nextStep(3)" data-i18n="form_btn_next">التالي ←</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="form-step" data-step="3">
+                        <h3 class="step-section-title" data-i18n="form_step3_title">متى ترغب في عقد جلسة العرض (الديمو)؟</h3>
+                        <div class="form-fields-grid">
+                            <div class="input-group">
+                                <label for="demo_date"><span data-i18n="form_lbl_date">التاريخ المفضل </span><span class="required">*</span></label>
+                                <input type="date" id="demo_date" name="demo_date" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="demo_time"><span data-i18n="form_lbl_time">الوقت المفضل للاتصال </span><span class="required">*</span></label>
+                                <select id="demo_time" name="demo_time" required>
+                                    <option value="" data-i18n="form_time_choose">اختر الوقت المناسب</option>
+                                    <option value="morning" data-i18n="form_time_morning">صباحاً (9:00 ص - 12:00 م)</option>
+                                    <option value="afternoon" data-i18n="form_time_afternoon">بعد الظهر (12:00 م - 4:00 م)</option>
+                                    <option value="evening" data-i18n="form_time_evening">مساءً (4:00 م - 8:00 م)</option>
+                                </select>
+                            </div>
+                            <div class="input-group span-2">
+                                <label for="cust_notes" data-i18n="form_lbl_notes_vexora">أكبر تحدي أو متطلبات معينة تود مناقشتها؟</label>
+                                <textarea id="cust_notes" name="notes" rows="3" placeholder="مثال: رصد التسلل الخارجي للمصنع بالليل..." data-placeholder-ar="مثال: رصد التسلل الخارجي للمصنع بالليل..." data-placeholder-en="E.g., Detecting night intrusions at the factory..."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions-row">
+                            <button type="button" class="btn-prev" onclick="prevStep(2)" data-i18n="form_btn_prev">→ السابق</button>
+                            <button type="submit" class="btn-submit" data-i18n="form_btn_submit">تأكيد طلب الديمو مجاناً 🚀</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 (Success) -->
+                    <div class="form-step" data-step="4">
+                        <div class="success-card text-center">
+                            <div class="success-animation-circle">
+                                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-success"><span data-i18n="form_success_thanks">شكراً لطلبك، </span><span id="success-user-name"></span>!</h3>
+                            <p class="success-desc"><span data-i18n="form_success_desc_vexora">تم تسجيل طلبك بنجاح لحجز ديمو خاص بنظام فيكسورا الأمني.</span></p>
+                            <div class="success-summary glass-card">
+                                <p><strong data-i18n="form_success_schedule">موعدك المقترح:</strong> <span id="success-date"></span> <span data-i18n="form_success_period"> في الفترة الـ </span> <span id="success-time"></span></p>
+                                <p><span data-i18n="form_success_whatsapp">سنقوم بإرسال رسالة تأكيد على واتساب برقم </span><strong><span id="success-phone"></span></strong><span data-i18n="form_success_whatsapp_sub"> وتفاصيل الاجتماع خلال ساعة.</span></p>
+                            </div>
+                            <button type="button" class="btn-reset" onclick="resetForm()" data-i18n="form_success_reset_btn">طلب حجز جديد</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <img src="logo_vexora.png" alt="VEXORA" class="footer-logo">
+                <p data-i18n="footer_about_text_vexora">مستشارك الأمني التكنولوجي الموثوق لتحليلات الفيديو الفورية وكاميرات المراقبة بالذكاء الاصطناعي.</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_links_title">روابط سريعة</h4>
+                <ul>
+                    <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+                    <li><a href="#vexora-showcase" data-i18n="nav_features_vex">تحليل الفيديو</a></li>
+                    <li><a href="#vexora-sandbox" data-i18n="nav_simulator_vex">كاميرات البث المباشر</a></li>
+                    <li><a href="https://beyout-ochre.vercel.app" data-i18n="nav_to_beyout">بيوت للمنازل الذكية (B2C)</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 data-i18n="footer_social_title">تابعنا على شبكاتنا الاجتماعية</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></circle></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p data-i18n="footer_copyright_vexora">&copy; 2026 شركة فيكسورا (Vexora). جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js?v=1.0.4"></script>
+</body>
+</html>

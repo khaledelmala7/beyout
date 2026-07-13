@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة محتوى السوشيال ميديا لـ 30 يوماً بالصور | شركة بيوت</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --text-primary: #f5f5f7;
+            --text-secondary: #9ca3af;
+            --accent-color: #f59e0b;
+            --accent-hover: #d97706;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.02);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Cairo', sans-serif;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        header h1 { font-size: 30px; font-weight: 800; margin-bottom: 12px; color: #ffffff; }
+        header p { color: var(--text-secondary); font-size: 15px; }
+        .print-btn {
+            display: inline-block;
+            background-color: #10b981;
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        .print-btn:hover { background-color: #059669; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(12px);
+            page-break-inside: avoid;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .card-header h3 { font-size: 18px; font-weight: 700; color: #ffffff; }
+        .platform-tag {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--accent-color);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .post-image-container {
+            width: 100%;
+            max-width: 420px;
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        .post-creative-img { width: 100%; display: block; object-fit: cover; }
+        .caption-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-right: 4px solid var(--accent-color);
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        .caption-box strong { display: block; font-size: 13px; color: #ffffff; margin-bottom: 8px; }
+        .copy-text { font-size: 13.5px; white-space: pre-wrap; color: #e5e7eb; margin-bottom: 8px; }
+        .copy-btn-caption {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 4px 10px;
+            font-size: 11px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .copy-btn-caption:hover { background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.3); }
+        .hashtags { font-size: 12px; color: #10b981; font-weight: 600; }
+        
+        @media print {
+            body { background-color: #ffffff !important; color: #000000 !important; padding: 0 !important; }
+            .container { max-width: 100% !important; }
+            .print-btn, .copy-btn-caption { display: none !important; }
+            .card {
+                background: none !important;
+                border: 1px solid #e5e7eb !important;
+                color: #000000 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+            .card-header h3 { color: #000000 !important; }
+            .platform-tag { border: 1px solid #cbd5e1 !important; color: #0f172a !important; background: none !important; }
+            .post-image-container { max-width: 300px !important; border: 1px solid #cbd5e1 !important; }
+            .caption-box { border-right: 4px solid #f59e0b !important; background: #f8fafc !important; }
+            .caption-box strong { color: #000000 !important; }
+            .copy-text { color: #1f2937 !important; }
+            .hashtags { color: #047857 !important; }
+        }
+    </style>
+    <script>
+        function copyText(elementId) {
+            var textElement = document.getElementById(elementId);
+            var range = document.createRange();
+            range.selectNode(textElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            try {
+                document.execCommand('copy');
+                alert('تم النسخ بنجاح! 📋');
+            } catch (err) {
+                alert('فشل النسخ تلقائياً، يرجى النسخ يدوياً.');
+            }
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📅 خطة محتوى السوشيال ميديا لـ 30 يوماً | شركة بيوت (Beyout)</h1>
+            <p>خطة تسويقية مصورة ومكتوبة بالكامل وموجهة للأفراد (B2C Smart Home) في مصر.</p>
+            <button class="print-btn" onclick="window.print()">🖨️ حفظ كملف PDF / طباعة الخطة</button>
+        </header>
+        <main>
+            
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 1 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> توفير استهلاك التكييف الذكي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_1.jpg" alt="Creative for توفير استهلاك التكييف الذكي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-1">التكييف شغال طول الصيف وفاتورة الكهرباء صدمة؟ 💸 مع نظام بيوت الذكي، التكييف بيعدل حرارته تلقائياً حسب الجو الخارجي وحركتك في الأوضة عشان يوفرلك لحد 30% من استهلاك الكهرباء!</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-1')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 2 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم بلمسة واحدة من السرير</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_2.jpg" alt="Creative for التحكم بلمسة واحدة من السرير" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-2">مكسل تقوم من السرير تطفي النور؟ 🛌 مع أنظمة بيوت الذكية، تقدر تطفي وتتحكم في كل أجهزة وإضاءة البيت بلمسة واحدة من موبايلك أو مفتاحك الزجاجي جنب السرير.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-2')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 3 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مستشعر تسريب الغاز الذكي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_3.jpg" alt="Creative for مستشعر تسريب الغاز الذكي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-3">الأمان أولاً! 🔐 مستشعر الغاز الذكي من بيوت مش بس بينبهك لو حصل تسريب، ده بيقفل محبس الغاز الرئيسي تلقائياً ويبعتلك إشعار عاجل على موبايلك لإنقاذ الموقف.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-3')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 4 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> إضاءة الممرات التلقائية ليلاً</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_4.jpg" alt="Creative for إضاءة الممرات التلقائية ليلاً" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-4">بتصحى بالليل والظلام بيضايقك؟ 🚶‍♂️ مع بيوت، مستشعرات الحركة الذكية بتنور ممرات البيت بالإضاءة الهادئة تلقائياً بمجرد حركتك، وبتطفي بعدها عشان توفر الطاقة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-4')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 5 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> فتح بوابة الفيلا بالهاتف</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_5.jpg" alt="Creative for فتح بوابة الفيلا بالهاتف" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-5">ليه تنزل من العربية تفتح البوابة؟ 🚗 بلمسة واحدة من شاشة موبايلك، بوابة الفيلا بتفتح لوحدها بمجرد اقترابك، وترجع تقفل لتأمين البيت.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-5')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 6 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> وضع السينما المنزلية (Cinema Mode)</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_6.jpg" alt="Creative for وضع السينما المنزلية (Cinema Mode)" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-6">حول صالتك لسينما حقيقية! 🍿🎬 بضغطة زر واحدة على موبايلك من بيوت، الستائر بتتقفل، الإضاءة بتهدأ وتتحول لألوان دافئة، والساوند سيستم بيشتغل تلقائياً لعرض فيلمك المفضّل.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-6')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 7 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مستشعر تسريب المياه والفيضان</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_7.jpg" alt="Creative for مستشعر تسريب المياه والفيضان" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-7">احمِ بيتك من الغرق وتلف الأثاث! 💧 مستشعر المياه الذكي من بيوت بيكتشف أي تسريب تحت الغسالة أو في الحمام وبيقفل المحبس الرئيسي للبيت فوراً مع تنبيهك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-7')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 8 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> أتمتة الستائر الذكية مع الشمس</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_8.jpg" alt="Creative for أتمتة الستائر الذكية مع الشمس" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-8">اصحى على نور ربنا الطبيعي ☀️ الستائر الذكية من بيوت بتفتح تلقائياً مع شروق الشمس عشان تصحيك بهدوء، وتقفل بالليل لحفظ الخصوصية بدون أي تدخل منك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-8')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 9 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> وضع السفر ومحاكاة الوجود</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_9.jpg" alt="Creative for وضع السفر ومحاكاة الوجود" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-9">مسافر ومش عايز حد يحس بغيابك؟ ✈️🔒 وضع السفر الذكي من بيوت بيقوم بتشغيل وإطفاء أنوار غرف مختلفة بشكل عشوائي عشان يبان إن البيت فيه حركة ويحمي فيلتك من اللصوص.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-9')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 10 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في فيلتك وأنت مسافر برا مصر</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_10.jpg" alt="Creative for التحكم في فيلتك وأنت مسافر برا مصر" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-10">بيتك تحت عينك من أي مكان في العالم! 🌍 حتى لو كنت مسافر خارج مصر، تقدر تطمن على فيلتك مع تطبيق بيوت الذكي، وتتحكم في ري الحديقة بضغطة زر.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-10')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 11 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> نظام ري الحديقة الذكي</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_11.jpg" alt="Creative for نظام ري الحديقة الذكي" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-11">وفر مياه وحافظ على حديقتك! 🌿 رشاشات المياه الذكية بتشتغل تلقائياً في المواعيد المحددة وبتفصل لوحدها لو التربة رطبة أو الجو ممطر عشان توفر المياه.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-11')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 12 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> المفاتيح الزجاجية الذكية الفاخرة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_12.jpg" alt="Creative for المفاتيح الزجاجية الذكية الفاخرة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-12">وداعاً للمفاتيح البلاستيكية القديمة! 💎 ارتقِ بديكور بيتك مع مفاتيح بيوت الزجاجية التي تعمل باللمس، وتتميز بتصميم زجاجي فاخر وإضاءة خافتة لتسهيل العثور عليها بالظلام.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-12')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 13 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> تأمين غرف الأطفال والتحكم بالإضاءة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_13.jpg" alt="Creative for تأمين غرف الأطفال والتحكم بالإضاءة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-13">سهل على أولادك المذاكرة والنوم 📚 في وقت الدراسة، نظام بيوت بيظبط إضاءة غرفة الأطفال للون الأبيض المحفز للتركيز، ومع وقت النوم بتتحول لإضاءة دافئة هادئة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-13')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 14 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> رعاية كبار السن وحركة البيت</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_14.jpg" alt="Creative for رعاية كبار السن وحركة البيت" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-14">اطمن على والديك طول الوقت 👴🧓 نظام بيوت بيكتشف لو مفيش أي حركة في البيت لفترة طويلة ويبعتلك تنبيه فوراً عشان تتصل بيهم وتتأكد إنهم بخير.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-14')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 15 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> سيناريو وضع الترحيب (Welcome Home)</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_15.jpg" alt="Creative for سيناريو وضع الترحيب (Welcome Home)" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-15">بيتك بيرحب بيك بطريقتك! 👋 بمجرد وصولك وفتح قفل الباب، بيشغل نظام بيوت وضع الترحيب: التكييف بيظبط الجو، الإضاءة بتنور، والموسيقى الهادئة بتشتغل تلقائياً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-15')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 16 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> توفير 30% من فواتير الكهرباء</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_16.jpg" alt="Creative for توفير 30% من فواتير الكهرباء" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-16">المنزل الذكي مش مجرد رفاهية.. هو استثمار بيوفرلك فلوسك! 💰 الحساسات الذكية من بيوت بتضمن إن مفيش لمبة أو تكييف يفضل شغال في مكان مفيش فيه حد.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-16')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 17 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في سخانات المياه الذكية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_17.jpg" alt="Creative for التحكم في سخانات المياه الذكية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-17">مياه دافئة جاهزة في وقتك المحدد 🛁 تقدر تظبط سخان المياه يشتغل قبل ما تصحى بنصف ساعة ويقفل لوحده عشان يوفر استهلاك الكهرباء ويكون جاهز دايماً.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-17')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 18 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> قفل البوابة الذكي بالبصمة</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_18.jpg" alt="Creative for قفل البوابة الذكي بالبصمة" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-18">وداعاً لمشكلة ضياع المفاتيح! 🔑 افتح باب بيتك ببصمة صباعك، أو كود سري، أو من موبايلك، واعرف مين دخل البيت ووقت دخوله بالدقيقة مع أنظمة بيوت.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-18')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 19 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في الإضاءة الخارجية والديكور</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_19.jpg" alt="Creative for التحكم في الإضاءة الخارجية والديكور" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-19">برز جمال فيلتك بالليل! ✨ تحكّم في إضاءة اللاندسكيب والواجهة الخارجية بلمسة واحدة، أو اظبطها تنور تدريجياً أول ما الشمس تغيب وتطفي الصبح.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-19')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 20 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم في فيلتك بدون تكسير حوائط</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_20.jpg" alt="Creative for التحكم في فيلتك بدون تكسير حوائط" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-20">تشطيب بيتك خلص وخايف من التكسير? 🛠️ أنظمة بيوت اللاسلكية بتركب مكان المفاتيح القديمة بدون أي تكسير في الحوائط أو تغيير في الديكور الحالي.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-20')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 21 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> سيناريو الحفلات والضيوف</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_21.jpg" alt="Creative for سيناريو الحفلات والضيوف" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-21">استقبل ضيوفك بأجواء مبهرة! 🎉 وضع الحفلة من بيوت بيغير ألوان الإضاءة في الصالون لإضاءة ديناميكية تفاعلية وبيشغل الساوند سيستم ليناسب التجمعات العائلية.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-21')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 22 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> أتمتة تهوية الجراج وسحب العوادم</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_22.jpg" alt="Creative for أتمتة تهوية الجراج وسحب العوادم" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-22">جراج خالي من عوادم السيارات! 🚗 بمجرد دخول سيارتك الجراج، مستشعرات بيوت الذكية بتشغل الشفاطات تلقائياً لسحب العوادم وتأمين تنفسك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-22')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 23 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم الذكي في الروف والبرجولات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_23.jpg" alt="Creative for التحكم الذكي في الروف والبرجولات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-23">استمتع بالروف في كل الفصول! 🌦️ البرجولة الذكية بتقفل لوحدها بمجرد رصد مستشعرات المطر لأي قطرات مياه، وتفتح في الجو المشمس لتستمتع بالهواء.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-23')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 24 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التوافق مع براندات الأجهزة العالمية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_24.jpg" alt="Creative for التوافق مع براندات الأجهزة العالمية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-24">تحكم مرن يجمع أجهزتك المفضلة! 📱 نظام بيوت متوافق بالكامل مع كل الأنظمة العالمية (Apple, Google, Amazon) لتتحكم في بيتك بالطريقة اللي تريحك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-24')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 25 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> مراقبة الأطفال داخل فيلتك</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_25.jpg" alt="Creative for مراقبة الأطفال داخل فيلتك" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-25">أولادك تحت عينك وفي أمان 👶 تقدر تشوف غرف ألعاب الأطفال وتطمن عليهم وهم بيلعبوا من شاشة مطبخك أو من موبايلك وأنت شغال في مكتبك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-25')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 26 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> توفير مياه المسبح والفلترة الذكية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_26.jpg" alt="Creative for توفير مياه المسبح والفلترة الذكية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-26">مسبح نظيف وموفر 🏊‍♂️ تحكم في مواعيد فلترة وتنظيف حمام السباحة أوتوماتيكياً في أوقات التعرفة المنخفضة للكهرباء ووفر تكاليف الصيانة اليومية.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-26')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 27 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> جلسة فحص وتخطيط سمارت هوم مجانية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_27.jpg" alt="Creative for جلسة فحص وتخطيط سمارت هوم مجانية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-27">بنصمم بيتك الذكي حسب احتياجك وميزانيتك! 📐 تواصل مع مهندسي بيوت دلوقتي واحصل على استشارة ومخطط ذكي مجاني لتشطيب فيلتك أو شقتك.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-27')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 28 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> الضمان الشامل وخدمة ما بعد البيع لمدة 5 سنوات</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_28.jpg" alt="Creative for الضمان الشامل وخدمة ما بعد البيع لمدة 5 سنوات" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-28">استثمارك آمن ومضمون! 🛡️ كل مشاريع وأنظمة بيوت بتشمل ضمان شامل وحقيقي لمدة 5 سنوات على الأجهزة والتركيبات، مع خدمة دعم فني وصيانة سريعة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-28')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 29 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> التحكم الذكي في الستائر والأبواب الكهربائية</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_29.jpg" alt="Creative for التحكم الذكي في الستائر والأبواب الكهربائية" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-29">الرفاهية تبدأ بالتفاصيل! الستائر بتفتح تلقائياً عشان تدخّل نور الشمس لبيتك، وبتقفل بالليل عشان الخصوصية والأمان التام بلمسة واحدة.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-29')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 اليوم 30 | بيوت (Beyout - سمارت هوم)</h3>
+            <span class="platform-tag">فيسبوك + انستقرام + تيك توك</span>
+        </div>
+        <div class="card-body">
+            <p><strong>الموضوع الأساسي:</strong> زيادة قيمة العقار وتجهيز المستقبل</p>
+            
+            <div class="post-image-container">
+                <img src="assets/beyout_day_30.jpg" alt="Creative for زيادة قيمة العقار وتجهيز المستقبل" class="post-creative-img">
+            </div>
+
+            <div class="caption-box">
+                <strong>✍️ النص الإعلاني (Caption) - جاهز للنسخ:</strong>
+                <div class="copy-text" id="text-day-30">المنزل الذكي استثمار للمستقبل! 📈 الفلل المجهزة بأنظمة بيوت الذكية الكاملة بتتباع بأسعار أعلى وبتجذب المشترين أسرع لأنها جاهزة للمستقبل.</div>
+                <button class="copy-btn-caption" onclick="copyText('text-day-30')">نسخ الكابشن 📋</button>
+            </div>
+            <div class="hashtags">#بيوت #سمارت_هوم #منزل_ذكي #تكنولوجيا #مصر</div>
+        </div>
+    </div>
+    
+        </main>
+    </div>
+</body>
+</html>
