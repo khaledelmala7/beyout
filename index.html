@@ -31,14 +31,14 @@
     <header class="main-header">
         <div class="container header-container">
             <div class="logo-area">
-                <a href="#"><img src="logo_beyout.png" alt="BEYOUT بيوت" class="header-logo"></a>
+                <span class="logo-text">BEYOUT <span class="logo-accent">بيوت</span></span>
             </div>
             
             <nav class="nav-links">
                 <a href="#about" class="nav-link" data-i18n="nav_about">من نحن</a>
                 <a href="#lumora-showcase" class="nav-link" id="nav-link-lumora-menu"><span data-i18n="nav_lumora_title">لومورا</span> <span class="badge-b2c" data-i18n="nav_lumora_badge">أفراد</span></a>
                 <a href="#vexora-showcase" class="nav-link" id="nav-link-vexora-menu"><span data-i18n="nav_vexora_title">فيكسورا</span> <span class="badge-b2b" data-i18n="nav_vexora_badge">شركات</span></a>
-                <a href="#demo-section" class="nav-link" data-i18n="nav_demo">حجز ديمو</a>
+                <a href="#simulator-section" class="nav-link" data-i18n="nav_demo">جرب بنفسك</a>
             </nav>
 
             <div class="header-actions">
@@ -53,90 +53,644 @@
         </div>
     </header>
 
-    <!-- Hero Portal Section (Two Big Cards) -->
-    <section class="hero-portal-section" id="about">
+    <!-- Hero Section with Brand Switcher -->
+    <section class="hero-section">
         <div class="container">
-            <div class="portal-header text-center">
-                <h1 class="portal-main-title" data-i18n="hero_title">شركة بيوت للحلول الذكية</h1>
-                <p class="portal-subtitle" data-i18n="hero_subtitle">Smart Living. Intelligent Business. (عيش بذكاء، وأدر أعمالك بذكاء)</p>
-                <p class="portal-desc max-w-600" data-i18n="hero_desc">
-                    نحن نربط التكنولوجيا بحياتك اليومية وأعمالك التجارية. اختر أحد برانداتنا أدناه لتكتشف تفاصيل الحلول والمحاكيات التفاعلية لكل منها.
-                </p>
+            <!-- Brand Switcher Tabs -->
+            <div class="brand-switcher">
+                <button class="switch-btn active" id="btn-lumora" onclick="switchBrand('lumora')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span data-i18n="hero_switch_lumora">LUMORA | لومورا (أفراد)</span>
+                </button>
+                <button class="switch-btn" id="btn-vexora" onclick="switchBrand('vexora')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    <span data-i18n="hero_switch_vexora">VEXORA | فيكسورا (شركات)</span>
+                </button>
             </div>
 
-            <!-- The Two Big Brand Cards -->
-            <div class="portal-grid">
-                <!-- Brand Box 1: Lumora (B2C Smart Home) -->
-                <div class="brand-portal-card lumora-card glass-card">
-                    <div class="card-glow-bg"></div>
-                    <div class="logo-backdrop">
-                        <img src="logo_lumora.png" alt="Lumora Logo" class="brand-portal-logo">
-                    </div>
-                    <div class="brand-badge tag-lumora" data-i18n="lumora_badge">أنظمة المنازل الذكية B2C</div>
-                    <h2 class="brand-card-title" data-i18n="lumora_title">لومورا | لأسلوب حياة ذكي ومريح</h2>
-                    <p class="brand-card-desc" data-i18n="lumora_desc">
-                        حوّل منزلك العادي إلى بيئة تفاعلية تفهم احتياجاتك وتوفر طاقتك. تحكّم في الإضاءة، التكييف، الأجهزة، والأمان بلمسة واحدة أو عبر الأوامر الصوتية.
-                    </p>
-                    
-                    <div class="brand-bullet-points">
-                        <div class="bullet-point">
-                            <span class="bullet-dot">✦</span>
-                            <span data-i18n="lumora_point_1">توفير حتى 30% من استهلاك الكهرباء بنظام التكييف الذكي.</span>
+            <!-- Hero Dynamic Content Grid -->
+            <div class="hero-grid">
+                <!-- Text Content Column -->
+                <div class="hero-text-content" id="hero-text">
+                    <!-- Lumora Content (Default) -->
+                    <div class="brand-content active" id="content-lumora">
+                        <div class="brand-badge tag-lumora" data-i18n="lumora_badge">منظومة المنزل الذكي المتكاملة</div>
+                        <h1 class="hero-title" data-i18n="lumora_hero_title">منزلك ينبض بالحياة مع <span class="highlight-lumora">LUMORA</span></h1>
+                        <p class="hero-desc" data-i18n="lumora_hero_desc">تحكّم في الإضاءة، التكييف، الأجهزة، والأمان بلمسة واحدة أو بأوامرك الصوتية. تجربة معيشية استثنائية توفر لك الراحة، التوفير، والأمان الكامل أينما كنت.</p>
+                        <div class="hero-benefits-list">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✦</span>
+                                <span data-i18n="hero_benefits_lumora_1">توفير حتى 30% من استهلاك الطاقة ذكياً.</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✦</span>
+                                <span data-i18n="hero_benefits_lumora_2">سيناريوهات ذكية مخصصة لأسلوب حياتك اليومي.</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✦</span>
+                                <span data-i18n="hero_benefits_lumora_3">حماية متطورة وتنبيهات فورية عند حدوث أي طارئ.</span>
+                            </div>
                         </div>
-                        <div class="bullet-point">
-                            <span class="bullet-dot">✦</span>
-                            <span data-i18n="lumora_point_2">سيناريوهات يومية مؤتمتة (وضع النوم، وضع السفر، وضع الترحيب).</span>
-                        </div>
-                        <div class="bullet-point">
-                            <span class="bullet-dot">✦</span>
-                            <span data-i18n="lumora_point_3">حماية تامة بفضل المستشعرات والإنذار المبكر للأعطال والحرائق.</span>
+                        <div class="hero-actions">
+                            <a href="#demo-section" class="cta-button cta-lumora" onclick="selectDemoProduct('lumora')" data-i18n="hero_cta_lumora">احجز ديمو منزلك الذكي</a>
+                            <a href="#simulator-section" class="secondary-button" data-i18n="hero_secondary_lumora">جرّب لوحة التحكم مجاناً</a>
                         </div>
                     </div>
 
-                    <div class="brand-card-actions">
-                        <a href="#lumora-showcase" class="brand-btn btn-lumora-primary" data-i18n="lumora_btn_explore">تصفح المحاكي التفاعلي</a>
-                        <a href="#demo-section" class="brand-btn btn-lumora-secondary" onclick="selectDemoProduct('lumora')" data-i18n="lumora_btn_demo">طلب ديمو لومورا</a>
+                    <!-- Vexora Content -->
+                    <div class="brand-content" id="content-vexora">
+                        <div class="brand-badge tag-vexora" data-i18n="vexora_badge">تحليلات الكاميرات بالذكاء الاصطناعي</div>
+                        <h1 class="hero-title" data-i18n="vexora_hero_title">أمن أعمالك بذكاء خارق مع <span class="highlight-vexora">VEXORA</span></h1>
+                        <p class="hero-desc" data-i18n="vexora_hero_desc">حوّل كاميرات المراقبة العادية إلى نظام أمان ذكي يكتشف التهديدات، الحرائق، التسلل، ويحلل حركة الزوار فورياً مع إرسال إشعارات لحظية لإنقاذ الموقف قبل فوات الأوان.</p>
+                        <div class="hero-benefits-list">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✦</span>
+                                <span data-i18n="hero_benefits_vexora_1">رصد فوري للتسلل، سرقة الأصول، وتواجد الغرباء.</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✦</span>
+                                <span data-i18n="hero_benefits_vexora_2">إشعارات تنبيه فورية على الموبايل واللوحة الإلكترونية.</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✦</span>
+                                <span data-i18n="hero_benefits_vexora_3">تحليلات ذكية لزيارات العملاء وأوقات الذروة.</span>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="#demo-section" class="cta-button cta-vexora" onclick="selectDemoProduct('vexora')" data-i18n="hero_cta_vexora">اطلب ديمو نظام الشركات</a>
+                            <a href="#simulator-section" class="secondary-button" data-i18n="hero_secondary_vexora">شاهد محاكاة الكاميرا الحية</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Brand Box 2: Vexora (B2B Video Analytics) -->
-                <div class="brand-portal-card vexora-card glass-card">
-                    <div class="card-glow-bg"></div>
-                    <div class="logo-backdrop">
-                        <img src="logo_vexora.png" alt="Vexora Logo" class="brand-portal-logo">
-                    </div>
-                    <div class="brand-badge tag-vexora" data-i18n="vexora_badge">تحليلات الكاميرات والذكاء الاصطناعي B2B</div>
-                    <h2 class="brand-card-title" data-i18n="vexora_title">فيكسورا | أمن أعمالك بذكاء خارق</h2>
-                    <p class="brand-card-desc" data-i18n="vexora_desc">
-                        قم بترقية كاميرات المراقبة الحالية لشركتك إلى نظام أمان رقمي فوري يكتشف التسلل، الحرائق، وسرقة الأصول مع إرسال إشعارات لحظية لإنقاذ الموقف فوراً.
-                    </p>
-                    
-                    <div class="brand-bullet-points">
-                        <div class="bullet-point">
-                            <span class="bullet-dot">✦</span>
-                            <span data-i18n="vexora_point_1">رصد فوري متطور للتسلل وتواجد الغرباء بعد ساعات العمل.</span>
+                <!-- Visual Media Column (Will display mock device / simulator previews) -->
+                <div class="hero-visual-content">
+                    <div class="device-mockup glass-card">
+                        <!-- Header of mockup -->
+                        <div class="mockup-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="mockup-title" id="mockup-header-title">لوحة تحكم لومورا للمنزل الذكي</div>
                         </div>
-                        <div class="bullet-point">
-                            <span class="bullet-dot">✦</span>
-                            <span data-i18n="vexora_point_2">تنبيهات فورية على الهاتف والبريد مع تحديد ذكي للأخطار.</span>
+                        
+                        <!-- Lumora Visual Preview -->
+                        <div class="mockup-body active" id="visual-lumora">
+                            <div class="smart-home-preview">
+                                <div class="home-stat-grid">
+                                    <div class="stat-card">
+                                        <span class="stat-label">الحالة العامة</span>
+                                        <span class="stat-value text-success">مؤمن بالكامل</span>
+                                    </div>
+                                    <div class="stat-card">
+                                        <span class="stat-label">درجة الحرارة</span>
+                                        <span class="stat-value">22°م</span>
+                                    </div>
+                                    <div class="stat-card">
+                                        <span class="stat-label">توفير الطاقة</span>
+                                        <span class="stat-value text-accent">+24%</span>
+                                    </div>
+                                </div>
+                                <div class="home-canvas">
+                                    <!-- Living room isometric vector view using SVG/HTML -->
+                                    <div class="room-preview-container">
+                                        <div class="house-layout">
+                                            <div class="room-node living-room glowing">
+                                                <div class="room-label">غرفة المعيشة</div>
+                                                <div class="device-status">الإضاءة: <span class="status-val light-status">نشطة</span></div>
+                                            </div>
+                                            <div class="room-node garden">
+                                                <div class="room-label">الحديقة الخارجية</div>
+                                                <div class="device-status">الرشاشات: <span class="status-val sprinkler-status">منطفئة</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mock-controls">
+                                    <button class="mock-btn active" id="btn-mock-light" onclick="toggleMockLight()">تغيير إضاءة المعيشة</button>
+                                    <button class="mock-btn" id="btn-mock-sprinkler" onclick="toggleMockSprinkler()">تشغيل الرشاشات</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bullet-point">
-                            <span class="bullet-dot">✦</span>
-                            <span data-i18n="vexora_point_3">تحليلات حركة الزوار (Heatmaps) وأوقات الذروة للمحلات.</span>
-                        </div>
-                    </div>
 
-                    <div class="brand-card-actions">
-                        <a href="#vexora-showcase" class="brand-btn btn-vexora-primary" data-i18n="vexora_btn_explore">شاهد الكاميرا الحية</a>
-                        <a href="#demo-section" class="brand-btn btn-vexora-secondary" onclick="selectDemoProduct('vexora')" data-i18n="vexora_btn_demo">طلب ديمو الشركات</a>
+                        <!-- Vexora Visual Preview -->
+                        <div class="mockup-body" id="visual-vexora">
+                            <div class="camera-preview">
+                                <div class="camera-feed-container">
+                                    <div class="camera-header">
+                                        <span class="cam-name">CAM 01 - المستودع الرئيسي</span>
+                                        <span class="rec-dot">● LIVE</span>
+                                    </div>
+                                    <div class="camera-video-mock">
+                                        <div class="scanner-line"></div>
+                                        <!-- Overlay bounding boxes -->
+                                        <div class="detection-overlay" id="mock-detection-box">
+                                            <span class="detection-label">غير معروف (94%)</span>
+                                        </div>
+                                        <div class="feed-grid">
+                                            <div class="feed-corner top-left"></div>
+                                            <div class="feed-corner top-right"></div>
+                                            <div class="feed-corner bottom-left"></div>
+                                            <div class="feed-corner bottom-right"></div>
+                                        </div>
+                                        <img src="" id="mock-camera-placeholder" style="display:none;" alt="Camera Mock">
+                                        <!-- Interactive SVG graphic acting as video -->
+                                        <svg viewBox="0 0 400 220" class="svg-video-mock">
+                                            <rect width="100%" height="100%" fill="#111827"/>
+                                            <!-- Warehouse background elements -->
+                                            <line x1="50" y1="200" x2="350" y2="200" stroke="#374151" stroke-width="4"/>
+                                            <rect x="80" y="100" width="80" height="100" fill="#1f2937" stroke="#4b5563"/>
+                                            <rect x="240" y="80" width="100" height="120" fill="#1f2937" stroke="#4b5563"/>
+                                            <!-- AI Scanner target -->
+                                            <circle id="ai-target-circle" cx="120" cy="140" r="15" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" stroke-width="2"/>
+                                            <line id="ai-target-line" x1="120" y1="140" x2="120" y2="180" stroke="#ef4444" stroke-dasharray="3,3"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ai-analytics-panel">
+                                    <div class="log-title">سجل التنبيهات الأمنية</div>
+                                    <div class="alert-log-container" id="alert-logs">
+                                        <div class="log-entry warning">
+                                            <span class="time">19:42:01</span>
+                                            <span class="msg">رصد حركة - منطقة البوابة 3</span>
+                                        </div>
+                                        <div class="log-entry normal">
+                                            <span class="time">19:40:15</span>
+                                            <span class="msg">مرور مركبة مصرحة - لوحة رقم 4829</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mock-controls">
+                                    <button class="mock-btn danger" onclick="triggerMockIncident()">محاكاة اختراق أمني (تنبيه)</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lumora Showcase Section (Details & Simulator) -->
-    <section class="brand-showcase-section lumora-theme" id="lumora-showcase">
+    <!-- Social Media Lead Magnets Section -->
+    <section class="lead-magnets-section" id="about">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">حلول ذكية تناسب احتياجاتك</span>
+                <h2 class="section-title">بيوت: نبني المستقبل الرقمي للأفراد والشركات</h2>
+                <p class="section-desc max-w-600">
+                    نوفر تقنيات تجعل الحياة أسهل وأكثر أماناً. لومورا تمنحك تحكماً مطلقاً في منزلك، وفيكسورا تمنحك عيوناً ذكية لا تنام لحماية منشآتك التجارية.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Card 1: Lumora B2C Guide -->
+                <div class="feature-card glass-card">
+                    <div class="card-icon icon-lumora">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3>دليل "توفير الطاقة في المنزل الذكي"</h3>
+                    <p>قم بتحميل كتابنا المجاني لتتعلم كيف يمكن لأنظمة لومورا توفير استهلاك الكهرباء بنسبة 30% مع زيادة رفاهية منزلك.</p>
+                    <a href="#demo-section" class="card-link color-lumora" onclick="selectLeadMagnet('كتاب توفير الطاقة لومورا')">احصل على نسختك المجانية الآن ←</a>
+                </div>
+
+                <!-- Card 2: Vexora B2B Audit -->
+                <div class="feature-card glass-card">
+                    <div class="card-icon icon-vexora">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+                    </div>
+                    <h3>تقييم أمني مجاني لكاميرات شركتك</h3>
+                    <p>أرسل لنا تفاصيل كاميرات المراقبة الحالية لشركتك، وسيقوم مهندسونا بعمل فحص أمني مجاني واقتراح حلول الترقية الذكية مع فيكسورا.</p>
+                    <a href="#demo-section" class="card-link color-vexora" onclick="selectLeadMagnet('تقييم أمني مجاني فيكسورا')">احجز جلسة الفحص المجانية ←</a>
+                </div>
+
+                <!-- Card 3: Interactive Demo benefits -->
+                <div class="feature-card glass-card">
+                    <div class="card-icon icon-beyout">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    </div>
+                    <h3>عرض حي ومباشر (Demo)</h3>
+                    <p>لا تعتمد على الكلام فقط. احجز ديمو مخصص على الهواء مباشرة مع مهندسينا لنريك الأنظمة تعمل في الوقت الحقيقي وتجيب على كل أسئلتك.</p>
+                    <a href="#demo-section" class="card-link" onclick="selectDemoProduct('both')">احجز ديمو مخصص الآن ←</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator Sandbox (Where users can "play" with both simulators side-by-side) -->
+    <section class="simulator-sandbox" id="simulator-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">منطقة التجربة التفاعلية</span>
+                <h2 class="section-title">اختبر الأنظمة بنفسك قبل حجز الموعد</h2>
+                <p class="section-desc max-w-600">قم بتجربة محاكاة التحكم بنظام لومورا للمنازل أو محاكاة ذكاء كاميرات فيكسورا لترى مفعول التكنولوجيا بنفسك.</p>
+            </div>
+
+            <!-- Central Simulator Box -->
+            <div class="sandbox-container glass-card">
+                <!-- Sandbox Selector Tabs -->
+                <div class="sandbox-tabs">
+                    <button class="tab-btn active" id="tab-lumora-sim" onclick="toggleSandboxSim('lumora')">لوحة تحكم لومورا الذكية</button>
+                    <button class="tab-btn" id="tab-vexora-sim" onclick="toggleSandboxSim('vexora')">كاميرات فيكسورا الذكية للشركات</button>
+                </div>
+
+                <!-- Lumora Sandbox Area -->
+                <div class="sandbox-content active" id="sandbox-lumora">
+                    <div class="sandbox-grid">
+                        <div class="simulator-visual">
+                            <div class="interactive-house">
+                                <!-- Interactive SVG of a smart villa floor plan -->
+                                <svg viewBox="0 0 500 350" class="house-svg">
+                                    <defs>
+                                        <radialGradient id="light-glow" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" stop-color="rgba(251, 191, 36, 0.4)" />
+                                            <stop offset="100%" stop-color="rgba(251, 191, 36, 0)" />
+                                        </radialGradient>
+                                        <radialGradient id="ac-glow" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" stop-color="rgba(34, 211, 238, 0.2)" />
+                                            <stop offset="100%" stop-color="rgba(34, 211, 238, 0)" />
+                                        </radialGradient>
+                                    </defs>
+                                    <!-- Base floor shape -->
+                                    <rect x="20" y="20" width="460" height="310" rx="10" fill="#1e293b" stroke="#475569" stroke-width="3"/>
+                                    <!-- Room Separators -->
+                                    <line x1="250" y1="20" x2="250" y2="330" stroke="#475569" stroke-width="2"/>
+                                    <line x1="20" y1="180" x2="480" y2="180" stroke="#475569" stroke-width="2"/>
+                                    
+                                    <!-- Room 1: Living Room -->
+                                    <rect id="glow-living" x="22" y="22" width="226" height="156" fill="url(#light-glow)" class="room-glow" style="display: block;"/>
+                                    <text x="50" y="50" fill="#94a3b8" font-family="Cairo" font-size="16" font-weight="bold">غرفة المعيشة</text>
+                                    
+                                    <!-- Room 2: Kitchen / Dining -->
+                                    <rect id="glow-kitchen" x="252" y="22" width="226" height="156" fill="url(#light-glow)" class="room-glow" style="display: none;"/>
+                                    <text x="280" y="50" fill="#94a3b8" font-family="Cairo" font-size="16" font-weight="bold">المطبخ</text>
+
+                                    <!-- Room 3: Master Bedroom -->
+                                    <rect id="glow-bedroom" x="22" y="182" width="226" height="146" fill="url(#light-glow)" class="room-glow" style="display: none;"/>
+                                    <rect id="ac-glow-bedroom" x="22" y="182" width="226" height="146" fill="url(#ac-glow)" class="room-ac-glow" style="display: none;"/>
+                                    <text x="50" y="210" fill="#94a3b8" font-family="Cairo" font-size="16" font-weight="bold">غرفة النوم الرئيسية</text>
+
+                                    <!-- Room 4: Garden / Exterior -->
+                                    <rect id="glow-garden" x="252" y="182" width="226" height="146" fill="none"/>
+                                    <text x="280" y="210" fill="#94a3b8" font-family="Cairo" font-size="16" font-weight="bold">الحديقة والمدخل</text>
+                                    <circle id="sprinkler-water-1" cx="300" cy="270" r="10" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="2,2" class="sprinkler-pulse" style="display: none;"/>
+                                    <circle id="sprinkler-water-2" cx="400" cy="270" r="15" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="2,2" class="sprinkler-pulse" style="display: none;"/>
+                                    
+                                    <!-- Smart Icons overlayed -->
+                                    <!-- Living room lamp -->
+                                    <path id="svg-lamp-living" d="M120 80h20l-10-15z" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+                                    <circle id="svg-lamp-light" cx="130" cy="95" r="15" fill="#fef08a" opacity="0.8"/>
+                                    
+                                    <!-- Security Locks -->
+                                    <g id="svg-lock-main" class="lock-secure" transform="translate(380, 230)">
+                                        <rect width="24" height="20" rx="3" fill="#10b981" id="lock-body"/>
+                                        <path d="M6 0v8h12v-8a6 6 0 0 0-12 0" fill="none" stroke="#10b981" stroke-width="4" id="lock-shackle"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="simulator-controls">
+                            <h3>أدوات التحكم بالمنزل</h3>
+                            <p class="small-desc">اضغط على المفاتيح أدناه لمحاكاة إرسال أوامر التحكم بالمنزل الذكي وشاهد الاستجابة الفورية بالرسم التخطيطي.</p>
+                            
+                            <div class="control-group">
+                                <div class="control-label-row">
+                                    <span>إضاءة غرفة المعيشة</span>
+                                    <label class="switch">
+                                        <input type="checkbox" id="chk-living-light" checked onchange="updateHouseSim()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="control-group">
+                                <div class="control-label-row">
+                                    <span>إضاءة المطبخ</span>
+                                    <label class="switch">
+                                        <input type="checkbox" id="chk-kitchen-light" onchange="updateHouseSim()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label-row">
+                                    <span>تكييف غرفة النوم (AC)</span>
+                                    <label class="switch">
+                                        <input type="checkbox" id="chk-bedroom-ac" onchange="updateHouseSim()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="ac-temp-control" id="ac-temp-wrapper" style="display:none;">
+                                    <span class="temp-val">درجة حرارة المكيف: <strong id="ac-temp-num">22</strong>°م</span>
+                                    <div class="temp-buttons">
+                                        <button onclick="changeAcTemp(-1)">-</button>
+                                        <button onclick="changeAcTemp(1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label-row">
+                                    <span>أمان قفل البوابة والحديقة</span>
+                                    <label class="switch">
+                                        <input type="checkbox" id="chk-security-system" checked onchange="updateHouseSim()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="security-status-text">
+                                    حالة البوابة: <strong id="lock-text" class="text-success">مغلقة ومؤمنة</strong>
+                                </div>
+                            </div>
+
+                            <div class="sim-feedback-msg" id="sim-feedback-lumora">
+                                أهلاً بك في لومورا! قم بتشغيل أو إطفاء الأجهزة لتجربة النظام الذكي.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vexora Sandbox Area -->
+                <div class="sandbox-content" id="sandbox-vexora">
+                    <div class="sandbox-grid">
+                        <div class="simulator-visual">
+                            <div class="vexora-camera-view glass-card">
+                                <div class="camera-lens-overlay">
+                                    <span class="fps">FPS: 30.00</span>
+                                    <span class="cam-id">BEYOUT-VEXORA-CAM-02</span>
+                                </div>
+                                <div class="camera-canvas">
+                                    <svg viewBox="0 0 500 300" class="camera-svg">
+                                        <rect width="100%" height="100%" fill="#090d16"/>
+                                        
+                                        <!-- Warehouse or store blueprint lines -->
+                                        <line x1="50" y1="250" x2="450" y2="250" stroke="#1e293b" stroke-width="2"/>
+                                        
+                                        <!-- Background structures -->
+                                        <!-- Safe vault / asset box -->
+                                        <rect x="360" y="160" width="70" height="90" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+                                        <circle cx="395" cy="205" r="10" fill="#0f172a" stroke="#334155"/>
+                                        <text x="395" y="240" font-family="Cairo" font-size="10" fill="#64748b" text-anchor="middle">خزانة الأصول</text>
+
+                                        <!-- Target Bounding Box -->
+                                        <g id="camera-target" style="display:none;">
+                                            <rect id="target-box" x="120" y="100" width="60" height="130" fill="none" stroke="#ef4444" stroke-width="2" class="pulse-border"/>
+                                            <!-- Corner tags for target -->
+                                            <line x1="120" y1="100" x2="135" y2="100" stroke="#ef4444" stroke-width="4"/>
+                                            <line x1="120" y1="100" x2="120" y2="115" stroke="#ef4444" stroke-width="4"/>
+                                            <line x1="180" y1="230" x2="165" y2="230" stroke="#ef4444" stroke-width="4"/>
+                                            <line x1="180" y1="230" x2="180" y2="215" stroke="#ef4444" stroke-width="4"/>
+                                            
+                                            <!-- Label -->
+                                            <rect x="120" y="80" width="80" height="20" fill="#ef4444"/>
+                                            <text x="125" y="94" font-family="Outfit" font-size="10" fill="#ffffff" font-weight="bold">INTRUDER 98%</text>
+
+                                            <!-- SVG intruder character -->
+                                            <circle cx="150" cy="120" r="12" fill="#ef4444"/>
+                                            <line x1="150" y1="132" x2="150" y2="190" stroke="#ef4444" stroke-width="4"/>
+                                            <line x1="150" y1="150" x2="130" y2="170" stroke="#ef4444" stroke-width="3"/>
+                                            <line x1="150" y1="150" x2="170" y2="170" stroke="#ef4444" stroke-width="3"/>
+                                            <line x1="150" y1="190" x2="135" y2="225" stroke="#ef4444" stroke-width="3"/>
+                                            <line x1="150" y1="190" x2="165" y2="225" stroke="#ef4444" stroke-width="3"/>
+                                        </g>
+
+                                        <!-- Scanning lasers -->
+                                        <line id="laser-line" x1="0" y1="40" x2="500" y2="40" stroke="rgba(34, 211, 238, 0.4)" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="simulator-controls">
+                            <h3>أدوات اختبار التحليل الذكي Vexora</h3>
+                            <p class="small-desc">تحكم بالكاميرا وقم بمحاكاة سيناريوهات حقيقية لرؤية رد فعل الذكاء الاصطناعي وكيفية رصد المخالفات فورياً.</p>
+                            
+                            <div class="scenario-buttons">
+                                <button class="scen-btn" onclick="runVexoraScenario('clear')">الوضع الطبيعي (تصفير الكاميرا)</button>
+                                <button class="scen-btn danger" onclick="runVexoraScenario('intruder')">محاكاة متسلل بعد ساعات العمل</button>
+                                <button class="scen-btn danger" onclick="runVexoraScenario('fire')">محاكاة خطر حريق/دخان</button>
+                            </div>
+
+                            <!-- Phone alert popup mockup -->
+                            <div class="phone-alert-mockup" id="phone-alert">
+                                <div class="phone-header">
+                                    <span class="carrier">Vexora Security System</span>
+                                    <span class="battery">⚡ 98%</span>
+                                </div>
+                                <div class="phone-body">
+                                    <div class="app-icon-small">V</div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">🚨 تنبيه أمني عاجل!</div>
+                                        <div class="alert-msg" id="phone-alert-msg">رصد كائن مجهول في منطقة خزانة الأصول. الكاميرا 02.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sim-feedback-msg" id="sim-feedback-vexora">
+                                اضغط على السيناريوهات أعلاه لرؤية كيف يقوم الذكاء الاصطناعي بتحليل البث وتنبيه صاحب العمل.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Step Demo Booking Form Section -->
+    <section class="demo-booking-section" id="demo-section">
+        <div class="container">
+            <div class="form-wrapper glass-card">
+                <div class="form-header text-center">
+                    <h2 class="form-title">ابدأ رحلتك معنا اليوم</h2>
+                    <p class="form-subtitle">احجز نسختك التجريبية والمجانية (Demo) وسيتواصل معك مستشارونا فورياً</p>
+                    
+                    <!-- Progress Bar for Multi-step Form -->
+                    <div class="form-progress">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <div class="progress-steps">
+                            <div class="step-node active" data-step="1">1</div>
+                            <div class="step-node" data-step="2">2</div>
+                            <div class="step-node" data-step="3">3</div>
+                            <div class="step-node" data-step="4">✓</div>
+                        </div>
+                        <div class="progress-labels">
+                            <span>المنتج المطلوب</span>
+                            <span>بياناتك</span>
+                            <span>التفاصيل والوقت</span>
+                            <span>تأكيد الطلب</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Form -->
+                <form id="demoForm" onsubmit="handleFormSubmit(event)">
+                    <!-- Step 1: Product Selection -->
+                    <div class="form-step active" data-step="1">
+                        <h3 class="step-section-title">ما هي الحلول التي تود تجربتها والتعرف عليها؟</h3>
+                        <div class="cards-select-grid">
+                            <!-- Option 1: Lumora -->
+                            <div class="select-card" id="select-card-lumora" onclick="setFormProduct('lumora')">
+                                <input type="radio" name="target_product" value="lumora" id="radio-lumora" style="display:none;">
+                                <div class="select-card-icon">🏠</div>
+                                <h4>لومورا (Lumora)</h4>
+                                <p>للأفراد والمنازل الذكية والشقق والفلل.</p>
+                                <span class="badge">B2C</span>
+                            </div>
+
+                            <!-- Option 2: Vexora -->
+                            <div class="select-card" id="select-card-vexora" onclick="setFormProduct('vexora')">
+                                <input type="radio" name="target_product" value="vexora" id="radio-vexora" style="display:none;">
+                                <div class="select-card-icon">👁️</div>
+                                <h4>فيكسورا (Vexora)</h4>
+                                <p>للشركات والمصانع ومراقبة وتحليل الفيديوهات بالكاميرات.</p>
+                                <span class="badge">B2B</span>
+                            </div>
+
+                            <!-- Option 3: Both -->
+                            <div class="select-card" id="select-card-both" onclick="setFormProduct('both')">
+                                <input type="radio" name="target_product" value="both" id="radio-both" style="display:none;">
+                                <div class="select-card-icon">💼</div>
+                                <h4>كليهما (لومورا وفيكسورا)</h4>
+                                <p>حلول متكاملة للمنازل والأعمال معاً.</p>
+                                <span class="badge">بيوت المتكاملة</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions-row">
+                            <span></span>
+                            <button type="button" class="btn-next" onclick="nextStep(2)">التالي ←</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Customer Contact Info -->
+                    <div class="form-step" data-step="2">
+                        <h3 class="step-section-title">أخبرنا بالمزيد عنك لنتمكن من التواصل معك</h3>
+                        <div class="form-fields-grid">
+                            <div class="input-group">
+                                <label for="cust_name">الاسم بالكامل <span class="required">*</span></label>
+                                <input type="text" id="cust_name" name="name" required placeholder="أدخل اسمك الكريم">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="cust_email">البريد الإلكتروني <span class="required">*</span></label>
+                                <input type="email" id="cust_email" name="email" required placeholder="name@company.com">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="cust_phone">رقم الهاتف / الواتساب <span class="required">*</span></label>
+                                <input type="tel" id="cust_phone" name="phone" required placeholder="+20 100 000 0000">
+                            </div>
+
+                            <!-- Company Details - Visible only if Vexora or Both are chosen -->
+                            <div class="input-group" id="company-field-group">
+                                <label for="company_name">اسم الشركة والنشاط <span class="required">*</span></label>
+                                <input type="text" id="company_name" name="company" placeholder="اسم شركتك أو نشاطك التجاري">
+                            </div>
+                        </div>
+
+                        <div class="form-actions-row">
+                            <button type="button" class="btn-prev" onclick="prevStep(1)">→ السابق</button>
+                            <button type="button" class="btn-next" onclick="nextStep(3)">التالي ←</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Scheduling & Details -->
+                    <div class="form-step" data-step="3">
+                        <h3 class="step-section-title">متى ترغب في عقد جلسة العرض (الديمو)؟</h3>
+                        <div class="form-fields-grid">
+                            <div class="input-group">
+                                <label for="demo_date">التاريخ المفضل <span class="required">*</span></label>
+                                <input type="date" id="demo_date" name="demo_date" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="demo_time">الوقت المفضل للاتصال <span class="required">*</span></label>
+                                <select id="demo_time" name="demo_time" required>
+                                    <option value="">اختر الوقت المناسب</option>
+                                    <option value="morning">صباحاً (9:00 ص - 12:00 م)</option>
+                                    <option value="afternoon">بعد الظهر (12:00 م - 4:00 م)</option>
+                                    <option value="evening">مساءً (4:00 م - 8:00 م)</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group span-2">
+                                <label for="cust_notes">أكبر تحدي أو متطلبات معينة تود مناقشتها؟</label>
+                                <textarea id="cust_notes" name="notes" rows="3" placeholder="مثال: أريد تأمين مستودع بضائع بمساحة 500 متر أو التحكم بالإضاءة عن بعد..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions-row">
+                            <button type="button" class="btn-prev" onclick="prevStep(2)">→ السابق</button>
+                            <button type="submit" class="btn-submit">تأكيد طلب الديمو مجاناً 🚀</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Success Message -->
+                    <div class="form-step" data-step="4">
+                        <div class="success-card text-center">
+                            <div class="success-animation-circle">
+                                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-success">شكراً لطلبك، <span id="success-user-name"></span>!</h3>
+                            <p class="success-desc">
+                                تم تسجيل طلبك بنجاح لحجز ديمو خاص بمنتجات <strong id="success-product"></strong>.
+                            </p>
+                            <div class="success-summary glass-card">
+                                <p><strong>موعدك المقترح:</strong> <span id="success-date"></span> في الفترة الـ <span id="success-time"></span></p>
+                                <p>سنقوم بإرسال رسالة تأكيد على واتساب وهاتفك برقم <strong><span id="success-phone"></span></strong> وتفاصيل الاجتماع الافتراضي خلال ساعة واحدة.</p>
+                            </div>
+                            <button type="button" class="btn-reset" onclick="resetForm()">طلب حجز جديد</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h4>بيوت (BEYOUT)</h4>
+                <p>مستشارك وشريكك التكنولوجي الموثوق لتصميم وبناء أنظمة التحكم الذكية وتحليلات الفيديو الأمنية.</p>
+            </div>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#lumora">لومورا للمنازل الذكية</a></li>
+                    <li><a href="#vexora">فيكسورا لتحليل الفيديو</a></li>
+                    <li><a href="#demo-section">حجز موعد ديمو</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>تابعنا على شبكاتنا الاجتماعية</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 شركة بيوت (Beyout). جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
+<section class="brand-showcase-section lumora-theme" id="lumora-showcase">
         <div class="container">
             <div class="showcase-grid">
                 <!-- Showcase Info Column -->
@@ -562,8 +1116,7 @@
                 </div>
 
                 <!-- The Form -->
-                <form id="demoForm" onsubmit="handleFormSubmit(event)" data-netlify="true" name="demo-requests">
-                    <input type="hidden" name="form-name" value="demo-requests">
+                <form id="demoForm" onsubmit="handleFormSubmit(event)">
                     <!-- Step 1: Product Selection -->
                     <div class="form-step active" data-step="1">
                         <h3 class="step-section-title" data-i18n="form_step1_title">ما هي الحلول التي تود تجربتها والتعرف عليها؟</h3>
@@ -734,6 +1287,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=1.0.1"></script>
+    <script src="app.js"></script>
 </body>
 </html>
