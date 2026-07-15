@@ -8,239 +8,178 @@
     <meta name="description" content="بيوت تقدم باقات أتمتة وتحكم ذكي بالكامل للمنازل والفلل والشقق الفاخرة في مصر. اختر باقتك المفضلة وسنتواصل معك فوراً.">
     <meta name="keywords" content="سمارت هوم, منزل ذكي, بيوت, Beyout, باقات سمارت هوم, تشطيب شقق, مصر">
     
-    <!-- Google Fonts: Cairo, Alexandria, Outfit -->
+    <!-- Google Fonts: Alexandria & Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=1.0.5">
+    <link rel="stylesheet" href="style.css?v=1.0.9">
 </head>
 <body class="theme-beyout">
 
     <!-- Sticky Frosted Header -->
     <header class="main-header">
         <div class="container header-container">
-            <div class="logo-area">
-                <a href="#"><img src="logo_beyout.png" alt="BEYOUT" class="header-logo"></a>
+            <!-- Left: Globe Language Selector -->
+            <div class="header-left">
+                <div class="lang-selector" onclick="toggleLanguage()">
+                    <svg class="globe-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span id="lang-switch-text">العربية</span>
+                    <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
             </div>
-            
+
+            <!-- Middle: Navigation Links -->
             <nav class="nav-links">
-                <a href="#about" class="nav-link" data-i18n="nav_about">من نحن</a>
-                <a href="#packages-section" class="nav-link" data-i18n="nav_packages">باقات الأتمتة</a>
-                <a href="#beyout-showcase" class="nav-link" data-i18n="nav_features">المميزات</a>
-                <a href="#beyout-sandbox" class="nav-link" data-i18n="nav_simulator">المحاكاة التفاعلية</a>
-                <a href="#demo-section" class="nav-link" data-i18n="nav_demo">حجز ديمو</a>
+                <a href="#about" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
+                <a href="#packages-section" class="nav-link" data-i18n="nav_solutions">الحلول</a>
+                <a href="#beyout-sandbox" class="nav-link" data-i18n="nav_products">المنتجات</a>
+                <a href="#demo-section" class="nav-link" data-i18n="nav_blog">المدونة</a>
+                <a href="#demo-section" class="nav-link" data-i18n="nav_contact">اتصل بنا</a>
                 <a href="https://vexora-ochre.vercel.app" class="nav-link link-external"><span data-i18n="nav_to_vexora">فيكسورا للأمن (B2B)</span> →</a>
             </nav>
-
-            <div class="header-actions">
-                <button class="lang-btn" id="lang-switch-btn" onclick="toggleLanguage()">English</button>
-                <a href="#demo-section" class="cta-button" data-i18n="nav_btn_demo">طلب ديمو مجاني</a>
-                <button class="menu-toggle" id="menu-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
+            
+            <!-- Right: Logo with Home Icon -->
+            <div class="header-right">
+                <a href="#" class="logo-link">
+                    <span class="logo-text">بيوت</span>
+                    <div class="logo-icon-container">
+                        <!-- Custom SVG Home Icon -->
+                        <svg class="logo-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                </a>
             </div>
+
+            <button class="menu-toggle" id="menu-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
-    <!-- Intro Header Section -->
-    <section class="intro-section" id="about">
-        <div class="container text-center">
-            <h1 class="portal-main-title" data-i18n="beyout_hero_title">شركة بيوت للمنازل الذكية</h1>
-            <p class="portal-subtitle" data-i18n="beyout_hero_subtitle">مستقبل الفخامة والتحكم والرفاهية الكاملة</p>
-        </div>
-    </section>
+    <!-- Custom Hero Banner (Matching Mockup) -->
+    <section class="mockup-hero" id="about">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container-grid">
+            <!-- Left: Premium Gold Switch Panel -->
+            <div class="hero-visual-col">
+                <div class="switch-glowing-frame">
+                    <img src="assets/smart_switch.jpg" alt="Beyout Smart Switch Panel" class="switch-mock-img">
+                </div>
+            </div>
 
-    <!-- Apple-style Main Hero Banner -->
-    <section class="apple-banner" id="beyout-hero">
-        <div class="banner-overlay-glow"></div>
-        <div class="container banner-container">
-            <div class="banner-text text-center">
-                <div class="logo-backdrop">
-                    <img src="logo_beyout.png" alt="Beyout Logo">
-                </div>
-                <h2 class="banner-title" data-i18n="beyout_banner_title">بيوت | لأسلوب حياة ذكي ومريح</h2>
-                <p class="banner-subtitle" data-i18n="beyout_banner_desc">حوّل منزلك العادي إلى بيئة تفاعلية تفهم احتياجاتك وتوفر طاقتك. تحكّم في الأجهزة والتكييف والأمان بلمسة واحدة أو بالصوت.</p>
-                <div class="banner-links">
-                    <a href="#packages-section" class="apple-link" data-i18n="beyout_btn_packages">تصفح باقات الأتمتة &gt;</a>
-                    <a href="#beyout-showcase" class="apple-link secondary" data-i18n="lumora_btn_explore">تصفح المحاكي التفاعلي &gt;</a>
-                </div>
+            <!-- Right: Hero Text & CTA -->
+            <div class="hero-text-col">
+                <h1 class="hero-main-title" data-i18n="beyout_hero_title">عيش الذكاء والأناقة في منزلك</h1>
+                <p class="hero-sub-text" data-i18n="beyout_hero_subtitle">حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.</p>
+                <a href="#packages-section" class="hero-cta-btn" data-i18n="btn_start_now">ابدأ الآن</a>
             </div>
         </div>
     </section>
 
-    <!-- Automation Packages Section (NEW) -->
+    <!-- Showcase & Packages Section -->
     <section class="packages-section-wrapper" id="packages-section">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle" data-i18n="packages_subtitle">باقات بيوت المخصصة</span>
-                <h2 class="section-title" data-i18n="packages_title">اختر الباقة المناسبة لمساحة منزلك</h2>
-                <p class="section-desc max-w-600" data-i18n="packages_desc">نقدم حلولاً ذكية متكاملة تناسب جميع المساحات بأسعار مرنة وعروض مخصصة بعد الاستشارة.</p>
-            </div>
-
             <div class="packages-grid">
                 <!-- Package 1: Studio -->
                 <div class="package-card glass-card">
-                    <div class="package-header">
-                        <span class="package-badge" data-i18n="pkg_badge_studio">مساحة مفتوحة</span>
-                        <h3 data-i18n="pkg_title_studio">باقة الاستوديو</h3>
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <!-- Blueprint plan svg icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18M3 15h18M15 3v18"/></svg>
+                        </div>
                     </div>
-                    <ul class="package-features">
-                        <li data-i18n="pkg_feat_studio_1">💡 تحكم ذكي كامل بالإضاءة (ON/OFF).</li>
-                        <li data-i18n="pkg_feat_studio_2">💎 مفاتيح زجاجية ذكية تعمل باللمس.</li>
-                        <li data-i18n="pkg_feat_studio_3">🔒 مستشعر ذكي لتسريب الغاز الطبيعي.</li>
-                        <li data-i18n="pkg_feat_studio_4">📱 التحكم والمراقبة بالكامل عبر الموبايل.</li>
-                    </ul>
-                    <div class="package-pricing">
-                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
-                    </div>
-                    <button class="package-cta" onclick="selectPackage('باقة الاستوديو')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
-                </div>
-
-                <!-- Package 2: 2-Room Apartment -->
-                <div class="package-card glass-card">
-                    <div class="package-header">
-                        <span class="package-badge" data-i18n="pkg_badge_2room">شقة متوسطة</span>
-                        <h3 data-i18n="pkg_title_2room">شقة غرفتين وصالة</h3>
-                    </div>
-                    <ul class="package-features">
-                        <li data-i18n="pkg_feat_2room_1">💡 إضاءة ذكية لغرفتين نوم وصالة المعيشة.</li>
-                        <li data-i18n="pkg_feat_2room_2">❄️ تحكم ذكي بمكيف الهواء والتكييفات.</li>
-                        <li data-i18n="pkg_feat_2room_3">🚶‍♂️ مستشعرات حركة ذكية لإضاءة الممرات تلقائياً.</li>
-                        <li data-i18n="pkg_feat_2room_4">🔒 مستشعر أمان المطبخ وقفل الغاز الرئيسي.</li>
-                    </ul>
-                    <div class="package-pricing">
-                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
-                    </div>
-                    <button class="package-cta" onclick="selectPackage('باقة شقة غرفتين وصالة')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
-                </div>
-
-                <!-- Package 3: 3-Room Apartment -->
-                <div class="package-card glass-card highlighted">
-                    <div class="package-ribbon" data-i18n="pkg_ribbon_popular">الأكثر طلباً ⭐</div>
-                    <div class="package-header">
-                        <span class="package-badge" data-i18n="pkg_badge_3room">شقة عائلية</span>
-                        <h3 data-i18n="pkg_title_3room">شقة ثلاث غرف وصالة</h3>
-                    </div>
-                    <ul class="package-features">
-                        <li data-i18n="pkg_feat_3room_1">🛋️ تحكم كامل بالستائر الكهربائية أوتوماتيكياً.</li>
-                        <li data-i18n="pkg_feat_3room_2">❄️ تحكم بالتكييفات وسخانات المياه.</li>
-                        <li data-i18n="pkg_feat_3room_3">🌈 إضاءة ديكورية تفاعلية مدمجة للريسبشن.</li>
-                        <li data-i18n="pkg_feat_3room_4">💧 نظام رصد تسريب المياه والفيضان الذكي.</li>
-                        <li data-i18n="pkg_feat_3room_5">🗣️ توافق كامل مع التحكم الصوتي (Alexa/Siri).</li>
-                    </ul>
-                    <div class="package-pricing">
-                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
-                    </div>
-                    <button class="package-cta" onclick="selectPackage('باقة شقة ثلاث غرف وصالة')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
-                </div>
-
-                <!-- Package 4: Duplex -->
-                <div class="package-card glass-card">
-                    <div class="package-header">
-                        <span class="package-badge" data-i18n="pkg_badge_duplex">شقة طابقين</span>
-                        <h3 data-i18n="pkg_title_duplex">شقة دوبلكس</h3>
-                    </div>
-                    <ul class="package-features">
-                        <li data-i18n="pkg_feat_duplex_1">🚪 تحكم ذكي ببوابات الشقة وقفل البصمة.</li>
-                        <li data-i18n="pkg_feat_duplex_2">🎬 تفعيل سيناريو وضع السينما والمسرح المنزلي.</li>
-                        <li data-i18n="pkg_feat_duplex_3">🔌 مقابس ذكية (Smart Plugs) لحماية الأجهزة.</li>
-                        <li data-i18n="pkg_feat_duplex_4">🛡️ تأمين شامل للمخارج والأدوار المتعددة.</li>
-                    </ul>
-                    <div class="package-pricing">
-                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
-                    </div>
-                    <button class="package-cta" onclick="selectPackage('باقة شقة دوبلكس')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
-                </div>
-
-                <!-- Package 5: Villa -->
-                <div class="package-card glass-card">
-                    <div class="package-header">
-                        <span class="package-badge" data-i18n="pkg_badge_villa">فيلا فاخرة</span>
-                        <h3 data-i18n="pkg_title_villa">الباقة الفاخرة للفلل</h3>
-                    </div>
-                    <ul class="package-features">
-                        <li data-i18n="pkg_feat_villa_1">🌿 نظام ري الحديقة واللاندسكيب الذكي.</li>
-                        <li data-i18n="pkg_feat_villa_2">🚗 تحكم تلقائي ببوابات الجراج والسيارات.</li>
-                        <li data-i18n="pkg_feat_villa_3">✈️ وضع السفر الذكي ومحاكاة الوجود للتأمين.</li>
-                        <li data-i18n="pkg_feat_villa_4">🏊‍♂️ تحكم ذكي بمواعيد فلترة وتنظيف المسبح.</li>
-                        <li data-i18n="pkg_feat_villa_5">🛡️ ضمان كامل لمدة 5 سنوات وصيانة دورية مجانية.</li>
-                    </ul>
-                    <div class="package-pricing">
-                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
-                    </div>
-                    <button class="package-cta" onclick="selectPackage('باقة الفيلا الفاخرة')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Beyout Showcase Section (Interactive Simulator) -->
-    <section class="brand-showcase-section lumora-theme" id="beyout-showcase">
-        <div class="container">
-            <div class="showcase-grid">
-                <!-- Showcase Info Column -->
-                <div class="showcase-info">
-                    <h3 class="showcase-title" data-i18n="lumora_showcase_title">عيش الرفاهية الكاملة في منزلك الذكي</h3>
-                    <p class="showcase-desc" data-i18n="lumora_showcase_desc">نظام بيوت يمنحك راحة البال والتحكم الكامل. لا داعي للقلق بشأن نسيان الإنارة أو التكييف قيد العمل، حيث تقوم المستشعرات الذكية بضبط كل شيء تلقائياً.</p>
                     
-                    <!-- B2C Lead Magnet Guide -->
-                    <div class="magnet-widget glass-card">
-                        <div class="magnet-icon">💡</div>
-                        <div class="magnet-details">
-                            <h4 data-i18n="lumora_magnet_title">كتيب "توفير الطاقة في المنزل الذكي"</h4>
-                            <p data-i18n="lumora_magnet_desc">احصل على دليلك المجاني لتكتشف كيف توفر 30% من فواتير الكهرباء.</p>
-                            <a href="#demo-section" class="magnet-action-link" onclick="selectLeadMagnet('كتاب توفير الطاقة بيوت')" data-i18n="lumora_magnet_btn">تحميل الكتيب مجاناً ←</a>
-                        </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_studio.jpg" alt="Studio Package Layout" class="package-card-img">
                     </div>
+
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_studio">حزمة الاستوديو</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_all">حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.</p>
+                    </div>
+
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_studio_1_mock">نظام إضاءة ذكي</li>
+                        <li data-i18n="pkg_feat_studio_2_mock">تحكم في المناخ</li>
+                        <li data-i18n="pkg_feat_studio_3_mock">مساعد صوتي</li>
+                        <li data-i18n="pkg_feat_studio_4_mock">أمان متكامل</li>
+                    </ul>
+
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_studio">السعر: 7,500 ر.س</span>
+                    </div>
+
+                    <button class="package-cta" onclick="selectPackage('حزمة الاستوديو')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
                 </div>
 
-                <!-- Showcase Simulator Column -->
-                <div class="showcase-simulator">
-                    <div class="device-mockup glass-card">
-                        <div class="mockup-header">
-                            <div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-                            <div class="mockup-title" data-i18n="lumora_mockup_title">لوحة تحكم بيوت للمنزل الذكي</div>
-                        </div>
-                        <div class="mockup-body active">
-                            <div class="smart-home-preview">
-                                <div class="home-stat-grid">
-                                    <div class="stat-card">
-                                        <span class="stat-label" data-i18n="lumora_stat_status_lbl">الحالة العامة</span>
-                                        <span class="stat-value text-success" data-i18n="lumora_stat_status_val">مؤمن بالكامل</span>
-                                    </div>
-                                    <div class="stat-card">
-                                        <span class="stat-label" data-i18n="lumora_stat_temp_lbl">درجة الحرارة</span>
-                                        <span class="stat-value">22°م</span>
-                                    </div>
-                                    <div class="stat-card">
-                                        <span class="stat-label" data-i18n="lumora_stat_energy_lbl">توفير الطاقة</span>
-                                        <span class="stat-value text-accent">+24%</span>
-                                    </div>
-                                </div>
-                                <div class="home-canvas">
-                                    <div class="room-preview-container">
-                                        <div class="house-layout">
-                                            <div class="room-node living-room glowing" id="hero-living-room">
-                                                <div class="room-label" data-i18n="lumora_room_living">غرفة المعيشة</div>
-                                                <div class="device-status"><span data-i18n="lumora_status_light">الإضاءة:</span> <span class="status-val" id="hero-light-status" data-i18n="lumora_status_active">نشطة</span></div>
-                                            </div>
-                                            <div class="room-node garden" id="hero-garden">
-                                                <div class="room-label" data-i18n="lumora_room_garden">الحديقة الخارجية</div>
-                                                <div class="device-status"><span data-i18n="lumora_status_sprinklers">الرشاشات:</span> <span class="status-val" id="hero-sprinkler-status" data-i18n="lumora_status_inactive">منطفئة</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mock-controls">
-                                    <button class="mock-btn active" id="btn-hero-light" onclick="toggleMockLight()" data-i18n="lumora_btn_light_toggle">تغيير إضاءة المعيشة</button>
-                                    <button class="mock-btn" id="btn-hero-sprinkler" onclick="toggleMockSprinkler()" data-i18n="lumora_btn_sprinkler_toggle">تشغيل الرشاشات</button>
-                                </div>
-                            </div>
+                <!-- Package 2: Apartment -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <!-- Building plan svg icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/><line x1="9" y1="16" x2="15" y2="16"/><path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg>
                         </div>
                     </div>
+
+                    <div class="package-img-container">
+                        <img src="assets/pkg_apartment.jpg" alt="Apartment Package Layout" class="package-card-img">
+                    </div>
+
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_apartment">حزمة الشقة</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_all">حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.</p>
+                    </div>
+
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_apartment_1_mock">تحكم بالإضاءة والستائر</li>
+                        <li data-i18n="pkg_feat_apartment_2_mock">تكييف ذكي</li>
+                        <li data-i18n="pkg_feat_apartment_3_mock">أجهزة متعددة</li>
+                        <li data-i18n="pkg_feat_apartment_4_mock">كاميرات مراقبة</li>
+                    </ul>
+
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_apartment">السعر: 18,900 ر.س</span>
+                    </div>
+
+                    <button class="package-cta" onclick="selectPackage('حزمة الشقة')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
+
+                <!-- Package 3: Villa -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <!-- Villa plan svg icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="package-img-container">
+                        <img src="assets/pkg_villa.jpg" alt="Villa Package Layout" class="package-card-img">
+                    </div>
+
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_villa">حزمة الفيلا</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_all">حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.</p>
+                    </div>
+
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_villa_1_mock">أتمتة كاملة للمنزل</li>
+                        <li data-i18n="pkg_feat_villa_2_mock">سيناريوهات مخصصة</li>
+                        <li data-i18n="pkg_feat_villa_3_mock">نظام أمني متطور</li>
+                        <li data-i18n="pkg_feat_villa_4_mock">سينما منزلية</li>
+                        <li data-i18n="pkg_feat_villa_5_mock">حديقة ذكية</li>
+                    </ul>
+
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_villa">السعر: 45,000 ر.س</span>
+                    </div>
+
+                    <button class="package-cta" onclick="selectPackage('حزمة الفيلا')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
                 </div>
             </div>
         </div>
@@ -272,9 +211,9 @@
                                             <stop offset="100%" stop-color="rgba(34, 211, 238, 0)" />
                                         </radialGradient>
                                     </defs>
-                                    <rect x="20" y="20" width="460" height="310" rx="10" fill="#1e293b" stroke="#475569" stroke-width="3"/>
-                                    <line x1="250" y1="20" x2="250" y2="330" stroke="#475569" stroke-width="2"/>
-                                    <line x1="20" y1="180" x2="480" y2="180" stroke="#475569" stroke-width="2"/>
+                                    <rect x="20" y="20" width="460" height="310" rx="10" fill="#121620" stroke="#d4af37" stroke-width="2"/>
+                                    <line x1="250" y1="20" x2="250" y2="330" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                                    <line x1="20" y1="180" x2="480" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
                                     <rect id="glow-living" x="22" y="22" width="226" height="156" fill="url(#light-glow)" class="room-glow" style="display: block;"/>
                                     <text x="50" y="50" fill="#94a3b8" font-family="Cairo" font-size="16" font-weight="bold" data-i18n="sandbox_house_living">غرفة المعيشة</text>
                                     <rect id="glow-kitchen" x="252" y="22" width="226" height="156" fill="url(#light-glow)" class="room-glow" style="display: none;"/>
@@ -391,7 +330,12 @@
                         <h3 class="step-section-title" data-i18n="form_step1_title_beyout">هل ترغب في ترقية منزلك بالكامل؟</h3>
                         <div class="cards-select-grid single-card-center">
                             <div class="select-card selected" id="select-card-lumora">
-                                <div class="select-card-logo"><img src="logo_beyout.png" alt="Beyout" class="form-select-logo"></div>
+                                <div class="select-card-logo">
+                                    <svg class="form-logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                        <polyline points="9 22 9 12 15 12 15 22"/>
+                                    </svg>
+                                </div>
                                 <h4>بيوت (Beyout Smart Home)</h4>
                                 <p data-i18n="form_product_lumora_desc">أنظمة التحكم الكاملة والمنازل الذكية الفاخرة.</p>
                                 <span class="badge">B2C</span>
@@ -419,10 +363,6 @@
                                 <label for="cust_phone"><span data-i18n="form_lbl_phone">رقم الهاتف / الواتساب </span><span class="required">*</span></label>
                                 <input type="tel" id="cust_phone" name="phone" required placeholder="+20 100 000 0000" data-placeholder-ar="+20 100 000 0000" data-placeholder-en="+20 100 000 0000">
                             </div>
-                            <div class="input-group" id="company-field-group" style="display: none;">
-                                <label for="company_name"><span data-i18n="form_lbl_company">اسم الشركة والنشاط </span><span class="required">*</span></label>
-                                <input type="text" id="company_name" name="company" placeholder="اسم شركتك أو نشاطك التجاري" data-placeholder-ar="اسم شركتك أو نشاطك التجاري" data-placeholder-en="Your company name or field">
-                            </div>
                         </div>
                         <div class="form-actions-row">
                             <button type="button" class="btn-prev" onclick="prevStep(1)" data-i18n="form_btn_prev">→ السابق</button>
@@ -449,7 +389,7 @@
                             </div>
                             <div class="input-group span-2">
                                 <label for="cust_notes" data-i18n="form_lbl_notes_beyout">أكبر تحدي أو متطلبات معينة تود مناقشتها؟</label>
-                                <textarea id="cust_notes" name="notes" rows="3" placeholder="مثال: تشطيب فيلا جديدة بالكامل..." data-placeholder-ar="مثال: تشطيب فيلا جديدة بالكامل..." data-placeholder-en="E.g., Finishing a new smart villa..."></textarea>
+                                <textarea id="cust_notes" name="notes" rows="3" placeholder="مثال: أريد حجز الباقة وحساب الأتمتة..." data-placeholder-ar="مثال: أريد حجز الباقة وحساب الأتمتة..." data-placeholder-en="E.g., I want to book the package..."></textarea>
                             </div>
                         </div>
                         <div class="form-actions-row">
@@ -485,7 +425,15 @@
     <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-about">
-                <img src="logo_beyout.png" alt="BEYOUT" class="footer-logo">
+                <a href="#" class="logo-link">
+                    <span class="logo-text">بيوت</span>
+                    <div class="logo-icon-container">
+                        <svg class="logo-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                </a>
                 <p data-i18n="footer_about_text_beyout">مستشارك وشريكك التكنولوجي الموثوق لتصميم وبناء أنظمة التحكم والمنازل الذكية الفاخرة.</p>
             </div>
             <div class="footer-links">
@@ -493,9 +441,7 @@
                 <ul>
                     <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
                     <li><a href="#packages-section" data-i18n="nav_packages">باقات الأتمتة</a></li>
-                    <li><a href="#beyout-showcase" data-i18n="nav_features">المميزات</a></li>
                     <li><a href="#beyout-sandbox" data-i18n="nav_simulator">المحاكاة التفاعلية</a></li>
-                    <li><a href="https://vexora-ochre.vercel.app" data-i18n="nav_to_vexora">فيكسورا للأمن (B2B)</a></li>
                 </ul>
             </div>
             <div class="footer-social">
@@ -516,6 +462,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=1.0.5"></script>
+    <script src="app.js?v=1.0.9"></script>
 </body>
 </html>
