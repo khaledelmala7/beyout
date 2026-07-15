@@ -313,6 +313,17 @@ function handleFormSubmit(event) {
     .then(() => console.log("Lead captured by FormSubmit successfully"))
     .catch((error) => console.error("Error submitting to FormSubmit:", error));
 
+    // Redirect to WhatsApp with pre-filled details to the owner
+    const ownerPhone = "201064334334";
+    const msg = `مرحباً بيوت، أود حجز موعد استشارة:
+الاسم: ${name}
+الهاتف: ${phone}
+التاريخ المفضل: ${dateVal}
+الفترة: ${timeLabel}
+ملاحظات: ${leadData.notes || 'لا يوجد'}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${ownerPhone}&text=${encodeURIComponent(msg)}`;
+    window.open(whatsappUrl, '_blank');
+
     // Show step 4
     nextStep(4);
 }
