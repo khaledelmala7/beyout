@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=1.0.9">
+    <link rel="stylesheet" href="style.css?v=1.1.2">
 </head>
 <body class="theme-beyout">
 
@@ -22,9 +22,9 @@
         <div class="container header-container">
             <!-- Left: Globe Language Selector -->
             <div class="header-left">
-                <div class="lang-selector" onclick="toggleLanguage()">
+                <div class="lang-selector" id="lang-switch-btn" onclick="toggleLanguage()">
                     <svg class="globe-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    <span id="lang-switch-text">العربية</span>
+                    <span id="lang-switch-text">English</span>
                     <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
                 </div>
             </div>
@@ -44,7 +44,6 @@
                 <a href="#" class="logo-link">
                     <span class="logo-text">بيوت</span>
                     <div class="logo-icon-container">
-                        <!-- Custom SVG Home Icon -->
                         <svg class="logo-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                             <polyline points="9 22 9 12 15 12 15 22"/>
@@ -61,7 +60,7 @@
         </div>
     </header>
 
-    <!-- Custom Hero Banner (Matching Mockup) -->
+    <!-- Custom Hero Banner -->
     <section class="mockup-hero" id="about">
         <div class="hero-bg-overlay"></div>
         <div class="container hero-container-grid">
@@ -81,105 +80,170 @@
         </div>
     </section>
 
-    <!-- Showcase & Packages Section -->
+    <!-- 6 Packages Section -->
     <section class="packages-section-wrapper" id="packages-section">
         <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle" data-i18n="packages_subtitle">باقات بيوت المخصصة</span>
+                <h2 class="section-title" data-i18n="packages_title">اختر الباقة المناسبة لمساحة منزلك</h2>
+                <p class="section-desc max-w-600" data-i18n="packages_desc">نقدم حلولاً ذكية متكاملة تناسب جميع المساحات بأسعار مرنة وعروض مخصصة بعد الاستشارة.</p>
+            </div>
+
             <div class="packages-grid">
-                <!-- Package 1: Studio -->
+                <!-- Package 1: Bodyguard (للمخازن) -->
                 <div class="package-card glass-card">
                     <div class="card-icon-header">
                         <div class="circular-icon">
-                            <!-- Blueprint plan svg icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_warehouse.jpg" alt="Bodyguard Package" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_bodyguard">باقة الحارس الشخصي (للمخازن)</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_bodyguard">حلول تأمين ذكية متطورة للمخازن وأمن الأصول.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_bodyguard_1">🚶‍♂️ حساس حركة ذكي لرصد الحركة المشبوهة.</li>
+                        <li data-i18n="pkg_feat_bodyguard_2">🚨 سرينة إنذار قوية وصاخبة لردع المتسللين.</li>
+                        <li data-i18n="pkg_feat_bodyguard_3">📱 تنبيه فوري لحظي بالثواني على الموبايل.</li>
+                        <li data-i18n="pkg_feat_bodyguard_4">🛡️ تأمين كامل للمخازن والمستودعات.</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة الحارس الشخصي (للمخازن)')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
+
+                <!-- Package 2: Studio -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18M3 15h18M15 3v18"/></svg>
                         </div>
                     </div>
-                    
                     <div class="package-img-container">
-                        <img src="assets/pkg_studio.jpg" alt="Studio Package Layout" class="package-card-img">
+                        <img src="assets/pkg_studio.jpg" alt="Studio Package" class="package-card-img">
                     </div>
-
                     <div class="package-header">
-                        <h3 data-i18n="pkg_title_studio">حزمة الاستوديو</h3>
-                        <p class="pkg-card-desc" data-i18n="pkg_desc_all">حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.</p>
+                        <h3 data-i18n="pkg_title_studio">باقة الاستوديو</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_studio">أتمتة وحلول ذكية مخصصة للاستوديوهات والمساحات المفتوحة.</p>
                     </div>
-
                     <ul class="package-features">
-                        <li data-i18n="pkg_feat_studio_1_mock">نظام إضاءة ذكي</li>
-                        <li data-i18n="pkg_feat_studio_2_mock">تحكم في المناخ</li>
-                        <li data-i18n="pkg_feat_studio_3_mock">مساعد صوتي</li>
-                        <li data-i18n="pkg_feat_studio_4_mock">أمان متكامل</li>
+                        <li data-i18n="pkg_feat_studio_1">💡 تحكم ذكي كامل بالإضاءة (ON/OFF).</li>
+                        <li data-i18n="pkg_feat_studio_2">💎 مفاتيح زجاجية ذكية تعمل باللمس.</li>
+                        <li data-i18n="pkg_feat_studio_3">🔒 مستشعر ذكي لتسريب الغاز الطبيعي.</li>
+                        <li data-i18n="pkg_feat_studio_4">📱 التحكم والمراقبة بالكامل عبر الموبايل.</li>
                     </ul>
-
                     <div class="package-pricing">
-                        <span class="price-val" data-i18n="price_studio">السعر: 7,500 ر.س</span>
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
                     </div>
-
-                    <button class="package-cta" onclick="selectPackage('حزمة الاستوديو')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                    <button class="package-cta" onclick="selectPackage('باقة الاستوديو')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
                 </div>
 
-                <!-- Package 2: Apartment -->
+                <!-- Package 3: 2-Room Apartment -->
                 <div class="package-card glass-card">
                     <div class="card-icon-header">
                         <div class="circular-icon">
-                            <!-- Building plan svg icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/><line x1="9" y1="16" x2="15" y2="16"/><path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
                         </div>
                     </div>
-
                     <div class="package-img-container">
-                        <img src="assets/pkg_apartment.jpg" alt="Apartment Package Layout" class="package-card-img">
+                        <img src="assets/pkg_apartment.jpg" alt="2-Room Apartment Package" class="package-card-img">
                     </div>
-
                     <div class="package-header">
-                        <h3 data-i18n="pkg_title_apartment">حزمة الشقة</h3>
-                        <p class="pkg-card-desc" data-i18n="pkg_desc_all">حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.</p>
+                        <h3 data-i18n="pkg_title_2room">باقة شقة غرفتين</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_2room">أتمتة ذكية متكاملة تناسب الشقق ذات الغرفتين وصالة.</p>
                     </div>
-
                     <ul class="package-features">
-                        <li data-i18n="pkg_feat_apartment_1_mock">تحكم بالإضاءة والستائر</li>
-                        <li data-i18n="pkg_feat_apartment_2_mock">تكييف ذكي</li>
-                        <li data-i18n="pkg_feat_apartment_3_mock">أجهزة متعددة</li>
-                        <li data-i18n="pkg_feat_apartment_4_mock">كاميرات مراقبة</li>
+                        <li data-i18n="pkg_feat_2room_1">💡 إضاءة ذكية لغرفتين نوم وصالة المعيشة.</li>
+                        <li data-i18n="pkg_feat_2room_2">❄️ تحكم ذكي بمكيف الهواء والتكييفات.</li>
+                        <li data-i18n="pkg_feat_2room_3">🚶‍♂️ مستشعرات حركة ذكية لإضاءة الممرات تلقائياً.</li>
+                        <li data-i18n="pkg_feat_2room_4">🔒 مستشعر أمان المطبخ وقفل الغاز الرئيسي.</li>
                     </ul>
-
                     <div class="package-pricing">
-                        <span class="price-val" data-i18n="price_apartment">السعر: 18,900 ر.س</span>
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
                     </div>
-
-                    <button class="package-cta" onclick="selectPackage('حزمة الشقة')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                    <button class="package-cta" onclick="selectPackage('باقة شقة غرفتين')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
                 </div>
 
-                <!-- Package 3: Villa -->
+                <!-- Package 4: 3-Room Apartment -->
                 <div class="package-card glass-card">
                     <div class="card-icon-header">
                         <div class="circular-icon">
-                            <!-- Villa plan svg icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_apartment_3room.jpg" alt="3-Room Apartment Package" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_3room">باقة شقة ثلاث غرف</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_3room">تحكم شامل للشقق الكبيرة والعائلية لرفاهية لا تقاوم.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_3room_1">🛋️ تحكم كامل بالستائر الكهربائية والتكييفات.</li>
+                        <li data-i18n="pkg_feat_3room_2">🌈 إضاءة ديكورية تفاعلية مدمجة للريسبشن.</li>
+                        <li data-i18n="pkg_feat_3room_3">💧 نظام رصد تسريب المياه والفيضان الذكي.</li>
+                        <li data-i18n="pkg_feat_3room_4">🗣️ توافق كامل مع التحكم الصوتي (Alexa/Siri).</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة شقة ثلاث غرف')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
+
+                <!-- Package 5: Duplex -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                         </div>
                     </div>
-
                     <div class="package-img-container">
-                        <img src="assets/pkg_villa.jpg" alt="Villa Package Layout" class="package-card-img">
+                        <img src="assets/pkg_duplex.jpg" alt="Duplex Package" class="package-card-img">
                     </div>
-
                     <div class="package-header">
-                        <h3 data-i18n="pkg_title_villa">حزمة الفيلا</h3>
-                        <p class="pkg-card-desc" data-i18n="pkg_desc_all">حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.</p>
+                        <h3 data-i18n="pkg_title_duplex">باقة شقة دوبلكس</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_duplex">تحكم ذكي وأمان شامل متقاطع للشقق ذات الطابقين.</p>
                     </div>
-
                     <ul class="package-features">
-                        <li data-i18n="pkg_feat_villa_1_mock">أتمتة كاملة للمنزل</li>
-                        <li data-i18n="pkg_feat_villa_2_mock">سيناريوهات مخصصة</li>
-                        <li data-i18n="pkg_feat_villa_3_mock">نظام أمني متطور</li>
-                        <li data-i18n="pkg_feat_villa_4_mock">سينما منزلية</li>
-                        <li data-i18n="pkg_feat_villa_5_mock">حديقة ذكية</li>
+                        <li data-i18n="pkg_feat_duplex_1">🚪 تحكم ذكي ببوابات الشقة وقفل البصمة.</li>
+                        <li data-i18n="pkg_feat_duplex_2">🎬 تفعيل سيناريو وضع السينما والمسرح المنزلي.</li>
+                        <li data-i18n="pkg_feat_duplex_3">🔌 مقابس ذكية (Smart Plugs) لحماية الأجهزة.</li>
+                        <li data-i18n="pkg_feat_duplex_4">🛡️ تأمين شامل للمخارج والأدوار المتعددة.</li>
                     </ul>
-
                     <div class="package-pricing">
-                        <span class="price-val" data-i18n="price_villa">السعر: 45,000 ر.س</span>
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
                     </div>
+                    <button class="package-cta" onclick="selectPackage('باقة شقة دوبلكس')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
 
-                    <button class="package-cta" onclick="selectPackage('حزمة الفيلا')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                <!-- Package 6: Villa -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_villa.jpg" alt="Villa Package" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_villa">باقة فيلا (أرضي وأول وروف)</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_villa">أتمتة متكاملة ثلاثية المستويات للفلل والقصور والحدائق.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_villa_1">🌿 نظام ري الحديقة واللاندسكيب الذكي.</li>
+                        <li data-i18n="pkg_feat_villa_2">🚗 تحكم تلقائي ببوابات الجراج والسيارات.</li>
+                        <li data-i18n="pkg_feat_villa_3">✈️ وضع السفر ومحاكاة الوجود للتأمين.</li>
+                        <li data-i18n="pkg_feat_villa_4">🏊‍♂️ تحكم ذكي بالطوابق الثلاثة (أرضي، أول، وروف).</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة فيلا (أرضي وأول وروف)')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
                 </div>
             </div>
         </div>
@@ -462,6 +526,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=1.0.9"></script>
+    <script src="app.js?v=1.1.2"></script>
 </body>
 </html>
