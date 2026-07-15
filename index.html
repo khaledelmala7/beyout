@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="beyout_page_title">بيوت | حلول المنازل الذكية الفاخرة</title>
+    <title data-i18n="beyout_page_title">بيوت | أنظمة المنازل الذكية الفاخرة</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="شركة بيوت تقدم أرقى حلول وأنظمة التحكم بالمنزل الذكي (Smart Home) للأفراد في مصر. تحكم بالإضاءة والتكييف والأمان بلمسة واحدة.">
-    <meta name="keywords" content="سمارت هوم, منزل ذكي, بيوت, Beyout, تحكم بالمنزل, أتمتة منزلية">
+    <meta name="description" content="بيوت تقدم باقات أتمتة وتحكم ذكي بالكامل للمنازل والفلل والشقق الفاخرة في مصر. اختر باقتك المفضلة وسنتواصل معك فوراً.">
+    <meta name="keywords" content="سمارت هوم, منزل ذكي, بيوت, Beyout, باقات سمارت هوم, تشطيب شقق, مصر">
     
-    <!-- Google Fonts: Cairo & Outfit -->
+    <!-- Google Fonts: Cairo, Alexandria, Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=1.0.4">
+    <link rel="stylesheet" href="style.css?v=1.0.5">
 </head>
 <body class="theme-beyout">
 
-    <!-- Apple-style Frosted Glass Navigation Bar -->
+    <!-- Sticky Frosted Header -->
     <header class="main-header">
         <div class="container header-container">
             <div class="logo-area">
@@ -26,10 +26,11 @@
             
             <nav class="nav-links">
                 <a href="#about" class="nav-link" data-i18n="nav_about">من نحن</a>
+                <a href="#packages-section" class="nav-link" data-i18n="nav_packages">باقات الأتمتة</a>
                 <a href="#beyout-showcase" class="nav-link" data-i18n="nav_features">المميزات</a>
                 <a href="#beyout-sandbox" class="nav-link" data-i18n="nav_simulator">المحاكاة التفاعلية</a>
                 <a href="#demo-section" class="nav-link" data-i18n="nav_demo">حجز ديمو</a>
-                <a href="vexora.html" class="nav-link link-external"><span data-i18n="nav_to_vexora">فيكسورا للأمن (B2B)</span> →</a>
+                <a href="https://vexora-ochre.vercel.app" class="nav-link link-external"><span data-i18n="nav_to_vexora">فيكسورا للأمن (B2B)</span> →</a>
             </nav>
 
             <div class="header-actions">
@@ -44,7 +45,7 @@
         </div>
     </header>
 
-    <!-- Intro Corporate Title (Minimalist Apple style) -->
+    <!-- Intro Header Section -->
     <section class="intro-section" id="about">
         <div class="container text-center">
             <h1 class="portal-main-title" data-i18n="beyout_hero_title">شركة بيوت للمنازل الذكية</h1>
@@ -52,19 +53,125 @@
         </div>
     </section>
 
-    <!-- Apple-style Main Banner -->
-    <section class="apple-banner lumora-banner" id="beyout-hero">
+    <!-- Apple-style Main Hero Banner -->
+    <section class="apple-banner" id="beyout-hero">
         <div class="banner-overlay-glow"></div>
         <div class="container banner-container">
             <div class="banner-text text-center">
-                <div class="logo-backdrop small">
+                <div class="logo-backdrop">
                     <img src="logo_beyout.png" alt="Beyout Logo">
                 </div>
                 <h2 class="banner-title" data-i18n="beyout_banner_title">بيوت | لأسلوب حياة ذكي ومريح</h2>
                 <p class="banner-subtitle" data-i18n="beyout_banner_desc">حوّل منزلك العادي إلى بيئة تفاعلية تفهم احتياجاتك وتوفر طاقتك. تحكّم في الأجهزة والتكييف والأمان بلمسة واحدة أو بالصوت.</p>
                 <div class="banner-links">
-                    <a href="#beyout-showcase" class="apple-link" data-i18n="lumora_btn_explore">تصفح المحاكي التفاعلي &gt;</a>
-                    <a href="#demo-section" class="apple-link secondary" data-i18n="lumora_btn_demo">طلب ديمو مجاني &gt;</a>
+                    <a href="#packages-section" class="apple-link" data-i18n="beyout_btn_packages">تصفح باقات الأتمتة &gt;</a>
+                    <a href="#beyout-showcase" class="apple-link secondary" data-i18n="lumora_btn_explore">تصفح المحاكي التفاعلي &gt;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automation Packages Section (NEW) -->
+    <section class="packages-section-wrapper" id="packages-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle" data-i18n="packages_subtitle">باقات بيوت المخصصة</span>
+                <h2 class="section-title" data-i18n="packages_title">اختر الباقة المناسبة لمساحة منزلك</h2>
+                <p class="section-desc max-w-600" data-i18n="packages_desc">نقدم حلولاً ذكية متكاملة تناسب جميع المساحات بأسعار مرنة وعروض مخصصة بعد الاستشارة.</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Package 1: Studio -->
+                <div class="package-card glass-card">
+                    <div class="package-header">
+                        <span class="package-badge" data-i18n="pkg_badge_studio">مساحة مفتوحة</span>
+                        <h3 data-i18n="pkg_title_studio">باقة الاستوديو</h3>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_studio_1">💡 تحكم ذكي كامل بالإضاءة (ON/OFF).</li>
+                        <li data-i18n="pkg_feat_studio_2">💎 مفاتيح زجاجية ذكية تعمل باللمس.</li>
+                        <li data-i18n="pkg_feat_studio_3">🔒 مستشعر ذكي لتسريب الغاز الطبيعي.</li>
+                        <li data-i18n="pkg_feat_studio_4">📱 التحكم والمراقبة بالكامل عبر الموبايل.</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة الاستوديو')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
+                </div>
+
+                <!-- Package 2: 2-Room Apartment -->
+                <div class="package-card glass-card">
+                    <div class="package-header">
+                        <span class="package-badge" data-i18n="pkg_badge_2room">شقة متوسطة</span>
+                        <h3 data-i18n="pkg_title_2room">شقة غرفتين وصالة</h3>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_2room_1">💡 إضاءة ذكية لغرفتين نوم وصالة المعيشة.</li>
+                        <li data-i18n="pkg_feat_2room_2">❄️ تحكم ذكي بمكيف الهواء والتكييفات.</li>
+                        <li data-i18n="pkg_feat_2room_3">🚶‍♂️ مستشعرات حركة ذكية لإضاءة الممرات تلقائياً.</li>
+                        <li data-i18n="pkg_feat_2room_4">🔒 مستشعر أمان المطبخ وقفل الغاز الرئيسي.</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة شقة غرفتين وصالة')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
+                </div>
+
+                <!-- Package 3: 3-Room Apartment -->
+                <div class="package-card glass-card highlighted">
+                    <div class="package-ribbon" data-i18n="pkg_ribbon_popular">الأكثر طلباً ⭐</div>
+                    <div class="package-header">
+                        <span class="package-badge" data-i18n="pkg_badge_3room">شقة عائلية</span>
+                        <h3 data-i18n="pkg_title_3room">شقة ثلاث غرف وصالة</h3>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_3room_1">🛋️ تحكم كامل بالستائر الكهربائية أوتوماتيكياً.</li>
+                        <li data-i18n="pkg_feat_3room_2">❄️ تحكم بالتكييفات وسخانات المياه.</li>
+                        <li data-i18n="pkg_feat_3room_3">🌈 إضاءة ديكورية تفاعلية مدمجة للريسبشن.</li>
+                        <li data-i18n="pkg_feat_3room_4">💧 نظام رصد تسريب المياه والفيضان الذكي.</li>
+                        <li data-i18n="pkg_feat_3room_5">🗣️ توافق كامل مع التحكم الصوتي (Alexa/Siri).</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة شقة ثلاث غرف وصالة')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
+                </div>
+
+                <!-- Package 4: Duplex -->
+                <div class="package-card glass-card">
+                    <div class="package-header">
+                        <span class="package-badge" data-i18n="pkg_badge_duplex">شقة طابقين</span>
+                        <h3 data-i18n="pkg_title_duplex">شقة دوبلكس</h3>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_duplex_1">🚪 تحكم ذكي ببوابات الشقة وقفل البصمة.</li>
+                        <li data-i18n="pkg_feat_duplex_2">🎬 تفعيل سيناريو وضع السينما والمسرح المنزلي.</li>
+                        <li data-i18n="pkg_feat_duplex_3">🔌 مقابس ذكية (Smart Plugs) لحماية الأجهزة.</li>
+                        <li data-i18n="pkg_feat_duplex_4">🛡️ تأمين شامل للمخارج والأدوار المتعددة.</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة شقة دوبلكس')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
+                </div>
+
+                <!-- Package 5: Villa -->
+                <div class="package-card glass-card">
+                    <div class="package-header">
+                        <span class="package-badge" data-i18n="pkg_badge_villa">فيلا فاخرة</span>
+                        <h3 data-i18n="pkg_title_villa">الباقة الفاخرة للفلل</h3>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_villa_1">🌿 نظام ري الحديقة واللاندسكيب الذكي.</li>
+                        <li data-i18n="pkg_feat_villa_2">🚗 تحكم تلقائي ببوابات الجراج والسيارات.</li>
+                        <li data-i18n="pkg_feat_villa_3">✈️ وضع السفر الذكي ومحاكاة الوجود للتأمين.</li>
+                        <li data-i18n="pkg_feat_villa_4">🏊‍♂️ تحكم ذكي بمواعيد فلترة وتنظيف المسبح.</li>
+                        <li data-i18n="pkg_feat_villa_5">🛡️ ضمان كامل لمدة 5 سنوات وصيانة دورية مجانية.</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-lbl" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة الفيلا الفاخرة')" data-i18n="pkg_cta_btn">طلب عرض سعر الباقة 📋</button>
                 </div>
             </div>
         </div>
@@ -190,7 +297,7 @@
                         </div>
                         <div class="simulator-controls">
                             <h3 data-i18n="sandbox_ctrl_title">أدوات التحكم بالمنزل الذكي</h3>
-                            <p class="small-desc" data-i18n="sandbox_ctrl_desc">اضغط على مفاتيح أدناه لمحاكاة إرسال أوامر التحكم بالمنزل وشاهد الاستجابة الفورية بالرسم التخطيطي.</p>
+                            <p class="small-desc" data-i18n="sandbox_ctrl_desc">اضغط على المفاتيح أدناه لمحاكاة إرسال أوامر التحكم بالمنزل وشاهد الاستجابة بالرسم التخطيطي.</p>
                             
                             <div class="control-group">
                                 <div class="control-label-row">
@@ -385,9 +492,10 @@
                 <h4 data-i18n="footer_links_title">روابط سريعة</h4>
                 <ul>
                     <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+                    <li><a href="#packages-section" data-i18n="nav_packages">باقات الأتمتة</a></li>
                     <li><a href="#beyout-showcase" data-i18n="nav_features">المميزات</a></li>
                     <li><a href="#beyout-sandbox" data-i18n="nav_simulator">المحاكاة التفاعلية</a></li>
-                    <li><a href="vexora.html" data-i18n="nav_to_vexora">فيكسورا للأمن (B2B)</a></li>
+                    <li><a href="https://vexora-ochre.vercel.app" data-i18n="nav_to_vexora">فيكسورا للأمن (B2B)</a></li>
                 </ul>
             </div>
             <div class="footer-social">
@@ -408,6 +516,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=1.0.4"></script>
+    <script src="app.js?v=1.0.5"></script>
 </body>
 </html>

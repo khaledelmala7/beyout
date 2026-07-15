@@ -1,4 +1,22 @@
-// Beyout & Vexora Application Interactive Logic
+// Update app.js helper for packages selection
+function selectPackage(packageName) {
+    const notesField = document.getElementById('cust_notes');
+    if (notesField) {
+        notesField.value = `أريد الاستفسار وحجز الباقة الذكية: ${packageName}`;
+    }
+    
+    // Set internal selected product to lumora (smart home)
+    selectedFormProduct = 'lumora';
+    
+    // Style select card
+    const cardLumora = document.getElementById('select-card-lumora');
+    if (cardLumora) cardLumora.classList.add('selected');
+    
+    // Scroll smoothly to form section
+    const demoSection = document.getElementById('demo-section');
+    if (demoSection) demoSection.scrollIntoView({ behavior: 'smooth' });
+}
+\n// Beyout & Vexora Application Interactive Logic
 
 // Global state variables
 let activeBrand = 'lumora';
