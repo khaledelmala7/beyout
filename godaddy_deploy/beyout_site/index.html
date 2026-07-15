@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="beyout_page_title">بيوت | أنظمة المنازل الذكية الفاخرة</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="بيوت تقدم باقات أتمتة وتحكم ذكي بالكامل للمنازل والفلل والشقق الفاخرة في مصر. اختر باقتك المفضلة وسنتواصل معك فوراً.">
+    <meta name="keywords" content="سمارت هوم, منزل ذكي, بيوت, Beyout, باقات سمارت هوم, تشطيب شقق, مصر">
+    
+    <!-- Google Fonts: Alexandria & Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css?v=1.1.2">
+</head>
+<body class="theme-beyout">
+
+    <!-- Sticky Frosted Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- Left: Globe Language Selector -->
+            <div class="header-left">
+                <div class="lang-selector" id="lang-switch-btn" onclick="toggleLanguage()">
+                    <svg class="globe-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span id="lang-switch-text">English</span>
+                    <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+            </div>
+
+            <!-- Middle: Navigation Links -->
+            <nav class="nav-links">
+                <a href="#about" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
+                <a href="#packages-section" class="nav-link" data-i18n="nav_solutions">الحلول</a>
+                <a href="#beyout-sandbox" class="nav-link" data-i18n="nav_products">المنتجات</a>
+                <a href="#demo-section" class="nav-link" data-i18n="nav_blog">المدونة</a>
+                <a href="#demo-section" class="nav-link" data-i18n="nav_contact">اتصل بنا</a>
+                <a href="https://vexora-ochre.vercel.app" class="nav-link link-external"><span data-i18n="nav_to_vexora">فيكسورا للأمن (B2B)</span> →</a>
+            </nav>
+            
+            <!-- Right: Logo with Home Icon -->
+            <div class="header-right">
+                <a href="#" class="logo-link">
+                    <span class="logo-text">بيوت</span>
+                    <div class="logo-icon-container">
+                        <svg class="logo-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Custom Hero Banner -->
+    <section class="mockup-hero" id="about">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container-grid">
+            <!-- Left: Premium Gold Switch Panel -->
+            <div class="hero-visual-col">
+                <div class="switch-glowing-frame">
+                    <img src="assets/smart_switch.jpg" alt="Beyout Smart Switch Panel" class="switch-mock-img">
+                </div>
+            </div>
+
+            <!-- Right: Hero Text & CTA -->
+            <div class="hero-text-col">
+                <h1 class="hero-main-title" data-i18n="beyout_hero_title">عيش الذكاء والأناقة في منزلك</h1>
+                <p class="hero-sub-text" data-i18n="beyout_hero_subtitle">حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.</p>
+                <a href="#packages-section" class="hero-cta-btn" data-i18n="btn_start_now">ابدأ الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 Packages Section -->
+    <section class="packages-section-wrapper" id="packages-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle" data-i18n="packages_subtitle">باقات بيوت المخصصة</span>
+                <h2 class="section-title" data-i18n="packages_title">اختر الباقة المناسبة لمساحة منزلك</h2>
+                <p class="section-desc max-w-600" data-i18n="packages_desc">نقدم حلولاً ذكية متكاملة تناسب جميع المساحات بأسعار مرنة وعروض مخصصة بعد الاستشارة.</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Package 1: Bodyguard (للمخازن) -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_warehouse.jpg" alt="Bodyguard Package" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_bodyguard">باقة الحارس الشخصي (للمخازن)</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_bodyguard">حلول تأمين ذكية متطورة للمخازن وأمن الأصول.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_bodyguard_1">🚶‍♂️ حساس حركة ذكي لرصد الحركة المشبوهة.</li>
+                        <li data-i18n="pkg_feat_bodyguard_2">🚨 سرينة إنذار قوية وصاخبة لردع المتسللين.</li>
+                        <li data-i18n="pkg_feat_bodyguard_3">📱 تنبيه فوري لحظي بالثواني على الموبايل.</li>
+                        <li data-i18n="pkg_feat_bodyguard_4">🛡️ تأمين كامل للمخازن والمستودعات.</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة الحارس الشخصي (للمخازن)')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
+
+                <!-- Package 2: Studio -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18M3 15h18M15 3v18"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_studio.jpg" alt="Studio Package" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_studio">باقة الاستوديو</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_studio">أتمتة وحلول ذكية مخصصة للاستوديوهات والمساحات المفتوحة.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_studio_1">💡 تحكم ذكي كامل بالإضاءة (ON/OFF).</li>
+                        <li data-i18n="pkg_feat_studio_2">💎 مفاتيح زجاجية ذكية تعمل باللمس.</li>
+                        <li data-i18n="pkg_feat_studio_3">🔒 مستشعر ذكي لتسريب الغاز الطبيعي.</li>
+                        <li data-i18n="pkg_feat_studio_4">📱 التحكم والمراقبة بالكامل عبر الموبايل.</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة الاستوديو')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
+
+                <!-- Package 3: 2-Room Apartment -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_apartment.jpg" alt="2-Room Apartment Package" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_2room">باقة شقة غرفتين</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_2room">أتمتة ذكية متكاملة تناسب الشقق ذات الغرفتين وصالة.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_2room_1">💡 إضاءة ذكية لغرفتين نوم وصالة المعيشة.</li>
+                        <li data-i18n="pkg_feat_2room_2">❄️ تحكم ذكي بمكيف الهواء والتكييفات.</li>
+                        <li data-i18n="pkg_feat_2room_3">🚶‍♂️ مستشعرات حركة ذكية لإضاءة الممرات تلقائياً.</li>
+                        <li data-i18n="pkg_feat_2room_4">🔒 مستشعر أمان المطبخ وقفل الغاز الرئيسي.</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة شقة غرفتين')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
+
+                <!-- Package 4: 3-Room Apartment -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_apartment_3room.jpg" alt="3-Room Apartment Package" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_3room">باقة شقة ثلاث غرف</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_3room">تحكم شامل للشقق الكبيرة والعائلية لرفاهية لا تقاوم.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_3room_1">🛋️ تحكم كامل بالستائر الكهربائية والتكييفات.</li>
+                        <li data-i18n="pkg_feat_3room_2">🌈 إضاءة ديكورية تفاعلية مدمجة للريسبشن.</li>
+                        <li data-i18n="pkg_feat_3room_3">💧 نظام رصد تسريب المياه والفيضان الذكي.</li>
+                        <li data-i18n="pkg_feat_3room_4">🗣️ توافق كامل مع التحكم الصوتي (Alexa/Siri).</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة شقة ثلاث غرف')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
+
+                <!-- Package 5: Duplex -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_duplex.jpg" alt="Duplex Package" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_duplex">باقة شقة دوبلكس</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_duplex">تحكم ذكي وأمان شامل متقاطع للشقق ذات الطابقين.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_duplex_1">🚪 تحكم ذكي ببوابات الشقة وقفل البصمة.</li>
+                        <li data-i18n="pkg_feat_duplex_2">🎬 تفعيل سيناريو وضع السينما والمسرح المنزلي.</li>
+                        <li data-i18n="pkg_feat_duplex_3">🔌 مقابس ذكية (Smart Plugs) لحماية الأجهزة.</li>
+                        <li data-i18n="pkg_feat_duplex_4">🛡️ تأمين شامل للمخارج والأدوار المتعددة.</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة شقة دوبلكس')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
+
+                <!-- Package 6: Villa -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/pkg_villa.jpg" alt="Villa Package" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="pkg_title_villa">باقة فيلا (أرضي وأول وروف)</h3>
+                        <p class="pkg-card-desc" data-i18n="pkg_desc_villa">أتمتة متكاملة ثلاثية المستويات للفلل والقصور والحدائق.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="pkg_feat_villa_1">🌿 نظام ري الحديقة واللاندسكيب الذكي.</li>
+                        <li data-i18n="pkg_feat_villa_2">🚗 تحكم تلقائي ببوابات الجراج والسيارات.</li>
+                        <li data-i18n="pkg_feat_villa_3">✈️ وضع السفر ومحاكاة الوجود للتأمين.</li>
+                        <li data-i18n="pkg_feat_villa_4">🏊‍♂️ تحكم ذكي بالطوابق الثلاثة (أرضي، أول، وروف).</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <span class="price-val" data-i18n="price_after_call">الأسعار بعد الاتصال</span>
+                    </div>
+                    <button class="package-cta" onclick="selectPackage('باقة فيلا (أرضي وأول وروف)')" data-i18n="pkg_cta_btn_mock">اختر الخطة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sandbox Testing Ground (Playground) -->
+    <section class="simulator-sandbox" id="beyout-sandbox">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle" data-i18n="sandbox_subtitle">منطقة المحاكاة المتكاملة</span>
+                <h2 class="section-title" data-i18n="sandbox_title_beyout">جرّب لوحة تحكم منزلك الذكي بنفسك</h2>
+                <p class="section-desc max-w-600" data-i18n="sandbox_desc_beyout">اختبر التفاعل الحقيقي وعش تجربة العميل. تحكم في إضاءة وتكييف وأبواب الفيلا الذكية.</p>
+            </div>
+
+            <div class="sandbox-container glass-card">
+                <!-- Smart Home Sandbox -->
+                <div class="sandbox-content active" id="sandbox-lumora">
+                    <div class="sandbox-grid">
+                        <div class="simulator-visual">
+                            <div class="interactive-house">
+                                <svg viewBox="0 0 500 350" class="house-svg">
+                                    <defs>
+                                        <radialGradient id="light-glow" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" stop-color="rgba(251, 191, 36, 0.4)" />
+                                            <stop offset="100%" stop-color="rgba(251, 191, 36, 0)" />
+                                        </radialGradient>
+                                        <radialGradient id="ac-glow" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" stop-color="rgba(34, 211, 238, 0.2)" />
+                                            <stop offset="100%" stop-color="rgba(34, 211, 238, 0)" />
+                                        </radialGradient>
+                                    </defs>
+                                    <rect x="20" y="20" width="460" height="310" rx="10" fill="#121620" stroke="#d4af37" stroke-width="2"/>
+                                    <line x1="250" y1="20" x2="250" y2="330" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                                    <line x1="20" y1="180" x2="480" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                                    <rect id="glow-living" x="22" y="22" width="226" height="156" fill="url(#light-glow)" class="room-glow" style="display: block;"/>
+                                    <text x="50" y="50" fill="#94a3b8" font-family="Cairo" font-size="16" font-weight="bold" data-i18n="sandbox_house_living">غرفة المعيشة</text>
+                                    <rect id="glow-kitchen" x="252" y="22" width="226" height="156" fill="url(#light-glow)" class="room-glow" style="display: none;"/>
+                                    <text x="280" y="50" fill="#94a3b8" font-family="Cairo" font-size="16" font-weight="bold" data-i18n="sandbox_house_kitchen">المطبخ</text>
+                                    <rect id="glow-bedroom" x="22" y="182" width="226" height="146" fill="url(#light-glow)" class="room-glow" style="display: none;"/>
+                                    <rect id="ac-glow-bedroom" x="22" y="182" width="226" height="146" fill="url(#ac-glow)" class="room-ac-glow" style="display: none;"/>
+                                    <text x="50" y="210" fill="#94a3b8" font-family="Cairo" font-size="16" font-weight="bold" data-i18n="sandbox_house_bedroom">غرفة النوم الرئيسية</text>
+                                    <rect id="glow-garden" x="252" y="182" width="226" height="146" fill="none"/>
+                                    <text x="280" y="210" fill="#94a3b8" font-family="Cairo" font-size="16" font-weight="bold" data-i18n="sandbox_house_garden">الحديقة والمدخل</text>
+                                    <circle id="sprinkler-water-1" cx="300" cy="270" r="10" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="2,2" class="sprinkler-pulse" style="display: none;"/>
+                                    <circle id="sprinkler-water-2" cx="400" cy="270" r="15" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="2,2" class="sprinkler-pulse" style="display: none;"/>
+                                    <path id="svg-lamp-living" d="M120 80h20l-10-15z" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+                                    <circle id="svg-lamp-light" cx="130" cy="95" r="15" fill="#fef08a" opacity="0.8"/>
+                                    <g id="svg-lock-main" class="lock-secure" transform="translate(380, 230)">
+                                        <rect width="24" height="20" rx="3" fill="#10b981" id="lock-body"/>
+                                        <path d="M6 0v8h12v-8a6 6 0 0 0-12 0" fill="none" stroke="#10b981" stroke-width="4" id="lock-shackle"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="simulator-controls">
+                            <h3 data-i18n="sandbox_ctrl_title">أدوات التحكم بالمنزل الذكي</h3>
+                            <p class="small-desc" data-i18n="sandbox_ctrl_desc">اضغط على المفاتيح أدناه لمحاكاة إرسال أوامر التحكم بالمنزل وشاهد الاستجابة بالرسم التخطيطي.</p>
+                            
+                            <div class="control-group">
+                                <div class="control-label-row">
+                                    <span data-i18n="sandbox_ctrl_living_light">إضاءة غرفة المعيشة</span>
+                                    <label class="switch">
+                                        <input type="checkbox" id="chk-living-light" checked onchange="updateHouseSim()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="control-group">
+                                <div class="control-label-row">
+                                    <span data-i18n="sandbox_ctrl_kitchen_light">إضاءة المطبخ</span>
+                                    <label class="switch">
+                                        <input type="checkbox" id="chk-kitchen-light" onchange="updateHouseSim()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label-row">
+                                    <span data-i18n="sandbox_ctrl_bedroom_ac">تكييف غرفة النوم (AC)</span>
+                                    <label class="switch">
+                                        <input type="checkbox" id="chk-bedroom-ac" onchange="updateHouseSim()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="ac-temp-control" id="ac-temp-wrapper" style="display:none;">
+                                    <span class="temp-val"><span data-i18n="sandbox_ctrl_ac_temp">درجة حرارة المكيف: </span><strong id="ac-temp-num">22</strong>°م</span>
+                                    <div class="temp-buttons">
+                                        <button onclick="changeAcTemp(-1)">-</button>
+                                        <button onclick="changeAcTemp(1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label-row">
+                                    <span data-i18n="sandbox_ctrl_security">أمان قفل البوابة والحديقة</span>
+                                    <label class="switch">
+                                        <input type="checkbox" id="chk-security-system" checked onchange="updateHouseSim()">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="security-status-text">
+                                    <span data-i18n="sandbox_ctrl_security_status_lbl">حالة البوابة: </span><strong id="lock-text" class="text-success" data-i18n="sandbox_ctrl_secured_val">مغلقة ومؤمنة</strong>
+                                </div>
+                            </div>
+
+                            <div class="sim-feedback-msg" id="sim-feedback-lumora" data-i18n="sandbox_ctrl_welcome_msg">أهلاً بك! قم بتشغيل أو إطفاء الأجهزة لتجربة النظام الذكي.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Step Demo Booking Form Section -->
+    <section class="demo-booking-section" id="demo-section">
+        <div class="container">
+            <div class="form-wrapper glass-card">
+                <div class="form-header text-center">
+                    <h2 class="form-title" data-i18n="form_section_title">ابدأ رحلتك معنا اليوم</h2>
+                    <p class="form-subtitle" data-i18n="form_section_subtitle">احجز نسختك التجريبية والمجانية (Demo) وسيتواصل معك مستشارونا فورياً</p>
+                    
+                    <div class="form-progress">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <div class="progress-steps">
+                            <div class="step-node active" data-step="1">1</div>
+                            <div class="step-node" data-step="2">2</div>
+                            <div class="step-node" data-step="3">3</div>
+                            <div class="step-node" data-step="4">✓</div>
+                        </div>
+                        <div class="progress-labels">
+                            <span data-i18n="form_step1_lbl">المنتج المطلوب</span>
+                            <span data-i18n="form_step2_lbl">بياناتك</span>
+                            <span data-i18n="form_step3_lbl">التفاصيل والوقت</span>
+                            <span data-i18n="form_step4_lbl">تأكيد الطلب</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="demoForm" onsubmit="handleFormSubmit(event)" data-netlify="true" name="demo-requests">
+                    <input type="hidden" name="form-name" value="demo-requests">
+                    <input type="hidden" name="target_product" value="lumora">
+                    
+                    <!-- Step 1 -->
+                    <div class="form-step active" data-step="1">
+                        <h3 class="step-section-title" data-i18n="form_step1_title_beyout">هل ترغب في ترقية منزلك بالكامل؟</h3>
+                        <div class="cards-select-grid single-card-center">
+                            <div class="select-card selected" id="select-card-lumora">
+                                <div class="select-card-logo">
+                                    <svg class="form-logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                        <polyline points="9 22 9 12 15 12 15 22"/>
+                                    </svg>
+                                </div>
+                                <h4>بيوت (Beyout Smart Home)</h4>
+                                <p data-i18n="form_product_lumora_desc">أنظمة التحكم الكاملة والمنازل الذكية الفاخرة.</p>
+                                <span class="badge">B2C</span>
+                            </div>
+                        </div>
+                        <div class="form-actions-row">
+                            <span></span>
+                            <button type="button" class="btn-next" onclick="nextStep(2)" data-i18n="form_btn_next">التالي ←</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="form-step" data-step="2">
+                        <h3 class="step-section-title" data-i18n="form_step2_title">أخبرنا بالمزيد عنك لنتمكن من التواصل معك</h3>
+                        <div class="form-fields-grid">
+                            <div class="input-group">
+                                <label for="cust_name"><span data-i18n="form_lbl_name">الاسم بالكامل </span><span class="required">*</span></label>
+                                <input type="text" id="cust_name" name="name" required placeholder="أدخل اسمك الكريم" data-placeholder-ar="أدخل اسمك الكريم" data-placeholder-en="Enter your full name">
+                            </div>
+                            <div class="input-group">
+                                <label for="cust_email"><span data-i18n="form_lbl_email">البريد الإلكتروني </span><span class="required">*</span></label>
+                                <input type="email" id="cust_email" name="email" required placeholder="name@company.com" data-placeholder-ar="name@company.com" data-placeholder-en="name@company.com">
+                            </div>
+                            <div class="input-group">
+                                <label for="cust_phone"><span data-i18n="form_lbl_phone">رقم الهاتف / الواتساب </span><span class="required">*</span></label>
+                                <input type="tel" id="cust_phone" name="phone" required placeholder="+20 100 000 0000" data-placeholder-ar="+20 100 000 0000" data-placeholder-en="+20 100 000 0000">
+                            </div>
+                        </div>
+                        <div class="form-actions-row">
+                            <button type="button" class="btn-prev" onclick="prevStep(1)" data-i18n="form_btn_prev">→ السابق</button>
+                            <button type="button" class="btn-next" onclick="nextStep(3)" data-i18n="form_btn_next">التالي ←</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="form-step" data-step="3">
+                        <h3 class="step-section-title" data-i18n="form_step3_title">متى ترغب في عقد جلسة العرض (الديمو)؟</h3>
+                        <div class="form-fields-grid">
+                            <div class="input-group">
+                                <label for="demo_date"><span data-i18n="form_lbl_date">التاريخ المفضل </span><span class="required">*</span></label>
+                                <input type="date" id="demo_date" name="demo_date" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="demo_time"><span data-i18n="form_lbl_time">الوقت المفضل للاتصال </span><span class="required">*</span></label>
+                                <select id="demo_time" name="demo_time" required>
+                                    <option value="" data-i18n="form_time_choose">اختر الوقت المناسب</option>
+                                    <option value="morning" data-i18n="form_time_morning">صباحاً (9:00 ص - 12:00 م)</option>
+                                    <option value="afternoon" data-i18n="form_time_afternoon">بعد الظهر (12:00 م - 4:00 م)</option>
+                                    <option value="evening" data-i18n="form_time_evening">مساءً (4:00 م - 8:00 م)</option>
+                                </select>
+                            </div>
+                            <div class="input-group span-2">
+                                <label for="cust_notes" data-i18n="form_lbl_notes_beyout">أكبر تحدي أو متطلبات معينة تود مناقشتها؟</label>
+                                <textarea id="cust_notes" name="notes" rows="3" placeholder="مثال: أريد حجز الباقة وحساب الأتمتة..." data-placeholder-ar="مثال: أريد حجز الباقة وحساب الأتمتة..." data-placeholder-en="E.g., I want to book the package..."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions-row">
+                            <button type="button" class="btn-prev" onclick="prevStep(2)" data-i18n="form_btn_prev">→ السابق</button>
+                            <button type="submit" class="btn-submit" data-i18n="form_btn_submit">تأكيد طلب الديمو مجاناً 🚀</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 (Success) -->
+                    <div class="form-step" data-step="4">
+                        <div class="success-card text-center">
+                            <div class="success-animation-circle">
+                                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-success"><span data-i18n="form_success_thanks">شكراً لطلبك، </span><span id="success-user-name"></span>!</h3>
+                            <p class="success-desc"><span data-i18n="form_success_desc_beyout">تم تسجيل طلبك بنجاح لحجز ديمو خاص بأنظمة بيوت الذكية.</span></p>
+                            <div class="success-summary glass-card">
+                                <p><strong data-i18n="form_success_schedule">موعدك المقترح:</strong> <span id="success-date"></span> <span data-i18n="form_success_period"> في الفترة الـ </span> <span id="success-time"></span></p>
+                                <p><span data-i18n="form_success_whatsapp">سنقوم بإرسال رسالة تأكيد على واتساب برقم </span><strong><span id="success-phone"></span></strong><span data-i18n="form_success_whatsapp_sub"> وتفاصيل الاجتماع خلال ساعة.</span></p>
+                            </div>
+                            <button type="button" class="btn-reset" onclick="resetForm()" data-i18n="form_success_reset_btn">طلب حجز جديد</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="#" class="logo-link">
+                    <span class="logo-text">بيوت</span>
+                    <div class="logo-icon-container">
+                        <svg class="logo-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                </a>
+                <p data-i18n="footer_about_text_beyout">مستشارك وشريكك التكنولوجي الموثوق لتصميم وبناء أنظمة التحكم والمنازل الذكية الفاخرة.</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_links_title">روابط سريعة</h4>
+                <ul>
+                    <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+                    <li><a href="#packages-section" data-i18n="nav_packages">باقات الأتمتة</a></li>
+                    <li><a href="#beyout-sandbox" data-i18n="nav_simulator">المحاكاة التفاعلية</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 data-i18n="footer_social_title">تابعنا على شبكاتنا الاجتماعية</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p data-i18n="footer_copyright">&copy; 2026 شركة بيوت (Beyout). جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js?v=1.1.2"></script>
+</body>
+</html>

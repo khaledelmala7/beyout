@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="vexora_page_title">فيكسورا | أنظمة حماية وتحليل كاميرات المراقبة بالذكاء الاصطناعي</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="فيكسورا تقدم تحليلات كاميرات المراقبة بالذكاء الاصطناعي لرصد التسلل والحرائق وحساب حركة الزوار للشركات والمصانع والمؤسسات.">
+    <meta name="keywords" content="ذكاء اصطناعي أمني, تحليل الكاميرات, فيكسورا, Vexora, مراقبة شركات, كاميرات ذكية">
+    
+    <!-- Google Fonts: Alexandria & Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css?v=1.1.2">
+</head>
+<body class="theme-vexora">
+
+    <!-- Sticky Frosted Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- Left: Globe Language Selector -->
+            <div class="header-left">
+                <div class="lang-selector" id="lang-switch-btn" onclick="toggleLanguage()">
+                    <svg class="globe-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span id="lang-switch-text">English</span>
+                    <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+            </div>
+
+            <!-- Middle: Navigation Links -->
+            <nav class="nav-links">
+                <a href="#about" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
+                <a href="#sectors-section" class="nav-link" data-i18n="nav_solutions">الأنشطة</a>
+                <a href="#vexora-sandbox" class="nav-link" data-i18n="nav_products">المنتجات</a>
+                <a href="#demo-section" class="nav-link" data-i18n="nav_blog">المدونة</a>
+                <a href="#demo-section" class="nav-link" data-i18n="nav_contact">اتصل بنا</a>
+                <a href="https://beyout-ochre.vercel.app" class="nav-link link-external"><span data-i18n="nav_to_beyout">بيوت للمنازل الذكية (B2C)</span> →</a>
+            </nav>
+            
+            <!-- Right: Logo with Security Icon -->
+            <div class="header-right">
+                <a href="#" class="logo-link">
+                    <span class="logo-text">فيكسورا</span>
+                    <div class="logo-icon-container">
+                        <!-- Custom SVG Shield Icon -->
+                        <svg class="logo-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Custom Hero Banner -->
+    <section class="mockup-hero" id="about">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container-grid">
+            <!-- Left: Premium Live Camera Mockup -->
+            <div class="hero-visual-col">
+                <div class="switch-glowing-frame">
+                    <div class="live-indicator">LIVE 🔴</div>
+                    <img src="assets/vexora_compare.jpg" alt="Vexora AI Surveillance Stream" class="switch-mock-img">
+                </div>
+            </div>
+
+            <!-- Right: Hero Text & CTA -->
+            <div class="hero-text-col">
+                <h1 class="hero-main-title" data-i18n="vexora_hero_title">عيون رقمية ذكية لا تنام لحماية أعمالك</h1>
+                <p class="hero-sub-text" data-i18n="vexora_hero_subtitle">تحليلات كاميرات المراقبة بالذكاء الاصطناعي لرصد التسلل والحرائق وتحسين الإنتاجية فوراً.</p>
+                <a href="#sectors-section" class="hero-cta-btn" data-i18n="btn_start_now">ابدأ الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 Sectors Section -->
+    <section class="packages-section-wrapper" id="sectors-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle" data-i18n="sectors_subtitle">الأنشطة والقطاعات</span>
+                <h2 class="section-title" data-i18n="sectors_title">أين تعمل تحليلات فيكسورا بالذكاء الاصطناعي؟</h2>
+                <p class="section-desc max-w-600" data-i18n="sectors_desc">ندمج كاميرات المراقبة الحالية لشركتك مع الذكاء الاصطناعي لتأمين وإدارة أهم الأنشطة التجارية والاستثمارية.</p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Sector 1: Schools -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/sec_schools.jpg" alt="Schools Sector" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="sec_title_schools">المدارس والمؤسسات التعليمية</h3>
+                        <p class="pkg-card-desc" data-i18n="sec_desc_schools">حماية أمنية شاملة للطلاب وبوابات المدارس ضد الغرباء.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="sec_feat_schools_1">🏫 تأمين بوابات المدارس ومحيطها الخارجي.</li>
+                        <li data-i18n="sec_feat_schools_2">🚶‍♂️ رصد تلقائي لأي حركة مريبة أو غرباء.</li>
+                        <li data-i18n="sec_feat_schools_3">📱 تنبيه فوري للإدارة والمسؤولين عند الطوارئ.</li>
+                    </ul>
+                    <button class="package-cta" onclick="selectSector('المدارس والمؤسسات التعليمية')" data-i18n="sec_cta_btn">طلب استشارة مجانية</button>
+                </div>
+
+                <!-- Sector 2: Factories -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/sec_factories.jpg" alt="Factories Sector" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="sec_title_factories">المصانع والمناطق الصناعية</h3>
+                        <p class="pkg-card-desc" data-i18n="sec_desc_factories">مراقبة الالتزام بمعايير السلامة المهنية وتجنب الحوادث.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="sec_feat_factories_1">👷‍♂️ رصد ارتداء الخوذات وسترات الأمان فورياً.</li>
+                        <li data-i18n="sec_feat_factories_2">🔥 كشف فوري ومبكر للدخان والحرائق.</li>
+                        <li data-i18n="sec_feat_factories_3">🛡️ حماية خطوط الإنتاج والآلات والمواد الخام.</li>
+                    </ul>
+                    <button class="package-cta" onclick="selectSector('المصانع والمناطق الصناعية')" data-i18n="sec_cta_btn">طلب استشارة مجانية</button>
+                </div>
+
+                <!-- Sector 3: Supermarkets -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/sec_supermarkets.jpg" alt="Supermarkets Sector" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="sec_title_supermarkets">السوبر ماركت ومحلات التجزئة</h3>
+                        <p class="pkg-card-desc" data-i18n="sec_desc_supermarkets">تحسين تجربة تسوق العملاء ومنع السرقات.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="sec_feat_supermarkets_1">🥫 تنبيه فوري لوجود رفوف بضائع فارغة.</li>
+                        <li data-i18n="sec_feat_supermarkets_2">🚶‍♂️ مراقبة طوابير الكاشير لتفادي الازدحام.</li>
+                        <li data-i18n="sec_feat_supermarkets_3">🛡️ رصد سرقة الأصول أو التلاعب بالصندوق.</li>
+                    </ul>
+                    <button class="package-cta" onclick="selectSector('السوبر ماركت ومحلات التجزئة')" data-i18n="sec_cta_btn">طلب استشارة مجانية</button>
+                </div>
+
+                <!-- Sector 4: Construction Sites -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/sec_construction.jpg" alt="Construction Sites Sector" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="sec_title_construction">موقع العمل والمشاريع الإنشائية</h3>
+                        <p class="pkg-card-desc" data-i18n="sec_desc_construction">تأمين محيط العمل ومنع تسلل الغرباء ليلاً.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="sec_feat_construction_1">🌙 تأمين كامل للموقع ضد الاختراقات الليلية.</li>
+                        <li data-i18n="sec_feat_construction_2">🚜 رصد وتتبع الآلات والمعدات الثقيلة.</li>
+                        <li data-i18n="sec_feat_construction_3">👷‍♂️ مراقبة التزام العمال بقواعد السلامة.</li>
+                    </ul>
+                    <button class="package-cta" onclick="selectSector('موقع العمل والمشاريع الإنشائية')" data-i18n="sec_cta_btn">طلب استشارة مجانية</button>
+                </div>
+
+                <!-- Sector 5: Office Buildings -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/sec_office_buildings.jpg" alt="Office Buildings Sector" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="sec_title_offices">المباني الإدارية والشركات</h3>
+                        <p class="pkg-card-desc" data-i18n="sec_desc_offices">إدارة كاملة لحركة دخول الموظفين والزوار الذكية.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="sec_feat_offices_1">🚪 التحكم الذكي بالبوابات والتكامل مع نظام حضور الموظفين.</li>
+                        <li data-i18n="sec_feat_offices_2">🔒 تأمين الغرف الحساسة والملفات ومخازن البيانات.</li>
+                        <li data-i18n="sec_feat_offices_3">📈 تقارير دورية بالزوار وحالة المبنى الأمنية.</li>
+                    </ul>
+                    <button class="package-cta" onclick="selectSector('المباني الإدارية والشركات')" data-i18n="sec_cta_btn">طلب استشارة مجانية</button>
+                </div>
+
+                <!-- Sector 6: Malls -->
+                <div class="package-card glass-card">
+                    <div class="card-icon-header">
+                        <div class="circular-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                    </div>
+                    <div class="package-img-container">
+                        <img src="assets/sec_malls.jpg" alt="Malls Sector" class="package-card-img">
+                    </div>
+                    <div class="package-header">
+                        <h3 data-i18n="sec_title_malls">المولات والمراكز التجارية</h3>
+                        <p class="pkg-card-desc" data-i18n="sec_desc_malls">تحليل كثافة المتسوقين وتأمين السيارات والأرواح.</p>
+                    </div>
+                    <ul class="package-features">
+                        <li data-i18n="sec_feat_malls_1">📈 الخرائط الحرارية لرصد الكثافة ومناطق الجذب.</li>
+                        <li data-i18n="sec_feat_malls_2">🚗 رصد لوحات السيارات وإدارة مواقف السيارات.</li>
+                        <li data-i18n="sec_feat_malls_3">🚨 كشف السلوكيات المريبة والتنبؤ بالجرائم قبل حدوثها.</li>
+                    </ul>
+                    <button class="package-cta" onclick="selectSector('المولات والمراكز التجارية')" data-i18n="sec_cta_btn">طلب استشارة مجانية</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sandbox Testing Ground (Vexora) -->
+    <section class="simulator-sandbox" id="vexora-sandbox">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle" data-i18n="sandbox_subtitle">منطقة المحاكاة المتكاملة</span>
+                <h2 class="section-title" data-i18n="sandbox_title_vexora">جرّب لوحة تحكم التحليل الأمني بنفسك</h2>
+                <p class="section-desc max-w-600" data-i18n="sandbox_desc_vexora">اختبر تحليلات فيكسورا ورصد المتسللين ومخاطر الحريق لحظياً على البث المباشر.</p>
+            </div>
+
+            <div class="sandbox-container glass-card">
+                <!-- Vexora Sandbox -->
+                <div class="sandbox-content active" id="sandbox-vexora">
+                    <div class="sandbox-grid">
+                        <div class="simulator-visual">
+                            <div class="device-mockup glass-card">
+                                <div class="mockup-header">
+                                    <div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                                    <div class="mockup-title" id="cam-title" data-i18n="vexora_cam_name">CAM 01 - المستودع الرئيسي</div>
+                                </div>
+                                <div class="mockup-body active">
+                                    <div class="camera-stream-container">
+                                        <div class="live-indicator">LIVE 🔴</div>
+                                        <img src="assets/vexora_safety_vest.jpg" alt="Live Camera" class="camera-feed-img" id="cam-stream-img">
+                                        <div class="camera-detection-box" id="mock-detection-box" style="display: none;"></div>
+                                        <!-- AI Target Elements -->
+                                        <div class="ai-target-circle" id="ai-target-circle" style="display: none;"></div>
+                                        <div class="ai-target-line" id="ai-target-line" style="display: none;"></div>
+                                    </div>
+                                    <div class="alert-log-panel">
+                                        <h4 data-i18n="vexora_alert_logs_lbl">سجل التنبيهات الأمنية</h4>
+                                        <div class="alert-logs" id="alert-logs">
+                                            <div class="log-entry info">
+                                                <span class="time">09:12:04</span>
+                                                <span class="msg" data-i18n="vexora_log_vehicle">مرور مركبة مصرحة - لوحة رقم 4829</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="simulator-controls">
+                            <h3 data-i18n="sandbox_vex_ctrl_title">أدوات اختبار التحليل الذكي Vexora</h3>
+                            <p class="small-desc" data-i18n="sandbox_vex_ctrl_desc">تحكم بالكاميرا وقم بمحاكاة سيناريوهات حقيقية لرؤية رد فعل الذكاء الاصطناعي ورصد المخالفات.</p>
+                            
+                            <button class="mock-btn active" id="btn-scen-clear" onclick="triggerVexoraScenario('clear')" data-i18n="sandbox_vex_scen_clear">الوضع الطبيعي (تصفير الكاميرا)</button>
+                            <button class="mock-btn" id="btn-scen-intruder" onclick="triggerVexoraScenario('intruder')" data-i18n="sandbox_vex_scen_intruder">محاكاة متسلل بعد ساعات العمل</button>
+                            <button class="mock-btn" id="btn-scen-fire" onclick="triggerVexoraScenario('fire')" data-i18n="sandbox_vex_scen_fire">محاكاة خطر حريق/دخان</button>
+
+                            <div class="sim-feedback-msg" id="sim-feedback-vexora" data-i18n="sandbox_vex_feedback_msg">اضغط على السيناريوهات أعلاه لرؤية كيف يقوم الذكاء الاصطناعي بتحليل البث وتنبيه صاحب العمل.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Step Demo Booking Form Section -->
+    <section class="demo-booking-section" id="demo-section">
+        <div class="container">
+            <div class="form-wrapper glass-card">
+                <div class="form-header text-center">
+                    <h2 class="form-title" data-i18n="form_section_title">ابدأ رحلتك معنا اليوم</h2>
+                    <p class="form-subtitle" data-i18n="form_section_subtitle">احجز نسختك التجريبية والمجانية (Demo) وسيتواصل معك مستشارونا فورياً</p>
+                    
+                    <div class="form-progress">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <div class="progress-steps">
+                            <div class="step-node active" data-step="1">1</div>
+                            <div class="step-node" data-step="2">2</div>
+                            <div class="step-node" data-step="3">3</div>
+                            <div class="step-node" data-step="4">✓</div>
+                        </div>
+                        <div class="progress-labels">
+                            <span data-i18n="form_step1_lbl">المنتج المطلوب</span>
+                            <span data-i18n="form_step2_lbl">بياناتك</span>
+                            <span data-i18n="form_step3_lbl">التفاصيل والوقت</span>
+                            <span data-i18n="form_step4_lbl">تأكيد الطلب</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="demoForm" onsubmit="handleFormSubmit(event)" data-netlify="true" name="demo-requests">
+                    <input type="hidden" name="form-name" value="demo-requests">
+                    <input type="hidden" name="target_product" value="vexora">
+                    
+                    <!-- Step 1 -->
+                    <div class="form-step active" data-step="1">
+                        <h3 class="step-section-title" data-i18n="form_step1_title_vexora">ترقية نظام الأمان لشركتك؟</h3>
+                        <div class="cards-select-grid single-card-center">
+                            <div class="select-card selected" id="select-card-vexora">
+                                <div class="select-card-logo">
+                                    <svg class="form-logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <h4>فيكسورا (Vexora AI Video Security)</h4>
+                                <p data-i18n="form_product_vexora_desc">أنظمة حماية وتحليل كاميرات المراقبة بالذكاء الاصطناعي.</p>
+                                <span class="badge">B2B</span>
+                            </div>
+                        </div>
+                        <div class="form-actions-row">
+                            <span></span>
+                            <button type="button" class="btn-next" onclick="nextStep(2)" data-i18n="form_btn_next">التالي ←</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="form-step" data-step="2">
+                        <h3 class="step-section-title" data-i18n="form_step2_title">أخبرنا بالمزيد عن شركتك لنتمكن من التواصل معك</h3>
+                        <div class="form-fields-grid">
+                            <div class="input-group">
+                                <label for="cust_name"><span data-i18n="form_lbl_name">الاسم بالكامل </span><span class="required">*</span></label>
+                                <input type="text" id="cust_name" name="name" required placeholder="أدخل اسمك الكريم">
+                            </div>
+                            <div class="input-group">
+                                <label for="cust_email"><span data-i18n="form_lbl_email">البريد الإلكتروني للعمل </span><span class="required">*</span></label>
+                                <input type="email" id="cust_email" name="email" required placeholder="name@company.com">
+                            </div>
+                            <div class="input-group">
+                                <label for="cust_phone"><span data-i18n="form_lbl_phone">رقم الهاتف / الواتساب </span><span class="required">*</span></label>
+                                <input type="tel" id="cust_phone" name="phone" required placeholder="+20 100 000 0000">
+                            </div>
+                            <div class="input-group">
+                                <label for="company_name"><span data-i18n="form_lbl_company">اسم الشركة والنشاط </span><span class="required">*</span></label>
+                                <input type="text" id="company_name" name="company" required placeholder="أدخل اسم شركتك ونشاطها">
+                            </div>
+                        </div>
+                        <div class="form-actions-row">
+                            <button type="button" class="btn-prev" onclick="prevStep(1)" data-i18n="form_btn_prev">→ السابق</button>
+                            <button type="button" class="btn-next" onclick="nextStep(3)" data-i18n="form_btn_next">التالي ←</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="form-step" data-step="3">
+                        <h3 class="step-section-title" data-i18n="form_step3_title">متى ترغب في عقد جلسة الاستشارة الأمنية (الديمو)؟</h3>
+                        <div class="form-fields-grid">
+                            <div class="input-group">
+                                <label for="demo_date"><span data-i18n="form_lbl_date">التاريخ المفضل </span><span class="required">*</span></label>
+                                <input type="date" id="demo_date" name="demo_date" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="demo_time"><span data-i18n="form_lbl_time">الوقت المفضل للاتصال </span><span class="required">*</span></label>
+                                <select id="demo_time" name="demo_time" required>
+                                    <option value="" data-i18n="form_time_choose">اختر الوقت المناسب</option>
+                                    <option value="morning" data-i18n="form_time_morning">صباحاً (9:00 ص - 12:00 م)</option>
+                                    <option value="afternoon" data-i18n="form_time_afternoon">بعد الظهر (12:00 م - 4:00 م)</option>
+                                    <option value="evening" data-i18n="form_time_evening">مساءً (4:00 م - 8:00 م)</option>
+                                </select>
+                            </div>
+                            <div class="input-group span-2">
+                                <label for="cust_notes" data-i18n="form_lbl_notes_vexora">أكبر تحدي أمني أو متطلبات خاصة تودون مناقشتها؟</label>
+                                <textarea id="cust_notes" name="notes" rows="3" placeholder="مثال: رصد التسلل في الفروع بعد مواعيد العمل..."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions-row">
+                            <button type="button" class="btn-prev" onclick="prevStep(2)" data-i18n="form_btn_prev">→ السابق</button>
+                            <button type="submit" class="btn-submit" data-i18n="form_btn_submit">تأكيد طلب ديمو الشركات 🚀</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 (Success) -->
+                    <div class="form-step" data-step="4">
+                        <div class="success-card text-center">
+                            <div class="success-animation-circle">
+                                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-success"><span data-i18n="form_success_thanks">شكراً لطلبك، </span><span id="success-user-name"></span>!</h3>
+                            <p class="success-desc"><span data-i18n="form_success_desc_vexora">تم تسجيل طلبك بنجاح لحجز ديمو خاص بنظام فيكسورا الأمني للشركات.</span></p>
+                            <div class="success-summary glass-card">
+                                <p><strong data-i18n="form_success_schedule">موعدك المقترح:</strong> <span id="success-date"></span> <span data-i18n="form_success_period"> في الفترة الـ </span> <span id="success-time"></span></p>
+                                <p><span data-i18n="form_success_whatsapp">سنقوم بإرسال رسالة تأكيد على واتساب برقم </span><strong><span id="success-phone"></span></strong><span data-i18n="form_success_whatsapp_sub"> وتفاصيل الاجتماع خلال ساعة.</span></p>
+                            </div>
+                            <button type="button" class="btn-reset" onclick="resetForm()" data-i18n="form_success_reset_btn">طلب حجز جديد</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="#" class="logo-link">
+                    <span class="logo-text">فيكسورا</span>
+                    <div class="logo-icon-container">
+                        <svg class="logo-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                </a>
+                <p data-i18n="footer_about_text_vexora">مستشارك الأمني التكنولوجي الموثوق لتحليلات الفيديو الفورية وكاميرات المراقبة بالذكاء الاصطناعي.</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_links_title">روابط سريعة</h4>
+                <ul>
+                    <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+                    <li><a href="#sectors-section" data-i18n="nav_solutions">الأنشطة</a></li>
+                    <li><a href="#vexora-sandbox" data-i18n="nav_simulator">المحاكاة التفاعلية</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 data-i18n="footer_social_title">تابعنا على شبكاتنا الاجتماعية</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p data-i18n="footer_copyright_vexora">&copy; 2026 شركة فيكسورا (Vexora). جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js?v=1.1.2"></script>
+</body>
+</html>
