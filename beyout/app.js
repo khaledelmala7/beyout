@@ -301,17 +301,17 @@ function handleFormSubmit(event) {
     existingLeads.push(leadData);
     localStorage.setItem('beyout_leads', JSON.stringify(existingLeads));
 
-    // Submit form data to Netlify
-    const formElement = document.getElementById('demoForm');
-    const formData = new FormData(formElement);
-    
-    fetch("/", {
+    // Submit form data to FormSubmit (free email form provider)
+    fetch("https://formsubmit.co/ajax/khaledelmala7@gmail.com", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
+        headers: { 
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(leadData)
     })
-    .then(() => console.log("Lead captured by Netlify Forms successfully"))
-    .catch((error) => console.error("Error submitting to Netlify Forms:", error));
+    .then(() => console.log("Lead captured by FormSubmit successfully"))
+    .catch((error) => console.error("Error submitting to FormSubmit:", error));
 
     // Show step 4
     nextStep(4);
