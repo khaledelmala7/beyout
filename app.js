@@ -1,4 +1,6 @@
 // Beyout Smart Home Application Logic
+const TELEGRAM_CHAT_ID = '498398965';
+const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
 let currentLanguage = 'ar';
 let currentFormStep = 1;
 let selectedFormProduct = 'lumora';
@@ -323,6 +325,28 @@ function handleFormSubmit(event) {
 ملاحظات: ${leadData.notes || 'لا يوجد'}`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${ownerPhone}&text=${encodeURIComponent(msg)}`;
     window.open(whatsappUrl, '_blank');
+
+    // Send Telegram Notification
+    if (typeof TELEGRAM_BOT_TOKEN !== 'undefined' && TELEGRAM_BOT_TOKEN && TELEGRAM_BOT_TOKEN !== 'YOUR_BOT_TOKEN_HERE') {
+        const telegramMsg = `🔔 *طلب حجز جديد (BEYOUT)* 🔔\n\n` +
+            `👤 *الاسم:* ${name}\n` +
+            `📞 *الهاتف:* ${phone}\n` +
+            `📅 *التاريخ:* ${dateVal}\n` +
+            `🕒 *الفترة:* ${timeLabel}\n` +
+            `📝 *ملاحظات:* ${leadData.notes || 'لا يوجد'}`;
+
+        fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text: telegramMsg,
+                parse_mode: "Markdown"
+            })
+        })
+        .then(() => console.log("Telegram notification sent successfully"))
+        .catch((error) => console.error("Error sending Telegram notification:", error));
+    }
 
     // Show step 4
     nextStep(4);
