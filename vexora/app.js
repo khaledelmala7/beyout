@@ -1,6 +1,6 @@
 // Vexora AI Security Application Logic
 const TELEGRAM_CHAT_ID = '498398965';
-const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+const TELEGRAM_BOT_TOKEN = '8715853574:AAExFfgLPMlNXiTfd3OULRKB4Ap3cxmhS24';
 let currentLanguage = 'ar';
 let currentFormStep = 1;
 let selectedFormProduct = 'vexora';
