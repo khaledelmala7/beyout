@@ -324,7 +324,7 @@ function handleFormSubmit(event) {
 الفترة: ${timeLabel}
 ملاحظات: ${leadData.notes || 'لا يوجد'}`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${ownerPhone}&text=${encodeURIComponent(msg)}`;
-    window.open(whatsappUrl, '_blank');
+    window.location.href = whatsappUrl;
 
     // Send Telegram Notification
     if (typeof TELEGRAM_BOT_TOKEN !== 'undefined' && TELEGRAM_BOT_TOKEN && TELEGRAM_BOT_TOKEN !== 'YOUR_BOT_TOKEN_HERE') {
