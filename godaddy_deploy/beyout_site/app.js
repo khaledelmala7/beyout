@@ -316,7 +316,7 @@ function handleFormSubmit(event) {
     .catch((error) => console.error("Error submitting to FormSubmit:", error));
 
     // Redirect to WhatsApp with pre-filled details to the owner
-    const ownerPhone = "201064334334";
+    const ownerPhone = "201100400082";
     const msg = `مرحباً بيوت، أود حجز موعد استشارة:
 الاسم: ${name}
 الهاتف: ${phone}
