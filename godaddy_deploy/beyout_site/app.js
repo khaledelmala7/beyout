@@ -425,6 +425,14 @@ function setLanguage(lang) {
 
 const translations = {
     ar: {
+        "nav_dashboard": "لوحة التحكم",
+        "live_dash_subtitle": "لوحة التحكم الأمنية للعملاء",
+        "live_dash_title": "شاشة مراقبة حية لمشروعاتك (Construction Site Dashboard)",
+        "live_dash_desc": "تحكم وتابع جميع مواقعك الإنشائية ومصانعك من شاشة تحكم موحدة ذكية تجمع تحليلات البث والتنبيهات الفورية.",
+        "live_dash_panel_title": "موقع الإنشاءات الغربي - لوحة التحكم الأمنية",
+        "live_dash_cam_active": "CAM 02 - منطقة العمل الرئيسية",
+        "live_dash_log_no_helmet": "مخالفة أمنية: عامل بدون خوذة سلامة - منطقة العمل الرئيسية",
+        "live_dash_log_truck": "مرور مركبة مصرحة: شاحنة نقل - البوابة الغربية",
         "sec_title_15": "مجمعات سكنية (كمبوند)",
         "sec_feat_15_1": "🎯 رصد تسلق الأسوار",
         "sec_feat_15_2": "🎯 التعرف على لوحات السيارات",
@@ -634,6 +642,14 @@ const translations = {
         "footer_copyright": "&copy; 2026 شركة بيوت (Beyout). جميع الحقوق محفوظة."
     },
     en: {
+        "nav_dashboard": "Control Panel",
+        "live_dash_subtitle": "Customer Security Console",
+        "live_dash_title": "Live Smart Monitoring Dashboard for Your Projects",
+        "live_dash_desc": "Monitor and manage all your construction sites and factories from a unified intelligent screen aggregating stream analytics and real-time alerts.",
+        "live_dash_panel_title": "WEST-PORT CONSTRUCTION SITE - SECURITY CONSOLE",
+        "live_dash_cam_active": "CAM 02 - Main Work Area",
+        "live_dash_log_no_helmet": "Violation: Worker not wearing safety helmet - Main Work Area",
+        "live_dash_log_truck": "Authorized Truck Entry - West Gate",
         "sec_title_15": "Residential Compounds",
         "sec_feat_15_1": "🎯 Fence Climbing Detection",
         "sec_feat_15_2": "🎯 License Plate Recognition",

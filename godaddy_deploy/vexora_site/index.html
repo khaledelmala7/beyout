@@ -34,7 +34,7 @@
                 <a href="#about" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
                 <a href="#sectors-section" class="nav-link" data-i18n="nav_solutions">الأنشطة</a>
                 <a href="#vexora-sandbox" class="nav-link" data-i18n="nav_products">المنتجات</a>
-                <a href="#demo-section" class="nav-link" data-i18n="nav_blog">المدونة</a>
+                <a href="#dashboard-section" class="nav-link" data-i18n="nav_dashboard">لوحة التحكم</a>
                 <a href="#demo-section" class="nav-link" data-i18n="nav_contact">اتصل بنا</a>
                 <a href="https://beyout-ochre.vercel.app" class="nav-link link-external"><span data-i18n="nav_to_beyout">بيوت للمنازل الذكية (B2C)</span> →</a>
             </nav>
@@ -552,6 +552,94 @@
             </div>
     </section>
 
+        <!-- Real-Time Customer Security Dashboard Section (Vexora) -->
+    <section class="live-dashboard-section" id="dashboard-section" style="padding: 80px 0; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 50px;">
+                <span class="section-subtitle" data-i18n="live_dash_subtitle">لوحة التحكم الأمنية للعملاء</span>
+                <h2 class="section-title" data-i18n="live_dash_title" style="font-size: 34px; font-weight: 800; margin: 12px 0 16px;">شاشة مراقبة حية لمشروعاتك (Construction Site Dashboard)</h2>
+                <p class="section-desc max-w-600" data-i18n="live_dash_desc" style="color: var(--text-secondary); font-size: 16px;">تحكم وتابع جميع مواقعك الإنشائية ومصانعك من شاشة تحكم موحدة ذكية تجمع تحليلات البث والتنبيهات الفورية.</p>
+            </div>
+
+            <div class="sandbox-container glass-card" style="padding: 24px; border: 1px solid var(--border-color); border-radius: 24px;">
+                <div class="device-mockup glass-card dashboard-mockup">
+                    <div class="mockup-header">
+                        <div class="dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="mockup-title" data-i18n="live_dash_panel_title">WEST-PORT CONSTRUCTION SITE - SECURITY CONSOLE</div>
+                    </div>
+                    <div class="dashboard-layout">
+                        <!-- Sidebar -->
+                        <div class="dashboard-sidebar">
+                            <div class="sidebar-section">
+                                <h4 data-i18n="dash_cameras_title">القنوات النشطة</h4>
+                                <div class="cam-channels-list">
+                                    <div class="channel-item">
+                                        <span class="status-indicator online"></span>
+                                        <span class="channel-name">CAM 01 - البوابة الغربية</span>
+                                    </div>
+                                    <div class="channel-item active">
+                                        <span class="status-indicator online"></span>
+                                        <span class="channel-name" data-i18n="live_dash_cam_active">CAM 02 - منطقة العمل الرئيسية</span>
+                                    </div>
+                                    <div class="channel-item">
+                                        <span class="status-indicator offline"></span>
+                                        <span class="channel-name">CAM 03 - مستودع المواد</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-section">
+                                <h4 data-i18n="dash_stats_title">تحليلات النظام</h4>
+                                <div class="dash-stats-grid">
+                                    <div class="dash-stat-box">
+                                        <span class="stat-lbl" data-i18n="dash_cpu">المعالج</span>
+                                        <span class="stat-val">18%</span>
+                                    </div>
+                                    <div class="dash-stat-box">
+                                        <span class="stat-lbl" data-i18n="dash_fps">الإطارات</span>
+                                        <span class="stat-val">30 FPS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Main Panel -->
+                        <div class="dashboard-main">
+                            <div class="camera-stream-container" style="border: none; margin-bottom: 0;">
+                                <div class="live-indicator">LIVE 🔴</div>
+                                <img src="assets/sec_construction.jpg" alt="Construction Site Camera" class="camera-feed-img" style="max-height: 400px; object-fit: cover;">
+                                
+                                <!-- Decorative AI bounding boxes to show construction helmet detection! -->
+                                <div class="camera-detection-box warning-box" style="display: block; top: 15%; left: 30%; width: 12%; height: 25%;">
+                                    <span style="position: absolute; top: -18px; left: 0; background: #ffd60a; color: #000; font-size: 8px; font-weight: bold; padding: 2px 4px; border-radius: 2px; white-space: nowrap;">HELMET: OK</span>
+                                </div>
+                                <div class="camera-detection-box danger-box" style="display: block; top: 35%; left: 60%; width: 14%; height: 30%;">
+                                    <span style="position: absolute; top: -18px; left: 0; background: #ff453a; color: #fff; font-size: 8px; font-weight: bold; padding: 2px 4px; border-radius: 2px; white-space: nowrap;">NO HELMET! ⚠️</span>
+                                </div>
+                            </div>
+                            
+                            <div class="alert-log-panel" style="margin-top: 16px;">
+                                <h4 data-i18n="vexora_alert_logs_lbl">سجل التنبيهات الأمنية</h4>
+                                <div class="alert-logs">
+                                    <div class="log-entry danger">
+                                        <span class="time">15:38:12</span>
+                                        <span class="msg" data-i18n="live_dash_log_no_helmet">مخالفة أمنية: عامل بدون خوذة سلامة - منطقة العمل الرئيسية</span>
+                                    </div>
+                                    <div class="log-entry info">
+                                        <span class="time">15:36:04</span>
+                                        <span class="msg" data-i18n="live_dash_log_truck">مرور مركبة مصرحة: شاحنة نقل - البوابة الغربية</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Multi-Step Demo Booking Form Section -->
     <section class="demo-booking-section" id="demo-section">
         <div class="container">
@@ -715,6 +803,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=1.1.9"></script>
+    <script src="app.js?v=1.2.0"></script>
 </body>
 </html>
