@@ -425,6 +425,10 @@ function setLanguage(lang) {
 
 const translations = {
     ar: {
+        "dash_cameras_title": "القنوات النشطة",
+        "dash_stats_title": "تحليلات النظام",
+        "dash_cpu": "المعالج",
+        "dash_fps": "الإطارات",
         "sec_desc_gen": "تأمين وتحليل الأنشطة عبر كاميرات المراقبة.",
         "sec_title_1": "مواقع إنشائية",
         "sec_feat_1_1": "🎯 خوذة السلامة",
@@ -624,6 +628,10 @@ const translations = {
         "footer_copyright": "&copy; 2026 شركة بيوت (Beyout). جميع الحقوق محفوظة."
     },
     en: {
+        "dash_cameras_title": "Active Channels",
+        "dash_stats_title": "System Analytics",
+        "dash_cpu": "CPU",
+        "dash_fps": "FPS",
         "sec_desc_gen": "Securing and analyzing activities via surveillance cameras.",
         "sec_title_1": "Construction Sites",
         "sec_feat_1_1": "🎯 Safety Helmet Detection",

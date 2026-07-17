@@ -860,3 +860,105 @@ input:checked + .slider:before { transform: translateX(18px); }
     .form-fields-grid { grid-template-columns: 1fr; }
     .input-group.span-2 { grid-column: span 1; }
 }
+
+/* -------------------------------------------------------------
+   VEXORA - B2B Security Dashboard Mockup Styles
+   ------------------------------------------------------------- */
+.dashboard-mockup {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #080c10;
+    overflow: hidden;
+}
+.dashboard-layout {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(8, 12, 16, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+.dashboard-sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    padding-left: 16px;
+}
+html[dir="rtl"] .dashboard-sidebar {
+    border-left: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    padding-left: 0;
+    padding-right: 16px;
+}
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.sidebar-section h4 {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.cam-channels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.channel-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--text-secondary);
+    transition: var(--transition-smooth);
+}
+.channel-item.active {
+    background: rgba(34, 211, 238, 0.08);
+    border-color: rgba(34, 211, 238, 0.2);
+    color: #ffffff;
+}
+.status-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.status-indicator.online {
+    background: #34c759;
+    box-shadow: 0 0 6px #34c759;
+}
+.status-indicator.offline {
+    background: #8e8e93;
+}
+.dash-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.dash-stat-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.dash-stat-box .stat-lbl {
+    font-size: 9px;
+    color: var(--text-secondary);
+}
+.dash-stat-box .stat-val {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-color);
+}

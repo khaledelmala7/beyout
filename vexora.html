@@ -357,10 +357,90 @@
                 <p class="section-desc max-w-600" data-i18n="sandbox_desc_vexora">اختبر تحليلات فيكسورا ورصد المتسللين ومخاطر الحريق لحظياً على البث المباشر.</p>
             </div>
 
-            <div class="sandbox-container glass-card" style="height: 85vh; padding: 0; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px;">
-                <iframe src="http://localhost:5173" width="100%" height="100%" frameborder="0" style="border-radius: 20px; background: transparent;"></iframe>
+                        <div class="sandbox-container glass-card" style="padding: 24px;">
+                <!-- Vexora Sandbox -->
+                <div class="sandbox-content active" id="sandbox-vexora">
+                    <div class="sandbox-grid">
+                        <div class="simulator-visual">
+                            <div class="device-mockup glass-card dashboard-mockup">
+                                <div class="mockup-header">
+                                    <div class="dots">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                    </div>
+                                    <div class="mockup-title">VEXORA CLOUD CONTROL PANEL</div>
+                                </div>
+                                <div class="dashboard-layout">
+                                    <!-- Sidebar -->
+                                    <div class="dashboard-sidebar">
+                                        <div class="sidebar-section">
+                                            <h4 data-i18n="dash_cameras_title">القنوات النشطة</h4>
+                                            <div class="cam-channels-list">
+                                                <div class="channel-item active">
+                                                    <span class="status-indicator online"></span>
+                                                    <span class="channel-name" id="cam-title">CAM 01 - المستودع</span>
+                                                </div>
+                                                <div class="channel-item">
+                                                    <span class="status-indicator offline"></span>
+                                                    <span class="channel-name">CAM 02 - منطقة الشحن</span>
+                                                </div>
+                                                <div class="channel-item">
+                                                    <span class="status-indicator offline"></span>
+                                                    <span class="channel-name">CAM 03 - البوابة الرئيسية</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar-section">
+                                            <h4 data-i18n="dash_stats_title">تحليلات النظام</h4>
+                                            <div class="dash-stats-grid">
+                                                <div class="dash-stat-box">
+                                                    <span class="stat-lbl" data-i18n="dash_cpu">المعالج</span>
+                                                    <span class="stat-val">12%</span>
+                                                </div>
+                                                <div class="dash-stat-box">
+                                                    <span class="stat-lbl" data-i18n="dash_fps">الإطارات</span>
+                                                    <span class="stat-val">30 FPS</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Main Panel -->
+                                    <div class="dashboard-main">
+                                        <div class="camera-stream-container">
+                                            <div class="live-indicator">LIVE 🔴</div>
+                                            <img src="assets/vexora_safety_vest.jpg" alt="Live Camera" class="camera-feed-img" id="cam-stream-img">
+                                            <div class="camera-detection-box" id="mock-detection-box" style="display: none;"></div>
+                                            <!-- AI Target Elements -->
+                                            <div class="ai-target-circle" id="ai-target-circle" style="display: none;"></div>
+                                            <div class="ai-target-line" id="ai-target-line" style="display: none;"></div>
+                                        </div>
+                                        <div class="alert-log-panel">
+                                            <h4 data-i18n="vexora_alert_logs_lbl">سجل التنبيهات الأمنية</h4>
+                                            <div class="alert-logs" id="alert-logs">
+                                                <div class="log-entry info">
+                                                    <span class="time">09:12:04</span>
+                                                    <span class="msg" data-i18n="vexora_log_vehicle">مرور مركبة مصرحة - لوحة رقم 4829</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="simulator-controls">
+                            <h3 data-i18n="sandbox_vex_ctrl_title">أدوات اختبار التحليل الذكي Vexora</h3>
+                            <p class="small-desc" data-i18n="sandbox_vex_ctrl_desc">تحكم بالكاميرا وقم بمحاكاة سيناريوهات حقيقية لرؤية رد فعل الذكاء الاصطناعي ورصد المخالفات.</p>
+                            
+                            <button class="mock-btn active" id="btn-scen-clear" onclick="triggerVexoraScenario('clear')" data-i18n="sandbox_vex_scen_clear">الوضع الطبيعي (تصفير الكاميرا)</button>
+                            <button class="mock-btn" id="btn-scen-intruder" onclick="triggerVexoraScenario('intruder')" data-i18n="sandbox_vex_scen_intruder">محاكاة متسلل بعد ساعات العمل</button>
+                            <button class="mock-btn" id="btn-scen-fire" onclick="triggerVexoraScenario('fire')" data-i18n="sandbox_vex_scen_fire">محاكاة خطر حريق/دخان</button>
+
+                            <div class="sim-feedback-msg" id="sim-feedback-vexora" data-i18n="sandbox_vex_feedback_msg">اضغط على السيناريوهات أعلاه لرؤية كيف يقوم الذكاء الاصطناعي بتحليل البث وتنبيه صاحب العمل.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- Multi-Step Demo Booking Form Section -->
@@ -526,6 +606,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=1.1.8"></script>
+    <script src="app.js?v=1.1.9"></script>
 </body>
 </html>
