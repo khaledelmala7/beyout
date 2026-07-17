@@ -425,6 +425,12 @@ function setLanguage(lang) {
 
 const translations = {
     ar: {
+        "sec_title_15": "مجمعات سكنية (كمبوند)",
+        "sec_feat_15_1": "🎯 رصد تسلق الأسوار",
+        "sec_feat_15_2": "🎯 التعرف على لوحات السيارات",
+        "sec_feat_15_3": "🎯 تسكع مريب في الممرات",
+        "sec_feat_15_4": "🎯 أمان منطقة المسابح",
+        "sec_feat_15_5": "🎯 رصد دخان أو حريق",
         "dash_cameras_title": "القنوات النشطة",
         "dash_stats_title": "تحليلات النظام",
         "dash_cpu": "المعالج",
@@ -628,6 +634,12 @@ const translations = {
         "footer_copyright": "&copy; 2026 شركة بيوت (Beyout). جميع الحقوق محفوظة."
     },
     en: {
+        "sec_title_15": "Residential Compounds",
+        "sec_feat_15_1": "🎯 Fence Climbing Detection",
+        "sec_feat_15_2": "🎯 License Plate Recognition",
+        "sec_feat_15_3": "🎯 Suspicious Loitering",
+        "sec_feat_15_4": "🎯 Pool Area Safety",
+        "sec_feat_15_5": "🎯 Smoke & Fire Detection",
         "dash_cameras_title": "Active Channels",
         "dash_stats_title": "System Analytics",
         "dash_cpu": "CPU",
