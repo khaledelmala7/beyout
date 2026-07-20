@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Presentation - Vexora AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+        body {
+            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #080c10;
+            color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        .slide {
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+            padding: 50px 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            page-break-after: always;
+            position: relative;
+        }
+        .cover-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #020608 0%, #0d1a24 100%);
+        }
+        .cover-logo {
+            font-size: 40px;
+            font-weight: 800;
+            color: #22d3ee;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .cover-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 10px 0 20px 0;
+        }
+        .cover-subtitle {
+            font-size: 18px;
+            color: #9ca3af;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+        .slide-header {
+            border-bottom: 2px solid rgba(34, 211, 238, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .slide-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #22d3ee;
+            margin: 0;
+        }
+        .slide-brand {
+            font-size: 16px;
+            font-weight: 700;
+            color: #9ca3af;
+        }
+        .slide-body {
+            flex: 1;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #d1d5db;
+        }
+        .slide-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+            font-size: 12px;
+            color: #6b7280;
+            display: flex;
+            justify-content: space-between;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .panel {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .panel h3 {
+            color: #ffd60a;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-bottom: 1px dashed rgba(255, 214, 10, 0.2);
+            padding-bottom: 8px;
+        }
+        .bullet-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .bullet-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-right: 24px;
+        }
+        .bullet-list li::before {
+            content: "•";
+            color: #22d3ee;
+            font-size: 20px;
+            position: absolute;
+            right: 0;
+            top: -2px;
+        }
+        .check-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .check-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-right: 24px;
+        }
+        .check-list li::before {
+            content: "✓";
+            color: #34c759;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .price-box {
+            background: rgba(34, 211, 238, 0.05);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .price-val {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffd60a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: Cover Page -->
+    <div class="slide cover-slide">
+        <div class="cover-logo">VEXORA AI SECURITY</div>
+        <div class="cover-title">العرض التقديمي والحل الأمني الذكي</div>
+        <div class="cover-subtitle">قطاع: المواقع الإنشائية (Construction Sites)</div>
+        <div style="margin-top: 40px; font-size: 13px; color: #6b7280;">منصة الذكاء الاصطناعي الأمني الموحد لكاميرات المراقبة</div>
+    </div>
+
+    <!-- SLIDE 2: About Vexora -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2 class="slide-title">من نحن - شركة فيكسورا (Vexora)</h2>
+            <span class="slide-brand">VEXORA AI</span>
+        </div>
+        <div class="slide-body">
+            <p><strong>فيكسورا</strong> هي شركة رائدة في تقديم حلول الذكاء الاصطناعي وتكنولوجيا تحليل الفيديو الفوري لكاميرات المراقبة (B2B AI Video Analytics) في مصر والشرق الأوسط. نقوم بتحويل نظام كاميرات المراقبة التقليدي السلبي (الذي يسجل فقط) إلى نظام أمني ذكي نشط يتنبأ بالجرائم والحوادث ويمنع المخاطر قبل حدوثها عبر إرسال تنبيهات مصورة فورية في أجزاء من الثانية.</p>
+            
+            <div class="grid-2" style="margin-top: 30px;">
+                <div class="panel">
+                    <h3>الرؤية والرسالة (Vision & Mission)</h3>
+                    <ul class="bullet-list" style="font-size:13.5px;">
+                        <li><strong>رؤيتنا</strong>: ريادة الشرق الأوسط في أمن المنشآت والذكاء الصناعي، وجعل كل كاميرا مراقبة حارساً ذكياً ساهراً لا ينام لحماية الاستثمارات والأرواح.</li>
+                        <li><strong>رسالتنا</strong>: أتمتة الأمن والسلامة والصحة المهنية لقطاع الأعمال عبر منصاتنا وتوفير أقصى درجات الحماية بدون تكاليف باهظة للعملاء.</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h3>قيمنا وثوابتنا الثابتة (Core Values)</h3>
+                    <ul class="bullet-list" style="font-size:13.5px;">
+                        <li><strong>الابتكار المستمر</strong>: نطور خوارزميات التعلم العميق محلياً لتناسب السوق المصري.</li>
+                        <li><strong>الأمان والسرية المطلقة</strong>: معالجة بث الكاميرات محلياً بنسبة 100% لحماية البيانات والخصوصية.</li>
+                        <li><strong>المرونة والتكامل الفائق</strong>: التوافق الكامل مع جميع أنواع كاميرات المراقبة الحالية دون قيود.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>الصفحة 2 من 5</span>
+            <span>www.vexorame.com</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: Sector Specific Analysis -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2 class="slide-title">دراسة وتحليل قطاع: المواقع الإنشائية (Construction Sites)</h2>
+            <span class="slide-brand">VEXORA SOLUTIONS</span>
+        </div>
+        <div class="slide-body">
+            <div class="grid-2">
+                <div class="panel" style="border-right: 4px solid #ff453a;">
+                    <h3 style="color:#ff453a; border-bottom-color: rgba(255, 69, 58, 0.2);">الأخطار والمشاكل المحيطة بالقطاع ⚠️</h3>
+                    <ul class="bullet-list" style="font-size:13.5px; color:#e5e7eb;">
+                        <li>عدم التزام العمال بارتداء خوذة السلامة والسترة العاكسة مما يعرضهم لإصابات بالغة وغرامات قانونية.</li>
+<li>اقتحام الآليات الثقيلة لمناطق تواجد العمال أو دخول العمال لمناطق الخطر المحيطة بالرافعات.</li>
+<li>حوادث سقوط العمال من المرتفعات أو السلالم وعدم سرعة الاستجابة لإنقاذهم.</li>
+<li>التسلل الليلي وسرقة مواد البناء الثمينة (الحديد، النحاس، الأسمنت) والمعدات.</li>
+                    </ul>
+                </div>
+                <div class="panel" style="border-right: 4px solid #34c759;">
+                    <h3 style="color:#34c759; border-bottom-color: rgba(52, 199, 89, 0.2);">الحلول الأمنية الذكية المطبقة من فيكسورا ✅</h3>
+                    <ul class="check-list" style="font-size:13.5px; color:#e5e7eb;">
+                        <li>🎯 رصد تلقائي لارتداء خوذة السلامة (Helmet Detection) والسترة الواقية (Safety Vest) لحظة دخول الموقع.</li>
+<li>🎯 التنبيه الفوري عند دخول العمال لمناطق الخطر الحرجة حول الرافعات والآليات الثقيلة.</li>
+<li>🎯 رصد السقوط المفاجئ للعمال (Fall Detection) وإطلاق جرس إنذار فوري لإسعافهم.</li>
+<li>🎯 نظام كشف التسلل والسرقة الليلية عبر تفعيل خطوط الليزر الافتراضية حول الأسوار.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>الصفحة 3 من 5</span>
+            <span>www.vexorame.com</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: Hardware Constraints & Trial Offer -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2 class="slide-title">مواصفات السيرفر وفترة التجربة المجانية</h2>
+            <span class="slide-brand">VEXORA HARDWARE & TRIAL</span>
+        </div>
+        <div class="slide-body">
+            <div class="grid-2">
+                <div class="panel">
+                    <h3>سيرفر فيكسورا للذكاء الاصطناعي (Local AI Server)</h3>
+                    <ul class="bullet-list" style="font-size:13.5px;">
+                        <li><strong>معالجة محلية بالكامل</strong>: يتم تركيب سيرفر فيكسورا محلياً (On-Premise Server) لمعالجة بث الكاميرات دون استهلاك سرعة الإنترنت وبحماية سرية كاملة.</li>
+                        <li><strong>سعة الكاميرات للسيرفر الواحد</strong>: السيرفر الواحد يدعم بحد أقصى <strong>6 كاميرات مراقبة (6 Cameras Max)</strong>. في حال رغبة العميل في تغطية كاميرات أكثر، يتم تزويد الموقع بسيرفرات إضافية.</li>
+                        <li><strong>التوافق مع الكاميرات الحالية</strong>: نقوم بالربط والعمل على <strong>أي كاميرا مراقبة يملكها العميل بالفعل</strong> (IP, Analog, HD, DVR/NVR) مهما كان نوعها أو طرازها دون الحاجة لتغييرها أو شراء كاميرات جديدة.</li>
+                    </ul>
+                </div>
+                <div class="panel" style="border-right: 4px solid #ffd60a;">
+                    <h3 style="color:#ffd60a; border-bottom-color: rgba(255, 214, 10, 0.2);">الفترة التجريبية والضمان (15-Day Free Trial)</h3>
+                    <p style="font-size:14px; margin-top:0;">لتأكيد جودة الخدمة وفعالية الذكاء الاصطناعي، تقدم فيكسورا عرضاً تجريبياً حقيقياً ببيئة العمل الخاصة بك:</p>
+                    <ul class="check-list" style="font-size:13px;">
+                        <li><strong>تركيب سيرفر تجريبي محلي بالكامل مجاناً لمدة 15 يوماً</strong>.</li>
+                        <li>بعد انتهاء الـ 15 يوماً التجريبية، يحق لك شراء السيرفر التجريبي مباشرة والبدء بالتشغيل الفعلي.</li>
+                        <li>أو اختيار توريد سيرفر جديد كلياً ومماثل بنفس المواصفات الفنية وبضمان كامل.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>الصفحة 4 من 5</span>
+            <span>www.vexorame.com</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: Commercial Proposal & Pricing -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2 class="slide-title">العرض المالي والاشتراكات لقطاع: المواقع الإنشائية (Construction Sites)</h2>
+            <span class="slide-brand">VEXORA COMMERCIALS</span>
+        </div>
+        <div class="slide-body">
+            <div class="grid-2">
+                <div class="panel">
+                    <h3>أسعار السيرفرات والاشتراك الشهري للخدمة</h3>
+                    <div class="price-box">
+                        <span style="font-size: 12px; color: #9ca3af; display:block; margin-bottom:4px;">تكلفة سيرفر المعالجة الذكي (مرة واحدة)</span>
+                        <span class="price-val">18,000 EGP</span>
+                        <span style="font-size: 11px; color: #9ca3af; display:block; margin-top:4px;">*شراء السيرفر التجريبي مباشرة أو توريد جديد بـ 22,000 EGP</span>
+                    </div>
+                    
+                    <div class="price-box" style="background: rgba(52, 199, 89, 0.05); border-color: rgba(52, 199, 89, 0.2);">
+                        <span style="font-size: 12px; color: #9ca3af; display:block; margin-bottom:4px;">الاشتراك الشهري للذكاء الاصطناعي (للسيرفر الواحد - 6 كاميرات)</span>
+                        <span class="price-val" style="color: #34c759;">2,500 EGP / شهرياً</span>
+                        <span style="font-size: 11px; color: #9ca3af; display:block; margin-top:4px;">*يشمل التحديثات الأمنية والتنبيهات ودعم لوحة التحكم السحابية</span>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h3>التنبيهات القياسية والسيناريوهات المخصصة</h3>
+                    <ul class="bullet-list" style="font-size:13.5px;">
+                        <li><strong>تنبيهات الباقة القياسية (Standard Alerts)</strong>: كل قطاع يأتي بباقة التنبيهات القياسية المحددة له بداخل هذا العرض مجاناً وتكون مدمجة مع قيمة الاشتراك الشهري.</li>
+                        <li><strong>تنبيهات مخصصة حسب الطلب (Custom AI Alerts)</strong>: في حال احتياج العميل لتنبيه خاص ومخصص لمنشأته وغير متواجد في الباقة القياسية، نقوم ببرمجته وتطوير خوارزمياته خصيصاً للعميل.</li>
+                        <li><strong>تكلفة التخصيص</strong>: يتم احتساب <strong>5,000 EGP إضافية لمرة واحدة فقط (One-Time Setup Fee)</strong> لكل تنبيه مخصص يتم طلبه خارج الباقة.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">
+            <span>الصفحة 5 من 5</span>
+            <span>www.vexorame.com</span>
+        </div>
+    </div>
+
+</body>
+</html>
