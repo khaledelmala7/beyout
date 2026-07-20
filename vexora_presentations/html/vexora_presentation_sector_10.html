@@ -30,12 +30,17 @@
             text-align: center;
             background: linear-gradient(135deg, #020608 0%, #0d1a24 100%);
         }
+        .cover-logo-img {
+            max-height: 120px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.3));
+        }
         .cover-logo {
             font-size: 40px;
             font-weight: 800;
             color: #22d3ee;
             letter-spacing: 2px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .cover-title {
             font-size: 32px;
@@ -141,12 +146,12 @@
             background: rgba(34, 211, 238, 0.05);
             border: 1px solid rgba(34, 211, 238, 0.2);
             border-radius: 8px;
-            padding: 16px;
+            padding: 14px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .price-val {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
             color: #ffd60a;
         }
@@ -154,12 +159,13 @@
 </head>
 <body>
 
-    <!-- SLIDE 1: Cover Page -->
+    <!-- SLIDE 1: Cover Page (with logo image) -->
     <div class="slide cover-slide">
+        <img class="cover-logo-img" src="d:/Ai/social/vexora/logo_vexora.png" alt="Vexora Logo">
         <div class="cover-logo">VEXORA AI SECURITY</div>
         <div class="cover-title">العرض التقديمي والحل الأمني الذكي</div>
         <div class="cover-subtitle">قطاع: الهايبر ماركت وسوبر ماركت (Hypermarkets)</div>
-        <div style="margin-top: 40px; font-size: 13px; color: #6b7280;">منصة الذكاء الاصطناعي الأمني الموحد لكاميرات المراقبة</div>
+        <div style="margin-top: 30px; font-size: 13px; color: #6b7280;">منصة الذكاء الاصطناعي الأمني الموحد لكاميرات المراقبة</div>
     </div>
 
     <!-- SLIDE 2: About Vexora -->
@@ -246,8 +252,8 @@
                     </ul>
                 </div>
                 <div class="panel" style="border-right: 4px solid #ffd60a;">
-                    <h3 style="color:#ffd60a; border-bottom-color: rgba(255, 214, 10, 0.2);">الفترة التجريبية والضمان (15-Day Free Trial)</h3>
-                    <p style="font-size:14px; margin-top:0;">لتأكيد جودة الخدمة وفعالية الذكاء الاصطناعي، تقدم فيكسورا عرضاً تجريبياً حقيقياً ببيئة العمل الخاصة بك:</p>
+                    <h3>الفترة التجريبية المجانية (15-Day Free Trial)</h3>
+                    <p style="font-size:14px; margin-top:0;">تقدم فيكسورا عرضاً تجريبياً حقيقياً ببيئة العمل الخاصة بك للتأكد من الفعالية المطلقة:</p>
                     <ul class="check-list" style="font-size:13px;">
                         <li><strong>تركيب سيرفر تجريبي محلي بالكامل مجاناً لمدة 15 يوماً</strong>.</li>
                         <li>بعد انتهاء الـ 15 يوماً التجريبية، يحق لك شراء السيرفر التجريبي مباشرة والبدء بالتشغيل الفعلي.</li>
@@ -262,7 +268,7 @@
         </div>
     </div>
 
-    <!-- SLIDE 5: Commercial Proposal & Pricing -->
+    <!-- SLIDE 5: Commercial Proposal & Pricing & Customer Prep -->
     <div class="slide">
         <div class="slide-header">
             <h2 class="slide-title">العرض المالي والاشتراكات لقطاع: الهايبر ماركت وسوبر ماركت (Hypermarkets)</h2>
@@ -271,26 +277,35 @@
         <div class="slide-body">
             <div class="grid-2">
                 <div class="panel">
-                    <h3>أسعار السيرفرات والاشتراك الشهري للخدمة</h3>
-                    <div class="price-box">
-                        <span style="font-size: 12px; color: #9ca3af; display:block; margin-bottom:4px;">تكلفة سيرفر المعالجة الذكي (مرة واحدة)</span>
-                        <span class="price-val">18,000 EGP</span>
-                        <span style="font-size: 11px; color: #9ca3af; display:block; margin-top:4px;">*شراء السيرفر التجريبي مباشرة أو توريد جديد بـ 22,000 EGP</span>
-                    </div>
+                    <h3>التكلفة والاستثمار المالي</h3>
                     
-                    <div class="price-box" style="background: rgba(52, 199, 89, 0.05); border-color: rgba(52, 199, 89, 0.2);">
-                        <span style="font-size: 12px; color: #9ca3af; display:block; margin-bottom:4px;">الاشتراك الشهري للذكاء الاصطناعي (للسيرفر الواحد - 6 كاميرات)</span>
-                        <span class="price-val" style="color: #34c759;">2,500 EGP / شهرياً</span>
-                        <span style="font-size: 11px; color: #9ca3af; display:block; margin-top:4px;">*يشمل التحديثات الأمنية والتنبيهات ودعم لوحة التحكم السحابية</span>
+                    <div class="price-box">
+                        <span style="font-size: 11px; color: #9ca3af; display:block; margin-bottom:2px;">تكلفة سيرفر المعالجة المحلي الذكي (تدفع مرة واحدة عند بداية العقد)</span>
+                        <span class="price-val">20,000 EGP</span>
+                    </div>
+
+                    <div class="price-box" style="background: rgba(52, 199, 89, 0.05); border-color: rgba(52, 199, 89, 0.2); text-align: right; padding: 12px;">
+                        <span style="font-weight: 700; color:#34c759; display:block; border-bottom:1px solid rgba(52,199,89,0.2); padding-bottom:4px; margin-bottom:8px; font-size:13px;">هيكل الاشتراك الشهري للذكاء الاصطناعي (أقل باقة):</span>
+                        <ul style="font-size:12px; padding-right:15px; margin:0; line-height:1.6; color:#d1d5db;">
+                            <li>الباقة الدنيا (كاميرا واحدة + رقم موبايل واحد): <strong>8,000 EGP / شهرياً</strong></li>
+                            <li>تكلفة كل كاميرا إضافية: <strong>+1,500 EGP / شهرياً</strong></li>
+                            <li>تكلفة كل رقم موبايل إضافي للتنبيهات: <strong>+1,000 EGP / شهرياً</strong></li>
+                            <li style="color:#ffd60a; font-weight:700; margin-top:5px; list-style-type:none;">🎁 عرض السيرفر الكامل (6 كاميرات + رقم واحد): <strong>15,000 EGP / شهرياً</strong> بدلاً من 15,500</li>
+                            <li style="font-size:11px; color:#9ca3af; margin-top:4px;">* إذا تطلب الموقع أكثر من 6 كاميرات، يتم توريد سيرفر إضافي وتطبيق نفس الحسابات.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="panel">
-                    <h3>التنبيهات القياسية والسيناريوهات المخصصة</h3>
-                    <ul class="bullet-list" style="font-size:13.5px;">
-                        <li><strong>تنبيهات الباقة القياسية (Standard Alerts)</strong>: كل قطاع يأتي بباقة التنبيهات القياسية المحددة له بداخل هذا العرض مجاناً وتكون مدمجة مع قيمة الاشتراك الشهري.</li>
-                        <li><strong>تنبيهات مخصصة حسب الطلب (Custom AI Alerts)</strong>: في حال احتياج العميل لتنبيه خاص ومخصص لمنشأته وغير متواجد في الباقة القياسية، نقوم ببرمجته وتطوير خوارزمياته خصيصاً للعميل.</li>
-                        <li><strong>تكلفة التخصيص</strong>: يتم احتساب <strong>5,000 EGP إضافية لمرة واحدة فقط (One-Time Setup Fee)</strong> لكل تنبيه مخصص يتم طلبه خارج الباقة.</li>
+                    <h3>المستلزمات المطلوبة من العميل (Client Setup)</h3>
+                    <ul class="check-list" style="font-size:12.5px;">
+                        <li><strong>جهاز UPS (تنظيم وحفظ الطاقة)</strong>: لتأمين السيرفر الذكي وحمايته من التذبذب الكهربائي المفاجئ وانقطاع التيار.</li>
+                        <li><strong>خط إنترنت مستقر</strong>: لإرسال التنبيهات الفورية المصورة عبر الواتساب والمزامنة مع لوحة التحكم السحابية.</li>
+                        <li><strong>شبكة كاميرات مراقبة نشطة</strong>: كابلات وبث كاميرات المراقبة الحالي والجاهز للربط (مهما كان نوع الكاميرات).</li>
+                        <li><strong>مكان آمن ومكيف</strong>: لتركيب السيرفر وحمايته من الأتربة والحرارة العالية لضمان استقرار التشغيل.</li>
                     </ul>
+                    
+                    <h3 style="margin-top:15px; font-size:14px; color:#ffd60a; border-bottom-style:dashed; border-bottom-width:1px; padding-bottom:4px;">التنبيهات المخصصة</h3>
+                    <p style="font-size:11.5px; color:#d1d5db; margin:0; line-height:1.5;">التنبيهات القياسية المذكورة في العرض مجانية ومضمنة بالاشتراك. في حال رغبة العميل في ابتكار وتطوير سيناريو أمني خاص بغير الباقة القياسية، يتم برمجة التنبيه وتطوير الخوارزميات له مقابل <strong>5,000 EGP لمرة واحدة فقط</strong>.</p>
                 </div>
             </div>
         </div>
