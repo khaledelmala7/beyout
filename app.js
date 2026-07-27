@@ -429,9 +429,10 @@ function setLanguage(lang) {
 // 100% Pure Arabic & English Dictionaries (Zero Mixed Words)
 
 // 100% Comprehensive Bilingual Translation Dictionaries (Pure AR & Pure EN)
+
+// 100% Comprehensive Bilingual Translation Engine (Pure AR / Pure EN)
 const translations = {
     ar: {
-        // Navigation & Buttons
         "nav_products": "المنتجات والأنظمة",
         "nav_solutions": "التنبيهات الذكية",
         "nav_dashboard": "لوحة التحكم",
@@ -439,14 +440,12 @@ const translations = {
         "nav_stories": "قصص نجاح",
         "btn_start_now": "ابدأ التجربة المجانية",
         
-        // Hero Section
         "hero_title": "نظام الذكاء الاصطناعي الأمني فيكسورا",
         "hero_desc": "تحويل كاميرات المراقبة التقليدية إلى منظومة أمنية ذكية ترصد المخاطر والتسلل ومخالفات السلامة لحظياً.",
         "hero_badge": "منظومة المراقبة الذكية المتقدمة",
         "btn_request_demo": "حجز معاينة تجريبية (15 يوماً)",
         "btn_view_dashboard": "استعراض لوحة التحكم الحية",
         
-        // Products Section
         "products_subtitle": "حلول ومنتجات فيكسورا",
         "products_title": "منتجات الأنظمة وسيرفرات الذكاء الاصطناعي",
         "products_desc": "اختر الباقة والمنتج المناسب لبنية كاميرات مراقبة منشأتك مع تركيب ومكفول بـ 15 يوماً تجربة مجانية.",
@@ -471,7 +470,6 @@ const translations = {
         "prod_3_fee": "رسوم إعداد وتدريب لمرة واحدة فقط",
         "prod_3_btn": "طلب تنبيه مخصص",
         
-        // Categories & Alerts
         "alerts_subtitle": "كتالوج التنبيهات الذكية (26 تنبيهاً أمنياً بالصور)",
         "alerts_title": "فئات التنبيهات الخمس الكبرى لنظام فيكسورا",
         "alerts_desc": "استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.",
@@ -487,7 +485,6 @@ const translations = {
         "cat_title_5": "الفئة الخامسة: مراقبة العمليات والسلوكيات",
         "cat_desc_5": "تختص بضمان سير العمليات اليومية بأمان ومنع السلوكيات الخاطئة بداخل المنشأة.",
         
-        // Alert Tags
         "tag_helmet": "لم يتم ارتداء الخوذة! ⚠️",
         "tag_vest": "السترة: متوافق ✅",
         "tag_gloves": "القفازات: متوافق ✅",
@@ -515,7 +512,6 @@ const translations = {
         "tag_forklift": "اقتراب رافعة شوكية ⚠️",
         "tag_touching": "لمس المعروضات 🛑",
         
-        // Alert Titles
         "title_alert_1": "1. رصد خوذة السلامة",
         "title_alert_2": "2. رصد السترة الواقية",
         "title_alert_3": "3. رصد قفازات العمل",
@@ -543,7 +539,6 @@ const translations = {
         "title_alert_25": "25. الرافعات الشوكية",
         "title_alert_26": "26. لمس المعروضات",
 
-        // Control Panel Section
         "dash_sec_subtitle": "شاشة التحكم الحية والتفاعلية",
         "dash_sec_title": "منصة فيكسورا للسلامة الذكية",
         "dash_sec_desc": "لوحة تحكم حية ومباشرة تعكس النظام الفعلي المعمول به بالمنشآت مع بث مباشر وسجل التنبيهات الفوري.",
@@ -574,7 +569,6 @@ const translations = {
         "dash_stream_meta": "كاميرا: 01 | المنفذ: 5000 | الدقة: 640x480"
     },
     en: {
-        // Navigation & Buttons
         "nav_products": "Products & Systems",
         "nav_solutions": "AI Alerts",
         "nav_dashboard": "Control Panel",
@@ -582,14 +576,12 @@ const translations = {
         "nav_stories": "Success Stories",
         "btn_start_now": "Start Free Trial",
         
-        // Hero Section
-        "hero_title": "Vexora AI Security & Surveillance System",
+        "hero_title": "Vexora AI Security System",
         "hero_desc": "Transform standard CCTV cameras into an intelligent security system detecting threats, intrusion, and HSE violations in real time.",
-        "hero_badge": "Advanced AI Video Analytics Platform",
+        "hero_badge": "Advanced AI Surveillance Platform",
         "btn_request_demo": "Book 15-Day Free Trial",
         "btn_view_dashboard": "View Live Dashboard Demo",
         
-        // Products Section
         "products_subtitle": "Vexora Solutions & Hardware",
         "products_title": "AI Systems & On-Premise Servers",
         "products_desc": "Select the ideal server and AI package for your facility with 15-day free trial included.",
@@ -614,7 +606,6 @@ const translations = {
         "prod_3_fee": "One-time AI model training fee",
         "prod_3_btn": "Request Custom Alert",
         
-        // Categories & Alerts
         "alerts_subtitle": "Smart Alerts Catalog (26 AI Alerts with Screenshots)",
         "alerts_title": "Vexora 5 Major Alert Categories",
         "alerts_desc": "Explore all available system alerts divided into 5 main operational security categories.",
@@ -630,7 +621,6 @@ const translations = {
         "cat_title_5": "Category 5: Operations & Behavioral Safety",
         "cat_desc_5": "Ensuring smooth operational workflows, forklift safety, and prohibited actions.",
         
-        // Alert Tags
         "tag_helmet": "NO HELMET DETECTED! ⚠️",
         "tag_vest": "VEST: COMPLIANT ✅",
         "tag_gloves": "GLOVES: DETECTED ✅",
@@ -658,7 +648,6 @@ const translations = {
         "tag_forklift": "FORKLIFT PROXIMITY ALERT ⚠️",
         "tag_touching": "OBJECT TOUCHING ALERT 🛑",
         
-        // Alert Titles
         "title_alert_1": "1. Safety Helmet Detection",
         "title_alert_2": "2. Safety Vest Detection",
         "title_alert_3": "3. Safety Gloves Detection",
@@ -686,7 +675,6 @@ const translations = {
         "title_alert_25": "25. Forklift Proximity Warning",
         "title_alert_26": "26. Museum Object Touching",
 
-        // Control Panel Section
         "dash_sec_subtitle": "Interactive Security SOC Console",
         "dash_sec_title": "VEXORA SMART SAFETY DASHBOARD",
         "dash_sec_desc": "Live monitoring dashboard reflecting the real Vexora system console with real-time video stream.",
