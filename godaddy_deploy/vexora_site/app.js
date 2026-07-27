@@ -675,3 +675,19 @@ function toggleLanguage() {
     currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
     setLanguage(currentLanguage);
 }
+
+
+
+    translations.ar["tag_secure_stream"] = "بث آمن ومشفّر 🟢";
+    translations.ar["tag_danger_zone"] = "منطقة خطر ⚠️";
+    translations.ar["dash_stream_meta"] = "كاميرا: 01 | المنفذ: 5000 | الدقة: 640x480";
+    translations.ar["prod_1_title"] = "السيرفر المحلي الذكي";
+    translations.ar["dash_sec_title"] = "منصة فيكسورا للسلامة الذكية";
+    translations.ar["dash_brand_sub"] = "منصة التحكم والمراقبة الذكية | فيكسورا";
+
+    translations.en["tag_secure_stream"] = "SECURE STREAM 🟢";
+    translations.en["tag_danger_zone"] = "DANGER ZONE ⚠️";
+    translations.en["dash_stream_meta"] = "CAM: 01 | PORT: 5000 | RES: 640x480";
+    translations.en["prod_1_title"] = "On-Premise AI Server";
+    translations.en["dash_sec_title"] = "VEXORA SMART SAFETY DASHBOARD";
+    translations.en["dash_brand_sub"] = "VEXORA ENTERPRISE CONSOLE | SMART SAFETY DASHBOARD";
