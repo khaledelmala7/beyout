@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=1.5.0">
+    <link rel="stylesheet" href="style.css?v=1.6.0">
 </head>
 <body class="theme-vexora">
 
@@ -32,6 +32,7 @@
             <!-- Middle: Navigation Links -->
             <nav class="nav-links">
                 <a href="#about" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
+                <a href="#products-section" class="nav-link" data-i18n="nav_products">المنتجات والأنظمة</a>
                 <a href="#sectors-section" class="nav-link" data-i18n="nav_solutions">التنبيهات الذكية</a>
                 <a href="#trusted-clients" class="nav-link" data-i18n="nav_trusted">عملاءنا</a>
                 <a href="#success-stories" class="nav-link" data-i18n="nav_stories">قصص نجاح</a>
@@ -80,6 +81,78 @@
         <!-- 5 Alert Categories Section (26 Alerts) -->
         <!-- 5 Major Alert Categories - Full Vertical Stacked Layout (26 Detailed Alerts) -->
         <!-- 5 Major Alert Categories - Full Vertical Stacked Layout (26 Unique Screenshots) -->
+        <!-- Vexora AI Products & Enterprise Solutions Section -->
+    <section class="products-section-wrapper" id="products-section" style="padding: 80px 0; background: rgba(255, 255, 255, 0.015); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 50px;">
+                <span class="section-subtitle" data-i18n="products_subtitle">حلول ومنتجات فيكسورا</span>
+                <h2 class="section-title" data-i18n="products_title">منتجات الأنظمة وسيرفرات الذكاء الاصطناعي</h2>
+                <p class="section-desc max-w-600" data-i18n="products_desc">اختر الباقة والمنتج المناسب لبنية كاميرات مراقبة منشأتك مع تركيب ومكفول بـ 15 يوماً تجربة مجانية.</p>
+            </div>
+
+            <div class="products-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                
+                <!-- Product 1: AI Server -->
+                <div class="product-card glass-card" style="padding: 28px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
+                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #22d3ee; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;">On-Premise Server</div>
+                    <div class="prod-icon" style="font-size: 36px; margin-bottom: 16px;">🖥️</div>
+                    <h3 data-i18n="prod_1_title" style="color: #fff; font-size: 20px; margin: 0 0 8px 0;">السيرفر المحلي (On-Premise AI Server)</h3>
+                    <p data-i18n="prod_1_desc" style="color: #9ca3af; font-size: 13px; margin: 0 0 16px 0; line-height: 1.6;">سيرفر معالجة محلية يدعم حتى 6 كاميرات مراقبة بدون نقل بيانات للسحابة لضمان السرية والسرعة.</p>
+                    
+                    <div class="prod-price" style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
+                        <span style="font-size: 24px; font-weight: 800; color: #ffd60a;">20,000 EGP</span>
+                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_1_fee">تدفع مرة واحدة لشراء وتملّك السيرفر</span>
+                    </div>
+                    <button class="package-cta" style="margin-top: 16px;" onclick="selectProduct('السيرفر المحلي (On-Premise AI Server)')" data-i18n="prod_btn_request">طلب السيرفر الآن</button>
+                </div>
+
+                <!-- Product 2: AI Subscription -->
+                <div class="product-card glass-card" style="padding: 28px; border-radius: 20px; background: rgba(34, 211, 238, 0.04); border: 1px solid rgba(34, 211, 238, 0.4); display: flex; flex-direction: column; position: relative;">
+                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #ffd60a; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;">الباقة الأكثر طلباً ⭐</div>
+                    <div class="prod-icon" style="font-size: 36px; margin-bottom: 16px;">📹</div>
+                    <h3 data-i18n="prod_2_title" style="color: #fff; font-size: 20px; margin: 0 0 8px 0;">الاشتراك الشهري للتنبيهات (Camera AI License)</h3>
+                    <p data-i18n="prod_2_desc" style="color: #9ca3af; font-size: 13px; margin: 0 0 16px 0; line-height: 1.6;">تفعيل الذكاء الاصطناعي لكاميرا واحدة ورقم هاتف للتنبيهات الفورية مع الخرائط الحرارية.</p>
+                    
+                    <div class="prod-price" style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
+                        <span style="font-size: 24px; font-weight: 800; color: #34c759;">8,000 EGP / شهرياً</span>
+                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_2_fee">كل كاميرا إضافية +1,500 ج.م | رقم هاتف +1,000 ج.م</span>
+                    </div>
+                    <button class="package-cta" style="margin-top: 16px; background: #22d3ee; color: #000;" onclick="selectProduct('الاشتراك الشهري للتنبيهات')" data-i18n="prod_btn_request">اشترك الآن (15 يوماً تجربة)</button>
+                </div>
+
+                <!-- Product 3: LPR Gate System -->
+                <div class="product-card glass-card" style="padding: 28px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
+                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #38bdf8; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;">LPR Gate Automation</div>
+                    <div class="prod-icon" style="font-size: 36px; margin-bottom: 16px;">🚗</div>
+                    <h3 data-i18n="prod_3_title" style="color: #fff; font-size: 20px; margin: 0 0 8px 0;">نظام قراءة اللوحات والبوابات (Vexora LPR System)</h3>
+                    <p data-i18n="prod_3_desc" style="color: #9ca3af; font-size: 13px; margin: 0 0 16px 0; line-height: 1.6;">أتمتة فتح البوابات بالتعرف على لوحات السيارات بدقة 99.4% مع القوائم السوداء والبيضاء.</p>
+                    
+                    <div class="prod-price" style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
+                        <span style="font-size: 24px; font-weight: 800; color: #22d3ee;">عرض متكامل</span>
+                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_3_fee">شامل الربط التلقائي مع البوابات الإلكترونية</span>
+                    </div>
+                    <button class="package-cta" style="margin-top: 16px;" onclick="selectProduct('نظام قراءة اللوحات والبوابات')" data-i18n="prod_btn_request">طلب استشارة اللوحات</button>
+                </div>
+
+                <!-- Product 4: Custom Alert Setup -->
+                <div class="product-card glass-card" style="padding: 28px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
+                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #a855f7; color: #fff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;">Custom Alert Setup</div>
+                    <div class="prod-icon" style="font-size: 36px; margin-bottom: 16px;">⚙️</div>
+                    <h3 data-i18n="prod_4_title" style="color: #fff; font-size: 20px; margin: 0 0 8px 0;">التنبيهات المخصصة (Custom AI Alert)</h3>
+                    <p data-i18n="prod_4_desc" style="color: #9ca3af; font-size: 13px; margin: 0 0 16px 0; line-height: 1.6;">تطوير وتدريب نموذج ذكاء اصطناعي مخصص لسيناريو فريد خاص بنشاطك التجاري.</p>
+                    
+                    <div class="prod-price" style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
+                        <span style="font-size: 24px; font-weight: 800; color: #a855f7;">5,000 EGP</span>
+                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_4_fee">رسوم إعداد وتدريب لمرة واحدة فقط</span>
+                    </div>
+                    <button class="package-cta" style="margin-top: 16px;" onclick="selectProduct('التنبيهات المخصصة')" data-i18n="prod_btn_request">طلب تنبيه مخصص</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
     <section class="packages-section-wrapper" id="sectors-section">
         <div class="container">
             <div class="section-header text-center" style="margin-bottom: 60px;">
@@ -683,12 +756,13 @@
         <!-- Real-Time Customer Security Dashboard Section (Unified Vexora Interactive Console) -->
         <!-- Real-Time Customer Security Dashboard Section (Authentic Vexora Control Panel Console) -->
         <!-- Real-Time Customer Security Dashboard Section (Exact Match to User's Vexora Dashboard) -->
+        <!-- Real-Time Security Operations Center Dashboard Section (Generic Enterprise - NO Client Name) -->
     <section class="live-dashboard-section" id="dashboard-section" style="padding: 80px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); background: #03060a;">
         <div class="container">
             <div class="section-header text-center" style="margin-bottom: 35px;">
-                <span class="section-subtitle">شاشة التحكم الحية والتفاعلية (Real-Time Safety Dashboard)</span>
-                <h2 class="section-title" style="font-size: 34px; font-weight: 800; margin: 12px 0 16px;">SMART SAFETY DASHBOARD</h2>
-                <p class="section-desc max-w-600" style="color: var(--text-secondary); font-size: 16px;">لوحة تحكم حية ومباشرة تعكس النظام الفعلي المعمول به بالمنشآت مع بث مباشر وسجل التنبيهات الفوري.</p>
+                <span class="section-subtitle" data-i18n="dash_sec_subtitle">شاشة التحكم الحية والتفاعلية (Security Operations Console)</span>
+                <h2 class="section-title" data-i18n="dash_sec_title" style="font-size: 34px; font-weight: 800; margin: 12px 0 16px;">VEXORA SMART SAFETY DASHBOARD</h2>
+                <p class="section-desc max-w-600" data-i18n="dash_sec_desc" style="color: var(--text-secondary); font-size: 16px;">لوحة تحكم حية ومباشرة تعكس النظام الفعلي المعمول به بالمنشآت مع بث مباشر وسجل التنبيهات الفوري.</p>
             </div>
 
             <!-- Main Full Dashboard Outer Window -->
@@ -698,28 +772,28 @@
                 <div class="dash-top-header" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; background: #080b13; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
                     <!-- Left Pill Tools -->
                     <div class="dash-left-tools" style="display: flex; gap: 12px; align-items: center;">
-                        <button class="pill-btn" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                            <span>English</span> 🌐
+                        <button class="pill-btn" onclick="toggleLanguage()" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                            <span id="lang-switch-text-dash">English</span> 🌐
                         </button>
                         <button class="theme-icon-btn" style="background: none; border: none; color: #fff; cursor: pointer; font-size: 16px;">☀️</button>
-                        <span class="status-pill-badge" style="background: rgba(52, 199, 89, 0.15); color: #34c759; border: 1px solid rgba(52, 199, 89, 0.3); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px;">أمن وتشغيلي 🟢</span>
+                        <span class="status-pill-badge" style="background: rgba(52, 199, 89, 0.15); color: #34c759; border: 1px solid rgba(52, 199, 89, 0.3); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px;" data-i18n="dash_status_badge">أمن وتشغيلي 🟢</span>
                     </div>
 
-                    <!-- Right Brand Header -->
+                    <!-- Right Brand Header (Generic Enterprise - NO Client Name) -->
                     <div class="dash-right-brand" style="display: flex; align-items: center; gap: 12px;">
                         <div class="brand-titles-text" style="text-align: right;">
-                            <h3 style="margin: 0; color: #fff; font-size: 17px; font-weight: 800; font-family: 'Alexandria', sans-serif;">ألبان زاهر</h3>
-                            <span style="display: block; font-size: 10px; color: #38bdf8;">الترخيص حاد 31 يوليو 2026 | SMART SAFETY DASHBOARD</span>
+                            <h3 style="margin: 0; color: #fff; font-size: 17px; font-weight: 800; font-family: 'Alexandria', sans-serif;" data-i18n="dash_brand_title">الموقع الرئيسي - المنشأة الاستثمارية</h3>
+                            <span style="display: block; font-size: 10px; color: #38bdf8;" data-i18n="dash_brand_sub">VEXORA ENTERPRISE CONSOLE | SMART SAFETY DASHBOARD</span>
                         </div>
                         <div class="brand-avatar-box" style="width: 36px; height: 36px; border-radius: 8px; background: #1e293b; display: flex; align-items: center; justify-content: center; border: 1px solid #38bdf8;">
-                            <span style="color: #38bdf8; font-weight: 800; font-size: 14px;">AZ</span>
+                            <span style="color: #38bdf8; font-weight: 800; font-size: 14px;">VX</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2. TOP WARNING BANNER -->
                 <div class="dash-license-warning" style="background: rgba(180, 83, 9, 0.25); border-bottom: 1px solid rgba(245, 158, 11, 0.3); color: #fbbf24; padding: 10px 24px; font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
-                    <span>⚠️ تنبيه: سينتهي ترخيص تشغيل النظام خلال 4 أيام (تاريخ الانتهاء: 31 يوليو 2026). يرجى التواصل لتجديد الترخيص.</span>
+                    <span data-i18n="dash_license_warning">⚠️ تنبيه: ترخيص تجريبي نشط (15 يوماً تجربة مجانية). النظام يعمل بالطاقة القصوى لحماية المنشأة.</span>
                 </div>
 
                 <!-- 3. THREE-COLUMN DASHBOARD CONTENT GRID -->
@@ -730,19 +804,19 @@
                         <!-- Metric 1 & 2 Cards -->
                         <div class="top-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                             <div class="metric-card-dark glass-card" style="padding: 16px; border-radius: 12px; background: #111625; border: 1px solid rgba(255,255,255,0.06);">
-                                <span style="font-size: 11px; color: #9ca3af; display: block; margin-bottom: 6px;">كل الوقت / اليوم</span>
+                                <span style="font-size: 11px; color: #9ca3af; display: block; margin-bottom: 6px;" data-i18n="dash_lbl_alltime">كل الوقت / اليوم</span>
                                 <span style="font-size: 26px; font-weight: 800; color: #fff;">0</span>
                             </div>
                             <div class="metric-card-dark glass-card" style="padding: 16px; border-radius: 12px; background: #111625; border: 1px solid rgba(255,255,255,0.06); position: relative;">
                                 <span style="position: absolute; top: 12px; left: 12px; color: #f59e0b; font-size: 14px;">⚠️</span>
-                                <span style="font-size: 11px; color: #9ca3af; display: block; margin-bottom: 6px;">أعلى مخالفة</span>
+                                <span style="font-size: 11px; color: #9ca3af; display: block; margin-bottom: 6px;" data-i18n="dash_lbl_top_violation">أعلى مخالفة</span>
                                 <span style="font-size: 26px; font-weight: 800; color: #f59e0b;">8</span>
                             </div>
                         </div>
 
                         <!-- Chart Box -->
                         <div class="chart-card-dark glass-card" style="padding: 18px; border-radius: 14px; background: #111625; border: 1px solid rgba(255,255,255,0.06); flex: 1; display: flex; flex-direction: column;">
-                            <h4 style="margin: 0 0 16px 0; color: #38bdf8; font-size: 13px; font-weight: 700;">معدل تكرار المخالفات 📈</h4>
+                            <h4 style="margin: 0 0 16px 0; color: #38bdf8; font-size: 13px; font-weight: 700;" data-i18n="dash_chart_title">معدل تكرار المخالفات 📈</h4>
                             <div class="chart-svg-container" style="flex: 1; display: flex; align-items: flex-end; position: relative; min-height: 140px; padding-bottom: 20px;">
                                 <svg width="100%" height="100%" viewBox="0 0 280 120" preserveAspectRatio="none" style="overflow: visible;">
                                     <path d="M 0 110 L 40 105 L 80 108 L 120 100 L 160 106 L 200 108 L 240 104 L 280 108" fill="none" stroke="#e11d48" stroke-width="2.5"/>
@@ -761,14 +835,14 @@
                     <div class="dash-col-middle" style="display: flex; flex-direction: column; gap: 16px;">
                         <!-- Camera Selector Tabs -->
                         <div class="cam-tabs-row" style="display: flex; gap: 8px;">
-                            <button class="cam-tab-btn active" id="tab-main-gate" onclick="triggerVexoraScenario('clear')" style="flex: 1; background: #0284c7; color: #fff; border: none; padding: 8px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer;">المدخل الرئيسي</button>
-                            <button class="cam-tab-btn" id="tab-top-gate" onclick="triggerVexoraScenario('intruder')" style="flex: 1; background: rgba(255,255,255,0.05); color: #9ca3af; border: 1px solid rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 8px; font-size: 12px; cursor: pointer;">المدخل العلوي</button>
+                            <button class="cam-tab-btn active" id="tab-main-gate" onclick="triggerVexoraScenario('clear')" style="flex: 1; background: #0284c7; color: #fff; border: none; padding: 8px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer;" data-i18n="dash_tab_main">المدخل الرئيسي</button>
+                            <button class="cam-tab-btn" id="tab-top-gate" onclick="triggerVexoraScenario('intruder')" style="flex: 1; background: rgba(255,255,255,0.05); color: #9ca3af; border: 1px solid rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 8px; font-size: 12px; cursor: pointer;" data-i18n="dash_tab_top">المدخل العلوي</button>
                         </div>
 
                         <!-- Active Enabled Alerts List Panel -->
                         <div class="enabled-alerts-panel glass-card" style="padding: 16px; border-radius: 14px; background: #111625; border: 1px solid rgba(255,255,255,0.06); flex: 1; display: flex; flex-direction: column;">
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                                <h4 style="margin: 0; color: #38bdf8; font-size: 13px;">التنبيهات المفعّلة</h4>
+                                <h4 style="margin: 0; color: #38bdf8; font-size: 13px;" data-i18n="dash_enabled_alerts_title">التنبيهات المفعّلة</h4>
                                 <span style="font-size: 10px; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 2px 8px; border-radius: 10px;">5/5 مفعلة</span>
                             </div>
 
@@ -781,7 +855,7 @@
                             </div>
 
                             <div style="margin-top: auto; padding-top: 14px; text-align: center;">
-                                <span style="font-size: 11px; color: #34c759; background: rgba(52, 199, 89, 0.1); padding: 4px 12px; border-radius: 12px;">أمن وتشغيلي 🟢</span>
+                                <span style="font-size: 11px; color: #34c759; background: rgba(52, 199, 89, 0.1); padding: 4px 12px; border-radius: 12px;" data-i18n="dash_status_badge">أمن وتشغيلي 🟢</span>
                             </div>
                         </div>
                     </div>
@@ -791,7 +865,7 @@
                         <div class="live-stream-box glass-card" style="background: #000; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; position: relative;">
                             <!-- Camera Frame Header -->
                             <div class="cam-frame-header" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; background: rgba(15, 23, 42, 0.85); color: #fff; font-size: 12px;">
-                                <span>📹 المدخل الرئيسي</span>
+                                <span data-i18n="dash_stream_cam_name">📹 المدخل الرئيسي</span>
                                 <span style="color: #34c759; font-weight: 700; font-size: 11px;">SECURE STREAM 🟢</span>
                             </div>
 
@@ -812,18 +886,18 @@
 
                             <!-- Camera Frame Footer -->
                             <div class="cam-frame-footer" style="padding: 8px 14px; background: #0b0f19; display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; color: #94a3b8;">
-                                <span>👥 الأشخاص الآن (المدخل الرئيسي): <strong style="color: #38bdf8;" id="val-people-count">0 شخص</strong></span>
-                                <span style="color: #34c759;">أمن وتشغيلي 🟢</span>
+                                <span>👥 <span data-i18n="dash_people_count_lbl">الأشخاص الآن (المدخل الرئيسي):</span> <strong style="color: #38bdf8;" id="val-people-count">0 شخص</strong></span>
+                                <span style="color: #34c759;" data-i18n="dash_status_badge">أمن وتشغيلي 🟢</span>
                             </div>
                         </div>
 
                         <!-- Live Scenario Simulation Bar inside Dashboard Panel -->
                         <div class="scenarios-control-row" style="background: #111625; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                            <span style="font-size: 11px; color: #38bdf8; font-weight: 700;">🕹️ تجربة سيناريو الرصد:</span>
-                            <button class="mock-btn active" id="btn-scen-clear" onclick="triggerVexoraScenario('clear')" style="font-size: 10px; padding: 4px 8px;">تصفير البث</button>
-                            <button class="mock-btn" id="btn-scen-ppe" onclick="triggerVexoraScenario('ppe')" style="font-size: 10px; padding: 4px 8px;">⚠️ عدم ارتداء القفازات</button>
-                            <button class="mock-btn" id="btn-scen-intruder" onclick="triggerVexoraScenario('intruder')" style="font-size: 10px; padding: 4px 8px;">🚨 اختراق البوابة</button>
-                            <button class="mock-btn" id="btn-scen-fire" onclick="triggerVexoraScenario('fire')" style="font-size: 10px; padding: 4px 8px;">🔥 إنذار دخان</button>
+                            <span style="font-size: 11px; color: #38bdf8; font-weight: 700;" data-i18n="dash_scen_label">🕹️ تجربة سيناريو الرصد:</span>
+                            <button class="mock-btn active" id="btn-scen-clear" onclick="triggerVexoraScenario('clear')" style="font-size: 10px; padding: 4px 8px;" data-i18n="dash_scen_reset">تصفير البث</button>
+                            <button class="mock-btn" id="btn-scen-ppe" onclick="triggerVexoraScenario('ppe')" style="font-size: 10px; padding: 4px 8px;" data-i18n="dash_scen_gloves">⚠️ عدم ارتداء القفازات</button>
+                            <button class="mock-btn" id="btn-scen-intruder" onclick="triggerVexoraScenario('intruder')" style="font-size: 10px; padding: 4px 8px;" data-i18n="dash_scen_intruder">🚨 اختراق البوابة</button>
+                            <button class="mock-btn" id="btn-scen-fire" onclick="triggerVexoraScenario('fire')" style="font-size: 10px; padding: 4px 8px;" data-i18n="dash_scen_fire">🔥 إنذار دخان</button>
                         </div>
                     </div>
                 </div>
@@ -832,7 +906,7 @@
                 <div class="dash-bottom-table-section" style="padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); background: #080b13;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
                         <h4 style="margin: 0; color: #fff; font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 6px;">
-                            <span>سجل المخالفات الحديثة (18)</span> 🕒
+                            <span data-i18n="dash_recent_violations_title">سجل المخالفات الحديثة (18)</span> 🕒
                         </h4>
                         
                         <!-- Search & Filter Controls -->
@@ -851,10 +925,10 @@
                     <table style="width: 100%; border-collapse: collapse; text-align: right; font-size: 12px;">
                         <thead>
                             <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); color: #64748b;">
-                                <th style="padding: 10px;">الوقت</th>
-                                <th style="padding: 10px;">الكاميرا</th>
-                                <th style="padding: 10px;">نوع المخالفة</th>
-                                <th style="padding: 10px;">شخص</th>
+                                <th style="padding: 10px;" data-i18n="tbl_col_time">الوقت</th>
+                                <th style="padding: 10px;" data-i18n="tbl_col_cam">الكاميرا</th>
+                                <th style="padding: 10px;" data-i18n="tbl_col_type">نوع المخالفة</th>
+                                <th style="padding: 10px;" data-i18n="tbl_col_person">شخص</th>
                             </tr>
                         </thead>
                         <tbody id="dash-log-tbody">
@@ -877,6 +951,9 @@
             </div>
         </div>
     </section>
+
+
+    
 
 
     
@@ -1050,6 +1127,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=1.5.0"></script>
+    <script src="app.js?v=1.6.0"></script>
 </body>
 </html>

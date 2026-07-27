@@ -1033,3 +1033,71 @@ function triggerVexoraScenario(scen) {
         if (fpsVal) fpsVal.textContent = '30 FPS';
     }
 }
+
+
+
+function selectProduct(productName) {
+    const notesField = document.getElementById('cust_notes');
+    if (notesField) {
+        notesField.value = `أريد الاستفسار وحجز المنتج: ${productName}`;
+    }
+    if (typeof nextStep === 'function') nextStep(2);
+    const demoSection = document.getElementById('demo-section');
+    if (demoSection) demoSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Full English Translation Support for Bilingual Switcher
+if (typeof translations !== 'undefined') {
+    translations.en = {
+        "nav_products": "Products & Systems",
+        "nav_solutions": "AI Alerts",
+        "nav_dashboard": "Control Panel",
+        "nav_trusted": "Trusted Clients",
+        "nav_stories": "Success Stories",
+        "btn_start_now": "Get Started",
+        "products_subtitle": "Vexora Products & Hardware",
+        "products_title": "AI Systems & On-Premise Servers",
+        "products_desc": "Select the ideal server and AI package for your facility with 15-day free trial included.",
+        "prod_1_title": "On-Premise AI Server",
+        "prod_1_desc": "Local processing AI server supporting up to 6 IP cameras with zero cloud latency.",
+        "prod_1_fee": "One-time hardware purchase fee",
+        "prod_2_title": "Camera AI Subscription",
+        "prod_2_desc": "Activate real-time AI video analytics for 1 camera & 1 alert phone line.",
+        "prod_2_fee": "Additional camera +1,500 EGP/mo | Phone +1,000 EGP/mo",
+        "prod_3_title": "Vexora LPR System",
+        "prod_3_desc": "License plate recognition system with 99.4% accuracy and automatic gate opening.",
+        "prod_3_fee": "Includes automated gate relay integration",
+        "prod_4_title": "Custom AI Alert Setup",
+        "prod_4_desc": "Train custom AI models for unique industrial and operational scenarios.",
+        "prod_4_fee": "One-time AI model training fee",
+        "prod_btn_request": "Request This Product",
+        "dash_sec_subtitle": "Interactive Security SOC Console",
+        "dash_sec_title": "VEXORA SMART SAFETY DASHBOARD",
+        "dash_sec_desc": "Live monitoring dashboard reflecting the real Vexora system console with real-time video stream and alert logs.",
+        "dash_brand_title": "Main Investment Facility",
+        "dash_brand_sub": "VEXORA ENTERPRISE CONSOLE | SMART SAFETY DASHBOARD",
+        "dash_status_badge": "SECURE & ACTIVE 🟢",
+        "dash_license_warning": "⚠️ Notice: Active 15-Day Trial License. System running at peak capacity.",
+        "dash_lbl_alltime": "All-Time / Today",
+        "dash_lbl_top_violation": "Peak Violation",
+        "dash_chart_title": "Violation Frequency Rate 📈",
+        "dash_tab_main": "Main Gate",
+        "dash_tab_top": "Upper Gate",
+        "dash_enabled_alerts_title": "Active Enabled Alerts",
+        "dash_stream_cam_name": "📹 Main Entrance Camera",
+        "dash_people_count_lbl": "Current People (Main Gate):",
+        "dash_scen_label": "🕹️ Test AI Scenario:",
+        "dash_scen_reset": "Reset Feed",
+        "dash_scen_gloves": "⚠️ Gloves Violation",
+        "dash_scen_intruder": "🚨 Gate Breach",
+        "dash_scen_fire": "🔥 Smoke Alarm",
+        "dash_recent_violations_title": "Recent Violations Log (18)",
+        "tbl_col_time": "Time",
+        "tbl_col_cam": "Camera",
+        "tbl_col_type": "Violation Type",
+        "tbl_col_person": "Person ID"
+    };
+
+    translations.ar = translations.ar || {};
+    translations.ar["nav_products"] = "المنتجات والأنظمة";
+}
