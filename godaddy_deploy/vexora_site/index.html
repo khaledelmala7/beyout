@@ -381,107 +381,31 @@
     </section>
 
 
-    <section class="simulator-sandbox" id="vexora-sandbox">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle" data-i18n="sandbox_subtitle">منطقة المحاكاة المتكاملة</span>
-                <h2 class="section-title" data-i18n="sandbox_title_vexora">جرّب لوحة تحكم التحليل الأمني بنفسك</h2>
-                <p class="section-desc max-w-600" data-i18n="sandbox_desc_vexora">اختبر تحليلات فيكسورا ورصد المتسللين ومخاطر الحريق لحظياً على البث المباشر.</p>
-            </div>
-
-                        <div class="sandbox-container glass-card" style="padding: 24px;">
-                <!-- Vexora Sandbox -->
-                <div class="sandbox-content active" id="sandbox-vexora">
-                    <div class="sandbox-grid">
-                        <div class="simulator-visual">
-                            <div class="device-mockup glass-card dashboard-mockup">
-                                <div class="mockup-header">
-                                    <div class="dots">
-                                        <span class="dot red"></span>
-                                        <span class="dot yellow"></span>
-                                        <span class="dot green"></span>
-                                    </div>
-                                    <div class="mockup-title">VEXORA CLOUD CONTROL PANEL</div>
-                                </div>
-                                <div class="dashboard-layout">
-                                    <!-- Sidebar -->
-                                    <div class="dashboard-sidebar">
-                                        <div class="sidebar-section">
-                                            <h4 data-i18n="dash_cameras_title">القنوات النشطة</h4>
-                                            <div class="cam-channels-list">
-                                                <div class="channel-item active">
-                                                    <span class="status-indicator online"></span>
-                                                    <span class="channel-name" id="cam-title">CAM 01 - المستودع</span>
-                                                </div>
-                                                <div class="channel-item">
-                                                    <span class="status-indicator offline"></span>
-                                                    <span class="channel-name">CAM 02 - منطقة الشحن</span>
-                                                </div>
-                                                <div class="channel-item">
-                                                    <span class="status-indicator offline"></span>
-                                                    <span class="channel-name">CAM 03 - البوابة الرئيسية</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sidebar-section">
-                                            <h4 data-i18n="dash_stats_title">تحليلات النظام</h4>
-                                            <div class="dash-stats-grid">
-                                                <div class="dash-stat-box">
-                                                    <span class="stat-lbl" data-i18n="dash_cpu">المعالج</span>
-                                                    <span class="stat-val">12%</span>
-                                                </div>
-                                                <div class="dash-stat-box">
-                                                    <span class="stat-lbl" data-i18n="dash_fps">الإطارات</span>
-                                                    <span class="stat-val">30 FPS</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Main Panel -->
-                                    <div class="dashboard-main">
-                                        <div class="camera-stream-container">
-                                            <div class="live-indicator">LIVE 🔴</div>
-                                            <img src="assets/vexora_safety_vest.jpg" alt="Live Camera" class="camera-feed-img" id="cam-stream-img">
-                                            <div class="camera-detection-box" id="mock-detection-box" style="display: none;"></div>
-                                            <!-- AI Target Elements -->
-                                            <div class="ai-target-circle" id="ai-target-circle" style="display: none;"></div>
-                                            <div class="ai-target-line" id="ai-target-line" style="display: none;"></div>
-                                        </div>
-                                        <div class="alert-log-panel">
-                                            <h4 data-i18n="vexora_alert_logs_lbl">سجل التنبيهات الأمنية</h4>
-                                            <div class="alert-logs" id="alert-logs">
-                                                <div class="log-entry info">
-                                                    <span class="time">09:12:04</span>
-                                                    <span class="msg" data-i18n="vexora_log_vehicle">مرور مركبة مصرحة - لوحة رقم 4829</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="simulator-controls">
-                            <h3 data-i18n="sandbox_vex_ctrl_title">أدوات اختبار التحليل الذكي Vexora</h3>
-                            <p class="small-desc" data-i18n="sandbox_vex_ctrl_desc">تحكم بالكاميرا وقم بمحاكاة سيناريوهات حقيقية لرؤية رد فعل الذكاء الاصطناعي ورصد المخالفات.</p>
-                            
-                            <button class="mock-btn active" id="btn-scen-clear" onclick="triggerVexoraScenario('clear')" data-i18n="sandbox_vex_scen_clear">الوضع الطبيعي (تصفير الكاميرا)</button>
-                            <button class="mock-btn" id="btn-scen-intruder" onclick="triggerVexoraScenario('intruder')" data-i18n="sandbox_vex_scen_intruder">محاكاة متسلل بعد ساعات العمل</button>
-                            <button class="mock-btn" id="btn-scen-fire" onclick="triggerVexoraScenario('fire')" data-i18n="sandbox_vex_scen_fire">محاكاة خطر حريق/دخان</button>
-
-                            <div class="sim-feedback-msg" id="sim-feedback-vexora" data-i18n="sandbox_vex_feedback_msg">اضغط على السيناريوهات أعلاه لرؤية كيف يقوم الذكاء الاصطناعي بتحليل البث وتنبيه صاحب العمل.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
+    
 
         <!-- Real-Time Customer Security Dashboard Section (Vexora) -->
+        <!-- Real-Time Customer Security Dashboard Section (Unified Vexora Interactive Console) -->
     <section class="live-dashboard-section" id="dashboard-section" style="padding: 80px 0; border-top: 1px solid rgba(255, 255, 255, 0.05);">
         <div class="container">
-            <div class="section-header text-center" style="margin-bottom: 50px;">
-                <span class="section-subtitle" data-i18n="live_dash_subtitle">لوحة التحكم الأمنية للعملاء</span>
-                <h2 class="section-title" data-i18n="live_dash_title" style="font-size: 34px; font-weight: 800; margin: 12px 0 16px;">شاشة مراقبة حية لمشروعاتك (Construction Site Dashboard)</h2>
-                <p class="section-desc max-w-600" data-i18n="live_dash_desc" style="color: var(--text-secondary); font-size: 16px;">تحكم وتابع جميع مواقعك الإنشائية ومصانعك من شاشة تحكم موحدة ذكية تجمع تحليلات البث والتنبيهات الفورية.</p>
+            <div class="section-header text-center" style="margin-bottom: 40px;">
+                <span class="section-subtitle">شاشة التحكم الحية والتفاعلية</span>
+                <h2 class="section-title" style="font-size: 34px; font-weight: 800; margin: 12px 0 16px;">VEXORA CLOUD CONTROL PANEL & SIMULATOR</h2>
+                <p class="section-desc max-w-600" style="color: var(--text-secondary); font-size: 16px;">تحكم واختبر سيناريوهات الرصد الذكي لايف، وتابع البث المباشر وسجلات التنبيهات الأمنية كأنك بداخل غرفة التحكم الحقيقية.</p>
+            </div>
+
+            <!-- Interactive Scenario Trigger Bar -->
+            <div class="simulator-controls-bar glass-card" style="margin-bottom: 24px; padding: 20px; border-radius: 20px; text-align: center;">
+                <h4 style="margin: 0 0 12px 0; color: #22d3ee; font-size: 16px;">🕹️ اختر السيناريو لتشغيل الرصد الذكي على البث المباشر:</h4>
+                <div class="scenario-buttons-flex" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <button class="mock-btn active" id="btn-scen-clear" onclick="triggerVexoraScenario('clear')">الوضع الطبيعي (بث مباشر)</button>
+                    <button class="mock-btn" id="btn-scen-ppe" onclick="triggerVexoraScenario('ppe')">👷‍♂️ رصد مخالفة سلامة (No Helmet)</button>
+                    <button class="mock-btn" id="btn-scen-intruder" onclick="triggerVexoraScenario('intruder')">🚨 محاكاة متسلل (Perimeter Fence)</button>
+                    <button class="mock-btn" id="btn-scen-fire" onclick="triggerVexoraScenario('fire')">🔥 محاكاة حريق ودخان (Fire Alert)</button>
+                    <button class="mock-btn" id="btn-scen-lpr" onclick="triggerVexoraScenario('lpr')">🚗 قراءة لوحة سيارة (LPR Access)</button>
+                </div>
+                <div class="sim-feedback-msg" id="sim-feedback-vexora" style="margin-top: 14px; font-size: 14px; color: #ffd60a; font-weight: 600;">
+                    البث يعمل بالوضع الطبيعي المستقر. اضغط أي سيناريو أعلاه لتشغيل الرصد وسجل التنبيهات الفوري.
+                </div>
             </div>
 
             <div class="sandbox-container glass-card" style="padding: 24px; border: 1px solid var(--border-color); border-radius: 24px;">
@@ -492,67 +416,71 @@
                             <span class="dot yellow"></span>
                             <span class="dot green"></span>
                         </div>
-                        <div class="mockup-title" data-i18n="live_dash_panel_title">WEST-PORT CONSTRUCTION SITE - SECURITY CONSOLE</div>
+                        <div class="mockup-title">VEXORA ENTERPRISE SECURITY CONSOLE - LIVE SYSTEM MONITOR</div>
                     </div>
                     <div class="dashboard-layout">
                         <!-- Sidebar -->
                         <div class="dashboard-sidebar">
                             <div class="sidebar-section">
-                                <h4 data-i18n="dash_cameras_title">القنوات النشطة</h4>
+                                <h4>القنوات النشطة (Active Feeds)</h4>
                                 <div class="cam-channels-list">
-                                    <div class="channel-item">
+                                    <div class="channel-item active" id="chan-cam-1" onclick="triggerVexoraScenario('clear')">
                                         <span class="status-indicator online"></span>
-                                        <span class="channel-name">CAM 01 - البوابة الغربية</span>
+                                        <span class="channel-name">CAM 01 - موقع العمل الإنشائي</span>
                                     </div>
-                                    <div class="channel-item active">
+                                    <div class="channel-item" id="chan-cam-2" onclick="triggerVexoraScenario('intruder')">
                                         <span class="status-indicator online"></span>
-                                        <span class="channel-name" data-i18n="live_dash_cam_active">CAM 02 - منطقة العمل الرئيسية</span>
+                                        <span class="channel-name">CAM 02 - السياج الغربي</span>
                                     </div>
-                                    <div class="channel-item">
-                                        <span class="status-indicator offline"></span>
-                                        <span class="channel-name">CAM 03 - مستودع المواد</span>
+                                    <div class="channel-item" id="chan-cam-3" onclick="triggerVexoraScenario('fire')">
+                                        <span class="status-indicator online"></span>
+                                        <span class="channel-name">CAM 03 - مستودع المواد (B)</span>
+                                    </div>
+                                    <div class="channel-item" id="chan-cam-4" onclick="triggerVexoraScenario('lpr')">
+                                        <span class="status-indicator online"></span>
+                                        <span class="channel-name">CAM 04 - بوابة السيارات الرئيسية</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="sidebar-section">
-                                <h4 data-i18n="dash_stats_title">تحليلات النظام</h4>
+                                <h4>مؤشرات معالج AI</h4>
                                 <div class="dash-stats-grid">
                                     <div class="dash-stat-box">
-                                        <span class="stat-lbl" data-i18n="dash_cpu">المعالج</span>
-                                        <span class="stat-val">18%</span>
+                                        <span class="stat-lbl">المعالج</span>
+                                        <span class="stat-val" id="val-cpu">18%</span>
                                     </div>
                                     <div class="dash-stat-box">
-                                        <span class="stat-lbl" data-i18n="dash_fps">الإطارات</span>
-                                        <span class="stat-val">30 FPS</span>
+                                        <span class="stat-lbl">الإطارات</span>
+                                        <span class="stat-val" id="val-fps">30 FPS</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Main Panel -->
                         <div class="dashboard-main">
-                            <div class="camera-stream-container" style="border: none; margin-bottom: 0;">
+                            <div class="camera-stream-container" style="border: none; margin-bottom: 0; position: relative;">
                                 <div class="live-indicator">LIVE 🔴</div>
-                                <img src="assets/sec_construction.jpg" alt="Construction Site Camera" class="camera-feed-img" style="max-height: 400px; object-fit: cover;">
+                                <img src="assets/sec_construction.jpg" id="cam-stream-img" alt="Vexora Camera Stream" class="camera-feed-img" style="max-height: 420px; width: 100%; object-fit: cover; border-radius: 12px;">
                                 
-                                <!-- Decorative AI bounding boxes to show construction helmet detection! -->
-                                <div class="camera-detection-box warning-box" style="display: block; top: 15%; left: 30%; width: 12%; height: 25%;">
-                                    <span style="position: absolute; top: -18px; left: 0; background: #ffd60a; color: #000; font-size: 8px; font-weight: bold; padding: 2px 4px; border-radius: 2px; white-space: nowrap;">HELMET: OK</span>
+                                <!-- Dynamic Detection Box Overlays -->
+                                <div class="camera-detection-box warning-box" id="mock-box-1" style="display: block; top: 15%; left: 30%; width: 14%; height: 25%;">
+                                    <span class="ai-box-label" id="mock-label-1" style="position: absolute; top: -20px; left: 0; background: #ffd60a; color: #000; font-size: 9px; font-weight: bold; padding: 2px 6px; border-radius: 4px; white-space: nowrap;">HELMET: OK ✅</span>
                                 </div>
-                                <div class="camera-detection-box danger-box" style="display: block; top: 35%; left: 60%; width: 14%; height: 30%;">
-                                    <span style="position: absolute; top: -18px; left: 0; background: #ff453a; color: #fff; font-size: 8px; font-weight: bold; padding: 2px 4px; border-radius: 2px; white-space: nowrap;">NO HELMET! ⚠️</span>
+                                <div class="camera-detection-box danger-box" id="mock-box-2" style="display: block; top: 35%; left: 58%; width: 16%; height: 32%;">
+                                    <span class="ai-box-label" id="mock-label-2" style="position: absolute; top: -20px; left: 0; background: #ff453a; color: #fff; font-size: 9px; font-weight: bold; padding: 2px 6px; border-radius: 4px; white-space: nowrap;">NO HELMET! ⚠️</span>
                                 </div>
                             </div>
                             
                             <div class="alert-log-panel" style="margin-top: 16px;">
-                                <h4 data-i18n="vexora_alert_logs_lbl">سجل التنبيهات الأمنية</h4>
-                                <div class="alert-logs">
+                                <h4 style="color: #22d3ee; margin: 0 0 10px 0; font-size: 14px;">📋 سجل التنبيهات الأمنية المباشر (Real-Time AI Alert Logs):</h4>
+                                <div class="alert-logs" id="alert-logs" style="max-height: 140px; overflow-y: auto;">
                                     <div class="log-entry danger">
                                         <span class="time">15:38:12</span>
-                                        <span class="msg" data-i18n="live_dash_log_no_helmet">مخالفة أمنية: عامل بدون خوذة سلامة - منطقة العمل الرئيسية</span>
+                                        <span class="msg">⚠️ مخالفة سلامة: عامل بدون خوذة أمان - موقع العمل الرئيسي</span>
                                     </div>
                                     <div class="log-entry info">
                                         <span class="time">15:36:04</span>
-                                        <span class="msg" data-i18n="live_dash_log_truck">مرور مركبة مصرحة: شاحنة نقل - البوابة الغربية</span>
+                                        <span class="msg">ℹ️ فحص دوري: البث مستقر ونسبة التزام السلامة 95%</span>
                                     </div>
                                 </div>
                             </div>
@@ -562,6 +490,9 @@
             </div>
         </div>
     </section>
+
+
+    
 
     <!-- Multi-Step Demo Booking Form Section -->
     <section class="demo-booking-section" id="demo-section">

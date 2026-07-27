@@ -923,3 +923,113 @@ function selectAlertCategory(categoryName) {
     const demoSection = document.getElementById('demo-section');
     if (demoSection) demoSection.scrollIntoView({ behavior: 'smooth' });
 }
+
+
+
+// Interactive Scenarios for Vexora Control Panel Dashboard
+function triggerVexoraScenario(scen) {
+    const streamImg = document.getElementById('cam-stream-img');
+    const mockBox1 = document.getElementById('mock-box-1');
+    const mockBox2 = document.getElementById('mock-box-2');
+    const mockLabel1 = document.getElementById('mock-label-1');
+    const mockLabel2 = document.getElementById('mock-label-2');
+    const feedbackMsg = document.getElementById('sim-feedback-vexora');
+    const logsContainer = document.getElementById('alert-logs');
+    const cpuVal = document.getElementById('val-cpu');
+    const fpsVal = document.getElementById('val-fps');
+    
+    // De-activate all buttons
+    document.querySelectorAll('.simulator-controls-bar .mock-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.cam-channels-list .channel-item').forEach(ch => ch.classList.remove('active'));
+    
+    const time = new Date().toTimeString().split(' ')[0];
+    
+    if (scen === 'clear') {
+        const btn = document.getElementById('btn-scen-clear');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-1');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/sec_construction.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box warning-box'; mockBox1.style.top = '15%'; mockBox1.style.left = '30%'; mockBox1.style.width = '14%'; mockBox1.style.height = '25%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#ffd60a'; mockLabel1.style.color = '#000'; mockLabel1.textContent = 'HELMET: OK ✅'; }
+        if (mockBox2) { mockBox2.style.display = 'none'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '✅ البث يعمل بالوضع الطبيعي المستقر. الكاميرا رصدت الالتزام بالخوذة.';
+        if (cpuVal) cpuVal.textContent = '14%';
+        if (fpsVal) fpsVal.textContent = '30 FPS';
+        
+    } else if (scen === 'ppe') {
+        const btn = document.getElementById('btn-scen-ppe');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-1');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/sec_construction.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box warning-box'; mockBox1.style.top = '15%'; mockBox1.style.left = '30%'; mockBox1.style.width = '14%'; mockBox1.style.height = '25%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#ffd60a'; mockLabel1.style.color = '#000'; mockLabel1.textContent = 'HELMET: OK ✅'; }
+        if (mockBox2) { mockBox2.style.display = 'block'; mockBox2.className = 'camera-detection-box danger-box'; mockBox2.style.top = '35%'; mockBox2.style.left = '58%'; mockBox2.style.width = '16%'; mockBox2.style.height = '32%'; }
+        if (mockLabel2) { mockLabel2.style.background = '#ff453a'; mockLabel2.style.color = '#fff'; mockLabel2.textContent = 'NO HELMET! ⚠️'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '⚠️ إنذار سلامة: تم رصد عامل بدون خوذة حماية في منطقة العمل!';
+        if (logsContainer) {
+            logsContainer.innerHTML = `<div class="log-entry danger"><span class="time">${time}</span><span class="msg">⚠️ مخالفة سلامة: عامل بدون خوذة أمان - منطقة العمل الرئيسية</span></div>` + logsContainer.innerHTML;
+        }
+        if (cpuVal) cpuVal.textContent = '22%';
+        if (fpsVal) fpsVal.textContent = '30 FPS';
+
+    } else if (scen === 'intruder') {
+        const btn = document.getElementById('btn-scen-intruder');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-2');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/vexora_perimeter_fence.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box danger-box'; mockBox1.style.top = '35%'; mockBox1.style.left = '40%'; mockBox1.style.width = '25%'; mockBox1.style.height = '50%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#ff453a'; mockLabel1.style.color = '#fff'; mockLabel1.textContent = 'INTRUDER DETECTED! 🚨'; }
+        if (mockBox2) { mockBox2.style.display = 'none'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '🚨 إنذار أمني حرج: تم رصد متسلل يتسلق السياج الخارجي بعد أوقات العمل!';
+        if (logsContainer) {
+            logsContainer.innerHTML = `<div class="log-entry danger"><span class="time">${time}</span><span class="msg">🚨 خرق أمني: رصد جسم متسلل يتسلق السياج الخارجي - القناة 02</span></div>` + logsContainer.innerHTML;
+        }
+        if (cpuVal) cpuVal.textContent = '26%';
+        if (fpsVal) fpsVal.textContent = '29 FPS';
+
+    } else if (scen === 'fire') {
+        const btn = document.getElementById('btn-scen-fire');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-3');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/vexora_fire.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box danger-box'; mockBox1.style.top = '15%'; mockBox1.style.left = '15%'; mockBox1.style.width = '70%'; mockBox1.style.height = '70%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#ff453a'; mockLabel1.style.color = '#fff'; mockLabel1.textContent = 'FIRE & SMOKE ALARM! 🔥'; }
+        if (mockBox2) { mockBox2.style.display = 'none'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '🔥 إنذار حريق مبكر: تم رصد أدخنة ونيران مشتعلة بالمستودع وتم إرسال إشعارات الطوارئ!';
+        if (logsContainer) {
+            logsContainer.innerHTML = `<div class="log-entry danger"><span class="time">${time}</span><span class="msg">🔥 إنذار حظر حريق: تم كشف أدخنة ونيران - مستودع المواد B</span></div>` + logsContainer.innerHTML;
+        }
+        if (cpuVal) cpuVal.textContent = '28%';
+        if (fpsVal) fpsVal.textContent = '30 FPS';
+
+    } else if (scen === 'lpr') {
+        const btn = document.getElementById('btn-scen-lpr');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-4');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/sec_parking.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box warning-box'; mockBox1.style.top = '40%'; mockBox1.style.left = '35%'; mockBox1.style.width = '30%'; mockBox1.style.height = '35%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#34c759'; mockLabel1.style.color = '#fff'; mockLabel1.textContent = 'LPR: [أ ب ج 1 2 3 4] GATE OPEN ✅'; }
+        if (mockBox2) { mockBox2.style.display = 'none'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '🚗 قراءة لوحة LPR: تم التعرف على لوحة السيارة المصرح لها وفتح البوابة تلقائياً.';
+        if (logsContainer) {
+            logsContainer.innerHTML = `<div class="log-entry info"><span class="time">${time}</span><span class="msg">🚗 بوابة السيارات: قراءة لوحة [أ ب ج 1 2 3 4] وفتح البوابة للمالك</span></div>` + logsContainer.innerHTML;
+        }
+        if (cpuVal) cpuVal.textContent = '19%';
+        if (fpsVal) fpsVal.textContent = '30 FPS';
+    }
+}
