@@ -427,8 +427,11 @@ function setLanguage(lang) {
 // 100% Pure Arabic & English Translation Dictionaries
 
 // 100% Pure Arabic & English Dictionaries (Zero Mixed Words)
+
+// 100% Comprehensive Bilingual Translation Dictionaries (Pure AR & Pure EN)
 const translations = {
     ar: {
+        // Navigation & Buttons
         "nav_products": "المنتجات والأنظمة",
         "nav_solutions": "التنبيهات الذكية",
         "nav_dashboard": "لوحة التحكم",
@@ -436,6 +439,14 @@ const translations = {
         "nav_stories": "قصص نجاح",
         "btn_start_now": "ابدأ التجربة المجانية",
         
+        // Hero Section
+        "hero_title": "نظام الذكاء الاصطناعي الأمني فيكسورا",
+        "hero_desc": "تحويل كاميرات المراقبة التقليدية إلى منظومة أمنية ذكية ترصد المخاطر والتسلل ومخالفات السلامة لحظياً.",
+        "hero_badge": "منظومة المراقبة الذكية المتقدمة",
+        "btn_request_demo": "حجز معاينة تجريبية (15 يوماً)",
+        "btn_view_dashboard": "استعراض لوحة التحكم الحية",
+        
+        // Products Section
         "products_subtitle": "حلول ومنتجات فيكسورا",
         "products_title": "منتجات الأنظمة وسيرفرات الذكاء الاصطناعي",
         "products_desc": "اختر الباقة والمنتج المناسب لبنية كاميرات مراقبة منشأتك مع تركيب ومكفول بـ 15 يوماً تجربة مجانية.",
@@ -460,6 +471,7 @@ const translations = {
         "prod_3_fee": "رسوم إعداد وتدريب لمرة واحدة فقط",
         "prod_3_btn": "طلب تنبيه مخصص",
         
+        // Categories & Alerts
         "alerts_subtitle": "كتالوج التنبيهات الذكية (26 تنبيهاً أمنياً بالصور)",
         "alerts_title": "فئات التنبيهات الخمس الكبرى لنظام فيكسورا",
         "alerts_desc": "استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.",
@@ -475,32 +487,7 @@ const translations = {
         "cat_title_5": "الفئة الخامسة: مراقبة العمليات والسلوكيات",
         "cat_desc_5": "تختص بضمان سير العمليات اليومية بأمان ومنع السلوكيات الخاطئة بداخل المنشأة.",
         
-        "dash_sec_subtitle": "شاشة التحكم الحية والتفاعلية",
-        "dash_sec_title": "منصة فيكسورا للسلامة الذكية",
-        "dash_sec_desc": "لوحة تحكم حية ومباشرة تعكس النظام الفعلي المعمول به بالمنشآت مع بث مباشر وسجل التنبيهات الفوري.",
-        "dash_brand_title": "الموقع الرئيسي - المنشأة الاستثمارية",
-        "dash_brand_sub": "منصة التحكم والمراقبة الذكية | فيكسورا",
-        "dash_status_badge": "أمن وتشغيلي 🟢",
-        "dash_license_warning": "⚠️ تنبيه: ترخيص تجريبي نشط (15 يوماً تجربة مجانية). النظام يعمل بالطاقة القصوى لحماية المنشأة.",
-        "dash_lbl_alltime": "كل الوقت / اليوم",
-        "dash_lbl_top_violation": "أعلى مخالفة",
-        "dash_chart_title": "معدل تكرار المخالفات 📈",
-        "dash_tab_main": "المدخل الرئيسي",
-        "dash_tab_top": "المدخل العلوي",
-        "dash_enabled_alerts_title": "التنبيهات المفعّلة",
-        "dash_stream_cam_name": "📹 كاميرا المدخل الرئيسي",
-        "dash_people_count_lbl": "الأشخاص الآن (المدخل الرئيسي):",
-        "dash_scen_label": "🕹️ تجربة سيناريو الرصد:",
-        "dash_scen_reset": "تصفير البث",
-        "dash_scen_gloves": "⚠️ عدم ارتداء القفازات",
-        "dash_scen_intruder": "🚨 اختراق البوابة",
-        "dash_scen_fire": "🔥 إنذار دخان",
-        "dash_recent_violations_title": "سجل المخالفات الحديثة (18)",
-        "tbl_col_time": "الوقت",
-        "tbl_col_cam": "الكاميرا",
-        "tbl_col_type": "نوع المخالفة",
-        "tbl_col_person": "شخص",
-        
+        // Alert Tags
         "tag_helmet": "لم يتم ارتداء الخوذة! ⚠️",
         "tag_vest": "السترة: متوافق ✅",
         "tag_gloves": "القفازات: متوافق ✅",
@@ -528,6 +515,7 @@ const translations = {
         "tag_forklift": "اقتراب رافعة شوكية ⚠️",
         "tag_touching": "لمس المعروضات 🛑",
         
+        // Alert Titles
         "title_alert_1": "1. رصد خوذة السلامة",
         "title_alert_2": "2. رصد السترة الواقية",
         "title_alert_3": "3. رصد قفازات العمل",
@@ -553,9 +541,40 @@ const translations = {
         "title_alert_23": "23. حالات الغرق",
         "title_alert_24": "24. تناول الطعام",
         "title_alert_25": "25. الرافعات الشوكية",
-        "title_alert_26": "26. لمس المعروضات"
+        "title_alert_26": "26. لمس المعروضات",
+
+        // Control Panel Section
+        "dash_sec_subtitle": "شاشة التحكم الحية والتفاعلية",
+        "dash_sec_title": "منصة فيكسورا للسلامة الذكية",
+        "dash_sec_desc": "لوحة تحكم حية ومباشرة تعكس النظام الفعلي المعمول به بالمنشآت مع بث مباشر وسجل التنبيهات الفوري.",
+        "dash_brand_title": "الموقع الرئيسي - المنشأة الاستثمارية",
+        "dash_brand_sub": "منصة التحكم والمراقبة الذكية | فيكسورا",
+        "dash_status_badge": "أمن وتشغيلي 🟢",
+        "dash_license_warning": "⚠️ تنبيه: ترخيص تجريبي نشط (15 يوماً تجربة مجانية). النظام يعمل بالطاقة القصوى لحماية المنشأة.",
+        "dash_lbl_alltime": "كل الوقت / اليوم",
+        "dash_lbl_top_violation": "أعلى مخالفة",
+        "dash_chart_title": "معدل تكرار المخالفات 📈",
+        "dash_tab_main": "المدخل الرئيسي",
+        "dash_tab_top": "المدخل العلوي",
+        "dash_enabled_alerts_title": "التنبيهات المفعّلة",
+        "dash_stream_cam_name": "📹 كاميرا المدخل الرئيسي",
+        "dash_people_count_lbl": "الأشخاص الآن (المدخل الرئيسي):",
+        "dash_scen_label": "🕹️ تجربة سيناريو الرصد:",
+        "dash_scen_reset": "تصفير البث",
+        "dash_scen_gloves": "⚠️ عدم ارتداء القفازات",
+        "dash_scen_intruder": "🚨 اختراق البوابة",
+        "dash_scen_fire": "🔥 إنذار دخان",
+        "dash_recent_violations_title": "سجل المخالفات الحديثة (18)",
+        "tbl_col_time": "الوقت",
+        "tbl_col_cam": "الكاميرا",
+        "tbl_col_type": "نوع المخالفة",
+        "tbl_col_person": "شخص",
+        "tag_secure_stream": "بث آمن ومشفّر 🟢",
+        "tag_danger_zone": "منطقة خطر ⚠️",
+        "dash_stream_meta": "كاميرا: 01 | المنفذ: 5000 | الدقة: 640x480"
     },
     en: {
+        // Navigation & Buttons
         "nav_products": "Products & Systems",
         "nav_solutions": "AI Alerts",
         "nav_dashboard": "Control Panel",
@@ -563,6 +582,14 @@ const translations = {
         "nav_stories": "Success Stories",
         "btn_start_now": "Start Free Trial",
         
+        // Hero Section
+        "hero_title": "Vexora AI Security & Surveillance System",
+        "hero_desc": "Transform standard CCTV cameras into an intelligent security system detecting threats, intrusion, and HSE violations in real time.",
+        "hero_badge": "Advanced AI Video Analytics Platform",
+        "btn_request_demo": "Book 15-Day Free Trial",
+        "btn_view_dashboard": "View Live Dashboard Demo",
+        
+        // Products Section
         "products_subtitle": "Vexora Solutions & Hardware",
         "products_title": "AI Systems & On-Premise Servers",
         "products_desc": "Select the ideal server and AI package for your facility with 15-day free trial included.",
@@ -587,6 +614,7 @@ const translations = {
         "prod_3_fee": "One-time AI model training fee",
         "prod_3_btn": "Request Custom Alert",
         
+        // Categories & Alerts
         "alerts_subtitle": "Smart Alerts Catalog (26 AI Alerts with Screenshots)",
         "alerts_title": "Vexora 5 Major Alert Categories",
         "alerts_desc": "Explore all available system alerts divided into 5 main operational security categories.",
@@ -602,32 +630,7 @@ const translations = {
         "cat_title_5": "Category 5: Operations & Behavioral Safety",
         "cat_desc_5": "Ensuring smooth operational workflows, forklift safety, and prohibited actions.",
         
-        "dash_sec_subtitle": "Interactive Security SOC Console",
-        "dash_sec_title": "VEXORA SMART SAFETY DASHBOARD",
-        "dash_sec_desc": "Live monitoring dashboard reflecting the real Vexora system console with real-time video stream.",
-        "dash_brand_title": "Main Investment Facility",
-        "dash_brand_sub": "VEXORA ENTERPRISE CONSOLE | SMART SAFETY DASHBOARD",
-        "dash_status_badge": "SECURE & ACTIVE 🟢",
-        "dash_license_warning": "⚠️ Notice: Active 15-Day Trial License. System running at peak capacity.",
-        "dash_lbl_alltime": "All-Time / Today",
-        "dash_lbl_top_violation": "Peak Violation",
-        "dash_chart_title": "Violation Frequency Rate 📈",
-        "dash_tab_main": "Main Gate",
-        "dash_tab_top": "Upper Gate",
-        "dash_enabled_alerts_title": "Active Enabled Alerts",
-        "dash_stream_cam_name": "📹 Main Entrance Camera",
-        "dash_people_count_lbl": "Current People (Main Gate):",
-        "dash_scen_label": "🕹️ Test AI Scenario:",
-        "dash_scen_reset": "Reset Feed",
-        "dash_scen_gloves": "⚠️ Gloves Violation",
-        "dash_scen_intruder": "🚨 Gate Breach",
-        "dash_scen_fire": "🔥 Smoke Alarm",
-        "dash_recent_violations_title": "Recent Violations Log (18)",
-        "tbl_col_time": "Time",
-        "tbl_col_cam": "Camera",
-        "tbl_col_type": "Violation Type",
-        "tbl_col_person": "Person ID",
-        
+        // Alert Tags
         "tag_helmet": "NO HELMET DETECTED! ⚠️",
         "tag_vest": "VEST: COMPLIANT ✅",
         "tag_gloves": "GLOVES: DETECTED ✅",
@@ -655,6 +658,7 @@ const translations = {
         "tag_forklift": "FORKLIFT PROXIMITY ALERT ⚠️",
         "tag_touching": "OBJECT TOUCHING ALERT 🛑",
         
+        // Alert Titles
         "title_alert_1": "1. Safety Helmet Detection",
         "title_alert_2": "2. Safety Vest Detection",
         "title_alert_3": "3. Safety Gloves Detection",
@@ -680,7 +684,37 @@ const translations = {
         "title_alert_23": "23. Pool Drowning Alert",
         "title_alert_24": "24. Prohibited Eating on Line",
         "title_alert_25": "25. Forklift Proximity Warning",
-        "title_alert_26": "26. Museum Object Touching"
+        "title_alert_26": "26. Museum Object Touching",
+
+        // Control Panel Section
+        "dash_sec_subtitle": "Interactive Security SOC Console",
+        "dash_sec_title": "VEXORA SMART SAFETY DASHBOARD",
+        "dash_sec_desc": "Live monitoring dashboard reflecting the real Vexora system console with real-time video stream.",
+        "dash_brand_title": "Main Investment Facility",
+        "dash_brand_sub": "VEXORA ENTERPRISE CONSOLE | SMART SAFETY DASHBOARD",
+        "dash_status_badge": "SECURE & ACTIVE 🟢",
+        "dash_license_warning": "⚠️ Notice: Active 15-Day Trial License. System running at peak capacity.",
+        "dash_lbl_alltime": "All-Time / Today",
+        "dash_lbl_top_violation": "Peak Violation",
+        "dash_chart_title": "Violation Frequency Rate 📈",
+        "dash_tab_main": "Main Gate",
+        "dash_tab_top": "Upper Gate",
+        "dash_enabled_alerts_title": "Active Enabled Alerts",
+        "dash_stream_cam_name": "📹 Main Entrance Camera",
+        "dash_people_count_lbl": "Current People (Main Gate):",
+        "dash_scen_label": "🕹️ Test AI Scenario:",
+        "dash_scen_reset": "Reset Feed",
+        "dash_scen_gloves": "⚠️ Gloves Violation",
+        "dash_scen_intruder": "🚨 Gate Breach",
+        "dash_scen_fire": "🔥 Smoke Alarm",
+        "dash_recent_violations_title": "Recent Violations Log (18)",
+        "tbl_col_time": "Time",
+        "tbl_col_cam": "Camera",
+        "tbl_col_type": "Violation Type",
+        "tbl_col_person": "Person ID",
+        "tag_secure_stream": "SECURE STREAM 🟢",
+        "tag_danger_zone": "DANGER ZONE ⚠️",
+        "dash_stream_meta": "CAM: 01 | PORT: 5000 | RES: 640x480"
     }
 };
 
@@ -709,19 +743,3 @@ function toggleLanguage() {
     currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
     setLanguage(currentLanguage);
 }
-
-
-
-    translations.ar["tag_secure_stream"] = "بث آمن ومشفّر 🟢";
-    translations.ar["tag_danger_zone"] = "منطقة خطر ⚠️";
-    translations.ar["dash_stream_meta"] = "كاميرا: 01 | المنفذ: 5000 | الدقة: 640x480";
-    translations.ar["prod_1_title"] = "السيرفر المحلي الذكي";
-    translations.ar["dash_sec_title"] = "منصة فيكسورا للسلامة الذكية";
-    translations.ar["dash_brand_sub"] = "منصة التحكم والمراقبة الذكية | فيكسورا";
-
-    translations.en["tag_secure_stream"] = "SECURE STREAM 🟢";
-    translations.en["tag_danger_zone"] = "DANGER ZONE ⚠️";
-    translations.en["dash_stream_meta"] = "CAM: 01 | PORT: 5000 | RES: 640x480";
-    translations.en["prod_1_title"] = "On-Premise AI Server";
-    translations.en["dash_sec_title"] = "VEXORA SMART SAFETY DASHBOARD";
-    translations.en["dash_brand_sub"] = "VEXORA ENTERPRISE CONSOLE | SMART SAFETY DASHBOARD";
