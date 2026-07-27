@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=2.5.0">
+    <link rel="stylesheet" href="style.css?v=2.6.0">
 </head>
 <body class="theme-vexora">
 
@@ -32,12 +32,11 @@
             <!-- Middle: Navigation Links -->
             <nav class="nav-links">
                 <a href="#about" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
-                <a href="#products-section" class="nav-link" data-i18n="nav_products">المنتجات والأنظمة</a>
                 <a href="#sectors-section" class="nav-link" data-i18n="nav_solutions">التنبيهات الذكية</a>
+                <a href="#products-section" class="nav-link" data-i18n="nav_products">المنتجات والأنظمة</a>
+                <a href="#dashboard-section" class="nav-link" data-i18n="nav_dashboard">لوحة التحكم</a>
                 <a href="#trusted-clients" class="nav-link" data-i18n="nav_trusted">عملاءنا</a>
                 <a href="#success-stories" class="nav-link" data-i18n="nav_stories">قصص نجاح</a>
-                <a href="#vexora-sandbox" class="nav-link" data-i18n="nav_products">المنتجات</a>
-                <a href="#dashboard-section" class="nav-link" data-i18n="nav_dashboard">لوحة التحكم</a>
                 <a href="#demo-section" class="nav-link" data-i18n="nav_contact">اتصل بنا</a>
                 <a href="https://beyout-ochre.vercel.app" class="nav-link link-external"><span data-i18n="nav_to_beyout">بيوت للمنازل الذكية (B2C)</span> →</a>
             </nav>
@@ -83,7 +82,457 @@
         <!-- 5 Major Alert Categories - Full Vertical Stacked Layout (26 Unique Screenshots) -->
         <!-- Vexora AI Products & Enterprise Solutions Section -->
         <!-- Vexora AI Products & Enterprise Solutions Section -->
-    <section class="products-section-wrapper" id="products-section" style="padding: 80px 0; background: rgba(255, 255, 255, 0.015); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+    
+
+
+    
+
+
+    <section class="packages-section-wrapper" id="sectors-section">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 60px;">
+                <span class="section-subtitle">كتالوج التنبيهات الذكية (26 تنبيهاً أمنياً بالصور)</span>
+                <h2 class="section-title">فئات التنبيهات الخمس الكبرى لنظام فيكسورا</h2>
+                <p class="section-desc max-w-600">استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.</p>
+            </div>
+
+            <div class="categories-stacked-wrapper">
+
+                <!-- CATEGORY 1 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الأولى 👷‍♂️</span>
+                            <h2 data-i18n="cat_title_1">السلامة والصحة المهنية</h2>
+                            <p>تستهدف هذه الفئة حماية الأرواح، وتأمين بيئة العمل، والتزام طاقم العمل بالمعايير الوقائية والصحية.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alerts-items-grid">
+                        <!-- Alert 1 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_1.jpg?v=2.6.0" alt="Helmet Detection">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 35%; width: 30%; height: 35%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_helmet">لم يتم ارتداء الخوذة! ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_1">1. رصد خوذة السلامة</span></h4>
+                                <p>كشف عدم ارتداء خوذة الرأس بالمواقع الإنشائية وتنبيه المشرف فورياً لحماية الأرواح.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 2 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_2.jpg?v=2.6.0" alt="Vest Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 25%; left: 30%; width: 40%; height: 50%;">
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_vest">السترة: متوافق ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_2">2. رصد السترة الواقية</span></h4>
+                                <p>التحقق من ارتداء السترة الفسفورية المضيئة في بيئات العمل ذات الرؤية المنخفضة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 3 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_3.jpg?v=2.6.0" alt="Gloves Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 35%; left: 20%; width: 60%; height: 45%;">
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_gloves">القفازات: متوافق ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_3">3. رصد قفازات العمل</span></h4>
+                                <p>رصد الالتزام بقفازات العمل المخصصة أو القفازات الطبية بالمصانع والمختبرات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 4 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_4.jpg?v=2.6.0" alt="Goggles Detection">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 15%; left: 40%; width: 25%; height: 25%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_goggles">النظارة: غير متوافق ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_4">4. رصد نظارات الحماية</span></h4>
+                                <p>التأكد من ارتداء نظارات حماية العين أثناء عمليات القطع واللحام والمواد الكيميائية.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 5 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_5.jpg?v=2.6.0" alt="Safety Shoes">
+                                <div class="ai-box-overlay success-box-ai" style="top: 60%; left: 30%; width: 40%; height: 35%;">
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_shoes">حذاء الأمان: متوافق ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_5">5. رصد حذاء الأمان</span></h4>
+                                <p>رصد التزام العمال بارتداء أحذية الأمان المقاومة للانزلاق والصدمات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 6 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_6.jpg?v=2.6.0" alt="Mask Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 20%; left: 35%; width: 30%; height: 35%;">
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_mask">الكمامة: متوافق ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_6">6. الكمامات الوقائية</span></h4>
+                                <p>التأكد من ارتداء الكمامات بالقطاعات الصحية والمستشفيات ومصانع الأغذية.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 7 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_7.jpg?v=2.6.0" alt="Hairnet Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 10%; left: 35%; width: 30%; height: 25%;">
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_hairnet">غطاء الشعر: متوافق ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_7">7. غطاء الشعر</span></h4>
+                                <p>رصد الالتزام بتغطية الشعر في خطوط إنتاج الأغذية والمطابخ والمختبرات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 8 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_8.jpg?v=2.6.0" alt="Uniform Check">
+                                <div class="ai-box-overlay success-box-ai" style="top: 20%; left: 30%; width: 40%; height: 60%;">
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_uniform">الزي الموحد: متوافق ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_8">8. الزي الموحد</span></h4>
+                                <p>التأكد من التزام طاقم العمل بالزي الرسمي والتنفيذي المعتمد للشركة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 9 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_9.jpg?v=2.6.0" alt="Hygiene & Sterilization">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_hygiene">تجاوز جهاز التعقيم ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_9">9. النظافة العامة والتعقيم</span></h4>
+                                <p>كشف تخطي أجهزة تعقيم الأيدي قبل الدخول للغرف المعقمة والعمليات.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 2 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الثانية 🔒</span>
+                            <h2 data-i18n="cat_title_2">الأمن والحماية</h2>
+                            <p>مخصصة لحماية الممتلكات والمنشآت من الاختراق، والسرقة، والتهديدات الخارجية.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alerts-items-grid">
+                        <!-- Alert 10 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_10.jpg?v=2.6.0" alt="Perimeter Intrusion">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 40%; width: 30%; height: 50%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_intrusion">اختراق السياج الخارجي 🚨</span>
+                                </div>
+                                <div class="ai-perimeter-line"></div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_10">10. تسلل الأفراد والأسوار</span></h4>
+                                <p>رصد تسلق الأسوار واختراق الحدود الخارجية للمنشأة في أوقات الحظر.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 11 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_11.jpg?v=2.6.0" alt="Unauthorized Entry">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 35%; width: 30%; height: 55%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_unauthorized">منطقة غير مصرح بها ⛔</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_11">11. دخول مناطق غير مصرح بها</span></h4>
+                                <p>كشف دخول الأفراد لغرف الأرشيف، السيرفرات، وخزائن المواد الحساسة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 12 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_12.jpg?v=2.6.0" alt="Theft Detection">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 35%; left: 25%; width: 45%; height: 45%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_theft">حركة سرقة مريبة 🚨</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_12">12. حركات السرقة</span></h4>
+                                <p>رصد التقاط الأشياء المريب وإخفاء المنتجات في المتاجر والمستودعات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 13 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_13.jpg?v=2.6.0" alt="Abandoned Objects">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 55%; left: 40%; width: 25%; height: 30%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_baggage">حقيبة متروكة ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_13">13. الأجسام المتروكة</span></h4>
+                                <p>رصد الحقائب والأجسام المتروكة لفترات طويلة في الأماكن العامة والمطارات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 14 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_14.jpg?v=2.6.0" alt="Loitering Detection">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 35%; height: 45%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_loitering">تنبيه تسكع مريب (5 دقائق) ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_14">14. التسكع المريب</span></h4>
+                                <p>كشف وقوف أفراد لفترات مريبة وحركات غير مبررة حول محيط المنشأة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 15 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_15.jpg?v=2.6.0" alt="Vandalism Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 40%; left: 20%; width: 60%; height: 40%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_vandalism">رصد تخريب بالموقع 🚨</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_15">15. تخريب الممتلكات</span></h4>
+                                <p>رصد محاولات التخريب، رش الجدران، والعبث بالأسوار والأبواب الخارجية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الثالثة 👨‍稳‍👧‍👦</span>
+                            <h2 data-i18n="cat_title_3">السلامة العامة وإدارة الحشود</h2>
+                            <p>مخصصة للسيطرة على الأماكن العامة والممرات وتجنب الأزمات البشرية والتدافع.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alerts-items-grid">
+                        <!-- Alert 16 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_16.jpg?v=2.6.0" alt="Crowd Density">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 20%; left: 15%; width: 70%; height: 60%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_crowd">تكدس وازدحام شديد ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_16">16. التكدس والازدحام</span></h4>
+                                <p>رصد التجمعات الكبيرة والتدافع عند البوابات والممرات وإرسال تحذيرات الإخلاء.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 17 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_17.jpg?v=2.6.0" alt="Violence Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 25%; width: 50%; height: 50%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_violence">رصد مشاجرة واشتباك 🚨</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_17">17. المشاجرات والعنف</span></h4>
+                                <p>كشف الشغب والعنف الجسدي والاشتباكات بالصوت والصورة بشكل لحظي.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 18 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_18.jpg?v=2.6.0" alt="Running in Hallway">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_running">رصد ركض سريع مريب ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_18">18. الركض السريع</span></h4>
+                                <p>رصد الركض المريب في الممرات الداخلية للمدارس، المستشفيات، والمباني.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 19 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_19.jpg?v=2.6.0" alt="Traffic Congestion">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 35%; left: 20%; width: 60%; height: 50%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_traffic">تكدس مروري بالمدخل 🚗</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_19">19. التكدس المروري</span></h4>
+                                <p>كشف التكدس المفاجئ للسيارات أو التوقفات المعطلة لحركة السير داخل المجمعات.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 4 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الرابعة ⚠️</span>
+                            <h2 data-i18n="cat_title_4">مراقبة الحوادث والبيئة</h2>
+                            <p>فئة الإنذار المبكر للأزمات البيئية أو الحوادث المفاجئة التي تتطلب تدخلاً عاجلاً.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alerts-items-grid">
+                        <!-- Alert 20 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_20.jpg?v=2.6.0" alt="Smoke & Fire Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 15%; width: 70%; height: 70%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_fire">إنذار مبكر حريق ودخان 🔥</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_20">20. الأدخنة والحرائق</span></h4>
+                                <p>الإنذار المبكر بمجرد ظهور ألسنة لهب أو أدخنة قبل وصولها للمستشعرات العادية.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 21 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_21.jpg?v=2.6.0" alt="Patient Fall">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 50%; left: 30%; width: 45%; height: 40%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_fall">رصد سقوط مفاجئ 🚑</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_21">21. السقوط المفاجئ</span></h4>
+                                <p>رصد سقوط المرضى أو العمال على الأرض وإطلاق نداء استغاثة فورية للطوارئ.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 22 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_22.jpg?v=2.6.0" alt="Liquid Spill">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 60%; left: 25%; width: 50%; height: 30%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_spill">انسكاب سوائل على الأرض 💧</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_22">22. انسكاب السوائل</span></h4>
+                                <p>كشف انسكاب السوائل والمواد الخطرة على الأرضيات لمنع انزلاق الأفراد والمصانع.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 23 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_23.jpg?v=2.6.0" alt="Drowning Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 40%; left: 30%; width: 40%; height: 40%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_drowning">خطر غرق بالمسبح 🏊</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_23">23. حالات الغرق</span></h4>
+                                <p>رصد الأمان وحالات الغرق وعدم الحركة في المسابح والمنتجعات السياحية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 5 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الخامسة ⚙️</span>
+                            <h2 data-i18n="cat_title_5">مراقبة العمليات والسلوكيات</h2>
+                            <p>تختص بضمان سير العمليات اليومية بأمان ومنع السلوكيات الخاطئة بداخل المنشأة.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alerts-items-grid">
+                        <!-- Alert 24 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_24.jpg?v=2.6.0" alt="Eating Alert">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 25%; left: 35%; width: 30%; height: 40%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_eating">مخالفة تناول طعام 🚫</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_24">24. تناول الطعام</span></h4>
+                                <p>رصد تناول الأطعمة والمشروبات في غير الأماكن المخصصة مثل خطوط الإنتاج المعقمة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 25 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_25.jpg?v=2.6.0" alt="Forklift Proximity">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 25%; width: 50%; height: 50%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_forklift">اقتراب رافعة شوكية ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_25">25. الرافعات الشوكية</span></h4>
+                                <p>إنذار مبكر عند اقتراب الرافعات الشوكية بشكل خطر من مسارات المشاة والعمال.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 26 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_26.jpg?v=2.6.0" alt="Object Touching">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 35%; width: 30%; height: 45%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_touching">لمس المعروضات 🛑</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_26">26. لمس المعروضات</span></h4>
+                                <p>رصد الاقتراب الشديد أو اللمس للتحف والمعروضات الحساسة بالمعارض والمتاحف.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<section class="products-section-wrapper" id="products-section" style="padding: 80px 0; background: rgba(255, 255, 255, 0.015); border-top: 1px solid rgba(255, 255, 255, 0.05);">
         <div class="container">
             <div class="section-header text-center" style="margin-bottom: 50px;">
                 <span class="section-subtitle" data-i18n="products_subtitle">حلول ومنتجات فيكسورا</span>
@@ -133,454 +582,6 @@
                         <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_3_fee">رسوم إعداد وتدريب لمرة واحدة فقط</span>
                     </div>
                     <button class="package-cta" style="margin-top: 20px;" onclick="selectProduct('التنبيهات المخصصة')" data-i18n="prod_3_btn">طلب تنبيه مخصص</button>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    
-
-
-    <section class="packages-section-wrapper" id="sectors-section">
-        <div class="container">
-            <div class="section-header text-center" style="margin-bottom: 60px;">
-                <span class="section-subtitle">كتالوج التنبيهات الذكية (26 تنبيهاً أمنياً بالصور)</span>
-                <h2 class="section-title">فئات التنبيهات الخمس الكبرى لنظام فيكسورا</h2>
-                <p class="section-desc max-w-600">استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.</p>
-            </div>
-
-            <div class="categories-stacked-wrapper">
-
-                <!-- CATEGORY 1 -->
-                <div class="category-block-vertical glass-card">
-                    <div class="cat-block-header">
-                        <div class="cat-header-info">
-                            <span class="cat-num-pill">الفئة الأولى 👷‍♂️</span>
-                            <h2 data-i18n="cat_title_1">السلامة والصحة المهنية</h2>
-                            <p>تستهدف هذه الفئة حماية الأرواح، وتأمين بيئة العمل، والتزام طاقم العمل بالمعايير الوقائية والصحية.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="alerts-items-grid">
-                        <!-- Alert 1 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_1.jpg?v=2.5.0" alt="Helmet Detection">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 35%; width: 30%; height: 35%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_helmet">لم يتم ارتداء الخوذة! ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_1">1. رصد خوذة السلامة</span></h4>
-                                <p>كشف عدم ارتداء خوذة الرأس بالمواقع الإنشائية وتنبيه المشرف فورياً لحماية الأرواح.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 2 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_2.jpg?v=2.5.0" alt="Vest Detection">
-                                <div class="ai-box-overlay success-box-ai" style="top: 25%; left: 30%; width: 40%; height: 50%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_vest">السترة: متوافق ✅</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_2">2. رصد السترة الواقية</span></h4>
-                                <p>التحقق من ارتداء السترة الفسفورية المضيئة في بيئات العمل ذات الرؤية المنخفضة.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 3 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_3.jpg?v=2.5.0" alt="Gloves Detection">
-                                <div class="ai-box-overlay success-box-ai" style="top: 35%; left: 20%; width: 60%; height: 45%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_gloves">القفازات: متوافق ✅</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_3">3. رصد قفازات العمل</span></h4>
-                                <p>رصد الالتزام بقفازات العمل المخصصة أو القفازات الطبية بالمصانع والمختبرات.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 4 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_4.jpg?v=2.5.0" alt="Goggles Detection">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 15%; left: 40%; width: 25%; height: 25%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_goggles">النظارة: غير متوافق ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_4">4. رصد نظارات الحماية</span></h4>
-                                <p>التأكد من ارتداء نظارات حماية العين أثناء عمليات القطع واللحام والمواد الكيميائية.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 5 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_5.jpg?v=2.5.0" alt="Safety Shoes">
-                                <div class="ai-box-overlay success-box-ai" style="top: 60%; left: 30%; width: 40%; height: 35%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_shoes">حذاء الأمان: متوافق ✅</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_5">5. رصد حذاء الأمان</span></h4>
-                                <p>رصد التزام العمال بارتداء أحذية الأمان المقاومة للانزلاق والصدمات.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 6 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_6.jpg?v=2.5.0" alt="Mask Detection">
-                                <div class="ai-box-overlay success-box-ai" style="top: 20%; left: 35%; width: 30%; height: 35%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_mask">الكمامة: متوافق ✅</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_6">6. الكمامات الوقائية</span></h4>
-                                <p>التأكد من ارتداء الكمامات بالقطاعات الصحية والمستشفيات ومصانع الأغذية.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 7 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_7.jpg?v=2.5.0" alt="Hairnet Detection">
-                                <div class="ai-box-overlay success-box-ai" style="top: 10%; left: 35%; width: 30%; height: 25%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_hairnet">غطاء الشعر: متوافق ✅</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_7">7. غطاء الشعر</span></h4>
-                                <p>رصد الالتزام بتغطية الشعر في خطوط إنتاج الأغذية والمطابخ والمختبرات.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 8 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_8.jpg?v=2.5.0" alt="Uniform Check">
-                                <div class="ai-box-overlay success-box-ai" style="top: 20%; left: 30%; width: 40%; height: 60%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_uniform">الزي الموحد: متوافق ✅</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_8">8. الزي الموحد</span></h4>
-                                <p>التأكد من التزام طاقم العمل بالزي الرسمي والتنفيذي المعتمد للشركة.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 9 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_9.jpg?v=2.5.0" alt="Hygiene & Sterilization">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_hygiene">تجاوز جهاز التعقيم ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_9">9. النظافة العامة والتعقيم</span></h4>
-                                <p>كشف تخطي أجهزة تعقيم الأيدي قبل الدخول للغرف المعقمة والعمليات.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CATEGORY 2 -->
-                <div class="category-block-vertical glass-card">
-                    <div class="cat-block-header">
-                        <div class="cat-header-info">
-                            <span class="cat-num-pill">الفئة الثانية 🔒</span>
-                            <h2 data-i18n="cat_title_2">الأمن والحماية</h2>
-                            <p>مخصصة لحماية الممتلكات والمنشآت من الاختراق، والسرقة، والتهديدات الخارجية.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="alerts-items-grid">
-                        <!-- Alert 10 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_10.jpg?v=2.5.0" alt="Perimeter Intrusion">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 40%; width: 30%; height: 50%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_intrusion">اختراق السياج الخارجي 🚨</span>
-                                </div>
-                                <div class="ai-perimeter-line"></div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_10">10. تسلل الأفراد والأسوار</span></h4>
-                                <p>رصد تسلق الأسوار واختراق الحدود الخارجية للمنشأة في أوقات الحظر.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 11 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_11.jpg?v=2.5.0" alt="Unauthorized Entry">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 35%; width: 30%; height: 55%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_unauthorized">منطقة غير مصرح بها ⛔</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_11">11. دخول مناطق غير مصرح بها</span></h4>
-                                <p>كشف دخول الأفراد لغرف الأرشيف، السيرفرات، وخزائن المواد الحساسة.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 12 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_12.jpg?v=2.5.0" alt="Theft Detection">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 35%; left: 25%; width: 45%; height: 45%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_theft">حركة سرقة مريبة 🚨</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_12">12. حركات السرقة</span></h4>
-                                <p>رصد التقاط الأشياء المريب وإخفاء المنتجات في المتاجر والمستودعات.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 13 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_13.jpg?v=2.5.0" alt="Abandoned Objects">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 55%; left: 40%; width: 25%; height: 30%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_baggage">حقيبة متروكة ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_13">13. الأجسام المتروكة</span></h4>
-                                <p>رصد الحقائب والأجسام المتروكة لفترات طويلة في الأماكن العامة والمطارات.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 14 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_14.jpg?v=2.5.0" alt="Loitering Detection">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 35%; height: 45%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_loitering">تنبيه تسكع مريب (5 دقائق) ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_14">14. التسكع المريب</span></h4>
-                                <p>كشف وقوف أفراد لفترات مريبة وحركات غير مبررة حول محيط المنشأة.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 15 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_15.jpg?v=2.5.0" alt="Vandalism Alert">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 40%; left: 20%; width: 60%; height: 40%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_vandalism">رصد تخريب بالموقع 🚨</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_15">15. تخريب الممتلكات</span></h4>
-                                <p>رصد محاولات التخريب، رش الجدران، والعبث بالأسوار والأبواب الخارجية.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CATEGORY 3 -->
-                <div class="category-block-vertical glass-card">
-                    <div class="cat-block-header">
-                        <div class="cat-header-info">
-                            <span class="cat-num-pill">الفئة الثالثة 👨‍稳‍👧‍👦</span>
-                            <h2 data-i18n="cat_title_3">السلامة العامة وإدارة الحشود</h2>
-                            <p>مخصصة للسيطرة على الأماكن العامة والممرات وتجنب الأزمات البشرية والتدافع.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="alerts-items-grid">
-                        <!-- Alert 16 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_16.jpg?v=2.5.0" alt="Crowd Density">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 20%; left: 15%; width: 70%; height: 60%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_crowd">تكدس وازدحام شديد ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_16">16. التكدس والازدحام</span></h4>
-                                <p>رصد التجمعات الكبيرة والتدافع عند البوابات والممرات وإرسال تحذيرات الإخلاء.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 17 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_17.jpg?v=2.5.0" alt="Violence Alert">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 25%; width: 50%; height: 50%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_violence">رصد مشاجرة واشتباك 🚨</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_17">17. المشاجرات والعنف</span></h4>
-                                <p>كشف الشغب والعنف الجسدي والاشتباكات بالصوت والصورة بشكل لحظي.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 18 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_18.jpg?v=2.5.0" alt="Running in Hallway">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_running">رصد ركض سريع مريب ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_18">18. الركض السريع</span></h4>
-                                <p>رصد الركض المريب في الممرات الداخلية للمدارس، المستشفيات، والمباني.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 19 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_19.jpg?v=2.5.0" alt="Traffic Congestion">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 35%; left: 20%; width: 60%; height: 50%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_traffic">تكدس مروري بالمدخل 🚗</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_19">19. التكدس المروري</span></h4>
-                                <p>كشف التكدس المفاجئ للسيارات أو التوقفات المعطلة لحركة السير داخل المجمعات.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CATEGORY 4 -->
-                <div class="category-block-vertical glass-card">
-                    <div class="cat-block-header">
-                        <div class="cat-header-info">
-                            <span class="cat-num-pill">الفئة الرابعة ⚠️</span>
-                            <h2 data-i18n="cat_title_4">مراقبة الحوادث والبيئة</h2>
-                            <p>فئة الإنذار المبكر للأزمات البيئية أو الحوادث المفاجئة التي تتطلب تدخلاً عاجلاً.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="alerts-items-grid">
-                        <!-- Alert 20 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_20.jpg?v=2.5.0" alt="Smoke & Fire Alert">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 15%; width: 70%; height: 70%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_fire">إنذار مبكر حريق ودخان 🔥</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_20">20. الأدخنة والحرائق</span></h4>
-                                <p>الإنذار المبكر بمجرد ظهور ألسنة لهب أو أدخنة قبل وصولها للمستشعرات العادية.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 21 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_21.jpg?v=2.5.0" alt="Patient Fall">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 50%; left: 30%; width: 45%; height: 40%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_fall">رصد سقوط مفاجئ 🚑</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_21">21. السقوط المفاجئ</span></h4>
-                                <p>رصد سقوط المرضى أو العمال على الأرض وإطلاق نداء استغاثة فورية للطوارئ.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 22 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_22.jpg?v=2.5.0" alt="Liquid Spill">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 60%; left: 25%; width: 50%; height: 30%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_spill">انسكاب سوائل على الأرض 💧</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_22">22. انسكاب السوائل</span></h4>
-                                <p>كشف انسكاب السوائل والمواد الخطرة على الأرضيات لمنع انزلاق الأفراد والمصانع.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 23 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_23.jpg?v=2.5.0" alt="Drowning Alert">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 40%; left: 30%; width: 40%; height: 40%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_drowning">خطر غرق بالمسبح 🏊</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_23">23. حالات الغرق</span></h4>
-                                <p>رصد الأمان وحالات الغرق وعدم الحركة في المسابح والمنتجعات السياحية.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CATEGORY 5 -->
-                <div class="category-block-vertical glass-card">
-                    <div class="cat-block-header">
-                        <div class="cat-header-info">
-                            <span class="cat-num-pill">الفئة الخامسة ⚙️</span>
-                            <h2 data-i18n="cat_title_5">مراقبة العمليات والسلوكيات</h2>
-                            <p>تختص بضمان سير العمليات اليومية بأمان ومنع السلوكيات الخاطئة بداخل المنشأة.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="alerts-items-grid">
-                        <!-- Alert 24 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_24.jpg?v=2.5.0" alt="Eating Alert">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 25%; left: 35%; width: 30%; height: 40%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_eating">مخالفة تناول طعام 🚫</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_24">24. تناول الطعام</span></h4>
-                                <p>رصد تناول الأطعمة والمشروبات في غير الأماكن المخصصة مثل خطوط الإنتاج المعقمة.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 25 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_25.jpg?v=2.5.0" alt="Forklift Proximity">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 25%; width: 50%; height: 50%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_forklift">اقتراب رافعة شوكية ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_25">25. الرافعات الشوكية</span></h4>
-                                <p>إنذار مبكر عند اقتراب الرافعات الشوكية بشكل خطر من مسارات المشاة والعمال.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 26 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_26.jpg?v=2.5.0" alt="Object Touching">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 35%; width: 30%; height: 45%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_touching">لمس المعروضات 🛑</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_26">26. لمس المعروضات</span></h4>
-                                <p>رصد الاقتراب الشديد أو اللمس للتحف والمعروضات الحساسة بالمعارض والمتاحف.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
             </div>
@@ -861,7 +862,7 @@
 
                             <!-- Video Stream Image Feed -->
                             <div class="cam-feed-view" style="position: relative; height: 260px; overflow: hidden;">
-                                <img src="assets/alert_photo_26.jpg?v=2.5.0" id="cam-stream-img" alt="Vexora Live Stream" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="assets/alert_photo_26.jpg?v=2.6.0" id="cam-stream-img" alt="Vexora Live Stream" style="width: 100%; height: 100%; object-fit: cover;">
                                 
                                 <!-- DANGER ZONE Overlay Box from Dashboard Screenshot -->
                                 <div class="camera-detection-box warning-box" id="mock-box-1" style="display: block; top: 40%; left: 30%; width: 50%; height: 45%; border: 2px dashed #f59e0b; position: absolute;">
@@ -1117,6 +1118,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=2.5.0"></script>
+    <script src="app.js?v=2.6.0"></script>
 </body>
 </html>
