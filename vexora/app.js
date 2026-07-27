@@ -391,6 +391,8 @@ function setLanguage(lang) {
 
 
 // 100% Pure Arabic & English Translation Dictionaries
+
+// 100% Pure Arabic & English Dictionaries (Zero Mixed Words)
 const translations = {
     ar: {
         "nav_products": "المنتجات والأنظمة",
@@ -404,7 +406,7 @@ const translations = {
         "products_title": "منتجات الأنظمة وسيرفرات الذكاء الاصطناعي",
         "products_desc": "اختر الباقة والمنتج المناسب لبنية كاميرات مراقبة منشأتك مع تركيب ومكفول بـ 15 يوماً تجربة مجانية.",
         "prod_1_badge": "معالجة محلية",
-        "prod_1_title": "السيرفر المحلي (On-Premise AI Server)",
+        "prod_1_title": "السيرفر المحلي الذكي",
         "prod_1_desc": "سيرفر معالجة محلية يدعم حتى 6 كاميرات مراقبة بدون نقل بيانات للسحابة لضمان السرية والسرعة.",
         "prod_1_price": "20,000 جنيه",
         "prod_1_fee": "تدفع مرة واحدة لشراء وتملّك السيرفر",
@@ -427,6 +429,17 @@ const translations = {
         "alerts_subtitle": "كتالوج التنبيهات الذكية (26 تنبيهاً أمنياً بالصور)",
         "alerts_title": "فئات التنبيهات الخمس الكبرى لنظام فيكسورا",
         "alerts_desc": "استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.",
+        
+        "cat_title_1": "الفئة الأولى: السلامة والصحة المهنية",
+        "cat_desc_1": "تستهدف هذه الفئة حماية الأرواح، وتأمين بيئة العمل، والتزام طاقم العمل بالمعايير الوقائية والصحية.",
+        "cat_title_2": "الفئة الثانية: الأمن والحماية",
+        "cat_desc_2": "مخصصة لحماية الممتلكات والمنشآت من الاختراق، والسرقة، والتهديدات الخارجية.",
+        "cat_title_3": "الفئة الثالثة: السلامة العامة وإدارة الحشود",
+        "cat_desc_3": "مخصصة للسيطرة على الأماكن العامة والممرات وتجنب الأزمات البشرية والتدافع.",
+        "cat_title_4": "الفئة الرابعة: مراقبة الحوادث والبيئة",
+        "cat_desc_4": "فئة الإنذار المبكر للأزمات البيئية أو الحوادث المفاجئة التي تتطلب تدخلاً عاجلاً.",
+        "cat_title_5": "الفئة الخامسة: مراقبة العمليات والسلوكيات",
+        "cat_desc_5": "تختص بضمان سير العمليات اليومية بأمان ومنع السلوكيات الخاطئة بداخل المنشأة.",
         
         "dash_sec_subtitle": "شاشة التحكم الحية والتفاعلية",
         "dash_sec_title": "منصة فيكسورا للسلامة الذكية",
@@ -479,7 +492,34 @@ const translations = {
         "tag_drowning": "خطر غرق بالمسبح 🏊",
         "tag_eating": "مخالفة تناول طعام 🚫",
         "tag_forklift": "اقتراب رافعة شوكية ⚠️",
-        "tag_touching": "لمس المعروضات 🛑"
+        "tag_touching": "لمس المعروضات 🛑",
+        
+        "title_alert_1": "1. رصد خوذة السلامة",
+        "title_alert_2": "2. رصد السترة الواقية",
+        "title_alert_3": "3. رصد قفازات العمل",
+        "title_alert_4": "4. رصد نظارات الحماية",
+        "title_alert_5": "5. رصد حذاء الأمان",
+        "title_alert_6": "6. الكمامات الوقائية",
+        "title_alert_7": "7. غطاء الشعر",
+        "title_alert_8": "8. الزي الموحد",
+        "title_alert_9": "9. النظافة العامة والتعقيم",
+        "title_alert_10": "10. تسلل الأفراد والأسوار",
+        "title_alert_11": "11. دخول مناطق غير مصرح بها",
+        "title_alert_12": "12. حركات السرقة",
+        "title_alert_13": "13. الأجسام المتروكة",
+        "title_alert_14": "14. التسكع المريب",
+        "title_alert_15": "15. تخريب الممتلكات",
+        "title_alert_16": "16. التكدس والازدحام",
+        "title_alert_17": "17. المشاجرات والعنف",
+        "title_alert_18": "18. الركض السريع",
+        "title_alert_19": "19. التكدس المروري",
+        "title_alert_20": "20. الأدخنة والحرائق",
+        "title_alert_21": "21. السقوط المفاجئ",
+        "title_alert_22": "22. انسكاب السوائل",
+        "title_alert_23": "23. حالات الغرق",
+        "title_alert_24": "24. تناول الطعام",
+        "title_alert_25": "25. الرافعات الشوكية",
+        "title_alert_26": "26. لمس المعروضات"
     },
     en: {
         "nav_products": "Products & Systems",
@@ -516,6 +556,17 @@ const translations = {
         "alerts_subtitle": "Smart Alerts Catalog (26 AI Alerts with Screenshots)",
         "alerts_title": "Vexora 5 Major Alert Categories",
         "alerts_desc": "Explore all available system alerts divided into 5 main operational security categories.",
+        
+        "cat_title_1": "Category 1: HSE & Personal Protection Equipment",
+        "cat_desc_1": "Protecting lives, securing work environments, and ensuring staff safety compliance.",
+        "cat_title_2": "Category 2: Facility Security & Perimeter Protection",
+        "cat_desc_2": "Securing perimeter fences, restricting unauthorized access, and detecting theft.",
+        "cat_title_3": "Category 3: Public Safety & Crowd Management",
+        "cat_desc_3": "Managing public spaces, controlling crowd density, and detecting violence.",
+        "cat_title_4": "Category 4: Incident & Environmental Monitoring",
+        "cat_desc_4": "Early detection of smoke, fire hazards, human falls, and liquid spills.",
+        "cat_title_5": "Category 5: Operations & Behavioral Safety",
+        "cat_desc_5": "Ensuring smooth operational workflows, forklift safety, and prohibited actions.",
         
         "dash_sec_subtitle": "Interactive Security SOC Console",
         "dash_sec_title": "VEXORA SMART SAFETY DASHBOARD",
@@ -568,7 +619,34 @@ const translations = {
         "tag_drowning": "POOL DROWNING HAZARD 🏊",
         "tag_eating": "PROHIBITED EATING 🚫",
         "tag_forklift": "FORKLIFT PROXIMITY ALERT ⚠️",
-        "tag_touching": "OBJECT TOUCHING ALERT 🛑"
+        "tag_touching": "OBJECT TOUCHING ALERT 🛑",
+        
+        "title_alert_1": "1. Safety Helmet Detection",
+        "title_alert_2": "2. Safety Vest Detection",
+        "title_alert_3": "3. Safety Gloves Detection",
+        "title_alert_4": "4. Protective Goggles Detection",
+        "title_alert_5": "5. Safety Shoes Detection",
+        "title_alert_6": "6. Protective Face Mask",
+        "title_alert_7": "7. Hygienic Hairnet Check",
+        "title_alert_8": "8. Official Uniform Check",
+        "title_alert_9": "9. Sanitization & Hygiene Bypass",
+        "title_alert_10": "10. Perimeter Fence Intrusion",
+        "title_alert_11": "11. Unauthorized Area Entry",
+        "title_alert_12": "12. Theft & Shoplifting Motion",
+        "title_alert_13": "13. Abandoned Unattended Baggage",
+        "title_alert_14": "14. Suspicious Loitering Alert",
+        "title_alert_15": "15. Facility Vandalism Detection",
+        "title_alert_16": "16. High Crowd Density Warning",
+        "title_alert_17": "17. Violence & Fight Detection",
+        "title_alert_18": "18. Fast Running in Hallway",
+        "title_alert_19": "19. Traffic Congestion Alert",
+        "title_alert_20": "20. Early Smoke & Fire Alarm",
+        "title_alert_21": "21. Human Fall Detection",
+        "title_alert_22": "22. Floor Liquid Spill Hazard",
+        "title_alert_23": "23. Pool Drowning Alert",
+        "title_alert_24": "24. Prohibited Eating on Line",
+        "title_alert_25": "25. Forklift Proximity Warning",
+        "title_alert_26": "26. Museum Object Touching"
     }
 };
 
