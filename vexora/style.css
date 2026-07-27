@@ -1231,3 +1231,102 @@ html[dir="rtl"] .dashboard-sidebar {
     background: repeating-linear-gradient(90deg, #ff453a, #ff453a 8px, transparent 8px, transparent 16px);
     box-shadow: 0 0 8px #ff453a;
 }
+
+
+
+/* -------------------------------------------------------------
+   Full Vertical Stacked Alert Categories & 26 Detailed Alert Cards
+   ------------------------------------------------------------- */
+.categories-stacked-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.category-block-vertical {
+    padding: 32px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cat-block-header {
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.cat-num-pill {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 800;
+    color: #22d3ee;
+    background: rgba(34, 211, 238, 0.1);
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    margin-bottom: 10px;
+}
+
+.cat-block-header h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.cat-block-header p {
+    font-size: 14px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.alerts-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.alert-item-card {
+    padding: 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.alert-item-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(34, 211, 238, 0.3);
+}
+
+.alert-img-frame {
+    position: relative;
+    height: 170px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.alert-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.alert-item-info h4 {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    color: #22d3ee;
+    font-weight: 700;
+}
+
+.alert-item-info p {
+    margin: 0;
+    font-size: 12.5px;
+    color: #d1d5db;
+    line-height: 1.5;
+}

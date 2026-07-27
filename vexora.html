@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=1.3.0">
+    <link rel="stylesheet" href="style.css?v=1.4.0">
 </head>
 <body class="theme-vexora">
 
@@ -78,157 +78,452 @@
 
     <!-- 6 Sectors Section -->
         <!-- 5 Alert Categories Section (26 Alerts) -->
+        <!-- 5 Major Alert Categories - Full Vertical Stacked Layout (26 Detailed Alerts) -->
     <section class="packages-section-wrapper" id="sectors-section">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle" data-i18n="alerts_subtitle">فئات التنبيهات الذكية (26 تنبيهاً أمنياً)</span>
-                <h2 class="section-title" data-i18n="alerts_title">فئات التنبيهات الخمس الكبرى لنظام فيكسورا</h2>
-                <p class="section-desc max-w-600" data-i18n="alerts_desc">نحوّل كاميرات المراقبة التقليدية الحالية في منشأتك إلى منظومة تنبيهات مبكرة مقسّمة إلى 5 فئات أمنية تشغيلية تغطي 26 تنبيهاً ذكياً.</p>
+            <div class="section-header text-center" style="margin-bottom: 60px;">
+                <span class="section-subtitle">منظومة التنبيهات الشاملة (26 تنبيهاً ذكياً)</span>
+                <h2 class="section-title">فئات التنبيهات الخمس الكبرى لنظام فيكسورا</h2>
+                <p class="section-desc max-w-600">استعرض كافة أنواع التنبيهات الأمنية والتشغيلية المتاحة بالنظام، مصحوبة بلقطات شاشة ورصد بصرى حي لكاميرات المراقبة.</p>
             </div>
 
-            <div class="packages-grid alerts-grid-5">
+            <div class="categories-stacked-wrapper">
 
-                <!-- Alert Category 1 -->
-                <div class="package-card glass-card alert-cat-card">
-                    <div class="card-icon-header">
-                        <div class="circular-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <!-- CATEGORY 1 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الأولى 👷‍♂️</span>
+                            <h2>السلامة والصحة المهنية (PPE & Health Safety)</h2>
+                            <p>تستهدف هذه الفئة حماية الأرواح، وتأمين بيئة العمل، والتزام طاقم العمل بالمعايير الوقائية والصحية.</p>
                         </div>
-                        <span class="cat-badge">الفئة الأولى 👷‍♂️</span>
                     </div>
                     
-                    <div class="package-img-container">
-                        <img src="assets/vexora_safety_vest.jpg" alt="PPE & Health Safety Alerts" class="package-card-img">
-                    </div>
+                    <div class="alerts-items-grid">
+                        <!-- Alert 1 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_construction.jpg" alt="Helmet Detection">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 35%; width: 30%; height: 35%;">
+                                    <span class="ai-tag-badge danger-tag">NO HELMET DETECTED! ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>1. رصد خوذة السلامة (Helmet)</h4>
+                                <p>كشف عدم ارتداء خوذة الرأس بالمواقع الإنشائية وتنبيه المشرف فورياً لحماية الأرواح.</p>
+                            </div>
+                        </div>
 
-                    <div class="package-header">
-                        <h3>1. السلامة والصحة المهنية (PPE & Health Safety)</h3>
-                        <p class="pkg-card-desc">حماية الأرواح وتأمين بيئة العمل والتزام طاقم العمل بالمعايير الصحية والوقائية.</p>
+                        <!-- Alert 2 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/vexora_safety_vest.jpg" alt="Vest Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 25%; left: 30%; width: 40%; height: 50%;">
+                                    <span class="ai-tag-badge success-tag">VEST: COMPLIANT ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>2. رصد السترة الواقية (Vest)</h4>
+                                <p>التحقق من ارتداء السترة الفسفورية المضيئة في بيئات العمل ذات الرؤية المنخفضة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 3 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_factories.jpg" alt="Gloves Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 40%; left: 20%; width: 60%; height: 40%;">
+                                    <span class="ai-tag-badge success-tag">GLOVES: DETECTED ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>3. رصد قفازات العمل (Gloves)</h4>
+                                <p>رصد الالتزام بقفازات العمل المخصصة أو القفازات الطبية بالمصانع والمختبرات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 4 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_factories.jpg" alt="Goggles Detection">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 15%; left: 40%; width: 25%; height: 25%;">
+                                    <span class="ai-tag-badge warning-tag">GOGGLES MISSING ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>4. رصد نظارات الحماية (Goggles)</h4>
+                                <p>التأكد من ارتداء نظارات حماية العين أثناء عمليات القطع واللحام والمواد الكيميائية.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 5 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_construction.jpg" alt="Safety Shoes">
+                                <div class="ai-box-overlay success-box-ai" style="top: 65%; left: 30%; width: 40%; height: 30%;">
+                                    <span class="ai-tag-badge success-tag">SAFETY SHOES ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>5. رصد حذاء الأمان (Shoes)</h4>
+                                <p>رصد التزام العمال بارتداء أحذية الأمان المقاومة للانزلاق والصدمات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 6 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_hospitals.jpg" alt="Mask Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 20%; left: 35%; width: 30%; height: 35%;">
+                                    <span class="ai-tag-badge success-tag">PROTECTIVE MASK ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>6. الكمامات الوقائية (Mask)</h4>
+                                <p>التأكد من ارتداء الكمامات بالقطاعات الصحية والمستشفيات ومصانع الأغذية.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 7 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_factories.jpg" alt="Hairnet Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 10%; left: 35%; width: 30%; height: 25%;">
+                                    <span class="ai-tag-badge success-tag">HAIRNET: VERIFIED ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>7. غطاء الشعر (Hairnet)</h4>
+                                <p>رصد الالتزام بتغطية الشعر في خطوط إنتاج الأغذية والمطابخ والمختبرات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 8 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_office_buildings.jpg" alt="Uniform Check">
+                                <div class="ai-box-overlay success-box-ai" style="top: 20%; left: 30%; width: 40%; height: 60%;">
+                                    <span class="ai-tag-badge success-tag">OFFICIAL UNIFORM ✅</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>8. الزي الموحد (Uniform)</h4>
+                                <p>التأكد من التزام طاقم العمل بالزي الرسمي والتنفيذي المعتمد للشركة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 9 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_hospitals.jpg" alt="Hygiene & Sterilization">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
+                                    <span class="ai-tag-badge danger-tag">SANITY BYPASS ALERT ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>9. النظافة العامة والتعقيم (Hygiene)</h4>
+                                <p>كشف تخطي أجهزة تعقيم الأيدي قبل الدخول للغرف المعقمة والعمليات.</p>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="package-features">
-                        <li>🎯 <strong>رصد خوذة السلامة (Helmet):</strong> كشف عدم ارتداء خوذة الرأس بالمواقع الإنشائية.</li>
-                        <li>🎯 <strong>رصد السترة الواقية (Vest):</strong> التحقق من ارتداء السترة الفسفورية المضيئة.</li>
-                        <li>🎯 <strong>رصد قفازات العمل (Gloves):</strong> رصد قفازات العمل أو القفازات الطبية المعقمة.</li>
-                        <li>🎯 <strong>رصد نظارات الحماية (Goggles):</strong> التأكد من ارتداء نظارات حماية العين.</li>
-                        <li>🎯 <strong>رصد حذاء الأمان (Shoes):</strong> رصد الالتزام بأحذية الأمان المخصصة.</li>
-                        <li>🎯 <strong>الكمامات الوقائية (Mask):</strong> رصد الكمامات بالمنشآت الصحية والمصانع.</li>
-                        <li>🎯 <strong>غطاء الشعر (Hairnet):</strong> تغطية الشعر بمصانع الأغذية والمطابخ.</li>
-                        <li>🎯 <strong>الزي الموحد (Uniform):</strong> الالتزام بالزي الرسمي المعتمد للشركة.</li>
-                        <li>🎯 <strong>النظافة العامة والتعقيم (Hygiene):</strong> كشف تخطي أجهزة تعقيم الأيدي.</li>
-                    </ul>
-                    <button class="package-cta" onclick="selectAlertCategory('السلامة والصحة المهنية (PPE & Health Safety)')">حجز ديمو لسلامة العمل</button>
                 </div>
 
-                <!-- Alert Category 2 -->
-                <div class="package-card glass-card alert-cat-card">
-                    <div class="card-icon-header">
-                        <div class="circular-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <!-- CATEGORY 2 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الثانية 🔒</span>
+                            <h2>الأمن والحماية (Security & Protection)</h2>
+                            <p>مخصصة لحماية الممتلكات والمنشآت من الاختراق، والسرقة، والتهديدات الخارجية.</p>
                         </div>
-                        <span class="cat-badge">الفئة الثانية 🔒</span>
                     </div>
                     
-                    <div class="package-img-container">
-                        <img src="assets/vexora_perimeter_fence.jpg" alt="Security & Protection Alerts" class="package-card-img">
-                    </div>
+                    <div class="alerts-items-grid">
+                        <!-- Alert 10 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/vexora_perimeter_fence.jpg" alt="Perimeter Intrusion">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 40%; width: 30%; height: 50%;">
+                                    <span class="ai-tag-badge danger-tag">FENCE INTRUSION 🚨</span>
+                                </div>
+                                <div class="ai-perimeter-line"></div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>10. تسلل الأفراد والأسوار (Intrusion)</h4>
+                                <p>رصد تسلق الأسوار واختراق الحدود الخارجية للمنشأة في أوقات الحظر.</p>
+                            </div>
+                        </div>
 
-                    <div class="package-header">
-                        <h3>2. الأمن والحماية (Security & Protection)</h3>
-                        <p class="pkg-card-desc">حماية الممتلكات من الاختراق والسرقة والتهديدات والتواجد غير المصرح به.</p>
+                        <!-- Alert 11 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_office_buildings.jpg" alt="Unauthorized Entry">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 35%; width: 30%; height: 55%;">
+                                    <span class="ai-tag-badge danger-tag">UNAUTHORIZED ZONE ⛔</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>11. دخول مناطق غير مصرح بها (Unauthorized)</h4>
+                                <p>كشف دخول الأفراد لغرف الأرشيف، السيرفرات، وخزائن المواد الحساسة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 12 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_malls.jpg" alt="Theft Detection">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 35%; left: 25%; width: 45%; height: 45%;">
+                                    <span class="ai-tag-badge danger-tag">SUSPICIOUS MOTION / THEFT 🚨</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>12. حركات السرقة (Theft)</h4>
+                                <p>رصد التقاط الأشياء المريب وإخفاء المنتجات في المتاجر والمستودعات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 13 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_airports.jpg" alt="Abandoned Objects">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 55%; left: 40%; width: 25%; height: 30%;">
+                                    <span class="ai-tag-badge warning-tag">ABANDONED BAGGAGE ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>13. الأجسام المتروكة (Baggage)</h4>
+                                <p>رصد الحقائب والأجسام المتروكة لفترات طويلة في الأماكن العامة والمطارات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 14 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_parking.jpg" alt="Loitering Detection">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 35%; height: 45%;">
+                                    <span class="ai-tag-badge warning-tag">LOITERING ALERT (5 MIN) ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>14. التسكع المريب (Loitering)</h4>
+                                <p>كشف وقوف أفراد لفترات مريبة وحركات غير مبررة حول محيط المنشأة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 15 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/vexora_perimeter_fence.jpg" alt="Vandalism Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 40%; left: 20%; width: 60%; height: 40%;">
+                                    <span class="ai-tag-badge danger-tag">VANDALISM DETECTED 🚨</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>15. تخريب الممتلكات (Vandalism)</h4>
+                                <p>رصد محاولات التخريب، رش الجدران، والعبث بالأسوار والأبواب الخارجية.</p>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="package-features">
-                        <li>🎯 <strong>تسلل الأفراد والأسوار (Intrusion):</strong> رصد تسلق الأسوار والاقتحام الخارجي.</li>
-                        <li>🎯 <strong>مناطق غير مصرح بها (Unauthorized):</strong> كشف دخول غرف الأرشيف والسيرفرات.</li>
-                        <li>🎯 <strong>حركات السرقة (Theft):</strong> رصد التقاط الأشياء المريب وإخفاء المنتجات.</li>
-                        <li>🎯 <strong>الأجسام المتروكة (Baggage):</strong> كشف الحقائب والأجسام المتروكة بالأماكن العامة.</li>
-                        <li>🎯 <strong>التسكع المريب (Loitering):</strong> كشف وقوف أفراد لفترات مريبة حول المنشأة.</li>
-                        <li>🎯 <strong>تخريب الممتلكات (Vandalism):</strong> رصد التخريب والعبث بالأسوار والجدران.</li>
-                    </ul>
-                    <button class="package-cta" onclick="selectAlertCategory('الأمن والحماية (Security & Protection)')">حجز ديمو لتأمين الأسوار</button>
                 </div>
 
-                <!-- Alert Category 3 -->
-                <div class="package-card glass-card alert-cat-card">
-                    <div class="card-icon-header">
-                        <div class="circular-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <!-- CATEGORY 3 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الثالثة 👨‍👩‍👧‍👦</span>
+                            <h2>السلامة العامة وإدارة الحشود (Public Safety & Crowd)</h2>
+                            <p>مخصصة للسيطرة على الأماكن العامة والممرات وتجنب الأزمات البشرية والتدافع.</p>
                         </div>
-                        <span class="cat-badge">الفئة الثالثة 👨‍👩‍👧‍👦</span>
                     </div>
                     
-                    <div class="package-img-container">
-                        <img src="assets/sec_schools.jpg" alt="Public Safety & Crowd Management Alerts" class="package-card-img">
-                    </div>
+                    <div class="alerts-items-grid">
+                        <!-- Alert 16 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_malls.jpg" alt="Crowd Density">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 20%; left: 15%; width: 70%; height: 60%;">
+                                    <span class="ai-tag-badge warning-tag">HIGH CROWD DENSITY ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>16. التكدس والازدحام (Crowd)</h4>
+                                <p>رصد التجمعات الكبيرة والتدافع عند البوابات والممرات وإرسال تحذيرات الإخلاء.</p>
+                            </div>
+                        </div>
 
-                    <div class="package-header">
-                        <h3>3. السلامة العامة وإدارة الحشود (Public Safety & Crowd)</h3>
-                        <p class="pkg-card-desc">السيادة على الأماكن العامة والممرات وتجنب الأزمات البشرية والتدافع.</p>
+                        <!-- Alert 17 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_schools.jpg" alt="Violence Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 25%; width: 50%; height: 50%;">
+                                    <span class="ai-tag-badge danger-tag">VIOLENCE / FIGHT DETECTED 🚨</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>17. المشاجرات والعنف (Violence)</h4>
+                                <p>كشف الشغب والعنف الجسدي والاشتباكات بالصوت والصورة بشكل لحظي.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 18 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_hospitals.jpg" alt="Running in Hallway">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
+                                    <span class="ai-tag-badge warning-tag">FAST RUNNING DETECTED ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>18. الركض السريع (Running)</h4>
+                                <p>رصد الركض المريب في الممرات الداخلية للمدارس، المستشفيات، والمباني.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 19 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_parking.jpg" alt="Traffic Congestion">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 35%; left: 20%; width: 60%; height: 50%;">
+                                    <span class="ai-tag-badge warning-tag">TRAFFIC CONGESTION 🚗</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>19. التكدس المروري (Traffic)</h4>
+                                <p>كشف التكدس المفاجئ للسيارات أو التوقفات المعطلة لحركة السير داخل المجمعات.</p>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="package-features">
-                        <li>🎯 <strong>التكدس والازدحام (Crowd):</strong> رصد التجمعات الكبيرة والتدافع عند البوابات.</li>
-                        <li>🎯 <strong>المشاجرات والعنف (Violence):</strong> كشف الشغب والعنف الجسدي لحظياً.</li>
-                        <li>🎯 <strong>الركض السريع (Running):</strong> رصد الركض المريب بممرات المدارس والمستشفيات.</li>
-                        <li>🎯 <strong>التكدس المروري (Traffic):</strong> كشف التوقف المفاجئ للسيارات وازدوحام الممرات.</li>
-                    </ul>
-                    <button class="package-cta" onclick="selectAlertCategory('السلامة العامة وإدارة الحشود')">حجز ديمو لإدارة الحشود</button>
                 </div>
 
-                <!-- Alert Category 4 -->
-                <div class="package-card glass-card alert-cat-card">
-                    <div class="card-icon-header">
-                        <div class="circular-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                <!-- CATEGORY 4 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الرابعة ⚠️</span>
+                            <h2>مراقبة الحوادث والبيئة (Incident & Environment)</h2>
+                            <p>فئة الإنذار المبكر للأزمات البيئية أو الحوادث المفاجئة التي تتطلب تدخلاً عاجلاً.</p>
                         </div>
-                        <span class="cat-badge">الفئة الرابعة ⚠️</span>
                     </div>
                     
-                    <div class="package-img-container">
-                        <img src="assets/vexora_fire.jpg" alt="Incident & Environment Alerts" class="package-card-img">
-                    </div>
+                    <div class="alerts-items-grid">
+                        <!-- Alert 20 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/vexora_fire.jpg" alt="Smoke & Fire Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 15%; width: 70%; height: 70%;">
+                                    <span class="ai-tag-badge danger-tag">EARLY SMOKE & FIRE 🔥</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>20. الأدخنة والحرائق (Fire/Smoke)</h4>
+                                <p>الإنذار المبكر بمجرد ظهور ألسنة لهب أو أدخنة قبل وصولها للمستشعرات العادية.</p>
+                            </div>
+                        </div>
 
-                    <div class="package-header">
-                        <h3>4. مراقبة الحوادث والبيئة (Incident & Environment)</h3>
-                        <p class="pkg-card-desc">الإنذار المبكر للأزمات البيئية والحوادث المفاجئة التي تتطلب تدخلاً عاجلاً.</p>
+                        <!-- Alert 21 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_hospitals.jpg" alt="Patient Fall">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 50%; left: 30%; width: 45%; height: 40%;">
+                                    <span class="ai-tag-badge danger-tag">HUMAN FALL DETECTED 🚑</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>21. السقوط المفاجئ (Fall)</h4>
+                                <p>رصد سقوط المرضى أو العمال على الأرض وإطلاق نداء استغاثة فورية للطوارئ.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 22 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_supermarkets.jpg" alt="Liquid Spill">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 60%; left: 25%; width: 50%; height: 30%;">
+                                    <span class="ai-tag-badge warning-tag">LIQUID SPILL ON FLOOR 💧</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>22. انسكاب السوائل (Spill)</h4>
+                                <p>كشف انسكاب السوائل والمواد الخطرة على الأرضيات لمنع انزلاق الأفراد والمصانع.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 23 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_hotels.jpg" alt="Drowning Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 40%; left: 30%; width: 40%; height: 40%;">
+                                    <span class="ai-tag-badge danger-tag">POOL DROWNING HAZARD 🏊</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>23. حالات الغرق (Drowning)</h4>
+                                <p>رصد الأمان وحالات الغرق وعدم الحركة في المسابح والمنتجعات السياحية.</p>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="package-features">
-                        <li>🎯 <strong>الأدخنة والحرائق (Fire/Smoke):</strong> إنذار مبكر بمجرد ظهور أدخنة أو ألسنة لهب.</li>
-                        <li>🎯 <strong>السقوط المفاجئ (Fall):</strong> رصد سقوط العمال أو المرضى وإطلاق استغاثة.</li>
-                        <li>🎯 <strong>انسكاب السوائل (Spill):</strong> كشف السوائل على الأرضيات لمنع انزلاق الأفراد.</li>
-                        <li>🎯 <strong>حالات الغرق (Drowning):</strong> رصد الأمان وحالات الغرق بالمسابح والمنتجعات.</li>
-                    </ul>
-                    <button class="package-cta" onclick="selectAlertCategory('مراقبة الحوادث والبيئة')">حجز ديمو للحرائق والطوارئ</button>
                 </div>
 
-                <!-- Alert Category 5 -->
-                <div class="package-card glass-card alert-cat-card">
-                    <div class="card-icon-header">
-                        <div class="circular-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <!-- CATEGORY 5 -->
+                <div class="category-block-vertical glass-card">
+                    <div class="cat-block-header">
+                        <div class="cat-header-info">
+                            <span class="cat-num-pill">الفئة الخامسة ⚙️</span>
+                            <h2>مراقبة العمليات والسلوكيات (Operations & Behavior)</h2>
+                            <p>تختص بضمان سير العمليات اليومية بأمان ومنع السلوكيات الخاطئة بداخل المنشأة.</p>
                         </div>
-                        <span class="cat-badge">الفئة الخامسة ⚙️</span>
                     </div>
                     
-                    <div class="package-img-container">
-                        <img src="assets/sec_factories.jpg" alt="Operations & Behavior Alerts" class="package-card-img">
-                    </div>
+                    <div class="alerts-items-grid">
+                        <!-- Alert 24 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_factories.jpg" alt="Eating Alert">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 25%; left: 35%; width: 30%; height: 40%;">
+                                    <span class="ai-tag-badge warning-tag">PROHIBITED EATING 🚫</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>24. تناول الطعام (Eating)</h4>
+                                <p>رصد تناول الأطعمة والمشروبات في غير الأماكن المخصصة مثل خطوط الإنتاج المعقمة.</p>
+                            </div>
+                        </div>
 
-                    <div class="package-header">
-                        <h3>5. مراقبة العمليات والسلوكيات (Operations & Behavior)</h3>
-                        <p class="pkg-card-desc">ضمان سير العمليات التشغيلية بأمان ومنع السلوكيات الخاطئة داخل المنشأة.</p>
+                        <!-- Alert 25 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_warehouses.jpg" alt="Forklift Proximity">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 25%; width: 50%; height: 50%;">
+                                    <span class="ai-tag-badge warning-tag">FORKLIFT PROXIMITY ALERT ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>25. الرافعات الشوكية (Forklift)</h4>
+                                <p>إنذار مبكر عند اقتراب الرافعات الشوكية بشكل خطر من مسارات المشاة والعمال.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 26 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/sec_museums.jpg" alt="Object Touching">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 35%; width: 30%; height: 45%;">
+                                    <span class="ai-tag-badge danger-tag">OBJECT TOUCHING ALERT 🛑</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4>26. لمس المعروضات (Touching)</h4>
+                                <p>رصد الاقتراب الشديد أو اللمس للتحف والمعروضات الحساسة بالمعارض والمتاحف.</p>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="package-features">
-                        <li>🎯 <strong>تناول الطعام (Eating):</strong> رصد الأكل والشرب بغير الأماكن المخصصة كخطوط الإنتاج.</li>
-                        <li>🎯 <strong>الرافعات الشوكية (Forklift):</strong> إنذار عند اقتراب الرافعات الخطرة من المشاة.</li>
-                        <li>🎯 <strong>لمس المعروضات (Touching):</strong> رصد الاقتراب أو لمس المعروضات والتحف الحساسة.</li>
-                    </ul>
-                    <button class="package-cta" onclick="selectAlertCategory('مراقبة العمليات والسلوكيات')">حجز ديمو للعمليات والسلوكيات</button>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Trusted International Enterprise Clients Section -->
+
     <section class="trusted-clients-wrapper" id="trusted-clients">
         <div class="container">
             <div class="section-header text-center">
@@ -385,102 +680,116 @@
 
         <!-- Real-Time Customer Security Dashboard Section (Vexora) -->
         <!-- Real-Time Customer Security Dashboard Section (Unified Vexora Interactive Console) -->
+        <!-- Real-Time Customer Security Dashboard Section (Authentic Vexora Control Panel Console) -->
     <section class="live-dashboard-section" id="dashboard-section" style="padding: 80px 0; border-top: 1px solid rgba(255, 255, 255, 0.05);">
         <div class="container">
             <div class="section-header text-center" style="margin-bottom: 40px;">
-                <span class="section-subtitle">شاشة التحكم الحية والتفاعلية</span>
-                <h2 class="section-title" style="font-size: 34px; font-weight: 800; margin: 12px 0 16px;">VEXORA CLOUD CONTROL PANEL & SIMULATOR</h2>
-                <p class="section-desc max-w-600" style="color: var(--text-secondary); font-size: 16px;">تحكم واختبر سيناريوهات الرصد الذكي لايف، وتابع البث المباشر وسجلات التنبيهات الأمنية كأنك بداخل غرفة التحكم الحقيقية.</p>
+                <span class="section-subtitle">شاشة التحكم الحية والتفاعلية (Security SOC Console)</span>
+                <h2 class="section-title" style="font-size: 34px; font-weight: 800; margin: 12px 0 16px;">VEXORA ENTERPRISE CONTROL PANEL</h2>
+                <p class="section-desc max-w-600" style="color: var(--text-secondary); font-size: 16px;">اختبر البث المباشر وغرفة المراقبة المركزية الخاصة بمنشأتك، وقم بمحاكاة التنبيهات الأمنية فورياً.</p>
             </div>
 
-            <!-- Interactive Scenario Trigger Bar -->
-            <div class="simulator-controls-bar glass-card" style="margin-bottom: 24px; padding: 20px; border-radius: 20px; text-align: center;">
-                <h4 style="margin: 0 0 12px 0; color: #22d3ee; font-size: 16px;">🕹️ اختر السيناريو لتشغيل الرصد الذكي على البث المباشر:</h4>
-                <div class="scenario-buttons-flex" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                    <button class="mock-btn active" id="btn-scen-clear" onclick="triggerVexoraScenario('clear')">الوضع الطبيعي (بث مباشر)</button>
-                    <button class="mock-btn" id="btn-scen-ppe" onclick="triggerVexoraScenario('ppe')">👷‍♂️ رصد مخالفة سلامة (No Helmet)</button>
-                    <button class="mock-btn" id="btn-scen-intruder" onclick="triggerVexoraScenario('intruder')">🚨 محاكاة متسلل (Perimeter Fence)</button>
-                    <button class="mock-btn" id="btn-scen-fire" onclick="triggerVexoraScenario('fire')">🔥 محاكاة حريق ودخان (Fire Alert)</button>
-                    <button class="mock-btn" id="btn-scen-lpr" onclick="triggerVexoraScenario('lpr')">🚗 قراءة لوحة سيارة (LPR Access)</button>
-                </div>
-                <div class="sim-feedback-msg" id="sim-feedback-vexora" style="margin-top: 14px; font-size: 14px; color: #ffd60a; font-weight: 600;">
-                    البث يعمل بالوضع الطبيعي المستقر. اضغط أي سيناريو أعلاه لتشغيل الرصد وسجل التنبيهات الفوري.
-                </div>
-            </div>
-
-            <div class="sandbox-container glass-card" style="padding: 24px; border: 1px solid var(--border-color); border-radius: 24px;">
-                <div class="device-mockup glass-card dashboard-mockup">
-                    <div class="mockup-header">
-                        <div class="dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <div class="mockup-title">VEXORA ENTERPRISE SECURITY CONSOLE - LIVE SYSTEM MONITOR</div>
+            <div class="sandbox-container glass-card" style="padding: 24px; border: 1px solid var(--border-color); border-radius: 24px; background: #05080c;">
+                <!-- System Status Header Bar -->
+                <div class="console-top-status-bar" style="display: flex; justify-content: space-between; align-items: center; background: rgba(34, 211, 238, 0.05); padding: 12px 20px; border-radius: 12px; border: 1px solid rgba(34, 211, 238, 0.15); margin-bottom: 20px;">
+                    <div class="sys-info-flex" style="display: flex; gap: 20px; align-items: center;">
+                        <span style="color: #22d3ee; font-weight: 800; font-size: 14px;">📡 VEXORA AI CORE v4.2</span>
+                        <span style="color: #34c759; font-size: 12px; background: rgba(52, 199, 89, 0.15); padding: 3px 10px; border-radius: 20px;">SYSTEM: ONLINE 🟢</span>
+                        <span style="color: #ffd60a; font-size: 12px;">SERVER: LOCAL ON-PREMISE</span>
                     </div>
-                    <div class="dashboard-layout">
+                    <div class="sys-actions-flex" style="display: flex; gap: 10px;">
+                        <span style="font-size: 12px; color: #9ca3af;" id="live-clock-console">15:42:09 UTC+3</span>
+                    </div>
+                </div>
+
+                <div class="device-mockup glass-card dashboard-mockup" style="border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <!-- Simulator Control Buttons Bar Header -->
+                    <div class="mockup-header" style="background: rgba(15, 23, 42, 0.9); padding: 14px 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                        <div class="dots" style="display: flex; gap: 6px;">
+                            <span class="dot red" style="width: 10px; height: 10px; border-radius: 50%; background: #ff453a;"></span>
+                            <span class="dot yellow" style="width: 10px; height: 10px; border-radius: 50%; background: #ffd60a;"></span>
+                            <span class="dot green" style="width: 10px; height: 10px; border-radius: 50%; background: #34c759;"></span>
+                        </div>
+                        <div class="mockup-title" style="color: #22d3ee; font-weight: 700; font-size: 13px; margin-right: 15px;">🕹️ اختر سيناريو الرصد اللحظي:</div>
+                        
+                        <div class="console-scenario-btns" style="display: flex; gap: 8px; flex-wrap: wrap; margin-right: auto;">
+                            <button class="mock-btn active" id="btn-scen-clear" onclick="triggerVexoraScenario('clear')">الوضع الطبيعي</button>
+                            <button class="mock-btn" id="btn-scen-ppe" onclick="triggerVexoraScenario('ppe')">👷‍♂️ مخالفة سلامة (No Helmet)</button>
+                            <button class="mock-btn" id="btn-scen-intruder" onclick="triggerVexoraScenario('intruder')">🚨 اختراق السياج (Intruder)</button>
+                            <button class="mock-btn" id="btn-scen-fire" onclick="triggerVexoraScenario('fire')">🔥 إنذار حريق (Fire Alarm)</button>
+                            <button class="mock-btn" id="btn-scen-lpr" onclick="triggerVexoraScenario('lpr')">🚗 قراءة لوحة (LPR Gate)</button>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-layout" style="display: flex; gap: 16px; padding: 16px;">
                         <!-- Sidebar -->
-                        <div class="dashboard-sidebar">
-                            <div class="sidebar-section">
-                                <h4>القنوات النشطة (Active Feeds)</h4>
-                                <div class="cam-channels-list">
-                                    <div class="channel-item active" id="chan-cam-1" onclick="triggerVexoraScenario('clear')">
-                                        <span class="status-indicator online"></span>
-                                        <span class="channel-name">CAM 01 - موقع العمل الإنشائي</span>
+                        <div class="dashboard-sidebar" style="width: 260px; background: rgba(15, 23, 42, 0.5); padding: 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                            <div class="sidebar-section" style="margin-bottom: 20px;">
+                                <h4 style="color: #22d3ee; font-size: 13px; margin: 0 0 12px 0;">📹 القنوات والبث المباشر</h4>
+                                <div class="cam-channels-list" style="display: flex; flex-direction: column; gap: 8px;">
+                                    <div class="channel-item active" id="chan-cam-1" onclick="triggerVexoraScenario('clear')" style="padding: 8px 12px; border-radius: 8px; background: rgba(34, 211, 238, 0.1); border: 1px solid rgba(34, 211, 238, 0.3); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                        <span class="status-indicator online" style="width: 8px; height: 8px; border-radius: 50%; background: #34c759;"></span>
+                                        <span class="channel-name" style="font-size: 12px; color: #fff;">CAM 01 - الموقع الإنشائي</span>
                                     </div>
-                                    <div class="channel-item" id="chan-cam-2" onclick="triggerVexoraScenario('intruder')">
-                                        <span class="status-indicator online"></span>
-                                        <span class="channel-name">CAM 02 - السياج الغربي</span>
+                                    <div class="channel-item" id="chan-cam-2" onclick="triggerVexoraScenario('intruder')" style="padding: 8px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                        <span class="status-indicator online" style="width: 8px; height: 8px; border-radius: 50%; background: #34c759;"></span>
+                                        <span class="channel-name" style="font-size: 12px; color: #9ca3af;">CAM 02 - السياج الغربي</span>
                                     </div>
-                                    <div class="channel-item" id="chan-cam-3" onclick="triggerVexoraScenario('fire')">
-                                        <span class="status-indicator online"></span>
-                                        <span class="channel-name">CAM 03 - مستودع المواد (B)</span>
+                                    <div class="channel-item" id="chan-cam-3" onclick="triggerVexoraScenario('fire')" style="padding: 8px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                        <span class="status-indicator online" style="width: 8px; height: 8px; border-radius: 50%; background: #34c759;"></span>
+                                        <span class="channel-name" style="font-size: 12px; color: #9ca3af;">CAM 03 - المستودع الرئيسي</span>
                                     </div>
-                                    <div class="channel-item" id="chan-cam-4" onclick="triggerVexoraScenario('lpr')">
-                                        <span class="status-indicator online"></span>
-                                        <span class="channel-name">CAM 04 - بوابة السيارات الرئيسية</span>
+                                    <div class="channel-item" id="chan-cam-4" onclick="triggerVexoraScenario('lpr')" style="padding: 8px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                        <span class="status-indicator online" style="width: 8px; height: 8px; border-radius: 50%; background: #34c759;"></span>
+                                        <span class="channel-name" style="font-size: 12px; color: #9ca3af;">CAM 04 - بوابة LPR</span>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="sidebar-section">
-                                <h4>مؤشرات معالج AI</h4>
-                                <div class="dash-stats-grid">
-                                    <div class="dash-stat-box">
-                                        <span class="stat-lbl">المعالج</span>
-                                        <span class="stat-val" id="val-cpu">18%</span>
+                                <h4 style="color: #22d3ee; font-size: 13px; margin: 0 0 12px 0;">⚡ مؤشرات معالج AI المحلي</h4>
+                                <div class="dash-stats-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                    <div class="dash-stat-box" style="background: rgba(255, 255, 255, 0.03); padding: 10px; border-radius: 8px; text-align: center;">
+                                        <span class="stat-lbl" style="font-size: 10px; color: #9ca3af; display: block;">CPU LOAD</span>
+                                        <span class="stat-val" id="val-cpu" style="font-size: 14px; font-weight: 800; color: #ffd60a;">18%</span>
                                     </div>
-                                    <div class="dash-stat-box">
-                                        <span class="stat-lbl">الإطارات</span>
-                                        <span class="stat-val" id="val-fps">30 FPS</span>
+                                    <div class="dash-stat-box" style="background: rgba(255, 255, 255, 0.03); padding: 10px; border-radius: 8px; text-align: center;">
+                                        <span class="stat-lbl" style="font-size: 10px; color: #9ca3af; display: block;">STREAM FPS</span>
+                                        <span class="stat-val" id="val-fps" style="font-size: 14px; font-weight: 800; color: #34c759;">30 FPS</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <!-- Main Panel -->
-                        <div class="dashboard-main">
-                            <div class="camera-stream-container" style="border: none; margin-bottom: 0; position: relative;">
-                                <div class="live-indicator">LIVE 🔴</div>
-                                <img src="assets/sec_construction.jpg" id="cam-stream-img" alt="Vexora Camera Stream" class="camera-feed-img" style="max-height: 420px; width: 100%; object-fit: cover; border-radius: 12px;">
+                        <div class="dashboard-main" style="flex: 1; display: flex; flex-direction: column;">
+                            <div class="camera-stream-container" style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; position: relative; background: #000;">
+                                <div class="live-indicator" style="position: absolute; top: 12px; right: 12px; background: rgba(255, 69, 58, 0.85); color: #fff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px; z-index: 10;">LIVE 🔴 ANALYZING</div>
+                                <img src="assets/sec_construction.jpg" id="cam-stream-img" alt="Vexora Live Stream Console" class="camera-feed-img" style="max-height: 420px; width: 100%; object-fit: cover; display: block;">
                                 
                                 <!-- Dynamic Detection Box Overlays -->
-                                <div class="camera-detection-box warning-box" id="mock-box-1" style="display: block; top: 15%; left: 30%; width: 14%; height: 25%;">
+                                <div class="camera-detection-box warning-box" id="mock-box-1" style="display: block; top: 15%; left: 30%; width: 14%; height: 25%; position: absolute; border: 2px solid #ffd60a;">
                                     <span class="ai-box-label" id="mock-label-1" style="position: absolute; top: -20px; left: 0; background: #ffd60a; color: #000; font-size: 9px; font-weight: bold; padding: 2px 6px; border-radius: 4px; white-space: nowrap;">HELMET: OK ✅</span>
                                 </div>
-                                <div class="camera-detection-box danger-box" id="mock-box-2" style="display: block; top: 35%; left: 58%; width: 16%; height: 32%;">
+                                <div class="camera-detection-box danger-box" id="mock-box-2" style="display: block; top: 35%; left: 58%; width: 16%; height: 32%; position: absolute; border: 2px solid #ff453a;">
                                     <span class="ai-box-label" id="mock-label-2" style="position: absolute; top: -20px; left: 0; background: #ff453a; color: #fff; font-size: 9px; font-weight: bold; padding: 2px 6px; border-radius: 4px; white-space: nowrap;">NO HELMET! ⚠️</span>
                                 </div>
                             </div>
                             
-                            <div class="alert-log-panel" style="margin-top: 16px;">
-                                <h4 style="color: #22d3ee; margin: 0 0 10px 0; font-size: 14px;">📋 سجل التنبيهات الأمنية المباشر (Real-Time AI Alert Logs):</h4>
-                                <div class="alert-logs" id="alert-logs" style="max-height: 140px; overflow-y: auto;">
-                                    <div class="log-entry danger">
-                                        <span class="time">15:38:12</span>
-                                        <span class="msg">⚠️ مخالفة سلامة: عامل بدون خوذة أمان - موقع العمل الرئيسي</span>
+                            <!-- Console Alerts Log -->
+                            <div class="alert-log-panel" style="margin-top: 14px; background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                    <h4 style="color: #22d3ee; margin: 0; font-size: 13px;">📋 سجل التنبيهات والأحداث الأمنية (AI Real-Time Events Log)</h4>
+                                    <span class="sim-feedback-msg" id="sim-feedback-vexora" style="font-size: 11px; color: #ffd60a; font-weight: 600;">الكاميرا ترصد الالتزام بمعدات الأمان في الموقع.</span>
+                                </div>
+                                <div class="alert-logs" id="alert-logs" style="max-height: 120px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px;">
+                                    <div class="log-entry danger" style="padding: 6px 10px; background: rgba(255, 69, 58, 0.1); border-left: 3px solid #ff453a; border-radius: 4px; font-size: 12px; color: #fff;">
+                                        <span class="time" style="color: #ff453a; font-weight: 700; margin-left: 8px;">15:38:12</span>
+                                        <span class="msg">⚠️ مخالفة سلامة: عامل بدون خوذة أمان - منطقة العمل الرئيسية</span>
                                     </div>
-                                    <div class="log-entry info">
-                                        <span class="time">15:36:04</span>
-                                        <span class="msg">ℹ️ فحص دوري: البث مستقر ونسبة التزام السلامة 95%</span>
+                                    <div class="log-entry info" style="padding: 6px 10px; background: rgba(34, 211, 238, 0.05); border-left: 3px solid #22d3ee; border-radius: 4px; font-size: 12px; color: #fff;">
+                                        <span class="time" style="color: #22d3ee; font-weight: 700; margin-left: 8px;">15:36:04</span>
+                                        <span class="msg">ℹ️ فحص استقراري: البث يعمل بدقة HD ونسبة الالتزام 95%</span>
                                     </div>
                                 </div>
                             </div>
@@ -490,6 +799,9 @@
             </div>
         </div>
     </section>
+
+
+    
 
 
     
@@ -657,6 +969,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=1.3.0"></script>
+    <script src="app.js?v=1.4.0"></script>
 </body>
 </html>
