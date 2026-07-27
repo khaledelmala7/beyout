@@ -423,657 +423,137 @@ function setLanguage(lang) {
     }
 }
 
+
+// 100% Pure Arabic & English Translation Dictionaries
 const translations = {
     ar: {
+        "nav_products": "المنتجات والأنظمة",
+        "nav_solutions": "التنبيهات الذكية",
         "nav_dashboard": "لوحة التحكم",
-
         "nav_trusted": "عملاءنا",
         "nav_stories": "قصص نجاح",
-        "alerts_subtitle": "فئات التنبيهات الذكية",
+        "btn_start_now": "ابدأ التجربة المجانية",
+        
+        "products_subtitle": "حلول ومنتجات فيكسورا",
+        "products_title": "منتجات الأنظمة وسيرفرات الذكاء الاصطناعي",
+        "products_desc": "اختر الباقة والمنتج المناسب لبنية كاميرات مراقبة منشأتك مع تركيب ومكفول بـ 15 يوماً تجربة مجانية.",
+        "prod_1_badge": "معالجة محلية",
+        "prod_1_title": "السيرفر المحلي (On-Premise AI Server)",
+        "prod_1_desc": "سيرفر معالجة محلية يدعم حتى 6 كاميرات مراقبة بدون نقل بيانات للسحابة لضمان السرية والسرعة.",
+        "prod_1_price": "20,000 جنيه",
+        "prod_1_fee": "تدفع مرة واحدة لشراء وتملّك السيرفر",
+        "prod_1_btn": "طلب السيرفر الآن",
+        
+        "prod_2_badge": "الباقة الأكثر طلباً ⭐",
+        "prod_2_title": "الاشتراك الشهري للتنبيهات",
+        "prod_2_desc": "تفعيل الذكاء الاصطناعي لكاميرا واحدة ورقم هاتف للتنبيهات الفورية مع الخرائط الحرارية.",
+        "prod_2_price": "8,000 جنيه / شهرياً",
+        "prod_2_fee": "كل كاميرا إضافية +1,500 ج.م | رقم هاتف +1,000 ج.م",
+        "prod_2_btn": "اشترك الآن (15 يوماً تجربة)",
+        
+        "prod_3_badge": "تخصيص كامل",
+        "prod_3_title": "التنبيهات المخصصة",
+        "prod_3_desc": "تطوير وتدريب نموذج ذكاء اصطناعي مخصص لسيناريو فريد خاص بنشاطك التجاري.",
+        "prod_3_price": "5,000 جنيه",
+        "prod_3_fee": "رسوم إعداد وتدريب لمرة واحدة فقط",
+        "prod_3_btn": "طلب تنبيه مخصص",
+        
+        "alerts_subtitle": "كتالوج التنبيهات الذكية (26 تنبيهاً أمنياً بالصور)",
         "alerts_title": "فئات التنبيهات الخمس الكبرى لنظام فيكسورا",
-        "alerts_desc": "نصنّف تحليلات الذكاء الاصطناعي إلى 5 فئات أمنية تشغيلية تغطي كافة المخاطر والأنشطة في منشأتك على مدار 24 ساعة.",
-        "cat_title_1": "1. السلامة والصحة المهنية (HSE)",
-        "cat_desc_1": "رصد التزام العمال بمعدات الوقاية الشخصية وحمايتهم من أخطار الآليات والمعدات.",
-        "cat_1_f1": "🎯 رصد خوذة السلامة (Safety Helmet)",
-        "cat_1_f2": "🎯 رصد السترة الواقية والعاكسة (Safety Vest)",
-        "cat_1_f3": "🎯 الكمامات، القفازات، وأغطية الرأس الطبية",
-        "cat_1_f4": "🎯 اقتحام المناطق الخطرة حول الماكينات",
-        "cat_1_f5": "🎯 رصد سقوط العمال والتعثر المفاجئ",
-        "cat_1_f6": "🎯 كشف انسكاب السوائل والمواد الخطرة",
-        "cat_title_2": "2. أمن وحماية المنشآت والأسوار",
-        "cat_desc_2": "حماية الحدود والأسوار الخارجية ورصد التسلل والسرقات والتواجد المريب.",
-        "cat_2_f1": "🎯 رصد تسلق الأسوار وحواجز المحيط",
-        "cat_2_f2": "🎯 التسلل والتواجد بعد ساعات العمل الرسمية",
-        "cat_2_f3": "🎯 منع التتبع الفردي عبر البوابات (Anti-Tailgating)",
-        "cat_2_f4": "🎯 رصد التسكع المريب في الممرات والساحات",
-        "cat_2_f5": "🎯 رصد السرقات ومحاولات إخفاء الأغراض",
-        "cat_2_f6": "🎯 كشف الحقائب والأجسام المتروكة في الصالات",
-        "cat_title_3": "3. الطوارئ والسلامة من الحرائق",
-        "cat_desc_3": "التنبؤ المباشر بالحرائق والدخان ورصد حالات الطوارئ الطبية وانسداد المخارج.",
-        "cat_3_f1": "🎯 الكشف المبكر عن الأدخنة المتصاعدة (Early Smoke)",
-        "cat_3_f2": "🎯 كشف اللهب والحرائق المشتعلة (Active Fire)",
-        "cat_3_f3": "🎯 انسداد مخارج الطوارئ وممرات الإخلاء",
-        "cat_3_f4": "🎯 رصد السقوط المفاجئ للمرضى والطوارئ الطبية",
-        "cat_title_4": "4. تحليلات الفيديو وحركة الحشود",
-        "cat_desc_4": "خرائط حرارية لمسارات الزوار، وإحصاء الطوابير ورصد التجمعات والعنف.",
-        "cat_4_f1": "🎯 الخرائط الحرارية ومسارات الحركة (Heatmaps)",
-        "cat_4_f2": "🎯 إحصاء وتكدس طوابير الانتظار عند الكاشير",
-        "cat_4_f3": "🎯 رصد التجمعات غير الطبيعية وتدافع الحشود",
-        "cat_4_f4": "🎯 كشف المشاجرات وحالات العنف (Fight Detection)",
-        "cat_title_5": "5. إدارة المركبات وقراءة اللوحات (LPR)",
-        "cat_desc_5": "أتمتة دخول السيارات بدقة 99.4%، ورصد مركبات القائمة السوداء والمخالفات.",
-        "cat_5_f1": "🎯 قراءة لوحات السيارات بدقة 99.4% (LPR)",
-        "cat_5_f2": "🎯 فتح البوابات التلقائي لسيارات الملاك والمصرح لهم",
-        "cat_5_f3": "🎯 التنبيه الفوري لسيارات القائمة السوداء",
-        "cat_5_f4": "🎯 رصد التوقف الخاطئ والسير عكس الاتجاه",
-        "cat_cta_btn": "حجز ديمو لهذه الفئة",
-        "trusted_subtitle": "شركاء النجاح وثقة المؤسسات",
-        "trusted_title": "مؤسسات كبرى تعتمد على ذكاء فيكسورا الأمني",
-        "trusted_desc": "تكنولوجيا فيكسورا معتمدة ومطبقة في كبرى الشركات والمجمعات والمصانع في الشرق الأوسط.",
-        "stories_subtitle": "قصص نجاح دولية بره مصر",
-        "stories_title": "تأثير حقيقي بالأرقام لعملائنا خارج مصر",
-        "stories_desc": "نتائج ميدانية أثبتت كفاءة منصة فيكسورا في حماية الأرواح والممتلكات وزيادة الكفاءة التشغيلية.",
-
-        "live_dash_subtitle": "لوحة التحكم الأمنية للعملاء",
-        "live_dash_title": "شاشة مراقبة حية لمشروعاتك (Construction Site Dashboard)",
-        "live_dash_desc": "تحكم وتابع جميع مواقعك الإنشائية ومصانعك من شاشة تحكم موحدة ذكية تجمع تحليلات البث والتنبيهات الفورية.",
-        "live_dash_panel_title": "موقع الإنشاءات الغربي - لوحة التحكم الأمنية",
-        "live_dash_cam_active": "CAM 02 - منطقة العمل الرئيسية",
-        "live_dash_log_no_helmet": "مخالفة أمنية: عامل بدون خوذة سلامة - منطقة العمل الرئيسية",
-        "live_dash_log_truck": "مرور مركبة مصرحة: شاحنة نقل - البوابة الغربية",
-        "sec_title_15": "مجمعات سكنية (كمبوند)",
-        "sec_feat_15_1": "🎯 رصد تسلق الأسوار",
-        "sec_feat_15_2": "🎯 التعرف على لوحات السيارات",
-        "sec_feat_15_3": "🎯 تسكع مريب في الممرات",
-        "sec_feat_15_4": "🎯 أمان منطقة المسابح",
-        "sec_feat_15_5": "🎯 رصد دخان أو حريق",
-        "dash_cameras_title": "القنوات النشطة",
-        "dash_stats_title": "تحليلات النظام",
-        "dash_cpu": "المعالج",
-        "dash_fps": "الإطارات",
-        "sec_desc_gen": "تأمين وتحليل الأنشطة عبر كاميرات المراقبة.",
-        "sec_title_1": "مواقع إنشائية",
-        "sec_feat_1_1": "🎯 خوذة السلامة",
-        "sec_feat_1_2": "🎯 السترة الواقية",
-        "sec_feat_1_3": "🎯 القفازات",
-        "sec_feat_1_4": "🎯 نظارة الأمان",
-        "sec_feat_1_5": "🎯 حذاء السلامة",
-        "sec_feat_1_6": "🎯 اقتحام منطقة الخطر",
-        "sec_feat_1_7": "🎯 سقوط العامل",
-        "sec_title_2": "مصانع (أغذية وصناعية)",
-        "sec_feat_2_1": "🎯 الكمامة الواقية",
-        "sec_feat_2_2": "🎯 القفازات",
-        "sec_feat_2_3": "🎯 غطاء الرأس",
-        "sec_feat_2_4": "🎯 النظافة العامة",
-        "sec_feat_2_5": "🎯 اقتحام منطقة الخطر",
-        "sec_feat_2_6": "🎯 اكتشاف حريق/دخان",
-        "sec_title_3": "مدارس وجامعات",
-        "sec_feat_3_1": "🎯 اقتحام الأسوار",
-        "sec_feat_3_2": "🎯 تجمعات غير طبيعية",
-        "sec_feat_3_3": "🎯 عنف أو مشاجرة",
-        "sec_feat_3_4": "🎯 الركض في الممرات",
-        "sec_title_4": "مستشفيات ورعاية صحية",
-        "sec_feat_4_1": "🎯 الكمامة الواقية",
-        "sec_feat_4_2": "🎯 تعقيم اليدين",
-        "sec_feat_4_3": "🎯 الازدحام",
-        "sec_feat_4_4": "🎯 سقوط مريض",
-        "sec_feat_4_5": "🎯 أجسام مشبوهة",
-        "sec_title_5": "مولات تجارية ومتاجر",
-        "sec_feat_5_1": "🎯 السرقة المنظمة",
-        "sec_feat_5_2": "🎯 الازدحام الشديد",
-        "sec_feat_5_3": "🎯 حقيبة متروكة",
-        "sec_feat_5_4": "🎯 عنف أو مشاجرة",
-        "sec_title_6": "مباني إدارية وبنوك",
-        "sec_feat_6_1": "🎯 تتبع / دخول غير مصرح",
-        "sec_feat_6_2": "🎯 حقيبة متروكة",
-        "sec_feat_6_3": "🎯 مشاجرات",
-        "sec_feat_6_4": "🎯 دخول بعد الدوام",
-        "sec_title_7": "مطارات ومحطات",
-        "sec_feat_7_1": "🎯 حقيبة متروكة / جسم مشبوه",
-        "sec_feat_7_2": "🎯 تجمعات غير طبيعية",
-        "sec_feat_7_3": "🎯 أحداث شغب",
-        "sec_feat_7_4": "🎯 تخطي الحواجز الأمنية",
-        "sec_title_8": "مخازن ولوجستيات",
-        "sec_feat_8_1": "🎯 السترة الواقية",
-        "sec_feat_8_2": "🎯 الخوذة",
-        "sec_feat_8_3": "🎯 اقتراب رافعة شوكية من الأفراد",
-        "sec_feat_8_4": "🎯 مناطق التحميل والتنزيل",
-        "sec_feat_8_5": "🎯 اكتشاف حريق/دخان",
-        "sec_title_9": "فنادق ومنتجعات",
-        "sec_feat_9_1": "🎯 دخول غير مصرح",
-        "sec_feat_9_2": "🎯 حقيبة متروكة",
-        "sec_feat_9_3": "🎯 أمان المسابح",
-        "sec_feat_9_4": "🎯 التزام بزي الموظفين",
-        "sec_feat_9_5": "🎯 اكتشاف حريق/دخان",
-        "sec_title_10": "هايبر ماركت وسوبر ماركت",
-        "sec_feat_10_1": "🎯 السرقة المنظمة",
-        "sec_feat_10_2": "🎯 تكدس عند الكاشير",
-        "sec_feat_10_3": "🎯 انسكاب سوائل على الأرض",
-        "sec_feat_10_4": "🎯 حريق أو دخان",
-        "sec_title_11": "مطاعم وكافيهات",
-        "sec_feat_11_1": "🎯 النظافة العامة / تعقيم اليدين",
-        "sec_feat_11_2": "🎯 غطاء الرأس / قفازات للطهاة",
-        "sec_feat_11_3": "🎯 زي الموظفين",
-        "sec_feat_11_4": "🎯 الازدحام",
-        "sec_title_12": "مواقف السيارات",
-        "sec_feat_12_1": "🎯 تسكع مريب حول السيارات",
-        "sec_feat_12_2": "🎯 مشاجرات",
-        "sec_feat_12_3": "🎯 حريق سيارة",
-        "sec_feat_12_4": "🎯 دخول سيارات غير مصرحة",
-        "sec_title_13": "متاحف ومعارض",
-        "sec_feat_13_1": "🎯 لمس المعروضات / الاقتراب الشديد",
-        "sec_feat_13_2": "🎯 حقيبة متروكة",
-        "sec_feat_13_3": "🎯 الازدحام",
-        "sec_feat_13_4": "🎯 دخول مناطق محظورة",
-        "sec_title_14": "شوارع ومدن ذكية",
-        "sec_feat_14_1": "🎯 ازدحام مروري / توقف مفاجئ",
-        "sec_feat_14_2": "🎯 تخريب الممتلكات العامة",
-        "sec_feat_14_3": "🎯 أحداث عنف أو شغب",
-        "sec_feat_14_4": "🎯 تجمعات غير طبيعية",
-        "nav_home": "الرئيسية",
-        "nav_solutions": "الحلول",
-        "nav_products": "المنتجات",
-        "nav_blog": "المدونة",
-        "nav_contact": "اتصل بنا",
-        "nav_to_vexora": "فيكسورا للأمن (B2B)",
+        "alerts_desc": "استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.",
         
-        "beyout_page_title": "بيوت | أنظمة المنازل الذكية الفاخرة",
-        "beyout_hero_title": "عيش الذكاء والأناقة في منزلك",
-        "beyout_hero_subtitle": "حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.",
-        "btn_start_now": "ابدأ الآن",
+        "dash_sec_subtitle": "شاشة التحكم الحية والتفاعلية",
+        "dash_sec_title": "منصة فيكسورا للسلامة الذكية",
+        "dash_sec_desc": "لوحة تحكم حية ومباشرة تعكس النظام الفعلي المعمول به بالمنشآت مع بث مباشر وسجل التنبيهات الفوري.",
+        "dash_brand_title": "الموقع الرئيسي - المنشأة الاستثمارية",
+        "dash_brand_sub": "منصة التحكم والمراقبة الذكية | فيكسورا",
+        "dash_status_badge": "أمن وتشغيلي 🟢",
+        "dash_license_warning": "⚠️ تنبيه: ترخيص تجريبي نشط (15 يوماً تجربة مجانية). النظام يعمل بالطاقة القصوى لحماية المنشأة.",
+        "dash_lbl_alltime": "كل الوقت / اليوم",
+        "dash_lbl_top_violation": "أعلى مخالفة",
+        "dash_chart_title": "معدل تكرار المخالفات 📈",
+        "dash_tab_main": "المدخل الرئيسي",
+        "dash_tab_top": "المدخل العلوي",
+        "dash_enabled_alerts_title": "التنبيهات المفعّلة",
+        "dash_stream_cam_name": "📹 كاميرا المدخل الرئيسي",
+        "dash_people_count_lbl": "الأشخاص الآن (المدخل الرئيسي):",
+        "dash_scen_label": "🕹️ تجربة سيناريو الرصد:",
+        "dash_scen_reset": "تصفير البث",
+        "dash_scen_gloves": "⚠️ عدم ارتداء القفازات",
+        "dash_scen_intruder": "🚨 اختراق البوابة",
+        "dash_scen_fire": "🔥 إنذار دخان",
+        "dash_recent_violations_title": "سجل المخالفات الحديثة (18)",
+        "tbl_col_time": "الوقت",
+        "tbl_col_cam": "الكاميرا",
+        "tbl_col_type": "نوع المخالفة",
+        "tbl_col_person": "شخص",
         
-        "packages_subtitle": "باقات بيوت المخصصة",
-        "packages_title": "اختر الباقة المناسبة لمساحة منزلك",
-        "packages_desc": "نقدم حلولاً ذكية متكاملة تناسب جميع المساحات بأسعار مرنة وعروض مخصصة بعد الاستشارة.",
-        
-        "pkg_title_bodyguard": "باقة الحارس الشخصي (للمخازن)",
-        "pkg_desc_bodyguard": "حلول تأمين ذكية متطورة للمخازن وأمن الأصول.",
-        "pkg_feat_bodyguard_1": "🚶‍♂️ حساس حركة ذكي لرصد الحركة المشبوهة.",
-        "pkg_feat_bodyguard_2": "🚨 سرينة إنذار قوية وصاخبة لردع المتسللين.",
-        "pkg_feat_bodyguard_3": "📱 تنبيه فوري لحظي بالثواني على الموبايل.",
-        "pkg_feat_bodyguard_4": "🛡️ تأمين كامل للمخازن والمستودعات.",
-        
-        "pkg_title_studio": "باقة الاستوديو",
-        "pkg_desc_studio": "أتمتة وحلول ذكية مخصصة للاستوديوهات والمساحات المفتوحة.",
-        "pkg_feat_studio_1": "💡 تحكم ذكي كامل بالإضاءة (ON/OFF).",
-        "pkg_feat_studio_2": "💎 مفاتيح زجاجية ذكية تعمل باللمس.",
-        "pkg_feat_studio_3": "🔒 مستشعر ذكي لتسريب الغاز الطبيعي.",
-        "pkg_feat_studio_4": "📱 التحكم والمراقبة بالكامل عبر الموبايل.",
-        
-        "pkg_title_2room": "باقة شقة غرفتين",
-        "pkg_desc_2room": "أتمتة ذكية متكاملة تناسب الشقق ذات الغرفتين وصالة.",
-        "pkg_feat_2room_1": "💡 إضاءة ذكية لغرفتين نوم وصالة المعيشة.",
-        "pkg_feat_2room_2": "❄️ تحكم ذكي بمكيف الهواء والتكييفات.",
-        "pkg_feat_2room_3": "🚶‍♂️ مستشعرات حركة ذكية لإضاءة الممرات تلقائياً.",
-        "pkg_feat_2room_4": "🔒 مستشعر أمان المطبخ وقفل الغاز الرئيسي.",
-        
-        "pkg_title_3room": "باقة شقة ثلاث غرف",
-        "pkg_desc_3room": "تحكم شامل للشقق الكبيرة والعائلية لرفاهية لا تقاوم.",
-        "pkg_feat_3room_1": "🛋️ تحكم كامل بالستائر الكهربائية والتكييفات.",
-        "pkg_feat_3room_2": "🌈 إضاءة ديكورية تفاعلية مدمجة للريسبشن.",
-        "pkg_feat_3room_3": "💧 نظام رصد تسريب المياه والفيضان الذكي.",
-        "pkg_feat_3room_4": "🗣️ توافق كامل مع التحكم الصوتي (Alexa/Siri).",
-        
-        "pkg_title_duplex": "باقة شقة دوبلكس",
-        "pkg_desc_duplex": "تحكم ذكي وأمان شامل متقاطع للشقق ذات الطابقين.",
-        "pkg_feat_duplex_1": "🚪 تحكم ذكي ببوابات الشقة وقفل البصمة.",
-        "pkg_feat_duplex_2": "🎬 تفعيل سيناريو وضع السينما والمسرح المنزلي.",
-        "pkg_feat_duplex_3": "🔌 مقابس ذكية (Smart Plugs) لحماية الأجهزة.",
-        "pkg_feat_duplex_4": "🛡️ تأمين شامل للمخارج والأدوار المتعددة.",
-        
-        "pkg_title_villa": "باقة فيلا (أرضي وأول وروف)",
-        "pkg_desc_villa": "أتمتة متكاملة ثلاثية المستويات للفلل والقصور والحدائق.",
-        "pkg_feat_villa_1": "🌿 نظام ري الحديقة واللاندسكيب الذكي.",
-        "pkg_feat_villa_2": "🚗 تحكم تلقائي ببوابات الجراج والسيارات.",
-        "pkg_feat_villa_3": "✈️ وضع السفر ومحاكاة الوجود للتأمين.",
-        "pkg_feat_villa_4": "🏊‍♂️ تحكم ذكي بالطوابق الثلاثة (أرضي، أول، وروف).",
-        
-        "price_after_call": "الأسعار بعد الاتصال",
-        "pkg_cta_btn_mock": "اختر الخطة",
-        
-        "sandbox_subtitle": "منطقة المحاكاة المتكاملة",
-        "sandbox_title_beyout": "جرّب لوحة تحكم منزلك الذكي بنفسك",
-        "sandbox_desc_beyout": "اختبر التفاعل الحقيقي وعش تجربة العميل. تحكم في إضاءة وتكييف وأبواب الفيلا الذكية.",
-        "sandbox_house_living": "غرفة المعيشة",
-        "sandbox_house_kitchen": "المطبخ",
-        "sandbox_house_bedroom": "غرفة النوم الرئيسية",
-        "sandbox_house_garden": "الحديقة والمدخل",
-        "sandbox_ctrl_title": "أدوات التحكم بالمنزل الذكي",
-        "sandbox_ctrl_desc": "اضغط على المفاتيح أدناه لمحاكاة إرسال أوامر التحكم بالمنزل وشاهد الاستجابة بالرسم التخطيطي.",
-        "sandbox_ctrl_living_light": "إضاءة غرفة المعيشة",
-        "sandbox_ctrl_kitchen_light": "إضاءة المطبخ",
-        "sandbox_ctrl_bedroom_ac": "تكييف غرفة النوم (AC)",
-        "sandbox_ctrl_ac_temp": "درجة حرارة المكيف: ",
-        "sandbox_ctrl_security": "أمان قفل البوابة والحديقة",
-        "sandbox_ctrl_security_status_lbl": "حالة البوابة: ",
-        "sandbox_ctrl_secured_val": "مغلقة ومؤمنة",
-        "sandbox_ctrl_unsecured_val": "ملغية التأمين - الحديقة نشطة!",
-        "sandbox_ctrl_welcome_msg": "أهلاً بك! قم بتشغيل أو إطفاء الأجهزة لتجربة النظام الذكي.",
-        
-        "form_section_title": "ابدأ رحلتك معنا اليوم",
-        "form_section_subtitle": "احجز نسختك التجريبية والمجانية (Demo) وسيتواصل معك مستشارونا فورياً",
-        "form_step1_lbl": "المنتج المطلوب",
-        "form_step2_lbl": "بياناتك",
-        "form_step3_lbl": "التفاصيل والوقت",
-        "form_step4_lbl": "تأكيد الطلب",
-        "form_step1_title_beyout": "هل ترغب في ترقية منزلك بالكامل؟",
-        
-        "form_product_lumora_desc": "أنظمة التحكم الكاملة والمنازل الذكية الفاخرة.",
-        "form_btn_next": "التالي ←",
-        "form_btn_prev": "→ السابق",
-        "form_btn_submit": "تأكيد طلب الديمو مجاناً 🚀",
-        
-        "form_step2_title": "أخبرنا بالمزيد عنك لنتمكن من التواصل معك",
-        "form_lbl_name": "الاسم بالكامل ",
-        "form_lbl_email": "البريد الإلكتروني ",
-        "form_lbl_phone": "رقم الهاتف / الواتساب ",
-        
-        "form_step3_title": "متى ترغب في عقد جلسة العرض (الديمو)؟",
-        "form_lbl_date": "التاريخ المفضل ",
-        "form_lbl_time": "الوقت المفضل للاتصال ",
-        "form_time_choose": "اختر الوقت المناسب",
-        "form_time_morning": "صباحاً (9:00 ص - 12:00 م)",
-        "form_time_afternoon": "بعد الظهر (12:00 م - 4:00 م)",
-        "form_time_evening": "مساءً (4:00 م - 8:00 م)",
-        "form_lbl_notes_beyout": "أكبر تحدي أو متطلبات معينة تود مناقشتها؟",
-        
-        "form_success_thanks": "شكراً لطلبك، ",
-        "form_success_desc_beyout": "تم تسجيل طلبك بنجاح لحجز ديمو خاص بأنظمة بيوت الذكية.",
-        "form_success_schedule": "موعدك المقترح: ",
-        "form_success_period": " في الفترة الـ ",
-        "form_success_whatsapp": "سنقوم بإرسال رسالة تأكيد على واتساب برقم ",
-        "form_success_whatsapp_sub": " وتفاصيل الاجتماع خلال ساعة.",
-        "form_success_reset_btn": "طلب حجز جديد",
-        
-        "footer_about_text_beyout": "مستشارك وشريكك التكنولوجي الموثوق لتصميم وبناء أنظمة التحكم والمنازل الذكية الفاخرة.",
-        "footer_links_title": "روابط سريعة",
-        "footer_copyright": "&copy; 2026 شركة بيوت (Beyout). جميع الحقوق محفوظة."
+        "tag_helmet": "لم يتم ارتداء الخوذة! ⚠️",
+        "tag_vest": "السترة: متوافق ✅",
+        "tag_gloves": "القفازات: متوافق ✅",
+        "tag_goggles": "النظارة: غير متوافق ⚠️",
+        "tag_shoes": "حذاء الأمان: متوافق ✅",
+        "tag_mask": "الكمامة: متوافق ✅",
+        "tag_hairnet": "غطاء الشعر: متوافق ✅",
+        "tag_uniform": "الزي الموحد: متوافق ✅",
+        "tag_hygiene": "تجاوز جهاز التعقيم ⚠️",
+        "tag_intrusion": "اختراق السياج الخارجي 🚨",
+        "tag_unauthorized": "منطقة غير مصرح بها ⛔",
+        "tag_theft": "حركة سرقة مريبة 🚨",
+        "tag_baggage": "حقيبة متروكة ⚠️",
+        "tag_loitering": "تنبيه تسكع مريب (5 دقائق) ⚠️",
+        "tag_vandalism": "رصد تخريب بالموقع 🚨",
+        "tag_crowd": "تكدس وازدحام شديد ⚠️",
+        "tag_violence": "رصد مشاجرة واشتباك 🚨",
+        "tag_running": "رصد ركض سريع مريب ⚠️",
+        "tag_traffic": "تكدس مروري بالمدخل 🚗",
+        "tag_fire": "إنذار مبكر حريق ودخان 🔥",
+        "tag_fall": "رصد سقوط مفاجئ 🚑",
+        "tag_spill": "انسكاب سوائل على الأرض 💧",
+        "tag_drowning": "خطر غرق بالمسبح 🏊",
+        "tag_eating": "مخالفة تناول طعام 🚫",
+        "tag_forklift": "اقتراب رافعة شوكية ⚠️",
+        "tag_touching": "لمس المعروضات 🛑"
     },
     en: {
-        "nav_dashboard": "Control Panel",
-        "live_dash_subtitle": "Customer Security Console",
-        "live_dash_title": "Live Smart Monitoring Dashboard for Your Projects",
-        "live_dash_desc": "Monitor and manage all your construction sites and factories from a unified intelligent screen aggregating stream analytics and real-time alerts.",
-        "live_dash_panel_title": "WEST-PORT CONSTRUCTION SITE - SECURITY CONSOLE",
-        "live_dash_cam_active": "CAM 02 - Main Work Area",
-        "live_dash_log_no_helmet": "Violation: Worker not wearing safety helmet - Main Work Area",
-        "live_dash_log_truck": "Authorized Truck Entry - West Gate",
-        "sec_title_15": "Residential Compounds",
-        "sec_feat_15_1": "🎯 Fence Climbing Detection",
-        "sec_feat_15_2": "🎯 License Plate Recognition",
-        "sec_feat_15_3": "🎯 Suspicious Loitering",
-        "sec_feat_15_4": "🎯 Pool Area Safety",
-        "sec_feat_15_5": "🎯 Smoke & Fire Detection",
-        "dash_cameras_title": "Active Channels",
-        "dash_stats_title": "System Analytics",
-        "dash_cpu": "CPU",
-        "dash_fps": "FPS",
-        "sec_desc_gen": "Securing and analyzing activities via surveillance cameras.",
-        "sec_title_1": "Construction Sites",
-        "sec_feat_1_1": "🎯 Safety Helmet Detection",
-        "sec_feat_1_2": "🎯 Safety Vest Detection",
-        "sec_feat_1_3": "🎯 Gloves Detection",
-        "sec_feat_1_4": "🎯 Safety Goggles Detection",
-        "sec_feat_1_5": "🎯 Safety Shoes Detection",
-        "sec_feat_1_6": "🎯 Danger Zone Intrusion",
-        "sec_feat_1_7": "🎯 Worker Fall Detection",
-        "sec_title_2": "Factories (Food & Industrial)",
-        "sec_feat_2_1": "🎯 Protective Mask Detection",
-        "sec_feat_2_2": "🎯 Gloves Detection",
-        "sec_feat_2_3": "🎯 Head Cover Detection",
-        "sec_feat_2_4": "🎯 General Hygiene Monitoring",
-        "sec_feat_2_5": "🎯 Danger Zone Intrusion",
-        "sec_feat_2_6": "🎯 Fire & Smoke Detection",
-        "sec_title_3": "Schools & Universities",
-        "sec_feat_3_1": "🎯 Fence Climbing Detection",
-        "sec_feat_3_2": "🎯 Unusual Crowd Gathering",
-        "sec_feat_3_3": "🎯 Violence & Fight Detection",
-        "sec_feat_3_4": "🎯 Running in Corridors",
-        "sec_title_4": "Hospitals & Healthcare",
-        "sec_feat_4_1": "🎯 Face Mask Compliance",
-        "sec_feat_4_2": "🎯 Hand Sanitization Check",
-        "sec_feat_4_3": "🎯 Crowd Detection",
-        "sec_feat_4_4": "🎯 Patient Fall Detection",
-        "sec_feat_4_5": "🎯 Suspicious Objects",
-        "sec_title_5": "Malls & Retail Stores",
-        "sec_feat_5_1": "🎯 Organized Theft Detection",
-        "sec_feat_5_2": "🎯 Heavy Crowding",
-        "sec_feat_5_3": "🎯 Abandoned Baggage",
-        "sec_feat_5_4": "🎯 Violence & Fights",
-        "sec_title_6": "Office Buildings & Banks",
-        "sec_feat_6_1": "🎯 Tailgating / Unauthorized Entry",
-        "sec_feat_6_2": "🎯 Abandoned Baggage",
-        "sec_feat_6_3": "🎯 Fights Detection",
-        "sec_feat_6_4": "🎯 After-hours Entry",
-        "sec_title_7": "Airports & Stations",
-        "sec_feat_7_1": "🎯 Left Luggage / Suspicious Object",
-        "sec_feat_7_2": "🎯 Unusual Crowding",
-        "sec_feat_7_3": "🎯 Commotion/Riot Detection",
-        "sec_feat_7_4": "🎯 Barrier Crossing Detection",
-        "sec_title_8": "Warehouses & Logistics",
-        "sec_feat_8_1": "🎯 Safety Vest Compliance",
-        "sec_feat_8_2": "🎯 Safety Helmet Compliance",
-        "sec_feat_8_3": "🎯 Forklift Proximity Warning",
-        "sec_feat_8_4": "🎯 Loading Zone Safety",
-        "sec_feat_8_5": "🎯 Smoke & Fire Detection",
-        "sec_title_9": "Hotels & Resorts",
-        "sec_feat_9_1": "🎯 Unauthorized Access",
-        "sec_feat_9_2": "🎯 Abandoned Luggage",
-        "sec_feat_9_3": "🎯 Pool Area Security",
-        "sec_feat_9_4": "🎯 Staff Uniform Compliance",
-        "sec_feat_9_5": "🎯 Smoke & Fire Detection",
-        "sec_title_10": "Hypermarkets & Supermarkets",
-        "sec_feat_10_1": "🎯 Shoplifting Detection",
-        "sec_feat_10_2": "🎯 Checkout Queue Crowding",
-        "sec_feat_10_3": "🎯 Liquid Spills on Floor",
-        "sec_feat_10_4": "🎯 Smoke & Fire Detection",
-        "sec_title_11": "Restaurants & Cafes",
-        "sec_feat_11_1": "🎯 Hygiene & Hand Sanitizing",
-        "sec_feat_11_2": "🎯 Chef Hairnet & Gloves Compliance",
-        "sec_feat_11_3": "🎯 Staff Uniform Compliance",
-        "sec_feat_11_4": "🎯 Crowding Detection",
-        "sec_title_12": "Parking Lots",
-        "sec_feat_12_1": "🎯 Loitering Around Vehicles",
-        "sec_feat_12_2": "🎯 Fights & Commotions",
-        "sec_feat_12_3": "🎯 Vehicle Fire Detection",
-        "sec_feat_12_4": "🎯 Unauthorized Vehicle Entry",
-        "sec_title_13": "Museums & Exhibitions",
-        "sec_feat_13_1": "🎯 Exhibit Touching / Proximity Alert",
-        "sec_feat_13_2": "🎯 Abandoned Object",
-        "sec_feat_13_3": "🎯 Crowd Detection",
-        "sec_feat_13_4": "🎯 Restricted Area Entry",
-        "sec_title_14": "Smart Streets & Cities",
-        "sec_feat_14_1": "🎯 Traffic Jam / Sudden Stop",
-        "sec_feat_14_2": "🎯 Public Property Vandalism",
-        "sec_feat_14_3": "🎯 Violence or Riot Detection",
-        "sec_feat_14_4": "🎯 Unusual Crowd Gathering",
-        "nav_home": "Home",
-        "nav_solutions": "Solutions",
-        "nav_products": "Products",
-        "nav_blog": "Blog",
-        "nav_contact": "Contact Us",
-        "nav_to_vexora": "Vexora Security (B2B)",
-        
-        "beyout_page_title": "Beyout | Luxury Smart Home Systems",
-        "beyout_hero_title": "Live Intelligence & Elegance inside Your Home",
-        "beyout_hero_subtitle": "Integrated Beyout smart solutions for a comfortable modern life.",
-        "btn_start_now": "Start Now",
-        
-        "packages_subtitle": "Custom Beyout Packages",
-        "packages_title": "Choose the Perfect Package for Your Home",
-        "packages_desc": "We offer integrated smart solutions tailored to all property sizes with flexible pricing upon contact.",
-        
-        "pkg_title_bodyguard": "Bodyguard Package (for Warehouses)",
-        "pkg_desc_bodyguard": "Intelligent high-security solutions for warehouses and asset protection.",
-        "pkg_feat_bodyguard_1": "🚶‍♂️ Smart motion sensor to detect suspicious activity.",
-        "pkg_feat_bodyguard_2": "🚨 Loud security alarm siren to deter intruders.",
-        "pkg_feat_bodyguard_3": "📱 Instant real-time alerts sent to your mobile phone.",
-        "pkg_feat_bodyguard_4": "🛡️ Total protection for warehouses and store rooms.",
-        
-        "pkg_title_studio": "Studio Package",
-        "pkg_desc_studio": "Custom automation and smart controls for studios and open spaces.",
-        "pkg_feat_studio_1": "💡 Smart light control (ON/OFF).",
-        "pkg_feat_studio_2": "💎 Touch-sensitive luxury glass switch panels.",
-        "pkg_feat_studio_3": "🔒 Smart natural gas leakage detector.",
-        "pkg_feat_studio_4": "📱 Full system control and monitoring via mobile app.",
-        
-        "pkg_title_2room": "2-Room Apartment Package",
-        "pkg_desc_2room": "Complete smart automation tailored to 2-bedroom apartments.",
-        "pkg_feat_2room_1": "💡 Smart lighting for 2 bedrooms and the living room.",
-        "pkg_feat_2room_2": "❄️ Smart control for air conditioning units.",
-        "pkg_feat_2room_3": "🚶‍♂️ Motion sensors to automatically light up hallways.",
-        "pkg_feat_2room_4": "🔒 Kitchen gas detector and main gas safety valve.",
-        
-        "pkg_title_3room": "3-Room Apartment Package",
-        "pkg_desc_3room": "Comprehensive automation for large apartments and families.",
-        "pkg_feat_3room_1": "🛋️ Full control for smart motorized curtains and AC.",
-        "pkg_feat_3room_2": "🌈 Decorative interactive accent lights for the reception.",
-        "pkg_feat_3room_3": "💧 Smart water leak and flood detection system.",
-        "pkg_feat_3room_4": "🗣️ Voice assistant compatibility (Alexa/Siri).",
-        
-        "pkg_title_duplex": "Duplex Apartment Package",
-        "pkg_desc_duplex": "Smart automation and multi-level security for duplexes.",
-        "pkg_feat_duplex_1": "🚪 Smart locks with biometric fingerprint access.",
-        "pkg_feat_duplex_2": "🎬 Custom home cinema and theater preset scene.",
-        "pkg_feat_duplex_3": "🔌 Smart plugs to protect appliances and manage load.",
-        "pkg_feat_duplex_4": "🛡️ Total security for multi-level access points.",
-        
-        "pkg_title_villa": "Villa Package (Ground, First & Roof)",
-        "pkg_desc_villa": "Three-level complete automation for villas, gardens, and pools.",
-        "pkg_feat_villa_1": "🌿 Smart landscape and garden irrigation system.",
-        "pkg_feat_villa_2": "🚗 Automatic control for garage and entrance gates.",
-        "pkg_feat_villa_3": "✈️ Travel mode and presence simulation for deterrence.",
-        "pkg_feat_villa_4": "🏊‍♂️ Smart control for pool filtering and all three levels.",
-        
-        "price_after_call": "Pricing Upon Consultation",
-        "pkg_cta_btn_mock": "Choose Plan",
-        
-        "sandbox_subtitle": "Interactive Simulator Sandbox",
-        "sandbox_title_beyout": "Try Out the Smart Home Dashboard Yourself",
-        "sandbox_desc_beyout": "Test real interactions and live the customer experience. Control the lighting, AC, and doors of the smart villa.",
-        "sandbox_house_living": "Living Room",
-        "sandbox_house_kitchen": "Kitchen",
-        "sandbox_house_bedroom": "Master Bedroom",
-        "sandbox_house_garden": "Garden & Entrance",
-        "sandbox_ctrl_title": "Smart Home Control Tools",
-        "sandbox_ctrl_desc": "Toggle the switches below to simulate sending smart home commands and watch the immediate visual feedback.",
-        "sandbox_ctrl_living_light": "Living Room Light",
-        "sandbox_ctrl_kitchen_light": "Kitchen Light",
-        "sandbox_ctrl_bedroom_ac": "Master Bedroom AC",
-        "sandbox_ctrl_ac_temp": "AC Temp: ",
-        "sandbox_ctrl_security": "Gate & Garden Security",
-        "sandbox_ctrl_security_status_lbl": "Gate Status: ",
-        "sandbox_ctrl_secured_val": "Locked & Secured",
-        "sandbox_ctrl_unsecured_val": "Unlocked - Garden Active!",
-        "sandbox_ctrl_welcome_msg": "Welcome! Toggle devices to experience the smart system.",
-        
-        "form_section_title": "Start Your Journey With Us Today",
-        "form_section_subtitle": "Book your free personalized Demo session and our consultants will reach out shortly",
-        "form_step1_lbl": "Requested Product",
-        "form_step2_lbl": "Contact Info",
-        "form_step3_lbl": "Schedule & Notes",
-        "form_step4_lbl": "Confirmation",
-        "form_step1_title_beyout": "Would you like to upgrade your home to a smart home?",
-        
-        "form_product_lumora_desc": "Complete smart home control and luxury automation systems.",
-        "form_btn_next": "Next Step ←",
-        "form_btn_prev": "→ Previous",
-        "form_btn_submit": "Confirm Free Demo Request 🚀",
-        
-        "form_step2_title": "Tell us more about yourself to get in touch",
-        "form_lbl_name": "Full Name ",
-        "form_lbl_email": "Email Address ",
-        "form_lbl_phone": "Phone / WhatsApp Number ",
-        
-        "form_step3_title": "When would you like to schedule the Demo session?",
-        "form_lbl_date": "Preferred Date ",
-        "form_lbl_time": "Preferred Call Time ",
-        "form_time_choose": "Choose a convenient time",
-        "form_time_morning": "Morning (9:00 AM - 12:00 PM)",
-        "form_time_afternoon": "Afternoon (12:00 PM - 4:00 PM)",
-        "form_time_evening": "Evening (4:00 PM - 8:00 PM)",
-        "form_lbl_notes_beyout": "What is your biggest challenge or specific requirements?",
-        
-        "form_success_thanks": "Thank you for your request, ",
-        "form_success_desc_beyout": "Your request has been registered successfully to book a demo for Beyout smart systems.",
-        "form_success_schedule": "Your suggested date: ",
-        "form_success_period": " during the ",
-        "form_success_whatsapp": "We will send a confirmation message on WhatsApp and phone to ",
-        "form_success_whatsapp_sub": " with meeting details within an hour.",
-        "form_success_reset_btn": "Request a New Booking",
-        
-        "footer_about_text_beyout": "Your trusted technology partner and consultant for smart home control and luxury automation.",
-        "footer_links_title": "Quick Links",
-        "footer_copyright": "&copy; 2026 Beyout. All Rights Reserved."
-    }
-};
-
-
-
-function selectAlertCategory(categoryName) {
-    const notesField = document.getElementById('cust_notes');
-    if (notesField) {
-        notesField.value = `أريد استشارة أمنية وتطبيق فيكسورا لفئة التنبيهات: ${categoryName}`;
-    }
-    
-    // Go to step 2 directly
-    if (typeof nextStep === 'function') nextStep(2);
-    
-    // Scroll smoothly to form section
-    const demoSection = document.getElementById('demo-section');
-    if (demoSection) demoSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-
-
-// Interactive Scenarios for Vexora Control Panel Dashboard
-function triggerVexoraScenario(scen) {
-    const streamImg = document.getElementById('cam-stream-img');
-    const mockBox1 = document.getElementById('mock-box-1');
-    const mockBox2 = document.getElementById('mock-box-2');
-    const mockLabel1 = document.getElementById('mock-label-1');
-    const mockLabel2 = document.getElementById('mock-label-2');
-    const feedbackMsg = document.getElementById('sim-feedback-vexora');
-    const logsContainer = document.getElementById('alert-logs');
-    const cpuVal = document.getElementById('val-cpu');
-    const fpsVal = document.getElementById('val-fps');
-    
-    // De-activate all buttons
-    document.querySelectorAll('.simulator-controls-bar .mock-btn').forEach(btn => btn.classList.remove('active'));
-    document.querySelectorAll('.cam-channels-list .channel-item').forEach(ch => ch.classList.remove('active'));
-    
-    const time = new Date().toTimeString().split(' ')[0];
-    
-    if (scen === 'clear') {
-        const btn = document.getElementById('btn-scen-clear');
-        if (btn) btn.classList.add('active');
-        const ch = document.getElementById('chan-cam-1');
-        if (ch) ch.classList.add('active');
-        
-        if (streamImg) streamImg.src = 'assets/sec_construction.jpg';
-        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box warning-box'; mockBox1.style.top = '15%'; mockBox1.style.left = '30%'; mockBox1.style.width = '14%'; mockBox1.style.height = '25%'; }
-        if (mockLabel1) { mockLabel1.style.background = '#ffd60a'; mockLabel1.style.color = '#000'; mockLabel1.textContent = 'HELMET: OK ✅'; }
-        if (mockBox2) { mockBox2.style.display = 'none'; }
-        
-        if (feedbackMsg) feedbackMsg.textContent = '✅ البث يعمل بالوضع الطبيعي المستقر. الكاميرا رصدت الالتزام بالخوذة.';
-        if (cpuVal) cpuVal.textContent = '14%';
-        if (fpsVal) fpsVal.textContent = '30 FPS';
-        
-    } else if (scen === 'ppe') {
-        const btn = document.getElementById('btn-scen-ppe');
-        if (btn) btn.classList.add('active');
-        const ch = document.getElementById('chan-cam-1');
-        if (ch) ch.classList.add('active');
-        
-        if (streamImg) streamImg.src = 'assets/sec_construction.jpg';
-        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box warning-box'; mockBox1.style.top = '15%'; mockBox1.style.left = '30%'; mockBox1.style.width = '14%'; mockBox1.style.height = '25%'; }
-        if (mockLabel1) { mockLabel1.style.background = '#ffd60a'; mockLabel1.style.color = '#000'; mockLabel1.textContent = 'HELMET: OK ✅'; }
-        if (mockBox2) { mockBox2.style.display = 'block'; mockBox2.className = 'camera-detection-box danger-box'; mockBox2.style.top = '35%'; mockBox2.style.left = '58%'; mockBox2.style.width = '16%'; mockBox2.style.height = '32%'; }
-        if (mockLabel2) { mockLabel2.style.background = '#ff453a'; mockLabel2.style.color = '#fff'; mockLabel2.textContent = 'NO HELMET! ⚠️'; }
-        
-        if (feedbackMsg) feedbackMsg.textContent = '⚠️ إنذار سلامة: تم رصد عامل بدون خوذة حماية في منطقة العمل!';
-        if (logsContainer) {
-            logsContainer.innerHTML = `<div class="log-entry danger"><span class="time">${time}</span><span class="msg">⚠️ مخالفة سلامة: عامل بدون خوذة أمان - منطقة العمل الرئيسية</span></div>` + logsContainer.innerHTML;
-        }
-        if (cpuVal) cpuVal.textContent = '22%';
-        if (fpsVal) fpsVal.textContent = '30 FPS';
-
-    } else if (scen === 'intruder') {
-        const btn = document.getElementById('btn-scen-intruder');
-        if (btn) btn.classList.add('active');
-        const ch = document.getElementById('chan-cam-2');
-        if (ch) ch.classList.add('active');
-        
-        if (streamImg) streamImg.src = 'assets/vexora_perimeter_fence.jpg';
-        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box danger-box'; mockBox1.style.top = '35%'; mockBox1.style.left = '40%'; mockBox1.style.width = '25%'; mockBox1.style.height = '50%'; }
-        if (mockLabel1) { mockLabel1.style.background = '#ff453a'; mockLabel1.style.color = '#fff'; mockLabel1.textContent = 'INTRUDER DETECTED! 🚨'; }
-        if (mockBox2) { mockBox2.style.display = 'none'; }
-        
-        if (feedbackMsg) feedbackMsg.textContent = '🚨 إنذار أمني حرج: تم رصد متسلل يتسلق السياج الخارجي بعد أوقات العمل!';
-        if (logsContainer) {
-            logsContainer.innerHTML = `<div class="log-entry danger"><span class="time">${time}</span><span class="msg">🚨 خرق أمني: رصد جسم متسلل يتسلق السياج الخارجي - القناة 02</span></div>` + logsContainer.innerHTML;
-        }
-        if (cpuVal) cpuVal.textContent = '26%';
-        if (fpsVal) fpsVal.textContent = '29 FPS';
-
-    } else if (scen === 'fire') {
-        const btn = document.getElementById('btn-scen-fire');
-        if (btn) btn.classList.add('active');
-        const ch = document.getElementById('chan-cam-3');
-        if (ch) ch.classList.add('active');
-        
-        if (streamImg) streamImg.src = 'assets/vexora_fire.jpg';
-        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box danger-box'; mockBox1.style.top = '15%'; mockBox1.style.left = '15%'; mockBox1.style.width = '70%'; mockBox1.style.height = '70%'; }
-        if (mockLabel1) { mockLabel1.style.background = '#ff453a'; mockLabel1.style.color = '#fff'; mockLabel1.textContent = 'FIRE & SMOKE ALARM! 🔥'; }
-        if (mockBox2) { mockBox2.style.display = 'none'; }
-        
-        if (feedbackMsg) feedbackMsg.textContent = '🔥 إنذار حريق مبكر: تم رصد أدخنة ونيران مشتعلة بالمستودع وتم إرسال إشعارات الطوارئ!';
-        if (logsContainer) {
-            logsContainer.innerHTML = `<div class="log-entry danger"><span class="time">${time}</span><span class="msg">🔥 إنذار حظر حريق: تم كشف أدخنة ونيران - مستودع المواد B</span></div>` + logsContainer.innerHTML;
-        }
-        if (cpuVal) cpuVal.textContent = '28%';
-        if (fpsVal) fpsVal.textContent = '30 FPS';
-
-    } else if (scen === 'lpr') {
-        const btn = document.getElementById('btn-scen-lpr');
-        if (btn) btn.classList.add('active');
-        const ch = document.getElementById('chan-cam-4');
-        if (ch) ch.classList.add('active');
-        
-        if (streamImg) streamImg.src = 'assets/sec_parking.jpg';
-        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box warning-box'; mockBox1.style.top = '40%'; mockBox1.style.left = '35%'; mockBox1.style.width = '30%'; mockBox1.style.height = '35%'; }
-        if (mockLabel1) { mockLabel1.style.background = '#34c759'; mockLabel1.style.color = '#fff'; mockLabel1.textContent = 'LPR: [أ ب ج 1 2 3 4] GATE OPEN ✅'; }
-        if (mockBox2) { mockBox2.style.display = 'none'; }
-        
-        if (feedbackMsg) feedbackMsg.textContent = '🚗 قراءة لوحة LPR: تم التعرف على لوحة السيارة المصرح لها وفتح البوابة تلقائياً.';
-        if (logsContainer) {
-            logsContainer.innerHTML = `<div class="log-entry info"><span class="time">${time}</span><span class="msg">🚗 بوابة السيارات: قراءة لوحة [أ ب ج 1 2 3 4] وفتح البوابة للمالك</span></div>` + logsContainer.innerHTML;
-        }
-        if (cpuVal) cpuVal.textContent = '19%';
-        if (fpsVal) fpsVal.textContent = '30 FPS';
-    }
-}
-
-
-
-function selectProduct(productName) {
-    const notesField = document.getElementById('cust_notes');
-    if (notesField) {
-        notesField.value = `أريد الاستفسار وحجز المنتج: ${productName}`;
-    }
-    if (typeof nextStep === 'function') nextStep(2);
-    const demoSection = document.getElementById('demo-section');
-    if (demoSection) demoSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-// Full English Translation Support for Bilingual Switcher
-if (typeof translations !== 'undefined') {
-    translations.en = {
         "nav_products": "Products & Systems",
         "nav_solutions": "AI Alerts",
         "nav_dashboard": "Control Panel",
         "nav_trusted": "Trusted Clients",
         "nav_stories": "Success Stories",
-        "btn_start_now": "Get Started",
-        "products_subtitle": "Vexora Products & Hardware",
+        "btn_start_now": "Start Free Trial",
+        
+        "products_subtitle": "Vexora Solutions & Hardware",
         "products_title": "AI Systems & On-Premise Servers",
         "products_desc": "Select the ideal server and AI package for your facility with 15-day free trial included.",
+        "prod_1_badge": "Local Processing",
         "prod_1_title": "On-Premise AI Server",
         "prod_1_desc": "Local processing AI server supporting up to 6 IP cameras with zero cloud latency.",
+        "prod_1_price": "20,000 EGP",
         "prod_1_fee": "One-time hardware purchase fee",
+        "prod_1_btn": "Order Server Now",
+        
+        "prod_2_badge": "Most Popular ⭐",
         "prod_2_title": "Camera AI Subscription",
         "prod_2_desc": "Activate real-time AI video analytics for 1 camera & 1 alert phone line.",
+        "prod_2_price": "8,000 EGP / month",
         "prod_2_fee": "Additional camera +1,500 EGP/mo | Phone +1,000 EGP/mo",
-        "prod_3_title": "Vexora LPR System",
-        "prod_3_desc": "License plate recognition system with 99.4% accuracy and automatic gate opening.",
-        "prod_3_fee": "Includes automated gate relay integration",
-        "prod_4_title": "Custom AI Alert Setup",
-        "prod_4_desc": "Train custom AI models for unique industrial and operational scenarios.",
-        "prod_4_fee": "One-time AI model training fee",
-        "prod_btn_request": "Request This Product",
+        "prod_2_btn": "Subscribe Now (15-Day Trial)",
+        
+        "prod_3_badge": "Full Customization",
+        "prod_3_title": "Custom AI Alerts",
+        "prod_3_desc": "Train custom AI models for unique industrial and operational scenarios.",
+        "prod_3_price": "5,000 EGP",
+        "prod_3_fee": "One-time AI model training fee",
+        "prod_3_btn": "Request Custom Alert",
+        
+        "alerts_subtitle": "Smart Alerts Catalog (26 AI Alerts with Screenshots)",
+        "alerts_title": "Vexora 5 Major Alert Categories",
+        "alerts_desc": "Explore all available system alerts divided into 5 main operational security categories.",
+        
         "dash_sec_subtitle": "Interactive Security SOC Console",
         "dash_sec_title": "VEXORA SMART SAFETY DASHBOARD",
-        "dash_sec_desc": "Live monitoring dashboard reflecting the real Vexora system console with real-time video stream and alert logs.",
+        "dash_sec_desc": "Live monitoring dashboard reflecting the real Vexora system console with real-time video stream.",
         "dash_brand_title": "Main Investment Facility",
         "dash_brand_sub": "VEXORA ENTERPRISE CONSOLE | SMART SAFETY DASHBOARD",
         "dash_status_badge": "SECURE & ACTIVE 🟢",
@@ -1095,9 +575,59 @@ if (typeof translations !== 'undefined') {
         "tbl_col_time": "Time",
         "tbl_col_cam": "Camera",
         "tbl_col_type": "Violation Type",
-        "tbl_col_person": "Person ID"
-    };
+        "tbl_col_person": "Person ID",
+        
+        "tag_helmet": "NO HELMET DETECTED! ⚠️",
+        "tag_vest": "VEST: COMPLIANT ✅",
+        "tag_gloves": "GLOVES: DETECTED ✅",
+        "tag_goggles": "GOGGLES MISSING ⚠️",
+        "tag_shoes": "SAFETY SHOES ✅",
+        "tag_mask": "PROTECTIVE MASK ✅",
+        "tag_hairnet": "HAIRNET: VERIFIED ✅",
+        "tag_uniform": "OFFICIAL UNIFORM ✅",
+        "tag_hygiene": "SANITY BYPASS ALERT ⚠️",
+        "tag_intrusion": "FENCE INTRUSION 🚨",
+        "tag_unauthorized": "UNAUTHORIZED ZONE ⛔",
+        "tag_theft": "THEFT SUSPECTED 🚨",
+        "tag_baggage": "ABANDONED BAGGAGE ⚠️",
+        "tag_loitering": "LOITERING ALERT (5 MIN) ⚠️",
+        "tag_vandalism": "VANDALISM DETECTED 🚨",
+        "tag_crowd": "HIGH CROWD DENSITY ⚠️",
+        "tag_violence": "VIOLENCE / FIGHT DETECTED 🚨",
+        "tag_running": "FAST RUNNING DETECTED ⚠️",
+        "tag_traffic": "TRAFFIC CONGESTION 🚗",
+        "tag_fire": "EARLY SMOKE & FIRE 🔥",
+        "tag_fall": "HUMAN FALL DETECTED 🚑",
+        "tag_spill": "LIQUID SPILL ON FLOOR 💧",
+        "tag_drowning": "POOL DROWNING HAZARD 🏊",
+        "tag_eating": "PROHIBITED EATING 🚫",
+        "tag_forklift": "FORKLIFT PROXIMITY ALERT ⚠️",
+        "tag_touching": "OBJECT TOUCHING ALERT 🛑"
+    }
+};
 
-    translations.ar = translations.ar || {};
-    translations.ar["nav_products"] = "المنتجات والأنظمة";
+function setLanguage(lang) {
+    currentLanguage = lang;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    
+    document.body.className = `theme-vexora lang-${lang}`;
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key] !== undefined) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
+    
+    const langBtnText = document.getElementById('lang-switch-text');
+    if (langBtnText) langBtnText.textContent = lang === 'ar' ? 'English' : 'العربية';
+    
+    const langBtnDash = document.getElementById('lang-switch-text-dash');
+    if (langBtnDash) langBtnDash.textContent = lang === 'ar' ? 'English' : 'العربية';
+}
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+    setLanguage(currentLanguage);
 }

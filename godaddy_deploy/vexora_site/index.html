@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=1.6.0">
+    <link rel="stylesheet" href="style.css?v=1.7.0">
 </head>
 <body class="theme-vexora">
 
@@ -82,6 +82,7 @@
         <!-- 5 Major Alert Categories - Full Vertical Stacked Layout (26 Detailed Alerts) -->
         <!-- 5 Major Alert Categories - Full Vertical Stacked Layout (26 Unique Screenshots) -->
         <!-- Vexora AI Products & Enterprise Solutions Section -->
+        <!-- Vexora AI Products & Enterprise Solutions Section -->
     <section class="products-section-wrapper" id="products-section" style="padding: 80px 0; background: rgba(255, 255, 255, 0.015); border-top: 1px solid rgba(255, 255, 255, 0.05);">
         <div class="container">
             <div class="section-header text-center" style="margin-bottom: 50px;">
@@ -90,67 +91,56 @@
                 <p class="section-desc max-w-600" data-i18n="products_desc">اختر الباقة والمنتج المناسب لبنية كاميرات مراقبة منشأتك مع تركيب ومكفول بـ 15 يوماً تجربة مجانية.</p>
             </div>
 
-            <div class="products-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            <div class="products-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; max-w-1000; margin: 0 auto;">
                 
                 <!-- Product 1: AI Server -->
-                <div class="product-card glass-card" style="padding: 28px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
-                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #22d3ee; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;">On-Premise Server</div>
-                    <div class="prod-icon" style="font-size: 36px; margin-bottom: 16px;">🖥️</div>
-                    <h3 data-i18n="prod_1_title" style="color: #fff; font-size: 20px; margin: 0 0 8px 0;">السيرفر المحلي (On-Premise AI Server)</h3>
-                    <p data-i18n="prod_1_desc" style="color: #9ca3af; font-size: 13px; margin: 0 0 16px 0; line-height: 1.6;">سيرفر معالجة محلية يدعم حتى 6 كاميرات مراقبة بدون نقل بيانات للسحابة لضمان السرية والسرعة.</p>
+                <div class="product-card glass-card" style="padding: 32px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
+                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #22d3ee; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;" data-i18n="prod_1_badge">معالجة محلية</div>
+                    <div class="prod-icon" style="font-size: 40px; margin-bottom: 16px;">🖥️</div>
+                    <h3 data-i18n="prod_1_title" style="color: #fff; font-size: 22px; margin: 0 0 10px 0;">السيرفر المحلي (On-Premise AI Server)</h3>
+                    <p data-i18n="prod_1_desc" style="color: #9ca3af; font-size: 13.5px; margin: 0 0 20px 0; line-height: 1.6;">سيرفر معالجة محلية يدعم حتى 6 كاميرات مراقبة بدون نقل بيانات للسحابة لضمان السرية والسرعة.</p>
                     
-                    <div class="prod-price" style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
-                        <span style="font-size: 24px; font-weight: 800; color: #ffd60a;">20,000 EGP</span>
+                    <div class="prod-price" style="margin-top: auto; padding-top: 18px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
+                        <span style="font-size: 26px; font-weight: 800; color: #ffd60a;" data-i18n="prod_1_price">20,000 جنيه</span>
                         <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_1_fee">تدفع مرة واحدة لشراء وتملّك السيرفر</span>
                     </div>
-                    <button class="package-cta" style="margin-top: 16px;" onclick="selectProduct('السيرفر المحلي (On-Premise AI Server)')" data-i18n="prod_btn_request">طلب السيرفر الآن</button>
+                    <button class="package-cta" style="margin-top: 20px;" onclick="selectProduct('السيرفر المحلي')" data-i18n="prod_1_btn">طلب السيرفر الآن</button>
                 </div>
 
                 <!-- Product 2: AI Subscription -->
-                <div class="product-card glass-card" style="padding: 28px; border-radius: 20px; background: rgba(34, 211, 238, 0.04); border: 1px solid rgba(34, 211, 238, 0.4); display: flex; flex-direction: column; position: relative;">
-                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #ffd60a; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;">الباقة الأكثر طلباً ⭐</div>
-                    <div class="prod-icon" style="font-size: 36px; margin-bottom: 16px;">📹</div>
-                    <h3 data-i18n="prod_2_title" style="color: #fff; font-size: 20px; margin: 0 0 8px 0;">الاشتراك الشهري للتنبيهات (Camera AI License)</h3>
-                    <p data-i18n="prod_2_desc" style="color: #9ca3af; font-size: 13px; margin: 0 0 16px 0; line-height: 1.6;">تفعيل الذكاء الاصطناعي لكاميرا واحدة ورقم هاتف للتنبيهات الفورية مع الخرائط الحرارية.</p>
+                <div class="product-card glass-card" style="padding: 32px; border-radius: 20px; background: rgba(34, 211, 238, 0.05); border: 1px solid rgba(34, 211, 238, 0.5); display: flex; flex-direction: column; position: relative;">
+                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #ffd60a; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;" data-i18n="prod_2_badge">الباقة الأكثر طلباً ⭐</div>
+                    <div class="prod-icon" style="font-size: 40px; margin-bottom: 16px;">📹</div>
+                    <h3 data-i18n="prod_2_title" style="color: #fff; font-size: 22px; margin: 0 0 10px 0;">الاشتراك الشهري للتنبيهات</h3>
+                    <p data-i18n="prod_2_desc" style="color: #9ca3af; font-size: 13.5px; margin: 0 0 20px 0; line-height: 1.6;">تفعيل الذكاء الاصطناعي لكاميرا واحدة ورقم هاتف للتنبيهات الفورية مع الخرائط الحرارية.</p>
                     
-                    <div class="prod-price" style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
-                        <span style="font-size: 24px; font-weight: 800; color: #34c759;">8,000 EGP / شهرياً</span>
+                    <div class="prod-price" style="margin-top: auto; padding-top: 18px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
+                        <span style="font-size: 26px; font-weight: 800; color: #34c759;" data-i18n="prod_2_price">8,000 جنيه / شهرياً</span>
                         <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_2_fee">كل كاميرا إضافية +1,500 ج.م | رقم هاتف +1,000 ج.م</span>
                     </div>
-                    <button class="package-cta" style="margin-top: 16px; background: #22d3ee; color: #000;" onclick="selectProduct('الاشتراك الشهري للتنبيهات')" data-i18n="prod_btn_request">اشترك الآن (15 يوماً تجربة)</button>
+                    <button class="package-cta" style="margin-top: 20px; background: #22d3ee; color: #000;" onclick="selectProduct('الاشتراك الشهري للتنبيهات')" data-i18n="prod_2_btn">اشترك الآن (15 يوماً تجربة)</button>
                 </div>
 
-                <!-- Product 3: LPR Gate System -->
-                <div class="product-card glass-card" style="padding: 28px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
-                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #38bdf8; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;">LPR Gate Automation</div>
-                    <div class="prod-icon" style="font-size: 36px; margin-bottom: 16px;">🚗</div>
-                    <h3 data-i18n="prod_3_title" style="color: #fff; font-size: 20px; margin: 0 0 8px 0;">نظام قراءة اللوحات والبوابات (Vexora LPR System)</h3>
-                    <p data-i18n="prod_3_desc" style="color: #9ca3af; font-size: 13px; margin: 0 0 16px 0; line-height: 1.6;">أتمتة فتح البوابات بالتعرف على لوحات السيارات بدقة 99.4% مع القوائم السوداء والبيضاء.</p>
+                <!-- Product 3: Custom Alert Setup -->
+                <div class="product-card glass-card" style="padding: 32px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
+                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #a855f7; color: #fff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;" data-i18n="prod_3_badge">تخصيص كامل</div>
+                    <div class="prod-icon" style="font-size: 40px; margin-bottom: 16px;">⚙️</div>
+                    <h3 data-i18n="prod_3_title" style="color: #fff; font-size: 22px; margin: 0 0 10px 0;">التنبيهات المخصصة</h3>
+                    <p data-i18n="prod_3_desc" style="color: #9ca3af; font-size: 13.5px; margin: 0 0 20px 0; line-height: 1.6;">تطوير وتدريب نموذج ذكاء اصطناعي مخصص لسيناريو فريد خاص بنشاطك التجاري.</p>
                     
-                    <div class="prod-price" style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
-                        <span style="font-size: 24px; font-weight: 800; color: #22d3ee;">عرض متكامل</span>
-                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_3_fee">شامل الربط التلقائي مع البوابات الإلكترونية</span>
+                    <div class="prod-price" style="margin-top: auto; padding-top: 18px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
+                        <span style="font-size: 26px; font-weight: 800; color: #a855f7;" data-i18n="prod_3_price">5,000 جنيه</span>
+                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_3_fee">رسوم إعداد وتدريب لمرة واحدة فقط</span>
                     </div>
-                    <button class="package-cta" style="margin-top: 16px;" onclick="selectProduct('نظام قراءة اللوحات والبوابات')" data-i18n="prod_btn_request">طلب استشارة اللوحات</button>
-                </div>
-
-                <!-- Product 4: Custom Alert Setup -->
-                <div class="product-card glass-card" style="padding: 28px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
-                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #a855f7; color: #fff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;">Custom Alert Setup</div>
-                    <div class="prod-icon" style="font-size: 36px; margin-bottom: 16px;">⚙️</div>
-                    <h3 data-i18n="prod_4_title" style="color: #fff; font-size: 20px; margin: 0 0 8px 0;">التنبيهات المخصصة (Custom AI Alert)</h3>
-                    <p data-i18n="prod_4_desc" style="color: #9ca3af; font-size: 13px; margin: 0 0 16px 0; line-height: 1.6;">تطوير وتدريب نموذج ذكاء اصطناعي مخصص لسيناريو فريد خاص بنشاطك التجاري.</p>
-                    
-                    <div class="prod-price" style="margin-top: auto; padding-top: 16px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
-                        <span style="font-size: 24px; font-weight: 800; color: #a855f7;">5,000 EGP</span>
-                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_4_fee">رسوم إعداد وتدريب لمرة واحدة فقط</span>
-                    </div>
-                    <button class="package-cta" style="margin-top: 16px;" onclick="selectProduct('التنبيهات المخصصة')" data-i18n="prod_btn_request">طلب تنبيه مخصص</button>
+                    <button class="package-cta" style="margin-top: 20px;" onclick="selectProduct('التنبيهات المخصصة')" data-i18n="prod_3_btn">طلب تنبيه مخصص</button>
                 </div>
 
             </div>
         </div>
     </section>
+
+
+    
 
 
     <section class="packages-section-wrapper" id="sectors-section">
@@ -179,7 +169,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_helmet.jpg" alt="Helmet Detection">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 35%; width: 30%; height: 35%;">
-                                    <span class="ai-tag-badge danger-tag">NO HELMET DETECTED! ⚠️</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_helmet">لم يتم ارتداء الخوذة! ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -193,7 +183,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_vest.jpg" alt="Vest Detection">
                                 <div class="ai-box-overlay success-box-ai" style="top: 25%; left: 30%; width: 40%; height: 50%;">
-                                    <span class="ai-tag-badge success-tag">VEST: COMPLIANT ✅</span>
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_vest">السترة: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -207,7 +197,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_gloves.jpg" alt="Gloves Detection">
                                 <div class="ai-box-overlay success-box-ai" style="top: 35%; left: 20%; width: 60%; height: 45%;">
-                                    <span class="ai-tag-badge success-tag">GLOVES: DETECTED ✅</span>
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_gloves">القفازات: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -221,7 +211,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_goggles.jpg" alt="Goggles Detection">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 15%; left: 40%; width: 25%; height: 25%;">
-                                    <span class="ai-tag-badge warning-tag">GOGGLES MISSING ⚠️</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_goggles">النظارة: غير متوافق ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -235,7 +225,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_shoes.jpg" alt="Safety Shoes">
                                 <div class="ai-box-overlay success-box-ai" style="top: 60%; left: 30%; width: 40%; height: 35%;">
-                                    <span class="ai-tag-badge success-tag">SAFETY SHOES ✅</span>
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_shoes">حذاء الأمان: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -249,7 +239,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_mask.jpg" alt="Mask Detection">
                                 <div class="ai-box-overlay success-box-ai" style="top: 20%; left: 35%; width: 30%; height: 35%;">
-                                    <span class="ai-tag-badge success-tag">PROTECTIVE MASK ✅</span>
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_mask">الكمامة: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -263,7 +253,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_hairnet.jpg" alt="Hairnet Detection">
                                 <div class="ai-box-overlay success-box-ai" style="top: 10%; left: 35%; width: 30%; height: 25%;">
-                                    <span class="ai-tag-badge success-tag">HAIRNET: VERIFIED ✅</span>
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_hairnet">غطاء الشعر: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -277,7 +267,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_uniform.jpg" alt="Uniform Check">
                                 <div class="ai-box-overlay success-box-ai" style="top: 20%; left: 30%; width: 40%; height: 60%;">
-                                    <span class="ai-tag-badge success-tag">OFFICIAL UNIFORM ✅</span>
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_uniform">الزي الموحد: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -291,7 +281,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_hygiene.jpg" alt="Hygiene & Sterilization">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
-                                    <span class="ai-tag-badge danger-tag">SANITY BYPASS ALERT ⚠️</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_hygiene">تجاوز جهاز التعقيم ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -318,7 +308,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_intrusion.jpg" alt="Perimeter Intrusion">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 40%; width: 30%; height: 50%;">
-                                    <span class="ai-tag-badge danger-tag">FENCE INTRUSION 🚨</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_intrusion">اختراق السياج الخارجي 🚨</span>
                                 </div>
                                 <div class="ai-perimeter-line"></div>
                             </div>
@@ -333,7 +323,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_unauthorized.jpg" alt="Unauthorized Entry">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 35%; width: 30%; height: 55%;">
-                                    <span class="ai-tag-badge danger-tag">UNAUTHORIZED ZONE ⛔</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_unauthorized">منطقة غير مصرح بها ⛔</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -347,7 +337,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_theft.jpg" alt="Theft Detection">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 35%; left: 25%; width: 45%; height: 45%;">
-                                    <span class="ai-tag-badge danger-tag">SUSPICIOUS MOTION / THEFT 🚨</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_theft">حركة سرقة مريبة 🚨</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -361,7 +351,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/alert_baggage.jpg" alt="Abandoned Objects">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 55%; left: 40%; width: 25%; height: 30%;">
-                                    <span class="ai-tag-badge warning-tag">ABANDONED BAGGAGE ⚠️</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_baggage">حقيبة متروكة ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -375,7 +365,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_parking.jpg" alt="Loitering Detection">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 35%; height: 45%;">
-                                    <span class="ai-tag-badge warning-tag">LOITERING ALERT (5 MIN) ⚠️</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_loitering">تنبيه تسكع مريب (5 دقائق) ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -389,7 +379,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/vexora_perimeter_fence.jpg" alt="Vandalism Alert">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 40%; left: 20%; width: 60%; height: 40%;">
-                                    <span class="ai-tag-badge danger-tag">VANDALISM DETECTED 🚨</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_vandalism">رصد تخريب بالموقع 🚨</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -416,7 +406,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_malls.jpg" alt="Crowd Density">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 20%; left: 15%; width: 70%; height: 60%;">
-                                    <span class="ai-tag-badge warning-tag">HIGH CROWD DENSITY ⚠️</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_crowd">تكدس وازدحام شديد ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -430,7 +420,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_schools.jpg" alt="Violence Alert">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 25%; width: 50%; height: 50%;">
-                                    <span class="ai-tag-badge danger-tag">VIOLENCE / FIGHT DETECTED 🚨</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_violence">رصد مشاجرة واشتباك 🚨</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -444,7 +434,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_hospitals.jpg" alt="Running in Hallway">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
-                                    <span class="ai-tag-badge warning-tag">FAST RUNNING DETECTED ⚠️</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_running">رصد ركض سريع مريب ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -458,7 +448,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_parking.jpg" alt="Traffic Congestion">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 35%; left: 20%; width: 60%; height: 50%;">
-                                    <span class="ai-tag-badge warning-tag">TRAFFIC CONGESTION 🚗</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_traffic">تكدس مروري بالمدخل 🚗</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -485,7 +475,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/vexora_fire.jpg" alt="Smoke & Fire Alert">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 15%; width: 70%; height: 70%;">
-                                    <span class="ai-tag-badge danger-tag">EARLY SMOKE & FIRE 🔥</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_fire">إنذار مبكر حريق ودخان 🔥</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -499,7 +489,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_hospitals.jpg" alt="Patient Fall">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 50%; left: 30%; width: 45%; height: 40%;">
-                                    <span class="ai-tag-badge danger-tag">HUMAN FALL DETECTED 🚑</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_fall">رصد سقوط مفاجئ 🚑</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -513,7 +503,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_supermarkets.jpg" alt="Liquid Spill">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 60%; left: 25%; width: 50%; height: 30%;">
-                                    <span class="ai-tag-badge warning-tag">LIQUID SPILL ON FLOOR 💧</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_spill">انسكاب سوائل على الأرض 💧</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -527,7 +517,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_hotels.jpg" alt="Drowning Alert">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 40%; left: 30%; width: 40%; height: 40%;">
-                                    <span class="ai-tag-badge danger-tag">POOL DROWNING HAZARD 🏊</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_drowning">خطر غرق بالمسبح 🏊</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -554,7 +544,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_factories.jpg" alt="Eating Alert">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 25%; left: 35%; width: 30%; height: 40%;">
-                                    <span class="ai-tag-badge warning-tag">PROHIBITED EATING 🚫</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_eating">مخالفة تناول طعام 🚫</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -568,7 +558,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_warehouses.jpg" alt="Forklift Proximity">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 25%; width: 50%; height: 50%;">
-                                    <span class="ai-tag-badge warning-tag">FORKLIFT PROXIMITY ALERT ⚠️</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_forklift">اقتراب رافعة شوكية ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -582,7 +572,7 @@
                             <div class="alert-img-frame">
                                 <img src="assets/sec_museums.jpg" alt="Object Touching">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 35%; width: 30%; height: 45%;">
-                                    <span class="ai-tag-badge danger-tag">OBJECT TOUCHING ALERT 🛑</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_touching">لمس المعروضات 🛑</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -1127,6 +1117,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=1.6.0"></script>
+    <script src="app.js?v=1.7.0"></script>
 </body>
 </html>
