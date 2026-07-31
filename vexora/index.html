@@ -41,7 +41,7 @@
             height: 100%;
             object-fit: fill; /* fill to ensure no black bars if aspect ratio differs slightly */
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
             z-index: 1;
         }
         .hero-slide.active {
@@ -94,8 +94,36 @@
             <!-- Left: Premium Live Camera Mockup -->
             <div class="hero-visual-col">
                 <div class="switch-glowing-frame">
-                    <div class="live-indicator"><span data-i18n="live_badge">مباشر 🔴</span></div>
-                    <img src="assets/vexora_compare.jpg" alt="Vexora AI Surveillance Stream" class="switch-mock-img">
+                    <div class="live-indicator" style="z-index: 10;"><span data-i18n="live_badge">مباشر 🔴</span></div>
+                    <div class="hero-slider-wrapper" style="border-radius: 16px; margin: 0; max-width: 100%;">
+                        <div class="hero-slider" id="hero-slider">
+                            <img src="assets/alert_photo_1.jpg" alt="Alert 1" class="hero-slide active">
+                            <img src="assets/alert_photo_2.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_3.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_4.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_5.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_6.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_7.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_28.jpg" alt="Alert" class="hero-slide">
+                            
+                            <img src="assets/alert_photo_10.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_11.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_12.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_13.jpg" alt="Alert" class="hero-slide">
+                            
+                            <img src="assets/alert_photo_16.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_17.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_18.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_30.jpg" alt="Alert" class="hero-slide">
+                            
+                            <img src="assets/alert_photo_20.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_21.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_22.jpg" alt="Alert" class="hero-slide">
+                            
+                            <img src="assets/alert_photo_24.jpg" alt="Alert" class="hero-slide">
+                            <img src="assets/alert_photo_31.jpg" alt="Alert" class="hero-slide">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -732,12 +760,12 @@
             const slides = document.querySelectorAll('.hero-slide');
             if (slides.length > 0) {
                 let currentSlide = 0;
-                // Total 30 seconds for 8 slides = 30000 / 8 = 3750ms per slide
+                // Total 30 seconds for 8 slides = 30000 / 8 = 1428ms per slide
                 setInterval(() => {
                     slides[currentSlide].classList.remove('active');
                     currentSlide = (currentSlide + 1) % slides.length;
                     slides[currentSlide].classList.add('active');
-                }, 3750);
+                }, 1428);
             }
         });
     </script>
