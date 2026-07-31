@@ -2,507 +2,337 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>كتالوج قطاعات التحليل الأمني الكامل بالذكاء الاصطناعي - 15 مجالاً مقسمة لمجموعات</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتالوج التنبيهات الأمنية الشامل - VEXORA AI (21 تنبيهاً)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #080c10;
-            color: #f3f4f6;
-            margin: 0;
-            padding: 40px;
-            direction: rtl;
+        :root {
+            --bg-dark: #07090e;
+            --card-bg: rgba(15, 23, 42, 0.75);
+            --primary: #0ea5e9;
+            --accent: #6366f1;
+            --danger: #e11d48;
+            --warning: #f59e0b;
+            --success: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-glass: rgba(255, 255, 255, 0.1);
         }
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #22d3ee;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-        }
-        .logo-title {
-            font-size: 36px;
-            font-weight: 800;
-            color: #22d3ee;
-            letter-spacing: 1px;
-            margin: 0;
-        }
-        .subtitle {
-            font-size: 16px;
-            color: #9ca3af;
-            margin-top: 5px;
-        }
-        .collection-header {
-            margin-top: 40px;
-            margin-bottom: 30px;
-            background: rgba(34, 211, 238, 0.04);
-            border-right: 4px solid #22d3ee;
-            padding: 15px 20px;
-            border-radius: 4px 12px 12px 4px;
-        }
-        .collection-title {
-            font-size: 22px;
-            color: #22d3ee;
-            margin: 0;
-        }
-        .collection-desc-top {
-            font-size: 14px;
-            color: #9ca3af;
-            margin: 6px 0 0 0;
-        }
-        .product-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 30px;
-            page-break-inside: avoid;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 24px;
-        }
-        .product-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .product-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        .product-price {
-            font-size: 14px;
-            color: #ffd60a;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        .product-desc {
-            font-size: 14px;
-            color: #d1d5db;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .features-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 0 20px 0;
-        }
-        .features-list li {
-            font-size: 13.5px;
-            color: #f3f4f6;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .features-list li::before {
-            content: "🎯";
-        }
-        .product-link {
-            font-size: 13px;
-            color: #22d3ee;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .product-image-container {
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            height: 240px;
-        }
-        .product-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            font-size: 12px;
-            color: #6b7280;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 20px;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', 'Outfit', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); padding: 40px 20px; line-height: 1.6; }
+        .container { max-width: 1300px; margin: 0 auto; }
+        
+        .header { text-align: center; margin-bottom: 50px; padding: 40px; background: radial-gradient(circle, rgba(14,165,233,0.15) 0%, rgba(7,9,14,1) 70%); border-radius: 24px; border: 1px solid var(--border-glass); }
+        .header h1 { font-size: 38px; font-weight: 900; color: #fff; margin-bottom: 12px; }
+        .header h1 span { color: var(--primary); }
+        .header p { font-size: 18px; color: var(--text-muted); max-width: 800px; margin: 0 auto 20px; }
+        .stats-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(14, 165, 233, 0.1); border: 1px solid var(--primary); padding: 8px 24px; border-radius: 50px; color: var(--primary); font-weight: 700; font-size: 16px; }
+
+        .pricing-banner { background: rgba(99, 102, 241, 0.1); border: 1px solid var(--accent); padding: 15px 30px; border-radius: 16px; margin: 20px auto 40px; text-align: center; max-width: 800px; color: #fff; font-size: 17px; font-weight: 700; }
+        .pricing-banner span { color: #f59e0b; font-size: 20px; font-weight: 900; }
+
+        .cat-title { font-size: 26px; font-weight: 800; margin: 40px 0 20px; display: flex; align-items: center; gap: 12px; border-bottom: 2px solid rgba(14,165,233,0.2); padding-bottom: 10px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 24px; }
+        
+        .card { background: var(--card-bg); border: 1px solid var(--border-glass); border-radius: 16px; overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(14, 165, 233, 0.2); }
+        
+        .img-box { position: relative; width: 100%; height: 220px; background: #000; overflow: hidden; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-title { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+        .card-desc { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+        
+        .footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border-glass); color: var(--text-muted); font-size: 14px; }
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <h1 class="logo-title">VEXORA AI SECURITY</h1>
-        <div class="subtitle">كتالوج قطاعات التحليل الأمني الكامل بالذكاء الاصطناعي - 15 مجالاً مقسماً لمجموعات أمنية</div>
-    </div>
-
-    <div class="collection-header">
-        <h2 class="collection-title">🗂️ المجموعة الأولى: أنظمة السلامة والصحة المهنية (HSE & Industrial Safety)</h2>
-        <p class="collection-desc-top">الحلول الذكية المخصصة للمصانع، المواقع الإنشائية، والمخازن لضمان السلامة ومنع الحوادث.</p>
-    </div>
-
-    <!-- Product 1 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">1. ذكاء المراقبة للمواقع الإنشائية (Construction Sites)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">تأمين المواقع الإنشائية ورصد الالتزام بمعايير السلامة المهنية ومعدات الوقاية الشخصية لحظياً للحد من الحوادث والغرامات.</p>
-                    <ul class="features-list">
-                        <li>رصد خوذة السلامة (Helmet Detection)</li>
-                        <li>التحقق من السترة الواقية (Safety Vest) والقفازات</li>
-                        <li>رصد اقتحام المناطق الخطرة والمحظورة حول المعدات</li>
-                        <li>تنبيهات فورية عند سقوط العمال أو حدوث حرائق</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
+    <div class="container">
+        <div class="header">
+            <h1>كتالوج التنبيهات الأمنية الذكية <span>VEXORA AI</span></h1>
+            <p>عرض تفصيلي شامل لكافة التنبيهات الـ 21 المتاحة بكتالوج المنظومة مجهزة بلقطات شاشة توضيحية عالية الدقة للمشروعات والعملاء.</p>
+            <div class="stats-badge">
+                <span>⚡ 21 تنبيهاً أمنياً ذكياً</span>
+                <span>• 5 فئات رئيسية</span>
+                <span>• دقة رصد لحظية</span>
             </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_construction.jpg" alt="Vexora Sector 1" class="product-img">
+            <div class="pricing-banner">
+                💡 التنبيهات المخصصة للمشروعات الفائقة: <span>من 10,000 إلى 20,000 جنيه مصري</span> / نموذج الذكاء الاصطناعي المخصص
             </div>
         </div>
-    </div>
+<div class="cat-title">السلامة والصحة المهنية ومعدات الوقاية 👷‍♂️ (8 تنبيهات)</div>
+<div class="grid">
 
-    <!-- Product 2 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">2. ذكاء المراقبة للمصانع والمنشآت الصناعية (Factories)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">أتمتة الرقابة الصحية والصناعية داخل خطوط الإنتاج والتحقق من التزام الأفراد باشتراطات النظافة والسلامة المهنية.</p>
-                    <ul class="features-list">
-                        <li>التحقق من ارتداء الكمامات وأغطية الرأس والقفازات</li>
-                        <li>مراقبة النظافة العامة والالتزام بالزي الرسمي للمصنع</li>
-                        <li>تأمين خطوط الإنتاج الساخنة والتحذير من الاقتراب الخطير</li>
-                        <li>رصد الدخان والحرائق الفورية وإرسال تنبيهات الطوارئ</li>
-                    </ul>
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_1.jpg" alt="1. رصد خوذة السلامة (Helmet Detection)">
                 </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>1. رصد خوذة السلامة (Helmet Detection)</span>
+                    </div>
+                    <div class="card-desc">كشف عدم ارتداء خوذة الرأس بالمواقع الإنشائية وتنبيه المشرف فورياً لحماية الأرواح.</div>
+                </div>
             </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_factories.jpg" alt="Vexora Sector 2" class="product-img">
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_2.jpg" alt="2. رصد السترة الواقية (Vest Detection)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>2. رصد السترة الواقية (Vest Detection)</span>
+                    </div>
+                    <div class="card-desc">التحقق من ارتداء السترة الفسفورية المضيئة في بيئات العمل ذات الرؤية المنخفضة.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_3.jpg" alt="3. رصد قفازات العمل (Gloves Detection)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>3. رصد قفازات العمل (Gloves Detection)</span>
+                    </div>
+                    <div class="card-desc">رصد الالتزام بقفازات العمل المخصصة أو القفازات الطبية بالمصانع والمختبرات.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_4.jpg" alt="4. رصد نظارات الحماية (Goggles Detection)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>4. رصد نظارات الحماية (Goggles Detection)</span>
+                    </div>
+                    <div class="card-desc">التأكد من ارتداء نظارات حماية العين أثناء عمليات القطع واللحام والمواد الكيميائية.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_5.jpg" alt="5. رصد حذاء الأمان (Safety Shoes)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>5. رصد حذاء الأمان (Safety Shoes)</span>
+                    </div>
+                    <div class="card-desc">رصد التزام العمال بارتداء أحذية الأمان المقاومة للانزلاق والصدمات.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_6.jpg" alt="6. رصد الكمامات الوقائية (Mask Detection)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>6. رصد الكمامات الوقائية (Mask Detection)</span>
+                    </div>
+                    <div class="card-desc">التأكد من ارتداء الكمامات بالقطاعات الصحية والمستشفيات ومصانع الأغذية.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_7.jpg" alt="7. رصد غطاء الشعر (Hairnet Compliance)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>7. رصد غطاء الشعر (Hairnet Compliance)</span>
+                    </div>
+                    <div class="card-desc">رصد الالتزام بتغطية الشعر في خطوط إنتاج الأغذية والمطابخ والمختبرات.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_8.jpg" alt="8. رصد التدخين (Smoking Detection)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>8. رصد التدخين (Smoking Detection)</span>
+                    </div>
+                    <div class="card-desc">اكتشاف السجائر وشعلة النار بالمستودعات والمناطق المحظورة قابلية الاشتعال.</div>
+                </div>
             </div>
         </div>
-    </div>
+<div class="cat-title">الأمن وحماية المحيط 🔒 (4 تنبيهات)</div>
+<div class="grid">
 
-    <!-- Product 8 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">3. ذكاء المخازن والمنشآت اللوجستية (Warehouses & Logistics)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">حماية البضائع وتأمين العمليات التشغيلية داخل المستودعات مع توفير حماية فائقة للعمال ضد حوادث الآليات.</p>
-                    <ul class="features-list">
-                        <li>تحذير العمال عند اقتراب الرافعات الشوكية (Forklift Proximity Warning)</li>
-                        <li>التحقق من ارتداء الخوذة والسترة العاكسة في مناطق التحميل</li>
-                        <li>رصد التسلل الخارجي ومحاولات سرقة البضائع ليلاً</li>
-                        <li>كشف فوري للدخان والحرائق لحماية المستودعات الاستراتيجية</li>
-                    </ul>
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_9.jpg" alt="9. تسلل الأسوار (Perimeter Intrusion)">
                 </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>9. تسلل الأسوار (Perimeter Intrusion)</span>
+                    </div>
+                    <div class="card-desc">رصد تسلق الأسوار واختراق الحدود الخارجية للمنشأة في أوقات الحظر.</div>
+                </div>
             </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_warehouses.jpg" alt="Vexora Sector 8" class="product-img">
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_10.jpg" alt="10. دخول غير مصرح (Unauthorized Entry)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>10. دخول غير مصرح (Unauthorized Entry)</span>
+                    </div>
+                    <div class="card-desc">كشف دخول الأفراد لغرف الأرشيف، السيرفرات، وخزائن المواد الحساسة.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_11.jpg" alt="11. حركات السرقة (Theft Detection)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>11. حركات السرقة (Theft Detection)</span>
+                    </div>
+                    <div class="card-desc">رصد التقاط الأشياء المريب وإخفاء المنتجات في المتاجر والمستودعات.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_12.jpg" alt="12. أجسام متروكة (Abandoned Baggage)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>12. أجسام متروكة (Abandoned Baggage)</span>
+                    </div>
+                    <div class="card-desc">رصد الحقائب والأجسام المتروكة لفترات طويلة في الأماكن العامة والمطارات.</div>
+                </div>
             </div>
         </div>
-    </div>
+<div class="cat-title">السلامة العامة وإدارة الحشود 👨‍👧‍👦 (4 تنبيهات)</div>
+<div class="grid">
 
-    <!-- Product 11 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">4. جودة وأمان المطاعم والكافيهات (Restaurants & Cafes)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">ضمان أعلى معايير النظافة والجودة داخل المطابخ ومناطق تحضير الطعام لحماية اسمك التجاري وصحة عملائك.</p>
-                    <ul class="features-list">
-                        <li>مراقبة التزام الطهاة بارتداء القفازات وأغطية الرأس الطبية</li>
-                        <li>رصد تعقيم الأيدي وتطبق معايير النظافة والتعقيم بالمطبخ</li>
-                        <li>التحقق من ارتداء زي العمل الرسمي لجميع أفراد الطاقم</li>
-                        <li>رصد الازدحام وسرعة خدمة الزبائن في منطقة الاستقبال</li>
-                    </ul>
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_13.jpg" alt="13. التكدس والازدحام (Crowd Density)">
                 </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>13. التكدس والازدحام (Crowd Density)</span>
+                    </div>
+                    <div class="card-desc">رصد التجمعات الكبيرة والتدافع عند البوابات والممرات وإرسال تحذيرات الإخلاء.</div>
+                </div>
             </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_restaurants.jpg" alt="Vexora Sector 11" class="product-img">
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_14.jpg" alt="14. المشاجرات والعنف (Violence Alert)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>14. المشاجرات والعنف (Violence Alert)</span>
+                    </div>
+                    <div class="card-desc">كشف الشغب والعنف الجسدي والاشتباكات بالصوت والصورة بشكل لحظي.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_15.jpg" alt="15. الركض السريع (Fast Running)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>15. الركض السريع (Fast Running)</span>
+                    </div>
+                    <div class="card-desc">رصد الركض المريب في الممرات الداخلية للمدارس، المستشفيات، والمباني.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_16.jpg" alt="16. طوابير الكاشير الطويلة (Long Queue)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>16. طوابير الكاشير الطويلة (Long Queue)</span>
+                    </div>
+                    <div class="card-desc">التنبيه عند زيادة طابور المحاسبة والخدمة عن 5 أشخاص لفتح مسار خدمة جديد.</div>
+                </div>
             </div>
         </div>
-    </div>
+<div class="cat-title">مراقبة الحوادث والبيئة ⚠️ (3 تنبيهات)</div>
+<div class="grid">
 
-<hr style='border: none; border-top: 1px dashed rgba(34, 211, 238, 0.3); margin: 50px 0;'>
-
-    <div class="collection-header">
-        <h2 class="collection-title">🗂️ المجموعة الثانية: حلول أمن وتأمين المنشآت (Facility Security Solutions)</h2>
-        <p class="collection-desc-top">أنظمة الحماية الذكية وتأمين الأسوار والبوابات للمباني الإدارية، المدارس، الفنادق، والكمبوندات.</p>
-    </div>
-
-    <!-- Product 3 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">5. تأمين المدارس والجامعات والمنشآت التعليمية (Schools & Universities)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">توفير بيئة تعليمية آمنة للطلاب وهيئة التدريس عبر رصد الأنشطة غير المعتادة والتسلل بعد أوقات العمل.</p>
-                    <ul class="features-list">
-                        <li>رصد تسلق الأسوار واقتحام الحرم التعليمي</li>
-                        <li>كشف التجمعات غير الطبيعية والمشاجرات وحالات العنف</li>
-                        <li>رصد الجري السريع والسلوكيات الخطرة في الممرات</li>
-                        <li>إرسال إشعارات فورية لغرفة الأمن بمجرد حدوث الخطر</li>
-                    </ul>
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_17.jpg" alt="17. الأدخنة والحرائق (Fire & Smoke)">
                 </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>17. الأدخنة والحرائق (Fire & Smoke)</span>
+                    </div>
+                    <div class="card-desc">الإنذار المبكر بمجرد ظهور ألسنة لهب أو أدخنة قبل وصولها للمستشعرات العادية.</div>
+                </div>
             </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_schools.jpg" alt="Vexora Sector 3" class="product-img">
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_18.jpg" alt="18. السقوط المفاجئ (Human Fall)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>18. السقوط المفاجئ (Human Fall)</span>
+                    </div>
+                    <div class="card-desc">رصد سقوط المرضى أو العمال على الأرض وإطلاق نداء استغاثة فورية للطوارئ.</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_19.jpg" alt="19. انسكاب السوائل (Liquid Spill)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>19. انسكاب السوائل (Liquid Spill)</span>
+                    </div>
+                    <div class="card-desc">كشف انسكاب السوائل والمواد الخطرة على الأرضيات لمنع انزلاق الأفراد والمصانع.</div>
+                </div>
             </div>
         </div>
-    </div>
+<div class="cat-title">مراقبة العمليات والسلوكيات ⚙️ (2 تنبيهات)</div>
+<div class="grid">
 
-    <!-- Product 4 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">6. تحليلات ورعاية المستشفيات والمنشآت الصحية (Hospitals & Healthcare)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">تحسين جودة الرعاية الطبية وأمان المرضى عبر الرصد التلقائي للحركة والالتزام بالاشتراطات الصحية داخل الغرف والممرات.</p>
-                    <ul class="features-list">
-                        <li>رصد حالات سقوط المرضى أو كبار السن فوراً لتلقي الإسعاف</li>
-                        <li>التحقق من تعقيم الأيدي وارتداء الكمامات للطاقم الطبي</li>
-                        <li>مراقبة تدفق الزوار وتنظيم الازدحام في غرف الطوارئ</li>
-                        <li>التنبيه عند وجود حقائب أو أجسام متروكة لفترة طويلة</li>
-                    </ul>
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_20.jpg" alt="20. تناول طعام بالمناطق (Prohibited Eating)">
                 </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>20. تناول طعام بالمناطق (Prohibited Eating)</span>
+                    </div>
+                    <div class="card-desc">رصد تناول الأطعمة والمشروبات في غير الأماكن المخصصة مثل خطوط الإنتاج المعقمة.</div>
+                </div>
             </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_hospitals.jpg" alt="Vexora Sector 4" class="product-img">
+        
+            <div class="card">
+                <div class="img-box">
+                    <img src="assets/alert_photo_21.jpg" alt="21. استخدام الهاتف المحمول (Mobile Phone Usage)">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <span>21. استخدام الهاتف المحمول (Mobile Phone Usage)</span>
+                    </div>
+                    <div class="card-desc">كشف انشغال العمالة بالجوال أثناء تشغيل الآلات الخطرة أو مواقع الانتباه.</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Product 6 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">7. أمن المباني الإدارية والبنوك (Office Buildings & Banks)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">تأمين المقرات الإدارية وفروع البنوك ومنع الاختراقات الأمنية عبر التحقق من هويات الموظفين والزوار ذكياً.</p>
-                    <ul class="features-list">
-                        <li>منع ظاهرة التتبع (Tailgating) عند بوابات الدخول الإلكترونية</li>
-                        <li>تنبيهات فورية عند دخول أشخاص بعد ساعات العمل الرسمية</li>
-                        <li>رصد المشاجرات والسرقات داخل الفروع الإدارية</li>
-                        <li>إصدار تنبيهات عند بقاء أجسام أو حقائب مجهولة بالمقر</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
-            </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_office_buildings.jpg" alt="Vexora Sector 6" class="product-img">
-            </div>
+        <div class="footer">
+            <p>© 2026 VEXORA Intelligent Security Platform - جميع الحقوق محفوظة</p>
         </div>
     </div>
-
-    <!-- Product 9 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">8. أمن وتأمين الفنادق والمنتجعات السياحية (Hotels & Resorts)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">توفير تجربة إقامة آمنة وفاخرة للنزلاء عبر مراقبة وتأمين الأسوار وحمامات السباحة ذكياً ودون المساس بالخصوصية.</p>
-                    <ul class="features-list">
-                        <li>تأمين محيط الفندق والأسوار الخارجية ورصد التسلل</li>
-                        <li>مراقبة حمامات السباحة ورصد الغرق أو التواجد بعد الساعات المخصصة</li>
-                        <li>التحقق من التزام الموظفين بالزي الرسمي وجودة الخدمة</li>
-                        <li>رصد الحقائب المتروكة في ردهات الفندق الرئيسية</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
-            </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_hotels.jpg" alt="Vexora Sector 9" class="product-img">
-            </div>
-        </div>
-    </div>
-
-    <!-- Product 13 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">9. حماية المتاحف وصالات المعارض (Museums & Exhibitions)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">حماية المقتنيات والمعروضات الأثرية والفنية النادرة من السرقة أو التخريب والاقتراب غير المصرح به.</p>
-                    <ul class="features-list">
-                        <li>رصد تخطي الحواجز الأمنية حول المعروضات الأثرية الفاخرة</li>
-                        <li>تنبيه فوري عند محاولة لمس اللوحات أو التماثيل الفنية</li>
-                        <li>تتبع الحقائب والأجسام المتروكة لفترة طويلة في صالات العرض</li>
-                        <li>مراقبة الازدحام وتنظيم تدفق حشود الزوار في المعارض</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
-            </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_museums.jpg" alt="Vexora Sector 13" class="product-img">
-            </div>
-        </div>
-    </div>
-
-    <!-- Product 15 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">10. أمن وتأمين المجمعات السكنية والكمبوند (Residential Compounds)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">تأمين شامل وذكي للمجمعات السكنية لحماية الملاك والحدائق والأسوار الخارجية ورصد التسلل على مدار الساعة.</p>
-                    <ul class="features-list">
-                        <li>رصد محاولات تسلق الأسوار الخارجية والأسلاك الشائكة (Intrusion)</li>
-                        <li>التعرف الذكي والآلي على لوحات سيارات الملاك لفتح البوابات تلقائياً</li>
-                        <li>تأمين منطقة حمامات السباحة والحدائق ورصد الغرق أو التواجد الليلي</li>
-                        <li>تنبيهات فورية عند رصد تسكع مريب أو سرقة بممرات الفلل والوحدات</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
-            </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_compounds.jpg" alt="Vexora Sector 15" class="product-img">
-            </div>
-        </div>
-    </div>
-
-<hr style='border: none; border-top: 1px dashed rgba(34, 211, 238, 0.3); margin: 50px 0;'>
-
-    <div class="collection-header">
-        <h2 class="collection-title">🗂️ المجموعة الثالثة: تحليلات الفيديو وإدارة المرور (Smart Analytics & Traffic Control)</h2>
-        <p class="collection-desc-top">حلول كشف السرقات، قراءة لوحات السيارات، خرائط الحركة الحرارية، وإدارة المدن الذكية.</p>
-    </div>
-
-    <!-- Product 5 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">11. ذكاء مراقبة المولات والمتاجر التجارية (Malls & Retail)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">تقليل خسائر السرقات وتقديم تحليلات تسويقية دقيقة لسلوك المستهلكين داخل المتاجر والمولات لزيادة المبيعات.</p>
-                    <ul class="features-list">
-                        <li>رصد السرقات المنظمة وسلوكيات الاحتيال للمتسوقين</li>
-                        <li>خرائط حرارية (Heatmaps) لتحديد مسارات ومناطق اهتمام الزوار</li>
-                        <li>رصد الحقائب المتروكة والاشتباه الأمني الفوري</li>
-                        <li>التحذير من المشاجرات وحالات الشغب والازدحام</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
-            </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_malls.jpg" alt="Vexora Sector 5" class="product-img">
-            </div>
-        </div>
-    </div>
-
-    <!-- Product 7 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">12. أمن المطارات ومحطات المسافرين (Airports & Stations)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">منظومة أمنية متقدمة لتأمين المنافذ والمطارات ومحطات القطار الكبرى ضد التهديدات الأمنية وتكدس المسافرين.</p>
-                    <ul class="features-list">
-                        <li>كشف الأجسام والحقائب المتروكة بدقة فائقة في صالات السفر</li>
-                        <li>رصد تسلق الأسوار واقتحام الممرات والمهابط المحظورة</li>
-                        <li>التنبيه التلقائي عند الازدحام الشديد وتوجيه المسافرين</li>
-                        <li>رصد التجمعات وحالات الشغب والعنف فور حدوثها</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
-            </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_airports.jpg" alt="Vexora Sector 7" class="product-img">
-            </div>
-        </div>
-    </div>
-
-    <!-- Product 10 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">13. أتمتة الهايبر ماركت وسوبر ماركت (Hypermarkets)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">تحسين تجربة التسوق اليومي عبر تقليل فترات الانتظار ومنع الخسائر المباشرة الناتجة عن السرقات والحوادث.</p>
-                    <ul class="features-list">
-                        <li>رصد السرقات وإخفاء المنتجات داخل الممرات تلقائياً</li>
-                        <li>التنبيه الفوري عند ازدحام وتكدس الطوابير عند الكاشير لتشغيل بوابات إضافية</li>
-                        <li>رصد انسكاب السوائل والمواد على الأرض لتجنب انزلاق العملاء</li>
-                        <li>تأمين مخازن التبريد ورصد درجات الحرارة والحرائق</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
-            </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_supermarkets.jpg" alt="Vexora Sector 10" class="product-img">
-            </div>
-        </div>
-    </div>
-
-    <!-- Product 12 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">14. إدارة مواقف السيارات الذكية (Smart Parking Lots)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">حلول مؤتمتة بالكامل لإدارة وتنظيم ساحات ومواقف السيارات وتأمين المركبات ضد السرقات والحرائق.</p>
-                    <ul class="features-list">
-                        <li>التعرف الذكي على لوحات السيارات وحروفها (LPR) بدقة 99.4%</li>
-                        <li>فتح البوابات أوتوماتيكياً للسيارات المصرح لها وسيارات الملاك</li>
-                        <li>رصد حالات التسكع المريب والسرقة حول السيارات المتوقفة</li>
-                        <li>التنبيه الفوري عند حدوث ماس كهربائي أو حريق بالمركبات</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
-            </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_parking.jpg" alt="Vexora Sector 12" class="product-img">
-            </div>
-        </div>
-    </div>
-
-    <!-- Product 14 -->
-    <div class="product-card">
-        <div class="product-grid">
-            <div class="product-info">
-                <div>
-                    <h3 class="product-name">15. شوارع ومدن ذكية (Smart Cities & Streets)</h3>
-                    <div class="product-price">السعر: يتم التحديد حسب متطلبات الموقع وحجم الكاميرات</div>
-                    <p class="product-desc">إدارة الحركة المرورية ورصد الجريمة وتخريب الممتلكات العامة لضمان أمان الشوارع وسلامة المواطنين.</p>
-                    <ul class="features-list">
-                        <li>رصد الازدحام المروري، الحوادث، والتوقف المفاجئ في الشوارع</li>
-                        <li>التنبيه التلقائي عند رصد تخريب الممتلكات العامة أو الجرافيتي</li>
-                        <li>رصد التجمعات غير الطبيعية وحالات العنف أو الشغب بالشوارع</li>
-                        <li>إحصائيات ذكية لأحجام المرور وأنواع المركبات والسرعات</li>
-                    </ul>
-                </div>
-                <a href="https://www.vexorame.com/#sectors-section" class="product-link">طلب عرض سعر وتفاصيل النشاط ←</a>
-            </div>
-            <div class="product-image-container">
-                <img src="d:/Ai/social/assets/sec_smart_cities.jpg" alt="Vexora Sector 14" class="product-img">
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        جميع الحقوق محفوظة لشركة فيكسورا &copy; 2026. تواصل معنا لحجز الديمو عبر الموقع vexorame.com
-    </div>
-
 </body>
 </html>
