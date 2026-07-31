@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=4.0.0">
+    <link rel="stylesheet" href="style.css?v=3.0.0">
 </head>
 <body class="theme-vexora">
 
@@ -31,10 +31,13 @@
 
             <!-- Middle: Navigation Links -->
             <nav class="nav-links">
+                <a href="#implementation-steps" class="nav-link">خطوات التنفيذ</a>
                 <a href="#about" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
                 <a href="#sectors-section" class="nav-link" data-i18n="nav_solutions">التنبيهات الذكية</a>
-                <a href="#products-section" class="nav-link" data-i18n="nav_products">المنتجات والأنظمة</a>
-                <a href="#dashboard-section" class="nav-link" data-i18n="nav_dashboard">لوحة التحكم</a>
+                
+                
+                
+                
                 <a href="#demo-section" class="nav-link" data-i18n="nav_contact">اتصل بنا</a>
                 <a href="https://beyout-ochre.vercel.app" class="nav-link link-external"><span data-i18n="nav_to_beyout">بيوت للمنازل الذكية (B2C)</span> →</a>
             </nav>
@@ -75,9 +78,9 @@
     </section>
 
     <!-- 6 Sectors Section -->
-        <!-- 5 Alert Categories Section (26 Alerts) -->
+        <!-- 5 Alert Categories Section (21 Alerts) -->
         <!-- 5 Major Alert Categories - Full Vertical Stacked Layout (26 Detailed Alerts) -->
-        <!-- 5 Major Alert Categories - Full Vertical Stacked Layout (26 Unique Screenshots) -->
+        <!-- 5 Major Alert Categories - Full Vertical Stacked Layout (21 Unique Screenshots) -->
         <!-- Vexora AI Products & Enterprise Solutions Section -->
         <!-- Vexora AI Products & Enterprise Solutions Section -->
     
@@ -86,21 +89,23 @@
     
 
 
-    <section class="sectors-section" id="sectors-section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="badge-tag glow-tag" data-i18n="catalog_badge">فئات التنبيهات الخمس الكبرى لنظام فيكسورا</span>
-                    <h2 data-i18n="catalog_title">كتالوج التنبيهات الذكية (21 تنبيهاً أمنياً بالصور)</h2>
-                    <p class="section-desc" data-i18n="catalog_desc">استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.</p>
-                </div>
+    <section class="packages-section-wrapper" id="sectors-section">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 60px;">
+                <span class="section-subtitle"><span data-i18n="catalog_title">كتالوج التنبيهات الذكية (21 تنبيهاً أمنياً بالصور)</span></span>
+                <h2 class="section-title"><span data-i18n="catalog_badge">فئات التنبيهات الخمس الكبرى لنظام فيكسورا</span></h2>
+                <p class="section-desc max-w-600"><span data-i18n="catalog_desc">استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.</span></p>
+            </div>
+
+            <div class="categories-stacked-wrapper">
 
                 <!-- CATEGORY 1 -->
                 <div class="category-block-vertical glass-card">
                     <div class="cat-block-header">
                         <div class="cat-header-info">
                             <span class="cat-num-pill" data-i18n="cat_pill_1">الفئة الأولى 👷‍♂️</span>
-                            <h2 data-i18n="cat_title_1">السلامة والصحة المهنية ومعدات الوقاية (PPE)</h2>
-                            <p data-i18n="cat_sub_1">تستهدف هذه الفئة حماية الأرواح، وتأمين بيئة العمل، والتزام طاقم العمل بالمعايير الوقائية والصحية.</p>
+                            <h2 data-i18n="cat_title_1">السلامة والصحة المهنية</h2>
+                            <p><span data-i18n="cat_sub_1">تستهدف هذه الفئة حماية الأرواح، وتأمين بيئة العمل، والتزام طاقم العمل بالمعايير الوقائية والصحية.</span></p>
                         </div>
                     </div>
                     
@@ -108,9 +113,9 @@
                         <!-- Alert 1 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_1.jpg?v=4.0.0" alt="Helmet Detection">
+                                <img src="assets/alert_photo_1.jpg?v=3.0.0" alt="Helmet Detection">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 35%; width: 30%; height: 35%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_alert_1">لم يتم ارتداء الخوذة! ⚠️</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_helmet">لم يتم ارتداء الخوذة! ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -122,9 +127,9 @@
                         <!-- Alert 2 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_2.jpg?v=4.0.0" alt="Vest Detection">
+                                <img src="assets/alert_photo_2.jpg?v=3.0.0" alt="Vest Detection">
                                 <div class="ai-box-overlay success-box-ai" style="top: 25%; left: 30%; width: 40%; height: 50%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_alert_2">السترة: متوافق ✅</span>
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_vest">السترة: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -136,9 +141,9 @@
                         <!-- Alert 3 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_3.jpg?v=4.0.0" alt="Gloves Detection">
+                                <img src="assets/alert_photo_3.jpg?v=3.0.0" alt="Gloves Detection">
                                 <div class="ai-box-overlay success-box-ai" style="top: 35%; left: 20%; width: 60%; height: 45%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_alert_3">القفازات: متوافق ✅</span>
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_gloves">القفازات: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -150,9 +155,9 @@
                         <!-- Alert 4 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_4.jpg?v=4.0.0" alt="Goggles Detection">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 20%; left: 35%; width: 30%; height: 30%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_4">نظارات: غير متوافق! ⚠️</span>
+                                <img src="assets/alert_photo_4.jpg?v=3.0.0" alt="Goggles Detection">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 15%; left: 40%; width: 25%; height: 25%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_goggles">النظارة: غير متوافق ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -164,9 +169,9 @@
                         <!-- Alert 5 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_5.jpg?v=4.0.0" alt="Safety Shoes">
-                                <div class="ai-box-overlay success-box-ai" style="top: 60%; left: 30%; width: 40%; height: 30%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_alert_5">حذاء أمان: متوافق ✅</span>
+                                <img src="assets/alert_photo_5.jpg?v=3.0.0" alt="Safety Shoes">
+                                <div class="ai-box-overlay success-box-ai" style="top: 60%; left: 30%; width: 40%; height: 35%;">
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_shoes">حذاء الأمان: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
@@ -178,13 +183,13 @@
                         <!-- Alert 6 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_6.jpg?v=4.0.0" alt="Mask Detection">
-                                <div class="ai-box-overlay success-box-ai" style="top: 25%; left: 35%; width: 30%; height: 35%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_alert_6">الكمامة: متوافق ✅</span>
+                                <img src="assets/alert_photo_6.jpg?v=3.0.0" alt="Mask Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 20%; left: 35%; width: 30%; height: 35%;">
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_mask">الكمامة: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_6">6. رصد الكمامات الوقائية</span></h4>
+                                <h4><span data-i18n="title_alert_6">6. الكمامات الوقائية</span></h4>
                                 <p data-i18n="desc_alert_6">التأكد من ارتداء الكمامات بالقطاعات الصحية والمستشفيات ومصانع الأغذية.</p>
                             </div>
                         </div>
@@ -192,28 +197,29 @@
                         <!-- Alert 7 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_7.jpg?v=4.0.0" alt="Hairnet Compliance">
-                                <div class="ai-box-overlay success-box-ai" style="top: 15%; left: 30%; width: 40%; height: 30%;">
-                                    <span class="ai-tag-badge success-tag" data-i18n="tag_alert_7">غطاء الشعر: متوافق ✅</span>
+                                <img src="assets/alert_photo_7.jpg?v=3.0.0" alt="Hairnet Detection">
+                                <div class="ai-box-overlay success-box-ai" style="top: 10%; left: 35%; width: 30%; height: 25%;">
+                                    <span class="ai-tag-badge success-tag" data-i18n="tag_hairnet">غطاء الشعر: متوافق ✅</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_7">7. رصد غطاء الشعر</span></h4>
+                                <h4><span data-i18n="title_alert_7">7. غطاء الشعر</span></h4>
                                 <p data-i18n="desc_alert_7">رصد الالتزام بتغطية الشعر في خطوط إنتاج الأغذية والمطابخ والمختبرات.</p>
                             </div>
                         </div>
 
-                        <!-- Alert 8 -->
+
+                        <!-- Alert 28 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_8.jpg?v=4.0.0" alt="Smoking Detection">
+                                <img src="assets/alert_photo_28.jpg?v=3.0.0" alt="Smoking Detection">
                                 <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 30%; width: 40%; height: 40%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_alert_8">رصد تدخين بـ منطقة محظورة 🚬</span>
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_alert_28">رصد تدخين بـ منطقة محظورة 🚬</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_8">8. رصد التدخين</span></h4>
-                                <p data-i18n="desc_alert_8">اكتشاف السجائر وشعلة النار بالمستودعات والمناطق المحظورة قابلية الاشتعال.</p>
+                                <h4><span data-i18n="title_alert_28">28. رصد التدخين</span> </h4>
+                                <p data-i18n="desc_alert_28">اكتشاف السجائر وشعلة النار بالمستودعات والمناطق المحظورة قابلية الاشتعال.</p>
                             </div>
                         </div>
                     </div>
@@ -224,67 +230,70 @@
                     <div class="cat-block-header">
                         <div class="cat-header-info">
                             <span class="cat-num-pill" data-i18n="cat_pill_2">الفئة الثانية 🔒</span>
-                            <h2 data-i18n="cat_title_2">الأمن وحماية المحيط والحدود الخارجية</h2>
-                            <p data-i18n="cat_sub_2">مخصصة لحماية الممتلكات والمنشآت من الاختراق، والسرقة، والتهديدات الخارجية.</p>
+                            <h2 data-i18n="cat_title_2">الأمن والحماية</h2>
+                            <p><span data-i18n="cat_sub_2">مخصصة لحماية الممتلكات والمنشآت من الاختراق، والسرقة، والتهديدات الخارجية.</span></p>
                         </div>
                     </div>
                     
                     <div class="alerts-items-grid">
-                        <!-- Alert 9 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_9.jpg?v=4.0.0" alt="Perimeter Intrusion">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 20%; left: 25%; width: 50%; height: 55%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_alert_9">تنبيه: اختراق محيط أمني! 🚨</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_9">9. تسلل الأسوار واختراق المحيط</span></h4>
-                                <p data-i18n="desc_alert_9">رصد تسلق الأسوار واختراق الحدود الخارجية للمنشأة في أوقات الحظر.</p>
-                            </div>
-                        </div>
-
                         <!-- Alert 10 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_10.jpg?v=4.0.0" alt="Unauthorized Entry">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 20%; left: 30%; width: 40%; height: 50%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_alert_10">دخول غطاء غير مصرح! ⛔</span>
+                                <img src="assets/alert_photo_10.jpg?v=3.0.0" alt="Perimeter Intrusion">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 30%; left: 40%; width: 30%; height: 50%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_intrusion">اختراق السياج الخارجي 🚨</span>
                                 </div>
+                                <div class="ai-perimeter-line"></div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_10">10. الدخول غير المصرح به</span></h4>
-                                <p data-i18n="desc_alert_10">كشف دخول الأفراد لغرف الأرشيف، السيرفرات، وخزائن المواد الحساسة.</p>
+                                <h4><span data-i18n="title_alert_10">10. تسلل الأفراد والأسوار</span></h4>
+                                <p data-i18n="desc_alert_10">رصد تسلق الأسوار واختراق الحدود الخارجية للمنشأة في أوقات الحظر.</p>
                             </div>
                         </div>
 
                         <!-- Alert 11 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_11.jpg?v=4.0.0" alt="Theft Detection">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 35%; left: 25%; width: 50%; height: 45%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_alert_11">رصد حركات سرقة مريبة 🚨</span>
+                                <img src="assets/alert_photo_11.jpg?v=3.0.0" alt="Unauthorized Entry">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 35%; width: 30%; height: 55%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_unauthorized">منطقة غير مصرح بها ⛔</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_11">11. رصد حركات السرقة</span></h4>
-                                <p data-i18n="desc_alert_11">رصد التقاط الأشياء المريب وإخفاء المنتجات في المتاجر والمستودعات.</p>
+                                <h4><span data-i18n="title_alert_11">11. دخول مناطق غير مصرح بها</span></h4>
+                                <p data-i18n="desc_alert_11">كشف دخول الأفراد لغرف الأرشيف، السيرفرات، وخزائن المواد الحساسة.</p>
                             </div>
                         </div>
 
                         <!-- Alert 12 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_12.jpg?v=4.0.0" alt="Abandoned Objects">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 40%; left: 35%; width: 30%; height: 35%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_12">حقيبة متروكة (محيط أمني) ⚠️</span>
+                                <img src="assets/alert_photo_12.jpg?v=3.0.0" alt="Theft Detection">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 35%; left: 25%; width: 45%; height: 45%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_theft">حركة سرقة مريبة 🚨</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_12">12. الأمتعة المتروكة</span></h4>
-                                <p data-i18n="desc_alert_12">رصد الحقائب والأجسام المتروكة لفترات طويلة في الأماكن العامة والمطارات.</p>
+                                <h4><span data-i18n="title_alert_12">12. حركات السرقة</span></h4>
+                                <p data-i18n="desc_alert_12">رصد التقاط الأشياء المريب وإخفاء المنتجات في المتاجر والمستودعات.</p>
                             </div>
                         </div>
+
+                        <!-- Alert 13 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_13.jpg?v=3.0.0" alt="Abandoned Objects">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 55%; left: 40%; width: 25%; height: 30%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_baggage">حقيبة متروكة ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_13">13. الأجسام المتروكة</span></h4>
+                                <p data-i18n="desc_alert_13">رصد الحقائب والأجسام المتروكة لفترات طويلة في الأماكن العامة والمطارات.</p>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -294,64 +303,64 @@
                         <div class="cat-header-info">
                             <span class="cat-num-pill" data-i18n="cat_pill_3">الفئة الثالثة 👨‍👧‍👦</span>
                             <h2 data-i18n="cat_title_3">السلامة العامة وإدارة الحشود</h2>
-                            <p data-i18n="cat_sub_3">مخصصة للسيطرة على الأماكن العامة والممرات وتجنب الأزمات البشرية والتدافع.</p>
+                            <p><span data-i18n="cat_sub_3">مخصصة للسيطرة على الأماكن العامة والممرات وتجنب الأزمات البشرية والتدافع.</span></p>
                         </div>
                     </div>
                     
                     <div class="alerts-items-grid">
-                        <!-- Alert 13 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_13.jpg?v=4.0.0" alt="Crowd Density">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 20%; left: 15%; width: 70%; height: 60%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_13">تكدس وازدحام شديد ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_13">13. التكدس والازدحام</span></h4>
-                                <p data-i18n="desc_alert_13">رصد التجمعات الكبيرة والتدافع عند البوابات والممرات وإرسال تحذيرات الإخلاء.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 14 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_14.jpg?v=4.0.0" alt="Violence Alert">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 25%; width: 50%; height: 50%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_alert_14">رصد مشاجرة واشتباك 🚨</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_14">14. المشاجرات والعنف</span></h4>
-                                <p data-i18n="desc_alert_14">كشف الشغب والعنف الجسدي والاشتباكات بالصوت والصورة بشكل لحظي.</p>
-                            </div>
-                        </div>
-
-                        <!-- Alert 15 -->
-                        <div class="alert-item-card glass-card">
-                            <div class="alert-img-frame">
-                                <img src="assets/alert_photo_15.jpg?v=4.0.0" alt="Fast Running">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_15">رصد ركض سريع مريب ⚠️</span>
-                                </div>
-                            </div>
-                            <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_15">15. الركض السريع</span></h4>
-                                <p data-i18n="desc_alert_15">رصد الركض المريب في الممرات الداخلية للمدارس، المستشفيات، والمباني.</p>
-                            </div>
-                        </div>
-
                         <!-- Alert 16 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_16.jpg?v=4.0.0" alt="Long Checkout Queue">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 35%; left: 15%; width: 70%; height: 50%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_16">طابور طويل وازدحام الخدمة ⏳</span>
+                                <img src="assets/alert_photo_16.jpg?v=3.0.0" alt="Crowd Density">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 20%; left: 15%; width: 70%; height: 60%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_crowd">تكدس وازدحام شديد ⚠️</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_16">16. طوابير الكاشير الطويلة</span></h4>
-                                <p data-i18n="desc_alert_16">التنبيه عند زيادة طابور المحاسبة والخدمة عن 5 أشخاص لفتح مسار خدمة جديد.</p>
+                                <h4><span data-i18n="title_alert_16">16. التكدس والازدحام</span></h4>
+                                <p data-i18n="desc_alert_16">رصد التجمعات الكبيرة والتدافع عند البوابات والممرات وإرسال تحذيرات الإخلاء.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 17 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_17.jpg?v=3.0.0" alt="Violence Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 25%; left: 25%; width: 50%; height: 50%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_violence">رصد مشاجرة واشتباك 🚨</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_17">17. المشاجرات والعنف</span></h4>
+                                <p data-i18n="desc_alert_17">كشف الشغب والعنف الجسدي والاشتباكات بالصوت والصورة بشكل لحظي.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 18 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_18.jpg?v=3.0.0" alt="Running in Hallway">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 30%; left: 30%; width: 40%; height: 45%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_running">رصد ركض سريع مريب ⚠️</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_18">18. الركض السريع</span></h4>
+                                <p data-i18n="desc_alert_18">رصد الركض المريب في الممرات الداخلية للمدارس، المستشفيات، والمباني.</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert 30 -->
+                        <div class="alert-item-card glass-card">
+                            <div class="alert-img-frame">
+                                <img src="assets/alert_photo_30.jpg?v=3.0.0" alt="Long Checkout Queue">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 35%; left: 15%; width: 70%; height: 50%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_30">طابور طويل وازدحام الخدمة ⏳</span>
+                                </div>
+                            </div>
+                            <div class="alert-item-info">
+                                <h4><span data-i18n="title_alert_30">30. طوابير الكاشير الطويلة</span> </h4>
+                                <p data-i18n="desc_alert_30">التنبيه عند زيادة طابور المحاسبة والخدمة عن 5 أشخاص لفتح مسار خدمة جديد.</p>
                             </div>
                         </div>
                     </div>
@@ -362,53 +371,54 @@
                     <div class="cat-block-header">
                         <div class="cat-header-info">
                             <span class="cat-num-pill" data-i18n="cat_pill_4">الفئة الرابعة ⚠️</span>
-                            <h2 data-i18n="cat_title_4">مراقبة الحوادث والبيئة الطارئة</h2>
-                            <p data-i18n="cat_sub_4">فئة الإنذار المبكر للأزمات البيئية أو الحوادث المفاجئة التي تتطلب تدخلاً عاجلاً.</p>
+                            <h2 data-i18n="cat_title_4">مراقبة الحوادث والبيئة</h2>
+                            <p><span data-i18n="cat_sub_4">فئة الإنذار المبكر للأزمات البيئية أو الحوادث المفاجئة التي تتطلب تدخلاً عاجلاً.</span></p>
                         </div>
                     </div>
                     
                     <div class="alerts-items-grid">
-                        <!-- Alert 17 -->
+                        <!-- Alert 20 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_17.jpg?v=4.0.0" alt="Smoke & Fire Alert">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 20%; left: 20%; width: 60%; height: 60%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_alert_17">إنذار حريق ودخان مبكر! 🔥</span>
+                                <img src="assets/alert_photo_20.jpg?v=3.0.0" alt="Smoke & Fire Alert">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 15%; left: 15%; width: 70%; height: 70%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_fire">إنذار مبكر حريق ودخان 🔥</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_17">17. الأدخنة والحرائق</span></h4>
-                                <p data-i18n="desc_alert_17">الإنذار المبكر بمجرد ظهور ألسنة لهب أو أدخنة قبل وصولها للمستشعرات العادية.</p>
+                                <h4><span data-i18n="title_alert_20">20. الأدخنة والحرائق</span></h4>
+                                <p data-i18n="desc_alert_20">الإنذار المبكر بمجرد ظهور ألسنة لهب أو أدخنة قبل وصولها للمستشعرات العادية.</p>
                             </div>
                         </div>
 
-                        <!-- Alert 18 -->
+                        <!-- Alert 21 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_18.jpg?v=4.0.0" alt="Sudden Human Fall">
-                                <div class="ai-box-overlay danger-box-ai" style="top: 40%; left: 20%; width: 60%; height: 40%;">
-                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_alert_18">رصد سقوط مفاجئ للإنسان 🚑</span>
+                                <img src="assets/alert_photo_21.jpg?v=3.0.0" alt="Patient Fall">
+                                <div class="ai-box-overlay danger-box-ai" style="top: 50%; left: 30%; width: 45%; height: 40%;">
+                                    <span class="ai-tag-badge danger-tag" data-i18n="tag_fall">رصد سقوط مفاجئ 🚑</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_18">18. السقوط المفاجئ</span></h4>
-                                <p data-i18n="desc_alert_18">رصد سقوط المرضى أو العمال على الأرض وإطلاق نداء استغاثة فورية للطوارئ.</p>
+                                <h4><span data-i18n="title_alert_21">21. السقوط المفاجئ</span></h4>
+                                <p data-i18n="desc_alert_21">رصد سقوط المرضى أو العمال على الأرض وإطلاق نداء استغاثة فورية للطوارئ.</p>
                             </div>
                         </div>
 
-                        <!-- Alert 19 -->
+                        <!-- Alert 22 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_19.jpg?v=4.0.0" alt="Liquid Spill">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 45%; left: 25%; width: 50%; height: 40%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_19">انسكاب سوائل على الأرض 💧</span>
+                                <img src="assets/alert_photo_22.jpg?v=3.0.0" alt="Liquid Spill">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 60%; left: 25%; width: 50%; height: 30%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_spill">انسكاب سوائل على الأرض 💧</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_19">19. انسكاب السوائل</span></h4>
-                                <p data-i18n="desc_alert_19">كشف انسكاب السوائل والمواد الخطرة على الأرضيات لمنع انزلاق الأفراد والمصانع.</p>
+                                <h4><span data-i18n="title_alert_22">22. انسكاب السوائل</span></h4>
+                                <p data-i18n="desc_alert_22">كشف انسكاب السوائل والمواد الخطرة على الأرضيات لمنع انزلاق الأفراد والمصانع.</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -417,100 +427,81 @@
                     <div class="cat-block-header">
                         <div class="cat-header-info">
                             <span class="cat-num-pill" data-i18n="cat_pill_5">الفئة الخامسة ⚙️</span>
-                            <h2 data-i18n="cat_title_5">مراقبة العمليات والسلوكيات التشغيلية</h2>
-                            <p data-i18n="cat_sub_5">تختص بضمان سير العمليات اليومية بأمان ومنع السلوكيات الخاطئة بداخل المنشأة.</p>
+                            <h2 data-i18n="cat_title_5">مراقبة العمليات والسلوكيات</h2>
+                            <p><span data-i18n="cat_sub_5">تختص بضمان سير العمليات اليومية بأمان ومنع السلوكيات الخاطئة بداخل المنشأة.</span></p>
                         </div>
                     </div>
                     
                     <div class="alerts-items-grid">
-                        <!-- Alert 20 -->
+                        <!-- Alert 24 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_20.jpg?v=4.0.0" alt="Prohibited Eating">
-                                <div class="ai-box-overlay warning-box-ai" style="top: 25%; left: 30%; width: 40%; height: 45%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_20">تناول طعام بالمنطقة المعقمة 🚫</span>
+                                <img src="assets/alert_photo_24.jpg?v=3.0.0" alt="Eating Alert">
+                                <div class="ai-box-overlay warning-box-ai" style="top: 25%; left: 35%; width: 30%; height: 40%;">
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_eating">مخالفة تناول طعام 🚫</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_20">20. تناول طعام بالمناطق المحظورة</span></h4>
-                                <p data-i18n="desc_alert_20">رصد تناول الأطعمة والمشروبات في غير الأماكن المخصصة مثل خطوط الإنتاج المعقمة.</p>
+                                <h4><span data-i18n="title_alert_24">24. تناول الطعام</span></h4>
+                                <p data-i18n="desc_alert_24">رصد تناول الأطعمة والمشروبات في غير الأماكن المخصصة مثل خطوط الإنتاج المعقمة.</p>
                             </div>
                         </div>
 
-                        <!-- Alert 21 -->
+
+                        <!-- Alert 31 -->
                         <div class="alert-item-card glass-card">
                             <div class="alert-img-frame">
-                                <img src="assets/alert_photo_21.jpg?v=4.0.0" alt="Mobile Phone Usage">
+                                <img src="assets/alert_photo_31.jpg?v=3.0.0" alt="Mobile Phone Usage">
                                 <div class="ai-box-overlay warning-box-ai" style="top: 20%; left: 30%; width: 40%; height: 45%;">
-                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_21">استخدام الهاتف أثناء العمل 📱</span>
+                                    <span class="ai-tag-badge warning-tag" data-i18n="tag_alert_31">استخدام الهاتف أثناء العمل 📱</span>
                                 </div>
                             </div>
                             <div class="alert-item-info">
-                                <h4><span data-i18n="title_alert_21">21. استخدام الهاتف المحمول</span></h4>
-                                <p data-i18n="desc_alert_21">كشف انشغال العمالة بالجوال أثناء تشغيل الآلات الخطرة أو مواقع الانتباه.</p>
+                                <h4><span data-i18n="title_alert_31">31. استخدام الهاتف المحمول</span> </h4>
+                                <p data-i18n="desc_alert_31">كشف انشغال العمالة بالجوال أثناء تشغيل الآلات الخطرة أو مواقع الانتباه.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-            </div>
-        </section>
-
-<section class="products-section-wrapper" id="products-section" style="padding: 80px 0; background: rgba(255, 255, 255, 0.015); border-top: 1px solid rgba(255, 255, 255, 0.05);">
-        <div class="container">
-            <div class="section-header text-center" style="margin-bottom: 50px;">
-                <span class="section-subtitle" data-i18n="products_subtitle">حلول ومنتجات فيكسورا</span>
-                <h2 class="section-title" data-i18n="products_title">منتجات الأنظمة وسيرفرات الذكاء الاصطناعي</h2>
-                <p class="section-desc max-w-600" data-i18n="products_desc">اختر الباقة والمنتج المناسب لبنية كاميرات مراقبة منشأتك مع تركيب ومكفول بـ 15 يوماً تجربة مجانية.</p>
-            </div>
-
-            <div class="products-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; max-w-1000; margin: 0 auto;">
-                
-                <!-- Product 1: AI Server -->
-                <div class="product-card glass-card" style="padding: 32px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
-                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #22d3ee; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;" data-i18n="prod_1_badge">معالجة محلية</div>
-                    <div class="prod-icon" style="font-size: 40px; margin-bottom: 16px;">🖥️</div>
-                    <h3 data-i18n="prod_1_title" style="color: #fff; font-size: 22px; margin: 0 0 10px 0;">السيرفر المحلي الذكي</h3>
-                    <p data-i18n="prod_1_desc" style="color: #9ca3af; font-size: 13.5px; margin: 0 0 20px 0; line-height: 1.6;">سيرفر معالجة محلية يدعم حتى 6 كاميرات مراقبة بدون نقل بيانات للسحابة لضمان السرية والسرعة.</p>
-                    
-                    <div class="prod-price" style="margin-top: auto; padding-top: 18px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
-                        <span style="font-size: 26px; font-weight: 800; color: #ffd60a;" data-i18n="prod_1_price">20,000 جنيه</span>
-                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_1_fee">تدفع مرة واحدة لشراء وتملّك السيرفر</span>
-                    </div>
-                    <button class="package-cta" style="margin-top: 20px;" onclick="selectProduct('السيرفر المحلي')" data-i18n="prod_1_btn">طلب السيرفر الآن</button>
-                </div>
-
-                <!-- Product 2: AI Subscription -->
-                <div class="product-card glass-card" style="padding: 32px; border-radius: 20px; background: rgba(34, 211, 238, 0.05); border: 1px solid rgba(34, 211, 238, 0.5); display: flex; flex-direction: column; position: relative;">
-                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #ffd60a; color: #000; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;" data-i18n="prod_2_badge">الباقة الأكثر طلباً ⭐</div>
-                    <div class="prod-icon" style="font-size: 40px; margin-bottom: 16px;">📹</div>
-                    <h3 data-i18n="prod_2_title" style="color: #fff; font-size: 22px; margin: 0 0 10px 0;">الاشتراك الشهري للتنبيهات</h3>
-                    <p data-i18n="prod_2_desc" style="color: #9ca3af; font-size: 13.5px; margin: 0 0 20px 0; line-height: 1.6;">تفعيل الذكاء الاصطناعي لكاميرا واحدة ورقم هاتف للتنبيهات الفورية مع الخرائط الحرارية.</p>
-                    
-                    <div class="prod-price" style="margin-top: auto; padding-top: 18px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
-                        <span style="font-size: 26px; font-weight: 800; color: #34c759;" data-i18n="prod_2_price">8,000 جنيه / شهرياً</span>
-                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_2_fee">كل كاميرا إضافية +1,500 ج.م | رقم هاتف +1,000 ج.م</span>
-                    </div>
-                    <button class="package-cta" style="margin-top: 20px; background: #22d3ee; color: #000;" onclick="selectProduct('الاشتراك الشهري للتنبيهات')" data-i18n="prod_2_btn">اشترك الآن (15 يوماً تجربة)</button>
-                </div>
-
-                <!-- Product 3: Custom Alert Setup -->
-                <div class="product-card glass-card" style="padding: 32px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(34, 211, 238, 0.2); display: flex; flex-direction: column; position: relative;">
-                    <div class="prod-badge" style="position: absolute; top: 16px; left: 16px; background: #a855f7; color: #fff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px;" data-i18n="prod_3_badge">تخصيص كامل</div>
-                    <div class="prod-icon" style="font-size: 40px; margin-bottom: 16px;">⚙️</div>
-                    <h3 data-i18n="prod_3_title" style="color: #fff; font-size: 22px; margin: 0 0 10px 0;">التنبيهات المخصصة</h3>
-                    <p data-i18n="prod_3_desc" style="color: #9ca3af; font-size: 13.5px; margin: 0 0 20px 0; line-height: 1.6;">تطوير وتدريب نموذج ذكاء اصطناعي مخصص لسيناريو فريد خاص بنشاطك التجاري.</p>
-                    
-                    <div class="prod-price" style="margin-top: auto; padding-top: 18px; border-top: 1px dashed rgba(255, 255, 255, 0.1);">
-                        <span style="font-size: 26px; font-weight: 800; color: #a855f7;" data-i18n="prod_3_price">5,000 جنيه</span>
-                        <span style="font-size: 11px; color: #9ca3af; display: block;" data-i18n="prod_3_fee">رسوم إعداد وتدريب لمرة واحدة فقط</span>
-                    </div>
-                    <button class="package-cta" style="margin-top: 20px;" onclick="selectProduct('التنبيهات المخصصة')" data-i18n="prod_3_btn">طلب تنبيه مخصص</button>
                 </div>
 
             </div>
         </div>
     </section>
+
+
+    <!-- Implementation Steps Section -->
+    <section class="packages-section-wrapper" id="implementation-steps" style="background: var(--bg-dark); border-top: 1px solid rgba(255,255,255,0.05); padding: 60px 0;">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 50px;">
+                <span class="section-subtitle">خطوات العمل</span>
+                <h2 class="section-title">خطوات التنفيذ والاشتراك</h2>
+                <p class="section-desc max-w-600">نضمن لك تجربة سلسة واختباراً عملياً للنظام قبل تفعيل التعاقد لضمان كفاءة التنبيهات.</p>
+            </div>
+            <div class="packages-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <!-- Step 1 -->
+                <div class="package-card glass-card" style="padding: 30px; text-align: right;">
+                    <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 15px;">1. الزيارة وعرض النظام</h3>
+                    <p style="color: #cbd5e1; line-height: 1.8; font-size: 15px;">الذهاب إلى العميل لعمل عرض (Demo) لرؤية النظام على أرض الواقع، وتحديد عدد الكاميرات المطلوبة وطريقة دفع الاشتراك (شهري أو ربع سنوي).</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="package-card glass-card" style="padding: 30px; text-align: right;">
+                    <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 15px;">2. الإعداد والتجربة المجانية</h3>
+                    <p style="color: #cbd5e1; line-height: 1.8; font-size: 15px;">إعداد سيرفر للعمل على كاميرا واحدة بعدد 3 تنبيهات لفترة 15 يوم، لكي يجرب العميل النظام بشكل فعلي ويتعلم نموذج الذكاء الاصطناعي.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="package-card glass-card" style="padding: 30px; text-align: right;">
+                    <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 15px;">3. تفعيل التعاقد</h3>
+                    <p style="color: #cbd5e1; line-height: 1.8; font-size: 15px;">انتظار قرار العميل بالاستمرار من عدمه، وفي حالة الاستمرار يتم تفعيل العقد الذي تم إبرامه مبدئياً في بداية الـ 15 يوم.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="package-card glass-card" style="padding: 30px; text-align: right;">
+                    <h3 style="color: var(--primary); font-size: 24px; margin-bottom: 15px;">4. التنفيذ المرحلي</h3>
+                    <p style="color: #cbd5e1; line-height: 1.8; font-size: 15px;">في حال كان عدد الكاميرات كبيراً (أكثر من 6 كاميرات مثلاً)، يتم التنسيق لتنفيذ المشروع على مراحل متتالية بالاتفاق مع العميل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     
@@ -526,200 +517,7 @@
         <!-- Real-Time Customer Security Dashboard Section (Authentic Vexora Control Panel Console) -->
         <!-- Real-Time Customer Security Dashboard Section (Exact Match to User's Vexora Dashboard) -->
         <!-- Real-Time Security Operations Center Dashboard Section (Generic Enterprise - NO Client Name) -->
-    <section class="live-dashboard-section" id="dashboard-section" style="padding: 80px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); background: #03060a;">
-        <div class="container">
-            <div class="section-header text-center" style="margin-bottom: 35px;">
-                <span class="section-subtitle" data-i18n="dash_sec_subtitle">شاشة التحكم الحية والتفاعلية (Security Operations Console)</span>
-                <h2 class="section-title" data-i18n="dash_sec_title" style="font-size: 34px; font-weight: 800; margin: 12px 0 16px;">منصة فيكسورا للسلامة الذكية</h2>
-                <p class="section-desc max-w-600" data-i18n="dash_sec_desc" style="color: var(--text-secondary); font-size: 16px;">لوحة تحكم حية ومباشرة تعكس النظام الفعلي المعمول به بالمنشآت مع بث مباشر وسجل التنبيهات الفوري.</p>
-            </div>
-
-            <!-- Main Full Dashboard Outer Window -->
-            <div class="real-dashboard-window glass-card" style="background: #0b0f19; border: 1px solid rgba(34, 211, 238, 0.2); border-radius: 18px; padding: 0; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.8);">
-                
-                <!-- 1. TOP HEADER BAR -->
-                <div class="dash-top-header" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; background: #080b13; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-                    <!-- Left Pill Tools -->
-                    <div class="dash-left-tools" style="display: flex; gap: 12px; align-items: center;">
-                        <button class="pill-btn" onclick="toggleLanguage()" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                            <span id="lang-switch-text-dash">English</span> 🌐
-                        </button>
-                        <button class="theme-icon-btn" style="background: none; border: none; color: #fff; cursor: pointer; font-size: 16px;">☀️</button>
-                        <span class="status-pill-badge" style="background: rgba(52, 199, 89, 0.15); color: #34c759; border: 1px solid rgba(52, 199, 89, 0.3); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px;" data-i18n="dash_status_badge">أمن وتشغيلي 🟢</span>
-                    </div>
-
-                    <!-- Right Brand Header (Generic Enterprise - NO Client Name) -->
-                    <div class="dash-right-brand" style="display: flex; align-items: center; gap: 12px;">
-                        <div class="brand-titles-text" style="text-align: right;">
-                            <h3 style="margin: 0; color: #fff; font-size: 17px; font-weight: 800; font-family: 'Alexandria', sans-serif;" data-i18n="dash_brand_title">الموقع الرئيسي - المنشأة الاستثمارية</h3>
-                            <span style="display: block; font-size: 10px; color: #38bdf8;" data-i18n="dash_brand_sub">منصة التحكم والمراقبة الذكية | فيكسورا</span>
-                        </div>
-                        <div class="brand-avatar-box" style="width: 36px; height: 36px; border-radius: 8px; background: #1e293b; display: flex; align-items: center; justify-content: center; border: 1px solid #38bdf8;">
-                            <span style="color: #38bdf8; font-weight: 800; font-size: 14px;">VX</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. TOP WARNING BANNER -->
-                <div class="dash-license-warning" style="background: rgba(180, 83, 9, 0.25); border-bottom: 1px solid rgba(245, 158, 11, 0.3); color: #fbbf24; padding: 10px 24px; font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
-                    <span data-i18n="dash_license_warning">⚠️ تنبيه: ترخيص تجريبي نشط (15 يوماً تجربة مجانية). النظام يعمل بالطاقة القصوى لحماية المنشأة.</span>
-                </div>
-
-                <!-- 3. THREE-COLUMN DASHBOARD CONTENT GRID -->
-                <div class="dash-content-grid" style="display: grid; grid-template-columns: 320px 260px 1fr; gap: 16px; padding: 20px;">
-                    
-                    <!-- COLUMN 1 (LEFT): STATS & CHARTS -->
-                    <div class="dash-col-left" style="display: flex; flex-direction: column; gap: 16px;">
-                        <!-- Metric 1 & 2 Cards -->
-                        <div class="top-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                            <div class="metric-card-dark glass-card" style="padding: 16px; border-radius: 12px; background: #111625; border: 1px solid rgba(255,255,255,0.06);">
-                                <span style="font-size: 11px; color: #9ca3af; display: block; margin-bottom: 6px;" data-i18n="dash_lbl_alltime">كل الوقت / اليوم</span>
-                                <span style="font-size: 26px; font-weight: 800; color: #fff;">0</span>
-                            </div>
-                            <div class="metric-card-dark glass-card" style="padding: 16px; border-radius: 12px; background: #111625; border: 1px solid rgba(255,255,255,0.06); position: relative;">
-                                <span style="position: absolute; top: 12px; left: 12px; color: #f59e0b; font-size: 14px;">⚠️</span>
-                                <span style="font-size: 11px; color: #9ca3af; display: block; margin-bottom: 6px;" data-i18n="dash_lbl_top_violation">أعلى مخالفة</span>
-                                <span style="font-size: 26px; font-weight: 800; color: #f59e0b;">8</span>
-                            </div>
-                        </div>
-
-                        <!-- Chart Box -->
-                        <div class="chart-card-dark glass-card" style="padding: 18px; border-radius: 14px; background: #111625; border: 1px solid rgba(255,255,255,0.06); flex: 1; display: flex; flex-direction: column;">
-                            <h4 style="margin: 0 0 16px 0; color: #38bdf8; font-size: 13px; font-weight: 700;" data-i18n="dash_chart_title">معدل تكرار المخالفات 📈</h4>
-                            <div class="chart-svg-container" style="flex: 1; display: flex; align-items: flex-end; position: relative; min-height: 140px; padding-bottom: 20px;">
-                                <svg width="100%" height="100%" viewBox="0 0 280 120" preserveAspectRatio="none" style="overflow: visible;">
-                                    <path d="M 0 110 L 40 105 L 80 108 L 120 100 L 160 106 L 200 108 L 240 104 L 280 108" fill="none" stroke="#e11d48" stroke-width="2.5"/>
-                                </svg>
-                                <div style="position: absolute; bottom: 0; left: 0; width: 100%; display: flex; justify-content: space-between; font-size: 9px; color: #64748b;">
-                                    <span>08:45 PM</span>
-                                    <span>10:45 PM</span>
-                                    <span>12:45 AM</span>
-                                    <span>02:45 AM</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- COLUMN 2 (MIDDLE): CAMERA TABS & ENABLED ALERTS -->
-                    <div class="dash-col-middle" style="display: flex; flex-direction: column; gap: 16px;">
-                        <!-- Camera Selector Tabs -->
-                        <div class="cam-tabs-row" style="display: flex; gap: 8px;">
-                            <button class="cam-tab-btn active" id="tab-main-gate" onclick="triggerVexoraScenario('clear')" style="flex: 1; background: #0284c7; color: #fff; border: none; padding: 8px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer;" data-i18n="dash_tab_main"><span data-i18n="table_entry_gate">المدخل الرئيسي</span></button>
-                            <button class="cam-tab-btn" id="tab-top-gate" onclick="triggerVexoraScenario('intruder')" style="flex: 1; background: rgba(255,255,255,0.05); color: #9ca3af; border: 1px solid rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 8px; font-size: 12px; cursor: pointer;" data-i18n="dash_tab_top">المدخل العلوي</button>
-                        </div>
-
-                        <!-- Active Enabled Alerts List Panel -->
-                        <div class="enabled-alerts-panel glass-card" style="padding: 16px; border-radius: 14px; background: #111625; border: 1px solid rgba(255,255,255,0.06); flex: 1; display: flex; flex-direction: column;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                                <h4 style="margin: 0; color: #38bdf8; font-size: 13px;" data-i18n="dash_enabled_alerts_title">التنبيهات المفعّلة</h4>
-                                <span style="font-size: 10px; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 2px 8px; border-radius: 10px;"><span data-i18n="dash_active_count">5/5 مفعلة</span></span>
-                            </div>
-
-                            <div class="alerts-pills-list" style="display: flex; flex-direction: column; gap: 8px;">
-                                <div class="alert-pill-item" style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3); color: #38bdf8; padding: 7px 12px; border-radius: 8px; font-size: 11.5px; font-weight: 600;"><span data-i18n="dash_rule_1">🔹 القفازات الوقائية</span></div>
-                                <div class="alert-pill-item" style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3); color: #38bdf8; padding: 7px 12px; border-radius: 8px; font-size: 11.5px; font-weight: 600;"><span data-i18n="dash_rule_2">🔹 نظارات الحماية</span></div>
-                                <div class="alert-pill-item" style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3); color: #38bdf8; padding: 7px 12px; border-radius: 8px; font-size: 11.5px; font-weight: 600;"><span data-i18n="dash_rule_3">🔹 غطاء الشعر</span></div>
-                                <div class="alert-pill-item" style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3); color: #38bdf8; padding: 7px 12px; border-radius: 8px; font-size: 11.5px; font-weight: 600;"><span data-i18n="dash_rule_4">🔹 النظافة العامة والتعقيم</span></div>
-                                <div class="alert-pill-item" style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3); color: #38bdf8; padding: 7px 12px; border-radius: 8px; font-size: 11.5px; font-weight: 600;"><span data-i18n="dash_rule_5">🔹 الكمامات الوقائية</span></div>
-                            </div>
-
-                            <div style="margin-top: auto; padding-top: 14px; text-align: center;">
-                                <span style="font-size: 11px; color: #34c759; background: rgba(52, 199, 89, 0.1); padding: 4px 12px; border-radius: 12px;" data-i18n="dash_status_badge">أمن وتشغيلي 🟢</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- COLUMN 3 (RIGHT): LIVE CAMERA STREAM MONITOR -->
-                    <div class="dash-col-right" style="display: flex; flex-direction: column; gap: 12px;">
-                        <div class="live-stream-box glass-card" style="background: #000; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; position: relative;">
-                            <!-- Camera Frame Header -->
-                            <div class="cam-frame-header" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; background: rgba(15, 23, 42, 0.85); color: #fff; font-size: 12px;">
-                                <span data-i18n="dash_stream_cam_name">📹 <span data-i18n="table_entry_gate">المدخل الرئيسي</span></span>
-                                <span style="color: #34c759; font-weight: 700; font-size: 11px;" data-i18n="tag_secure_stream">بث آمن ومشفّر 🟢</span>
-                            </div>
-
-                            <!-- Video Stream Image Feed -->
-                            <div class="cam-feed-view" style="position: relative; height: 260px; overflow: hidden;">
-                                <img src="assets/alert_photo_26.jpg?v=4.0.0" id="cam-stream-img" alt="Vexora Live Stream" style="width: 100%; height: 100%; object-fit: cover;">
-                                
-                                <!-- DANGER ZONE Overlay Box from Dashboard Screenshot -->
-                                <div class="camera-detection-box warning-box" id="mock-box-1" style="display: block; top: 40%; left: 30%; width: 50%; height: 45%; border: 2px dashed #f59e0b; position: absolute;">
-                                    <span id="mock-label-1" style="position: absolute; bottom: 4px; right: 4px; background: #f59e0b; color: #000; font-size: 9px; font-weight: bold; padding: 2px 6px; border-radius: 2px;" data-i18n="tag_danger_zone">منطقة خطر ⚠️</span>
-                                </div>
-
-                                <!-- Camera Meta Info Overlay -->
-                                <div style="position: absolute; bottom: 8px; left: 12px; background: rgba(0,0,0,0.7); color: #94a3b8; font-size: 9px; padding: 2px 8px; border-radius: 4px; font-family: monospace;">
-                                    <span data-i18n="dash_stream_meta">كاميرا: 01 | المنفذ: 5000 | الدقة: 640x480</span>
-                                </div>
-                            </div>
-
-                            <!-- Camera Frame Footer -->
-                            <div class="cam-frame-footer" style="padding: 8px 14px; background: #0b0f19; display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; color: #94a3b8;">
-                                <span>👥 <span data-i18n="dash_people_count_lbl">الأشخاص الآن (<span data-i18n="table_entry_gate">المدخل الرئيسي</span>):</span> <strong style="color: #38bdf8;" id="val-people-count">0 شخص</strong></span>
-                                <span style="color: #34c759;" data-i18n="dash_status_badge">أمن وتشغيلي 🟢</span>
-                            </div>
-                        </div>
-
-                        <!-- Live Scenario Simulation Bar inside Dashboard Panel -->
-                        <div class="scenarios-control-row" style="background: #111625; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                            <span style="font-size: 11px; color: #38bdf8; font-weight: 700;" data-i18n="dash_scen_label">🕹️ تجربة سيناريو الرصد:</span>
-                            <button class="mock-btn active" id="btn-scen-clear" onclick="triggerVexoraScenario('clear')" style="font-size: 10px; padding: 4px 8px;" data-i18n="dash_scen_reset">تصفير البث</button>
-                            <button class="mock-btn" id="btn-scen-ppe" onclick="triggerVexoraScenario('ppe')" style="font-size: 10px; padding: 4px 8px;" data-i18n="dash_scen_gloves">⚠️ عدم ارتداء القفازات</button>
-                            <button class="mock-btn" id="btn-scen-intruder" onclick="triggerVexoraScenario('intruder')" style="font-size: 10px; padding: 4px 8px;" data-i18n="dash_scen_intruder">🚨 اختراق البوابة</button>
-                            <button class="mock-btn" id="btn-scen-fire" onclick="triggerVexoraScenario('fire')" style="font-size: 10px; padding: 4px 8px;" data-i18n="dash_scen_fire">🔥 إنذار دخان</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. BOTTOM RECENT VIOLATIONS LOG TABLE (18) -->
-                <div class="dash-bottom-table-section" style="padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); background: #080b13;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-                        <h4 style="margin: 0; color: #fff; font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 6px;">
-                            <span data-i18n="dash_recent_violations_title">سجل المخالفات الحديثة (18)</span> 🕒
-                        </h4>
-                        
-                        <!-- Search & Filter Controls -->
-                        <div class="table-filters-flex" style="display: flex; gap: 10px; align-items: center;">
-                            <input type="text" placeholder="بحث بالمخالفة أو التوقيت أو الكاميرا..." style="background: #111625; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 6px 12px; border-radius: 8px; font-size: 11px; width: 220px;">
-                            <select style="background: #111625; border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; padding: 6px 12px; border-radius: 8px; font-size: 11px;">
-                                <option><span data-i18n="filter_all_cams">كل الكاميرات</span></option>
-                            </select>
-                            <select style="background: #111625; border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; padding: 6px 12px; border-radius: 8px; font-size: 11px;">
-                                <option><span data-i18n="filter_all_violations">جميع أنواع المخالفات</span></option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Log Table -->
-                    <table style="width: 100%; border-collapse: collapse; text-align: right; font-size: 12px;">
-                        <thead>
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); color: #64748b;">
-                                <th style="padding: 10px;" data-i18n="tbl_col_time">الوقت</th>
-                                <th style="padding: 10px;" data-i18n="tbl_col_cam">الكاميرا</th>
-                                <th style="padding: 10px;" data-i18n="tbl_col_type">نوع المخالفة</th>
-                                <th style="padding: 10px;" data-i18n="tbl_col_person">شخص</th>
-                            </tr>
-                        </thead>
-                        <tbody id="dash-log-tbody">
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
-                                <td style="padding: 12px; color: #94a3b8;">PM 10:14:12</td>
-                                <td style="padding: 12px; color: #38bdf8; font-weight: 600;"><span data-i18n="table_entry_gate">المدخل الرئيسي</span></td>
-                                <td style="padding: 12px;">
-                                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-                                        <span style="background: rgba(6, 182, 212, 0.15); color: #06b6d4; border: 1px solid rgba(6, 182, 212, 0.3); padding: 3px 8px; border-radius: 6px; font-size: 10.5px;"><span data-i18n="viol_no_gloves">🛡️ عدم ارتداء القفازات</span></span>
-                                        <span style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); padding: 3px 8px; border-radius: 6px; font-size: 10.5px;"><span data-i18n="viol_no_goggles">👓 عدم ارتداء النظارة</span></span>
-                                        <span style="background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); padding: 3px 8px; border-radius: 6px; font-size: 10.5px;"><span data-i18n="viol_no_mask">😷 عدم ارتداء الكمامة</span></span>
-                                    </div>
-                                </td>
-                                <td style="padding: 12px; color: #fff; font-weight: 700;">1</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    
 
 
     
@@ -896,6 +694,6 @@
     </footer>
 
     <!-- App Script -->
-    <script src="app.js?v=4.0.0"></script>
+    <script src="app.js?v=3.0.0"></script>
 </body>
 </html>
