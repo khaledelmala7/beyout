@@ -1,14 +1,12 @@
-// Beyout Smart Home Application Logic
-const TELEGRAM_CHAT_ID = '8641170921';
-const TELEGRAM_BOT_TOKEN = '8811745328:AAFC-kFEk2jChMzCEYyg2lMyzUa4lFn7BUQ';
+// Vexora AI Security Application Logic
+const TELEGRAM_CHAT_ID = '498398965';
+const TELEGRAM_BOT_TOKEN = '8910847998:AAH-PJb4Rc3w2cflpVcVB08WSbb3Vx-Gtt8';
 let currentLanguage = 'ar';
 let currentFormStep = 1;
-let selectedFormProduct = 'lumora';
-let acTemperature = 22;
+let selectedFormProduct = 'vexora';
 
-// DOMContentLoaded Initializations
 document.addEventListener('DOMContentLoaded', () => {
-    selectedFormProduct = 'lumora';
+    selectedFormProduct = 'vexora';
 
     const dateInput = document.getElementById('demo_date');
     if (dateInput) {
@@ -21,152 +19,129 @@ document.addEventListener('DOMContentLoaded', () => {
         dateInput.value = `${yyyy}-${mm}-${dd}`;
     }
     
-    // Set initial language translations
     setLanguage(currentLanguage);
     updateProgressBar();
 });
 
-// Interactive Simulator functions
-let heroLightOn = true;
-let heroSprinklerOn = false;
+// Interactive Sandbox for Vexora AI Video Analytics
 
-function toggleMockLight() {
-    heroLightOn = !heroLightOn;
-    const roomNode = document.getElementById('hero-living-room');
-    const statusText = document.getElementById('hero-light-status');
-    const btnLight = document.getElementById('btn-hero-light');
+// Interactive Scenarios for Vexora Control Panel Dashboard
+function triggerVexoraScenario(scen) {
+    const streamImg = document.getElementById('cam-stream-img');
+    const mockBox1 = document.getElementById('mock-box-1');
+    const mockBox2 = document.getElementById('mock-box-2');
+    const mockLabel1 = document.getElementById('mock-label-1');
+    const mockLabel2 = document.getElementById('mock-label-2');
+    const feedbackMsg = document.getElementById('sim-feedback-vexora');
+    const logsContainer = document.getElementById('alert-logs');
+    const cpuVal = document.getElementById('val-cpu');
+    const fpsVal = document.getElementById('val-fps');
     
-    if (roomNode && statusText && btnLight) {
-        if (heroLightOn) {
-            roomNode.classList.add('glowing');
-            statusText.textContent = (currentLanguage === 'ar') ? 'نشطة' : 'Active';
-            btnLight.classList.add('active');
-        } else {
-            roomNode.classList.remove('glowing');
-            statusText.textContent = (currentLanguage === 'ar') ? 'منطفئة' : 'Off';
-            btnLight.classList.remove('active');
+    // De-activate all buttons
+    document.querySelectorAll('.simulator-controls-bar .mock-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.cam-channels-list .channel-item').forEach(ch => ch.classList.remove('active'));
+    
+    const time = new Date().toTimeString().split(' ')[0];
+    
+    if (scen === 'clear') {
+        const btn = document.getElementById('btn-scen-clear');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-1');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/sec_construction.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box warning-box'; mockBox1.style.top = '15%'; mockBox1.style.left = '30%'; mockBox1.style.width = '14%'; mockBox1.style.height = '25%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#ffd60a'; mockLabel1.style.color = '#000'; mockLabel1.textContent = 'HELMET: OK ✅'; }
+        if (mockBox2) { mockBox2.style.display = 'none'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '✅ البث يعمل بالوضع الطبيعي المستقر. الكاميرا رصدت الالتزام بالخوذة.';
+        if (cpuVal) cpuVal.textContent = '14%';
+        if (fpsVal) fpsVal.textContent = '30 FPS';
+        
+    } else if (scen === 'ppe') {
+        const btn = document.getElementById('btn-scen-ppe');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-1');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/sec_construction.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box warning-box'; mockBox1.style.top = '15%'; mockBox1.style.left = '30%'; mockBox1.style.width = '14%'; mockBox1.style.height = '25%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#ffd60a'; mockLabel1.style.color = '#000'; mockLabel1.textContent = 'HELMET: OK ✅'; }
+        if (mockBox2) { mockBox2.style.display = 'block'; mockBox2.className = 'camera-detection-box danger-box'; mockBox2.style.top = '35%'; mockBox2.style.left = '58%'; mockBox2.style.width = '16%'; mockBox2.style.height = '32%'; }
+        if (mockLabel2) { mockLabel2.style.background = '#ff453a'; mockLabel2.style.color = '#fff'; mockLabel2.textContent = 'NO HELMET! ⚠️'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '⚠️ إنذار سلامة: تم رصد عامل بدون خوذة حماية في منطقة العمل!';
+        if (logsContainer) {
+            logsContainer.innerHTML = `<div class="log-entry danger"><span class="time">${time}</span><span class="msg">⚠️ مخالفة سلامة: عامل بدون خوذة أمان - منطقة العمل الرئيسية</span></div>` + logsContainer.innerHTML;
         }
+        if (cpuVal) cpuVal.textContent = '22%';
+        if (fpsVal) fpsVal.textContent = '30 FPS';
+
+    } else if (scen === 'intruder') {
+        const btn = document.getElementById('btn-scen-intruder');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-2');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/vexora_perimeter_fence.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box danger-box'; mockBox1.style.top = '35%'; mockBox1.style.left = '40%'; mockBox1.style.width = '25%'; mockBox1.style.height = '50%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#ff453a'; mockLabel1.style.color = '#fff'; mockLabel1.textContent = 'INTRUDER DETECTED! 🚨'; }
+        if (mockBox2) { mockBox2.style.display = 'none'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '🚨 إنذار أمني حرج: تم رصد متسلل يتسلق السياج الخارجي بعد أوقات العمل!';
+        if (logsContainer) {
+            logsContainer.innerHTML = `<div class="log-entry danger"><span class="time">${time}</span><span class="msg">🚨 خرق أمني: رصد جسم متسلل يتسلق السياج الخارجي - القناة 02</span></div>` + logsContainer.innerHTML;
+        }
+        if (cpuVal) cpuVal.textContent = '26%';
+        if (fpsVal) fpsVal.textContent = '29 FPS';
+
+    } else if (scen === 'fire') {
+        const btn = document.getElementById('btn-scen-fire');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-3');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/vexora_fire.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box danger-box'; mockBox1.style.top = '15%'; mockBox1.style.left = '15%'; mockBox1.style.width = '70%'; mockBox1.style.height = '70%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#ff453a'; mockLabel1.style.color = '#fff'; mockLabel1.textContent = 'FIRE & SMOKE ALARM! 🔥'; }
+        if (mockBox2) { mockBox2.style.display = 'none'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '🔥 إنذار حريق مبكر: تم رصد أدخنة ونيران مشتعلة بالمستودع وتم إرسال إشعارات الطوارئ!';
+        if (logsContainer) {
+            logsContainer.innerHTML = `<div class="log-entry danger"><span class="time">${time}</span><span class="msg">🔥 إنذار حظر حريق: تم كشف أدخنة ونيران - مستودع المواد B</span></div>` + logsContainer.innerHTML;
+        }
+        if (cpuVal) cpuVal.textContent = '28%';
+        if (fpsVal) fpsVal.textContent = '30 FPS';
+
+    } else if (scen === 'lpr') {
+        const btn = document.getElementById('btn-scen-lpr');
+        if (btn) btn.classList.add('active');
+        const ch = document.getElementById('chan-cam-4');
+        if (ch) ch.classList.add('active');
+        
+        if (streamImg) streamImg.src = 'assets/sec_parking.jpg';
+        if (mockBox1) { mockBox1.style.display = 'block'; mockBox1.className = 'camera-detection-box warning-box'; mockBox1.style.top = '40%'; mockBox1.style.left = '35%'; mockBox1.style.width = '30%'; mockBox1.style.height = '35%'; }
+        if (mockLabel1) { mockLabel1.style.background = '#34c759'; mockLabel1.style.color = '#fff'; mockLabel1.textContent = 'LPR: [أ ب ج 1 2 3 4] GATE OPEN ✅'; }
+        if (mockBox2) { mockBox2.style.display = 'none'; }
+        
+        if (feedbackMsg) feedbackMsg.textContent = '🚗 قراءة لوحة LPR: تم التعرف على لوحة السيارة المصرح لها وفتح البوابة تلقائياً.';
+        if (logsContainer) {
+            logsContainer.innerHTML = `<div class="log-entry info"><span class="time">${time}</span><span class="msg">🚗 بوابة السيارات: قراءة لوحة [أ ب ج 1 2 3 4] وفتح البوابة للمالك</span></div>` + logsContainer.innerHTML;
+        }
+        if (cpuVal) cpuVal.textContent = '19%';
+        if (fpsVal) fpsVal.textContent = '30 FPS';
     }
 }
 
-function toggleMockSprinkler() {
-    heroSprinklerOn = !heroSprinklerOn;
-    const roomNode = document.getElementById('hero-garden');
-    const statusText = document.getElementById('hero-sprinkler-status');
-    const btnSprinkler = document.getElementById('btn-hero-sprinkler');
-    
-    if (roomNode && statusText && btnSprinkler) {
-        if (heroSprinklerOn) {
-            roomNode.classList.add('active-sprinkler');
-            statusText.textContent = (currentLanguage === 'ar') ? 'نشطة' : 'Active';
-            btnSprinkler.classList.add('active-sprinkler');
-        } else {
-            roomNode.classList.remove('active-sprinkler');
-            statusText.textContent = (currentLanguage === 'ar') ? 'منطفئة' : 'Off';
-            btnSprinkler.classList.remove('active-sprinkler');
-        }
-    }
-}
 
-// Sandbox Simulator
-function updateHouseSim() {
-    const chkLight = document.getElementById('chk-living-light');
-    const chkKitchen = document.getElementById('chk-kitchen-light');
-    const chkAc = document.getElementById('chk-bedroom-ac');
-    const chkSec = document.getElementById('chk-security-system');
-    
-    const glowLiving = document.getElementById('glow-living');
-    const glowKitchen = document.getElementById('glow-kitchen');
-    const glowBedroom = document.getElementById('glow-bedroom');
-    const glowAcBedroom = document.getElementById('ac-glow-bedroom');
-    const lampLightSvg = document.getElementById('svg-lamp-light');
-    const lockBodySvg = document.getElementById('lock-body');
-    const lockShackleSvg = document.getElementById('lock-shackle');
-    const lockText = document.getElementById('lock-text');
-    const feedbackMsg = document.getElementById('sim-feedback-lumora');
-    
-    let actions = [];
-
-    if (chkLight) {
-        if (chkLight.checked) {
-            if (glowLiving) glowLiving.style.display = 'block';
-            if (lampLightSvg) lampLightSvg.style.display = 'block';
-            actions.push(currentLanguage === 'ar' ? 'إضاءة المعيشة' : 'Living light');
-        } else {
-            if (glowLiving) glowLiving.style.display = 'none';
-            if (lampLightSvg) lampLightSvg.style.display = 'none';
-        }
-    }
-    
-    if (chkKitchen) {
-        if (chkKitchen.checked) {
-            if (glowKitchen) glowKitchen.style.display = 'block';
-            actions.push(currentLanguage === 'ar' ? 'إضاءة المطبخ' : 'Kitchen light');
-        } else {
-            if (glowKitchen) glowKitchen.style.display = 'none';
-        }
-    }
-    
-    const acTempWrapper = document.getElementById('ac-temp-wrapper');
-    if (chkAc) {
-        if (chkAc.checked) {
-            if (glowBedroom) glowBedroom.style.display = 'block';
-            if (glowAcBedroom) glowAcBedroom.style.display = 'block';
-            if (acTempWrapper) acTempWrapper.style.display = 'flex';
-            actions.push(currentLanguage === 'ar' ? `التكييف (${acTemperature}°م)` : `AC (${acTemperature}°C)`);
-        } else {
-            if (glowBedroom) glowBedroom.style.display = 'none';
-            if (glowAcBedroom) glowAcBedroom.style.display = 'none';
-            if (acTempWrapper) acTempWrapper.style.display = 'none';
-        }
-    }
-    
-    if (chkSec) {
-        if (chkSec.checked) {
-            if (lockBodySvg) lockBodySvg.setAttribute('fill', '#10b981');
-            if (lockShackleSvg) lockShackleSvg.setAttribute('stroke', '#10b981');
-            if (lockText) {
-                lockText.textContent = currentLanguage === 'ar' ? 'مغلقة ومؤمنة' : 'Locked & Secured';
-                lockText.className = 'text-success';
-            }
-        } else {
-            if (lockBodySvg) lockBodySvg.setAttribute('fill', '#ff453a');
-            if (lockShackleSvg) lockShackleSvg.setAttribute('stroke', '#ff453a');
-            if (lockText) {
-                lockText.textContent = currentLanguage === 'ar' ? 'ملغية التأمين - الحديقة نشطة!' : 'Unlocked - Garden Active!';
-                lockText.className = 'text-danger';
-            }
-            actions.push(currentLanguage === 'ar' ? 'إنذار الأمان' : 'Security alarm');
-        }
-    }
-    
-    if (feedbackMsg) {
-        if (actions.length > 0) {
-            feedbackMsg.textContent = (currentLanguage === 'ar') ? `الأنظمة النشطة حالياً: ${actions.join('، ')}` : `Active systems: ${actions.join(', ')}`;
-        } else {
-            feedbackMsg.textContent = (currentLanguage === 'ar') ? 'تم إطفاء جميع الأجهزة لتوفير الطاقة.' : 'All devices turned off to save energy.';
-        }
-    }
-}
-
-function changeAcTemp(offset) {
-    acTemperature += offset;
-    if (acTemperature < 16) acTemperature = 16;
-    if (acTemperature > 30) acTemperature = 30;
-    
-    const tempNum = document.getElementById('ac-temp-num');
-    if (tempNum) tempNum.textContent = acTemperature;
-    updateHouseSim();
-}
-
-// Package Selection
-function selectPackage(packageName) {
+// B2B Sector click helper
+function selectSector(sectorName) {
     const notesField = document.getElementById('cust_notes');
     if (notesField) {
-        notesField.value = `أريد الاستفسار وحجز الباقة الذكية: ${packageName}`;
+        notesField.value = `أريد استشارة أمنية وتطبيق فيكسورا في نشاطنا: ${sectorName}`;
     }
     
-    // Go to step 2 of form directly to register details
+    // Go to step 2 directly
     nextStep(2);
     
     // Scroll smoothly to form section
@@ -174,7 +149,7 @@ function selectPackage(packageName) {
     if (demoSection) demoSection.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Form steps
+// Multi step form
 function updateProgressBar() {
     const progressBar = document.getElementById('progress-bar');
     const nodes = document.querySelectorAll('.step-node');
@@ -196,22 +171,22 @@ function updateProgressBar() {
 }
 
 function validateCurrentStep() {
-    if (currentFormStep === 1) {
-        return true;
-    }
+    if (currentFormStep === 1) return true;
     
     if (currentFormStep === 2) {
         const nameInput = document.getElementById('cust_name');
         const emailInput = document.getElementById('cust_email');
         const phoneInput = document.getElementById('cust_phone');
+        const companyInput = document.getElementById('company_name');
         
-        if (!nameInput || !emailInput || !phoneInput) return false;
+        if (!nameInput || !emailInput || !phoneInput || !companyInput) return false;
         
         const name = nameInput.value.trim();
         const email = emailInput.value.trim();
         const phone = phoneInput.value.trim();
+        const company = companyInput.value.trim();
         
-        if (!name || !email || !phone) {
+        if (!name || !email || !phone || !company) {
             alert((currentLanguage === 'ar') ? 'الرجاء تعبئة جميع الحقول المطلوبة المميزة بـ (*).' : 'Please fill all required fields marked with (*).');
             return false;
         }
@@ -235,7 +210,7 @@ function validateCurrentStep() {
         const timeVal = timeSelect.value;
         
         if (!dateVal || !timeVal) {
-            alert((currentLanguage === 'ar') ? 'الرجاء اختيار تاريخ ووقت حجز الديمو.' : 'Please select a date and time for the demo booking.');
+            alert((currentLanguage === 'ar') ? 'الرجاء اختيار تاريخ ووقت حجز الديمو.' : 'Please select a date and time.');
             return false;
         }
         return true;
@@ -276,7 +251,6 @@ function handleFormSubmit(event) {
     const dateVal = document.getElementById('demo_date').value;
     const timeVal = document.getElementById('demo_time').value;
     
-    // Set values in success screen
     document.getElementById('success-user-name').textContent = name;
     document.getElementById('success-date').textContent = dateVal;
     document.getElementById('success-phone').textContent = phone;
@@ -287,21 +261,22 @@ function handleFormSubmit(event) {
     if (timeVal === 'evening') timeLabel = (currentLanguage === 'ar') ? 'المسائية' : 'Evening';
     document.getElementById('success-time').textContent = timeLabel;
     
-    // Save locally
+    // Save lead
     const leadData = {
         name,
         email: document.getElementById('cust_email').value.trim(),
         phone,
-        product: 'lumora',
+        product: 'vexora',
+        company: document.getElementById('company_name').value.trim(),
         date: dateVal,
         time: timeVal,
         notes: document.getElementById('cust_notes') ? document.getElementById('cust_notes').value.trim() : '',
         submittedAt: new Date().toISOString()
     };
     
-    let existingLeads = JSON.parse(localStorage.getItem('beyout_leads') || '[]');
+    let existingLeads = JSON.parse(localStorage.getItem('vexora_leads') || '[]');
     existingLeads.push(leadData);
-    localStorage.setItem('beyout_leads', JSON.stringify(existingLeads));
+    localStorage.setItem('vexora_leads', JSON.stringify(existingLeads));
 
     // Submit form data to FormSubmit (free email form provider)
     fetch("https://formsubmit.co/ajax/khaledelmala7@gmail.com", {
@@ -316,10 +291,11 @@ function handleFormSubmit(event) {
     .catch((error) => console.error("Error submitting to FormSubmit:", error));
 
     // Redirect to WhatsApp with pre-filled details to the owner
-    const ownerPhone = "201100400082";
-    const msg = `مرحباً بيوت، أود حجز موعد استشارة:
+    const ownerPhone = "201064334334";
+    const msg = `مرحباً فيكسورا، أود حجز موعد ديمو:
 الاسم: ${name}
 الهاتف: ${phone}
+الشركة: ${leadData.company || 'لا يوجد'}
 التاريخ المفضل: ${dateVal}
 الفترة: ${timeLabel}
 ملاحظات: ${leadData.notes || 'لا يوجد'}`;
@@ -328,9 +304,10 @@ function handleFormSubmit(event) {
 
     // Send Telegram Notification
     if (typeof TELEGRAM_BOT_TOKEN !== 'undefined' && TELEGRAM_BOT_TOKEN && TELEGRAM_BOT_TOKEN !== 'YOUR_BOT_TOKEN_HERE') {
-        const telegramMsg = `🔔 *طلب حجز جديد (BEYOUT)* 🔔\n\n` +
+        const telegramMsg = `🔔 *طلب حجز جديد (VEXORA)* 🔔\n\n` +
             `👤 *الاسم:* ${name}\n` +
             `📞 *الهاتف:* ${phone}\n` +
+            `🏢 *الشركة:* ${leadData.company || 'لا يوجد'}\n` +
             `📅 *التاريخ:* ${dateVal}\n` +
             `🕒 *الفترة:* ${timeLabel}\n` +
             `📝 *ملاحظات:* ${leadData.notes || 'لا يوجد'}`;
@@ -348,7 +325,6 @@ function handleFormSubmit(event) {
         .catch((error) => console.error("Error sending Telegram notification:", error));
     }
 
-    // Show step 4
     nextStep(4);
 }
 
@@ -366,7 +342,6 @@ function resetForm() {
     updateProgressBar();
 }
 
-// Translations logic
 function toggleLanguage() {
     currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
     setLanguage(currentLanguage);
@@ -398,21 +373,12 @@ function setLanguage(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
     
-    document.body.className = `theme-beyout lang-${lang}`;
+    document.body.className = `theme-vexora lang-${lang}`;
     
-    // Translate text content
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key] !== undefined) {
             el.innerHTML = translations[lang][key];
-        }
-    });
-    
-    // Translate placeholders
-    document.querySelectorAll('[data-placeholder-ar]').forEach(el => {
-        const placeholder = el.getAttribute('data-placeholder-' + lang);
-        if (placeholder) {
-            el.placeholder = placeholder;
         }
     });
     
