@@ -399,7 +399,7 @@ function setLanguage(lang) {
 // 100% Comprehensive Bilingual Translation Engine (Pure AR / Pure EN)
 const translations = {
     ar: {
-        catalog_title: "كتالوج التنبيهات الذكية (32 تنبيهاً أمنياً بالصور)",
+        catalog_title: "كتالوج التنبيهات الذكية (21 تنبيهاً أمنياً بالصور)",
         title_alert_27: "انسداد ممرات الطوارئ",
         tag_alert_27: "انسداد مخرج الطوارئ! 🚨",
         desc_alert_27: "رصد تخزين المعدات أو وضع العوائق أمام أبواب وممرات الإخلاء والطوارئ.",
@@ -453,7 +453,7 @@ const translations = {
         footer_b2b: "حلول الأمن الذكي للمنشآت",
 
         live_badge: "مباشر 🔴",
-        catalog_title: "كتالوج التنبيهات الذكية (26 تنبيهاً أمنياً بالصور)",
+        catalog_title: "كتالوج التنبيهات الذكية (21 تنبيهاً أمنياً بالصور)",
         catalog_badge: "فئات التنبيهات الخمس الكبرى لنظام فيكسورا",
         catalog_desc: "استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.",
         trusted_badge: "الشركاء الدوليون والعملاء العالميّون",
@@ -501,7 +501,7 @@ const translations = {
         story_2_stat_3_val: "< 1.2 ثانية",
         story_2_stat_3_lbl: "زمن الاستجابة للإنذار",
 
-        catalog_title: "كتالوج التنبيهات الذكية (26 تنبيهاً أمنياً بالصور)",
+        catalog_title: "كتالوج التنبيهات الذكية (21 تنبيهاً أمنياً بالصور)",
         catalog_badge: "فئات التنبيهات الخمس الكبرى لنظام فيكسورا",
         catalog_desc: "استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.",
         cat_pill_1: "الفئة الأولى 👷‍♂️",
@@ -545,6 +545,18 @@ const translations = {
         "nav_solutions": "التنبيهات الذكية",
         "nav_home": "الرئيسية",
         "nav_steps": "خطوات التنفيذ",
+        "steps_section_subtitle": "خطوات العمل",
+        "steps_section_title": "خطوات التنفيذ والاشتراك",
+        "steps_section_desc": "نضمن لك تجربة سلسة واختباراً عملياً للنظام قبل تفعيل التعاقد لضمان كفاءة التنبيهات.",
+        "step_1_title": "1. الزيارة وعرض النظام",
+        "step_1_desc": "الذهاب إلى العميل لعمل عرض (Demo) لرؤية النظام على أرض الواقع، وتحديد عدد الكاميرات المطلوبة وطريقة دفع الاشتراك (شهري أو ربع سنوي).",
+        "step_2_title": "2. الإعداد والتجربة المجانية",
+        "step_2_desc": "إعداد سيرفر للعمل على كاميرا واحدة بعدد 3 تنبيهات لفترة 15 يوم، لكي يجرب العميل النظام بشكل فعلي ويتعلم نموذج الذكاء الاصطناعي.",
+        "step_3_title": "3. تفعيل التعاقد",
+        "step_3_desc": "انتظار قرار العميل بالاستمرار من عدمه، وفي حالة الاستمرار يتم تفعيل العقد الذي تم إبرامه مبدئياً في بداية الـ 15 يوم.",
+        "step_4_title": "4. التنفيذ المرحلي",
+        "step_4_desc": "في حال كان عدد الكاميرات كبيراً (أكثر من 6 كاميرات مثلاً)، يتم التنسيق لتنفيذ المشروع على مراحل متتالية بالاتفاق مع العميل.",
+
         "nav_contact": "اتصل بنا",
         "nav_to_beyout": "بيوت للمنازل الذكية (B2C)",
         "vexora_hero_title": "النظام الأمني الذكي الأول لمنشأتك",
@@ -585,7 +597,7 @@ const translations = {
         "prod_3_fee": "رسوم إعداد وتدريب لمرة واحدة فقط",
         "prod_3_btn": "طلب تنبيه مخصص",
         
-        "alerts_subtitle": "كتالوج التنبيهات الذكية (26 تنبيهاً أمنياً بالصور)",
+        "alerts_subtitle": "كتالوج التنبيهات الذكية (21 تنبيهاً أمنياً بالصور)",
         "alerts_title": "فئات التنبيهات الخمس الكبرى لنظام فيكسورا",
         "alerts_desc": "استعرض كافة أنواع التنبيهات المتاحة بالنظام، مقسمة في 5 فئات رئيسية، مع لقطة شاشة توضيحية ووصف كامل لكل تنبيه.",
         
@@ -684,7 +696,7 @@ const translations = {
         "dash_stream_meta": "كاميرا: 01 | المنفذ: 5000 | الدقة: 640x480"
     },
     en: {
-        catalog_title: "Smart Alerts Catalog (32 Visual Security Alerts)",
+        catalog_title: "Smart Alerts Catalog (21 Visual Security Alerts)",
         title_alert_27: "Emergency Exit Blocked",
         tag_alert_27: "Emergency Exit Blocked! 🚨",
         desc_alert_27: "Detects stored equipment or obstacles blocking emergency exit doors and evacuation corridors.",
@@ -738,7 +750,7 @@ const translations = {
         footer_b2b: "Enterprise Smart Security Solutions",
 
         live_badge: "LIVE 🔴",
-        catalog_title: "Smart Alerts Catalog (26 Visual Security Alerts)",
+        catalog_title: "Smart Alerts Catalog (21 Visual Security Alerts)",
         catalog_badge: "Vexora System 5 Major Alert Categories",
         catalog_desc: "Explore all available system alerts across 5 major categories, complete with visual snapshots and full descriptions.",
         trusted_badge: "Global Partners & International Clients",
@@ -786,7 +798,7 @@ const translations = {
         story_2_stat_3_val: "< 1.2 sec",
         story_2_stat_3_lbl: "Alert Response Latency",
 
-        catalog_title: "Smart Alerts Catalog (26 Visual Security Alerts)",
+        catalog_title: "Smart Alerts Catalog (21 Visual Security Alerts)",
         catalog_badge: "Vexora System 5 Major Alert Categories",
         catalog_desc: "Explore all available system alerts across 5 major categories, complete with visual snapshots and full descriptions.",
         cat_pill_1: "Category 1 👷‍♂️",
@@ -830,6 +842,18 @@ const translations = {
         "nav_solutions": "AI Alerts",
         "nav_home": "Home",
         "nav_steps": "Implementation Steps",
+        "steps_section_subtitle": "Workflow",
+        "steps_section_title": "Implementation & Subscription Steps",
+        "steps_section_desc": "We guarantee a smooth experience and practical testing of the system before activating the contract to ensure alert efficiency.",
+        "step_1_title": "1. Site Visit & Demo",
+        "step_1_desc": "Visiting the client for a live Demo to see the system in action, determine the required number of cameras, and choose the subscription payment method (monthly or quarterly).",
+        "step_2_title": "2. Setup & Free Trial",
+        "step_2_desc": "Setting up a server for a single camera with 3 alerts for a 15-day period, allowing the client to test the system and the AI model to learn.",
+        "step_3_title": "3. Contract Activation",
+        "step_3_desc": "Awaiting the client's decision to continue. If proceeding, the contract drafted at the start of the 15-day period is activated.",
+        "step_4_title": "4. Phased Implementation",
+        "step_4_desc": "If there are many cameras (e.g., more than 6), the project implementation is coordinated in consecutive phases in agreement with the client.",
+
         "nav_contact": "Contact Us",
         "nav_to_beyout": "Beyout Smart Homes (B2C)",
         "vexora_hero_title": "The Premier Smart Security System for Your Facility",
