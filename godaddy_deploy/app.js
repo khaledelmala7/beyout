@@ -554,8 +554,8 @@ const translations = {
         "step_2_desc": "إعداد سيرفر للعمل على كاميرا واحدة بعدد 3 تنبيهات لفترة 15 يوم، لكي يجرب العميل النظام بشكل فعلي ويتعلم نموذج الذكاء الاصطناعي.",
         "step_3_title": "3. تفعيل التعاقد",
         "step_3_desc": "انتظار قرار العميل بالاستمرار من عدمه، وفي حالة الاستمرار يتم تفعيل العقد الذي تم إبرامه مبدئياً في بداية الـ 15 يوم.",
-        "step_4_title": "4. التنفيذ المرحلي",
-        "step_4_desc": "في حال كان عدد الكاميرات كبيراً (أكثر من 6 كاميرات مثلاً)، يتم التنسيق لتنفيذ المشروع على مراحل متتالية بالاتفاق مع العميل.",
+        "step_4_title": "4. باقات الاشتراك الشهري",
+        "step_4_desc": "حتى 15 كاميرا: 2000 جنيه / كاميرا<br>من 16 إلى 50 كاميرا: 1500 جنيه / كاميرا<br>حتى 200 كاميرا: 1000 جنيه / كاميرا",
 
         "nav_contact": "اتصل بنا",
         "nav_to_beyout": "بيوت للمنازل الذكية (B2C)",
@@ -851,8 +851,8 @@ const translations = {
         "step_2_desc": "Setting up a server for a single camera with 3 alerts for a 15-day period, allowing the client to test the system and the AI model to learn.",
         "step_3_title": "3. Contract Activation",
         "step_3_desc": "Awaiting the client's decision to continue. If proceeding, the contract drafted at the start of the 15-day period is activated.",
-        "step_4_title": "4. Phased Implementation",
-        "step_4_desc": "If there are many cameras (e.g., more than 6), the project implementation is coordinated in consecutive phases in agreement with the client.",
+        "step_4_title": "4. Monthly Subscriptions",
+        "step_4_desc": "Up to 15 cameras: 2000 EGP / camera<br>16 to 50 cameras: 1500 EGP / camera<br>Up to 200 cameras: 1000 EGP / camera",
 
         "nav_contact": "Contact Us",
         "nav_to_beyout": "Beyout Smart Homes (B2C)",
