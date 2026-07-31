@@ -551,9 +551,9 @@ const translations = {
         "step_1_title": "1. الزيارة وعرض النظام",
         "step_1_desc": "الذهاب إلى العميل لعمل عرض (Demo) لرؤية النظام على أرض الواقع، وتحديد عدد الكاميرات المطلوبة وطريقة دفع الاشتراك (شهري أو ربع سنوي).",
         "step_2_title": "2. الإعداد والتجربة المجانية",
-        "step_2_desc": "إعداد سيرفر للعمل على كاميرا واحدة بعدد 3 تنبيهات لفترة 15 يوم، لكي يجرب العميل النظام بشكل فعلي ويتعلم نموذج الذكاء الاصطناعي.",
+        "step_2_desc": "إبرام عقد مبدئي (قابل للفسخ) كأمانة لجهاز السيرفر التجريبي الخاص بفيكسورا. يتم إعداد السيرفر للعمل على كاميرا واحدة بعدد 3 تنبيهات لفترة 15 يوم، ليجرب العميل النظام بشكل فعلي.",
         "step_3_title": "3. تفعيل التعاقد",
-        "step_3_desc": "انتظار قرار العميل بالاستمرار من عدمه، وفي حالة الاستمرار يتم تفعيل العقد الذي تم إبرامه مبدئياً في بداية الـ 15 يوم.",
+        "step_3_desc": "بعد 15 يوماً يتم استرداد السيرفر التجريبي. في حالة قرار العميل بالاستمرار، يتم تفعيل العقد النهائي ويقوم العميل بتوفير سيرفر دائم على حسابه بناءً على المواصفات المطلوبة.",
         "step_4_title": "4. باقات الاشتراك الشهري",
         "step_4_desc": "حتى 15 كاميرا: 2000 جنيه / كاميرا<br>من 16 إلى 50 كاميرا: 1500 جنيه / كاميرا<br>حتى 200 كاميرا: 1000 جنيه / كاميرا",
 
@@ -848,9 +848,9 @@ const translations = {
         "step_1_title": "1. Site Visit & Demo",
         "step_1_desc": "Visiting the client for a live Demo to see the system in action, determine the required number of cameras, and choose the subscription payment method (monthly or quarterly).",
         "step_2_title": "2. Setup & Free Trial",
-        "step_2_desc": "Setting up a server for a single camera with 3 alerts for a 15-day period, allowing the client to test the system and the AI model to learn.",
+        "step_2_desc": "A preliminary contract (cancellable) is signed as a trust for Vexora's trial server. The server is set up on 1 camera with 3 alerts for 15 days, allowing the client to test the system in action.",
         "step_3_title": "3. Contract Activation",
-        "step_3_desc": "Awaiting the client's decision to continue. If proceeding, the contract drafted at the start of the 15-day period is activated.",
+        "step_3_desc": "After 15 days, the trial server is retrieved. If the client decides to continue, the contract is activated and the client provides a permanent server at their own expense based on required specs.",
         "step_4_title": "4. Monthly Subscriptions",
         "step_4_desc": "Up to 15 cameras: 2000 EGP / camera<br>16 to 50 cameras: 1500 EGP / camera<br>Up to 200 cameras: 1000 EGP / camera",
 
