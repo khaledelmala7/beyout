@@ -1148,12 +1148,28 @@ input:checked + .slider:before { transform: translateX(18px); }
 
 .products-section .section-header {
     position: sticky;
-    top: 80px; /* Adjust based on navbar height */
+    top: -2px; /* Adjust based on navbar height */
     z-index: 20;
-    background-color: rgba(248, 250, 252, 0.95);
+    background-color: #ffffff;
     backdrop-filter: blur(10px);
     padding: 1.5rem 0 1rem;
     margin: 0 0 2rem;
     border-bottom: 2px solid var(--border-color, #e2e8f0);
 }
 
+
+/* Custom Scrollbar for Products */
+.products-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+.products-scroll-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+.products-scroll-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 8px;
+}
+.products-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
