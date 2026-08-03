@@ -1285,3 +1285,14 @@ input:checked + .slider:before { transform: translateX(18px); }
     border-bottom: none;
     width: max-content;
 }
+
+.products-scroll-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 0 2rem 0;
+    gap: 2rem;
+}
