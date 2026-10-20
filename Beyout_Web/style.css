@@ -5199,3 +5199,542 @@ html[dir="ltr"] .mega-dropdown-menu {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ==========================================================================
+   BEYOUT TECH v4.1.0 — COMPLETE MOBILE & RESPONSIVE OVERHAUL
+   ========================================================================== */
+
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+/* Fix Header Flex Layout on Desktop & Mobile */
+.enterprise-header .nav-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px;
+    min-height: 60px;
+    position: relative;
+}
+
+.enterprise-header .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.enterprise-header .nav-actions {
+    display: none;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Style Language Switcher Button inside Nav */
+.btn-lang {
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--accent-color);
+    padding: 7px 13px;
+    border-radius: 99px;
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 800;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.btn-lang:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+/* Style Hamburger Menu Toggle Button */
+.enterprise-header .menu-toggle {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 10px !important;
+    background: rgba(212, 175, 55, 0.12) !important;
+    border: 1px solid rgba(212, 175, 55, 0.4) !important;
+    color: var(--accent-color) !important;
+    font-size: 19px !important;
+    display: none;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.enterprise-header .menu-toggle:hover,
+.enterprise-header .menu-toggle.open {
+    background: var(--accent-color) !important;
+    color: #000 !important;
+}
+
+/* Tablet & Mobile Navigation Drawer (<= 1180px) */
+@media (max-width: 1180px) {
+    .enterprise-header .nav-actions {
+        display: flex !important;
+    }
+    .enterprise-header .menu-toggle {
+        display: inline-flex !important;
+    }
+    .enterprise-header .nav-links {
+        display: none !important;
+        position: fixed !important;
+        top: 66px !important;
+        right: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-height: calc(100vh - 66px) !important;
+        overflow-y: auto !important;
+        background: rgba(8, 11, 19, 0.98) !important;
+        backdrop-filter: blur(20px) !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 16px 18px 32px !important;
+        gap: 8px !important;
+        border-bottom: 2px solid rgba(212, 175, 55, 0.35) !important;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9) !important;
+        z-index: 2000 !important;
+    }
+    .enterprise-header .nav-links.active {
+        display: flex !important;
+    }
+    .enterprise-header .nav-item-link {
+        width: 100% !important;
+        justify-content: space-between !important;
+        padding: 12px 14px !important;
+        font-size: 14.5px !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.06) !important;
+        border-radius: 10px !important;
+    }
+    .enterprise-header .nav-item-link.active {
+        background: rgba(212, 175, 55, 0.15) !important;
+        border-color: rgba(212, 175, 55, 0.45) !important;
+        color: var(--accent-color) !important;
+    }
+    .enterprise-header .nav-cta-quote {
+        justify-content: center !important;
+        margin-top: 4px !important;
+        padding: 13px !important;
+    }
+    .enterprise-header .btn-lang {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 11px !important;
+        margin-top: 4px !important;
+    }
+
+    /* Mobile Mega Dropdown inside Drawer */
+    .nav-dropdown-wrap {
+        width: 100% !important;
+    }
+    .mega-dropdown-menu {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        background: rgba(14, 19, 32, 0.95) !important;
+        border: 1px solid rgba(212, 175, 55, 0.25) !important;
+        border-radius: 12px !important;
+        padding: 12px !important;
+        margin-top: 6px !important;
+        box-shadow: none !important;
+        display: none !important;
+    }
+    .nav-dropdown-wrap.open-mobile .mega-dropdown-menu {
+        display: block !important;
+    }
+    .mega-dropdown-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        padding-bottom: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    .mega-view-all-btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    .mega-systems-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+    .mega-sys-item {
+        padding: 10px !important;
+    }
+}
+
+/* Smartphone Layout Refinements (<= 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px !important;
+    }
+
+    /* Header Brand Sizing on Mobile */
+    .logo-icon {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 16px !important;
+    }
+    .logo-text {
+        font-size: 17.5px !important;
+    }
+    .logo-subtext {
+        font-size: 9.5px !important;
+    }
+
+    /* Quick Switcher Bar on Mobile */
+    .lc-systems-switcher-bar {
+        padding: 8px 0 !important;
+    }
+    .lc-switcher-label {
+        font-size: 11px !important;
+        margin-bottom: 6px !important;
+    }
+    .lc-switcher-pills {
+        gap: 6px !important;
+        padding-bottom: 4px !important;
+    }
+    .lc-quick-pill {
+        padding: 6px 11px !important;
+        font-size: 11.5px !important;
+    }
+
+    /* Home Grand Hero & System Detail Hero on Mobile */
+    .home-grand-hero,
+    .sys-detail-hero,
+    .page-hero-banner {
+        padding: 26px 0 36px !important;
+    }
+    .home-hero-grid,
+    .sys-hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+    .hero-trust-pill,
+    .sec-eyebrow {
+        font-size: 11px !important;
+        padding: 5px 11px !important;
+        line-height: 1.4 !important;
+        text-align: right;
+    }
+    .home-hero-text h1,
+    .sys-main-title,
+    .page-hero-banner h1 {
+        font-size: 22px !important;
+        line-height: 1.38 !important;
+        margin-bottom: 12px !important;
+    }
+    .home-hero-text p,
+    .sys-overview-lead,
+    .page-hero-banner p {
+        font-size: 13.5px !important;
+        line-height: 1.65 !important;
+        margin-bottom: 18px !important;
+    }
+    .home-hero-btns,
+    .sys-hero-cta-group {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+    .home-hero-btns a,
+    .sys-hero-cta-group a,
+    .btn-primary-glow,
+    .btn-secondary-outline {
+        width: 100% !important;
+        padding: 12px 16px !important;
+        font-size: 13px !important;
+        text-align: center !important;
+    }
+
+    /* Hero Collage Grid on Mobile */
+    .hero-collage-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+    .hc-card,
+    .hc-card.main-hc {
+        grid-column: span 1 !important;
+        height: 175px !important;
+    }
+
+    /* System Hero Image & Thumbnails on Mobile */
+    .sys-main-img-frame {
+        height: 220px !important;
+    }
+    .sys-img-overlay-badge {
+        font-size: 10.5px !important;
+        padding: 6px 10px !important;
+    }
+    .sys-thumbs-row {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 6px !important;
+    }
+    .sys-thumb-btn {
+        height: 54px !important;
+        border-radius: 8px !important;
+    }
+
+    /* KPIs & Stats Ribbon on Mobile */
+    .sys-kpis-row {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+    .sys-kpi-card {
+        padding: 10px 6px !important;
+    }
+    .sys-kpi-num {
+        font-size: 15.5px !important;
+    }
+    .sys-kpi-lbl {
+        font-size: 10px !important;
+        line-height: 1.3 !important;
+        display: block;
+    }
+    .home-stats-ribbon {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 14px !important;
+    }
+    .hs-item {
+        border-left: none !important;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 12px 8px !important;
+    }
+    .hs-item:last-child {
+        grid-column: span 2 !important;
+    }
+    .hs-item strong {
+        font-size: 19px !important;
+    }
+    .hs-item span {
+        font-size: 11px !important;
+    }
+
+    /* Section Spacing & Headers on Mobile */
+    .sys-topology-section,
+    .sys-simulator-section,
+    .sys-components-section,
+    .sys-related-projects,
+    .home-lc-portal-sec,
+    .home-lvmv-banner-sec,
+    .home-projects-sec,
+    .home-clients-sec,
+    .lc-hub-grid-section,
+    .clients-grid-sec,
+    .sectors-served-sec,
+    .projects-cases-sec,
+    .quote-builder-sec,
+    .contact-page-sec {
+        padding: 44px 0 !important;
+    }
+    .section-header-center {
+        margin-bottom: 26px !important;
+    }
+    .section-header-center h2,
+    .section-header-flex h2,
+    .lvmv-b-content h2 {
+        font-size: 20px !important;
+        line-height: 1.38 !important;
+    }
+    .section-header-center p {
+        font-size: 13px !important;
+    }
+
+    /* Interactive Simulators & Calculators on Mobile */
+    .sim-widget-box {
+        padding: 16px 14px !important;
+        border-radius: 18px !important;
+    }
+    .sim-widget-header h3,
+    .sim-widget-header h4 {
+        font-size: 17px !important;
+        line-height: 1.4 !important;
+    }
+    .sim-grid-2,
+    .sim-grid-2col {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+    .sim-output-col {
+        padding: 16px 12px !important;
+    }
+    .sim-metrics-boxes {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+    .sim-m-box {
+        padding: 10px 8px !important;
+    }
+    .sim-m-box span {
+        font-size: 14px !important;
+    }
+    .sim-m-box small {
+        font-size: 10.5px !important;
+    }
+
+    /* Smart Villa Simulator on Mobile */
+    .villa-scenes-bar {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+    .scenes-lbl {
+        grid-column: span 2 !important;
+        margin-bottom: 4px !important;
+    }
+    .scene-btn {
+        justify-content: center !important;
+        font-size: 11.5px !important;
+        padding: 8px 10px !important;
+    }
+    .villa-metrics-row {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px !important;
+    }
+    .v-metric {
+        padding: 8px 4px !important;
+    }
+    .v-metric strong {
+        font-size: 13px !important;
+    }
+
+    /* LV/MV Banner & Case Cards on Mobile */
+    .lvmv-banner-box {
+        padding: 20px 16px !important;
+        gap: 20px !important;
+    }
+    .lvmv-b-images {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+    .lvmv-b-images img {
+        height: 130px !important;
+    }
+    .lvmv-case-card {
+        padding: 18px 14px !important;
+    }
+    .lvmv-case-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+    .lvmv-case-gallery {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+    .lvmv-case-gallery img {
+        height: 120px !important;
+    }
+
+    /* Clients Grid on Mobile (2 per row) */
+    .home-clients-grid-8 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    .home-client-logo {
+        padding: 12px !important;
+    }
+    .home-client-logo img {
+        height: 65px !important;
+    }
+
+    /* Projects Case Studies on Mobile */
+    .project-full-case {
+        padding: 18px 14px !important;
+    }
+    .proj-case-info h2 {
+        font-size: 19px !important;
+    }
+    .proj-metrics-strip {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+    .proj-main-photo {
+        height: 200px !important;
+    }
+    .proj-sub-photos {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 6px !important;
+    }
+    .proj-sub-photos img {
+        height: 54px !important;
+    }
+
+    /* Packages & Products Horizontal Scroll on Mobile */
+    .packages-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+    .products-section .card {
+        flex: 0 0 82vw !important;
+        max-width: 290px !important;
+    }
+    .products-scroll-container .section-header h2 {
+        font-size: 1.35rem !important;
+    }
+
+    /* Floating Action Buttons on Mobile */
+    .floating-Quick-bar {
+        bottom: 12px !important;
+        left: 12px !important;
+        right: 12px !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        pointer-events: none;
+    }
+    .float-wa-btn,
+    .float-boq-btn {
+        pointer-events: auto;
+        padding: 9px 14px !important;
+        font-size: 12px !important;
+    }
+}
+
+
+/* Hide ugly white scrollbar on mobile quick switcher & category pills */
+.lc-switcher-pills,
+.catalog-category-pills {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    -webkit-overflow-scrolling: touch;
+}
+.lc-switcher-pills::-webkit-scrollbar,
+.catalog-category-pills::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* Ensure touch hover doesn't lock mega-dropdown open on mobile; only .open-mobile controls it */
+@media (max-width: 1180px) {
+    .nav-dropdown-wrap:hover .mega-dropdown-menu {
+        display: none !important;
+    }
+    .nav-dropdown-wrap.open-mobile .mega-dropdown-menu {
+        display: block !important;
+    }
+    .nav-dropdown-wrap.open-mobile .dropdown-caret {
+        transform: rotate(180deg) !important;
+    }
+}
+
+/* Give bottom of page extra padding on mobile so floating buttons never cover footer links */
+@media (max-width: 768px) {
+    .enterprise-footer {
+        padding-bottom: 75px !important;
+    }
+}

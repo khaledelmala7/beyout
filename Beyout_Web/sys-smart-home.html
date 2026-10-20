@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css?v=4.0.0"/>
+    <link rel="stylesheet" href="style.css?v=4.1.0"/>
 </head>
 <body class="rtl" data-page="sys-smart-home.html">
     <!-- Top Corporate Engineering Bar -->
@@ -342,11 +342,17 @@
 
                 <div class="sys-hero-Showcase">
                     <div class="sys-main-img-frame">
-                        <img id="sys-main-preview" src="portfolio_assets/p11_img1_xref312.jpeg" alt="Smart Home Control Panel" onclick="openLightbox(this.src, 'أنظمة المباني الذكية والسمارت هوم - بيوت تك')"/>
+                        <img id="sys-main-preview" src="assets/pkg_villa.jpg" alt="Smart Home Control Panel" onclick="openLightbox(this.src, 'أنظمة المباني الذكية والسمارت هوم - بيوت تك')"/>
                         <div class="sys-img-overlay-badge">
                             <i class="fas fa-tablet-alt"></i>
                             <span data-ar="شاشات تحكم جدارية مركزية ومفاتيح ذكية فاخرة بدون تكسير" data-en="Central Wall Touch Panels & Luxury Smart Switches">شاشات تحكم جدارية مركزية ومفاتيح ذكية فاخرة بدون تكسير</span>
                         </div>
+                    </div>
+                    <div class="sys-thumbs-row">
+                        <button class="sys-thumb-btn active" onclick="switchSysHeroImg(this, 'assets/pkg_villa.jpg')"><img src="assets/pkg_villa.jpg" alt="Smart Villa"/></button>
+                        <button class="sys-thumb-btn" onclick="switchSysHeroImg(this, 'assets/smart_switch.jpg')"><img src="assets/smart_switch.jpg" alt="Smart Switch"/></button>
+                        <button class="sys-thumb-btn" onclick="switchSysHeroImg(this, 'assets/lumora_home_cinema.jpg')"><img src="assets/lumora_home_cinema.jpg" alt="Home Cinema"/></button>
+                        <button class="sys-thumb-btn" onclick="switchSysHeroImg(this, 'assets/lumora_smart_lock.jpg')"><img src="assets/lumora_smart_lock.jpg" alt="Smart Lock"/></button>
                     </div>
                 </div>
             </div>
@@ -2911,6 +2917,6 @@
         <div id="lightbox-caption"></div>
     </div>
 
-    <script src="app.js?v=4.0.0"></script>
+    <script src="app.js?v=4.1.0"></script>
 </body>
 </html>

@@ -480,7 +480,7 @@ function toggleMobileMenu() {
 
 // Close menu when clicking on any nav link
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.nav-links a:not(.nav-dropdown-trigger)').forEach(link => {
         link.addEventListener('click', () => {
             const navLinks = document.querySelector('.nav-links');
             const menuToggle = document.getElementById('menu-toggle-btn');
@@ -2131,3 +2131,65 @@ function simSecurityGate() {
         document.getElementById('sg-out-summary').textContent = `منظومة تأمين متكاملة تشمل ${ped} بوابة كشف معادن وأجهزة X-Ray، ${car} بوابة سيارات أوتوماتيكية، وتأمين سور بطول ${wall} متر ضد التسلل.`;
     }
 }
+
+
+// v4.1.0 Mobile Navigation & Dropdown Fix
+function toggleMobileMenu() {
+    const navLinks = document.getElementById('nav-links');
+    const menuToggle = document.getElementById('menu-toggle');
+    if (navLinks) {
+        navLinks.classList.toggle('active');
+    }
+    if (menuToggle) {
+        menuToggle.classList.toggle('open');
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+            if (navLinks && navLinks.classList.contains('active')) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Allow tapping "أنظمة التيار الخفيف" on mobile to expand/collapse the 9 systems list
+    const dropTrigger = document.querySelector('.nav-dropdown-trigger');
+    const dropWrap = document.querySelector('.nav-dropdown-wrap');
+    if (dropTrigger && dropWrap) {
+        dropTrigger.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1180) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropWrap.classList.toggle('open-mobile');
+            }
+        });
+    }
+});
+
+
+// Override selectPackage for Multi-Page Architecture (redirects to quote.html with package prefilled)
+function selectPackage(packageName) {
+    const demoSection = document.getElementById('demo-section');
+    if (demoSection) {
+        demoSection.scrollIntoView({ behavior: 'smooth' });
+        return;
+    }
+    window.location.href = `quote.html?system=sys-smart-home&pkg=${encodeURIComponent(packageName)}`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const pkgParam = params.get('pkg');
+    if (pkgParam) {
+        const notesEl = document.getElementById('boq-notes');
+        if (notesEl) {
+            notesEl.value = `أرغب في طلب عرض سعر وحجز باقة السمارت هوم: (${pkgParam})`;
+        }
+        const typeEl = document.getElementById('boq-proj-type');
+        if (typeEl) {
+            typeEl.value = 'فيلا سكنية / قصر / شقة فاخرة (Smart Home)';
+        }
+    }
+});
