@@ -1175,8 +1175,8 @@ Object.assign(translations.ar, {
     "form_success_whatsapp_sub": " لمناقشة كافة التفاصيل الفنية والمالية.",
     "form_success_reset_btn": "إرسال طلب جديد",
     "footer_about_text_beyout": "شركة بيوت تك للمقاولات وأنظمة التيار الخفيف (Light Current)، الهندسة الكهربائية (LV/MV)، والحلول الذكية المتكاملة (Smart Home & BMS).",
-    "footer_addr_lbl": "المقرات:",
-    "footer_address_val": "42 ش أنقرة، شيراتون | 17 أ عمارات العبور، صلاح سالم، القاهرة، مصر",
+    "footer_addr_lbl": "المقر الرئيسي:",
+    "footer_address_val": "42 شارع أنقرة، شيراتون، القاهرة، مصر",
     "footer_links_title": "الأقسام والقطاعات الهندسية",
     "footer_social_title": "تواصل معنا وتابعنا",
     "footer_cert_box_title": "اعتمادات واختبارات قياسية",
@@ -1396,8 +1396,8 @@ Object.assign(translations.en, {
     "form_success_whatsapp_sub": " to discuss all technical and financial details.",
     "form_success_reset_btn": "Submit Another Request",
     "footer_about_text_beyout": "Beyout Tech for Contracting, Light Current Systems, Electrical Engineering (LV/MV), and Smart Automation Solutions (Smart Home & BMS).",
-    "footer_addr_lbl": "Offices:",
-    "footer_address_val": "42 Ankara St., Sheraton | 17A El Obour Bldgs., Salah Salem, Cairo, Egypt",
+    "footer_addr_lbl": "Head Office:",
+    "footer_address_val": "42 Ankara St., Sheraton, Cairo, Egypt",
     "footer_links_title": "Engineering Divisions & Links",
     "footer_social_title": "Connect With Us",
     "footer_cert_box_title": "Certified Engineering Standards",
@@ -1428,8 +1428,8 @@ function toggleLanguage() {
 
 function updateBrochureLinksForLanguage(lang) {
     const targetPdf = lang === 'en'
-        ? 'portfolio_assets/Beyout_Tech_Company_Profile_EN.pdf?v=4.3.0'
-        : 'portfolio_assets/Beyout_Tech_Company_Profile.pdf?v=4.3.0';
+        ? 'portfolio_assets/Beyout_Tech_Company_Profile_EN.pdf?v=4.4.0'
+        : 'portfolio_assets/Beyout_Tech_Company_Profile.pdf?v=4.4.0';
     document.querySelectorAll('a[href*="Beyout_Tech_Company_Profile"]').forEach(link => {
         link.setAttribute('href', targetPdf);
     });
@@ -1467,8 +1467,8 @@ document.addEventListener('click', (e) => {
     if (link) {
         const isEn = document.documentElement.getAttribute('lang') === 'en' || document.body.classList.contains('ltr');
         const targetPdf = isEn
-            ? 'portfolio_assets/Beyout_Tech_Company_Profile_EN.pdf?v=4.3.0'
-            : 'portfolio_assets/Beyout_Tech_Company_Profile.pdf?v=4.3.0';
+            ? 'portfolio_assets/Beyout_Tech_Company_Profile_EN.pdf?v=4.4.0'
+            : 'portfolio_assets/Beyout_Tech_Company_Profile.pdf?v=4.4.0';
         link.setAttribute('href', targetPdf);
     }
 });
