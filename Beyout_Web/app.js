@@ -1,7 +1,7 @@
 // Beyout Smart Home Application Logic
 const TELEGRAM_CHAT_ID = '8641170921';
 const TELEGRAM_BOT_TOKEN = '8811745328:AAFC-kFEk2jChMzCEYyg2lMyzUa4lFn7BUQ';
-let currentLanguage = 'ar';
+let currentLanguage = (typeof localStorage !== 'undefined' && localStorage.getItem('beyout_lang')) ? localStorage.getItem('beyout_lang') : 'ar';
 let currentFormStep = 1;
 let selectedFormProduct = 'lumora';
 let acTemperature = 22;
@@ -497,7 +497,8 @@ function setLanguage(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
     
-    document.body.className = `theme-beyout lang-${lang}`;
+    document.body.className = `theme-beyout lang-${lang} ${lang === 'ar' ? 'rtl' : 'ltr'}`;
+    if (typeof applySiteLanguage === 'function') applySiteLanguage(lang);
     
     // Translate text content
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -1425,7 +1426,17 @@ function toggleLanguage() {
     applySiteLanguage(nextLang);
 }
 
+function updateBrochureLinksForLanguage(lang) {
+    const targetPdf = lang === 'en'
+        ? 'portfolio_assets/Beyout_Tech_Company_Profile_EN.pdf?v=4.3.0'
+        : 'portfolio_assets/Beyout_Tech_Company_Profile.pdf?v=4.3.0';
+    document.querySelectorAll('a[href*="Beyout_Tech_Company_Profile"]').forEach(link => {
+        link.setAttribute('href', targetPdf);
+    });
+}
+
 function applySiteLanguage(lang) {
+    currentLanguage = lang;
     const htmlEl = document.documentElement;
     htmlEl.setAttribute('lang', lang);
     htmlEl.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
@@ -1442,7 +1453,25 @@ function applySiteLanguage(lang) {
         const val = el.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
         if (val) el.textContent = val;
     });
+
+    updateBrochureLinksForLanguage(lang);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const activeLang = (document.documentElement.getAttribute('lang') === 'en' || localStorage.getItem('beyout_lang') === 'en') ? 'en' : 'ar';
+    updateBrochureLinksForLanguage(activeLang);
+});
+
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="Beyout_Tech_Company_Profile"]');
+    if (link) {
+        const isEn = document.documentElement.getAttribute('lang') === 'en' || document.body.classList.contains('ltr');
+        const targetPdf = isEn
+            ? 'portfolio_assets/Beyout_Tech_Company_Profile_EN.pdf?v=4.3.0'
+            : 'portfolio_assets/Beyout_Tech_Company_Profile.pdf?v=4.3.0';
+        link.setAttribute('href', targetPdf);
+    }
+});
 
 // 2. Hero Image Switcher & Lightbox
 function switchSysHeroImg(btn, imgSrc) {
