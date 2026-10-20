@@ -1403,3 +1403,731 @@ Object.assign(translations.en, {
     "footer_cert_box_desc": "All fiber optic, data network, and security projects are delivered with certified Fluke & OTDR testing.",
     "footer_copyright": "© 2026 Beyout Tech (Light Current, Electrical Engineering & Smart Systems). All Rights Reserved."
 });
+
+
+
+/* ==========================================================================
+   BEYOUT TECH v4.0.0 — INTERACTIVE SIMULATORS, CALCULATORS & MULTI-PAGE LOGIC
+   ========================================================================== */
+
+// 1. Mobile Menu & Language Toggle Helpers
+function toggleMobileMenu() {
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks) {
+        navLinks.classList.toggle('active');
+    }
+}
+
+function toggleLanguage() {
+    const htmlEl = document.documentElement;
+    const currentLang = htmlEl.getAttribute('lang') === 'en' ? 'en' : 'ar';
+    const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+    applySiteLanguage(nextLang);
+}
+
+function applySiteLanguage(lang) {
+    const htmlEl = document.documentElement;
+    htmlEl.setAttribute('lang', lang);
+    htmlEl.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    document.body.classList.toggle('rtl', lang === 'ar');
+    document.body.classList.toggle('ltr', lang === 'en');
+    localStorage.setItem('beyout_lang', lang);
+
+    const langText = document.getElementById('lang-text');
+    if (langText) {
+        langText.textContent = lang === 'ar' ? 'EN' : 'عربي';
+    }
+
+    document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+        const val = el.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
+        if (val) el.textContent = val;
+    });
+}
+
+// 2. Hero Image Switcher & Lightbox
+function switchSysHeroImg(btn, imgSrc) {
+    const mainImg = document.getElementById('sys-main-preview');
+    if (mainImg) mainImg.src = imgSrc;
+    document.querySelectorAll('.sys-thumb-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+function openLightbox(src, caption) {
+    const modal = document.getElementById('img-lightbox');
+    const img = document.getElementById('lightbox-img');
+    const cap = document.getElementById('lightbox-caption');
+    if (modal && img) {
+        img.src = src;
+        if (cap) cap.textContent = caption || '';
+        modal.classList.add('open');
+    }
+}
+
+function closeLightbox() {
+    const modal = document.getElementById('img-lightbox');
+    if (modal) modal.classList.remove('open');
+}
+
+function highlightTopoStep(card) {
+    document.querySelectorAll('.topo-step-card').forEach(c => c.classList.remove('active-step'));
+    if (card) card.classList.add('active-step');
+}
+
+// 3. LC-01: Data & Fiber Network Calculator
+function calcDataFiber() {
+    const ptsEl = document.getElementById('df-points');
+    const bldgsEl = document.getElementById('df-bldgs');
+    const catEl = document.getElementById('df-cat');
+    if (!ptsEl || !bldgsEl) return;
+
+    const pts = parseInt(ptsEl.value, 10) || 90;
+    const bldgs = parseInt(bldgsEl.value, 10) || 3;
+    const cat = catEl ? catEl.value : 'Cat6a (10 Gbps)';
+
+    document.getElementById('df-points-val').textContent = pts;
+    document.getElementById('df-bldgs-val').textContent = bldgs;
+
+    const switches24 = Math.ceil(pts / 22);
+    const patchPanels = Math.ceil(pts / 24);
+    const racks = Math.max(1, bldgs);
+    const cableBoxes = Math.ceil((pts * 55) / 305);
+    const fiberCores = bldgs * 12;
+
+    const outRacks = document.getElementById('df-out-racks');
+    const outSw = document.getElementById('df-out-switches');
+    const outCables = document.getElementById('df-out-cables');
+    const outFiber = document.getElementById('df-out-fiber');
+    const outSum = document.getElementById('df-out-summary');
+
+    if (outRacks) outRacks.textContent = `${racks}x Rack + ${patchPanels} Patch Panel`;
+    if (outSw) outSw.textContent = `${switches24}x Switch 24-Port PoE`;
+    if (outCables) outCables.textContent = `${cableBoxes} رول كابل (${pts} مخرج)`;
+    if (outFiber) outFiber.textContent = `${fiberCores} Core لحام + OTDR`;
+    if (outSum) {
+        outSum.textContent = `المواصفة المختارة: ${cat} — تشمل توريد وسحب الكابلات، تقفيل ${patchPanels} باتش بانل، لحام ${fiberCores} فرعة فايبر، وإصدار شهادة اختبار Fluke DSX-8000 & OTDR لعدد ${pts} نقطة.`;
+    }
+}
+
+// 4. LC-02: CCTV Storage & NVR Calculator
+function calcCctv() {
+    const camsEl = document.getElementById('cctv-cams');
+    const daysEl = document.getElementById('cctv-days');
+    const resEl = document.getElementById('cctv-res');
+    if (!camsEl || !daysEl) return;
+
+    const cams = parseInt(camsEl.value, 10) || 32;
+    const days = parseInt(daysEl.value, 10) || 30;
+    const resMp = resEl ? parseInt(resEl.value, 10) : 4;
+
+    document.getElementById('cctv-cams-val').textContent = cams;
+    document.getElementById('cctv-days-val').textContent = days;
+
+    // Approx bitrate with H.265+
+    const mbpsPerCam = resMp === 8 ? 6.0 : (resMp === 4 ? 3.2 : 1.8);
+    const totalBandwidth = (cams * mbpsPerCam).toFixed(1);
+    const totalTB = Math.max(2, Math.ceil((cams * mbpsPerCam * 86400 * days) / (8 * 1024 * 1024) * 0.65));
+    const nvrCh = cams <= 8 ? 8 : (cams <= 16 ? 16 : (cams <= 32 ? 32 : (cams <= 64 ? 64 : 128)));
+    const poeSwitches = Math.ceil(cams / 16);
+
+    const outNvr = document.getElementById('cctv-out-nvr');
+    const outHdd = document.getElementById('cctv-out-hdd');
+    const outBw = document.getElementById('cctv-out-bw');
+    const outPoe = document.getElementById('cctv-out-poe');
+    const outSum = document.getElementById('cctv-out-summary');
+
+    if (outNvr) outNvr.textContent = `NVR ${nvrCh} Channels 4K`;
+    if (outHdd) outHdd.textContent = `${totalTB} TB Surveillance HDD`;
+    if (outBw) outBw.textContent = `${totalBandwidth} Mbps (H.265+)`;
+    if (outPoe) outPoe.textContent = `${poeSwitches}x PoE Switch`;
+    if (outSum) {
+        outSum.textContent = `المنظومة تشمل ${cams} كاميرا بدقة ${resMp}MP مع تسجيل مستمر لمدة ${days} يوم بمساحة تخزينية ${totalTB} تيرابايت وتجهيز غرفة المراقبة المركزية.`;
+    }
+}
+
+// 5. LC-03: Fire Alarm Loop Configurator & Simulator
+function calcFireAlarm() {
+    const floorsEl = document.getElementById('fa-floors');
+    const roomsEl = document.getElementById('fa-rooms');
+    if (!floorsEl || !roomsEl) return;
+
+    const floors = parseInt(floorsEl.value, 10) || 4;
+    const roomsPerFloor = parseInt(roomsEl.value, 10) || 12;
+
+    document.getElementById('fa-floors-val').textContent = floors;
+    document.getElementById('fa-rooms-val').textContent = roomsPerFloor;
+
+    const totalSmoke = floors * roomsPerFloor;
+    const totalHeat = floors * 2;
+    const totalMcp = floors * 2;
+    const totalSirens = floors * 3;
+    const totalDevices = totalSmoke + totalHeat + totalMcp + totalSirens;
+    const loops = Math.max(1, Math.ceil(totalDevices / 125));
+
+    const oPanel = document.getElementById('fa-out-panel');
+    const oSmoke = document.getElementById('fa-out-smoke');
+    const oHeat = document.getElementById('fa-out-heat');
+    const oSiren = document.getElementById('fa-out-siren');
+
+    if (oPanel) oPanel.textContent = `Addressable Panel (${loops} Loop)`;
+    if (oSmoke) oSmoke.textContent = `${totalSmoke} كاشف دخان`;
+    if (oHeat) oHeat.textContent = `${totalHeat} كاشف حرارة`;
+    if (oSiren) oSiren.textContent = `${totalSirens} سارينة + ${totalMcp} كاسر`;
+}
+
+function simFireAlarm(mode) {
+    const statusBox = document.getElementById('fa-sim-status');
+    if (!statusBox) return;
+    if (mode === 'test') {
+        statusBox.innerHTML = '🚨 <strong>حالة اختبار الحريق نشطة (ALARM TEST):</strong> تم رصد دخان في الدور الثاني (غرفة السيرفرات Address #02-14) — تم إطلاق السارينة، فصل التكييف HVAC، وإنزال المصاعد للدور الأرضي تلقائياً!';
+        statusBox.style.borderColor = '#ef4444';
+        statusBox.style.background = 'rgba(239, 68, 68, 0.15)';
+    } else {
+        statusBox.innerHTML = '✅ <strong>حالة النظام طبيعية (NORMAL STANDBY):</strong> جميع الحساسات المعنونة متصلة باللوحة الرئيسية وتعمل بكفاءة 100% وفق كود NFPA 72.';
+        statusBox.style.borderColor = '#10b981';
+        statusBox.style.background = 'rgba(16, 185, 129, 0.12)';
+    }
+}
+
+// 6. LC-04: Access Control & Biometrics Sizer
+function calcAccessControl() {
+    const doorsEl = document.getElementById('ac-doors');
+    const empEl = document.getElementById('ac-emp');
+    const typeEl = document.getElementById('ac-type');
+    if (!doorsEl || !empEl) return;
+
+    const doors = parseInt(doorsEl.value, 10) || 8;
+    const emp = parseInt(empEl.value, 10) || 150;
+    const type = typeEl ? typeEl.value : 'Face + Fingerprint';
+
+    document.getElementById('ac-doors-val').textContent = doors;
+    document.getElementById('ac-emp-val').textContent = emp;
+
+    const controllers = Math.ceil(doors / 4);
+    const timeTerminals = Math.max(1, Math.ceil(emp / 120));
+
+    const oCtrl = document.getElementById('ac-out-ctrl');
+    const oLocks = document.getElementById('ac-out-locks');
+    const oAtt = document.getElementById('ac-out-att');
+    const oCards = document.getElementById('ac-out-cards');
+    const oSum = document.getElementById('ac-out-summary');
+
+    if (oCtrl) oCtrl.textContent = `${controllers}x لوحة تحكم 4-Door`;
+    if (oLocks) oLocks.textContent = `${doors}x كالون EM Lock + قارئ`;
+    if (oAtt) oAtt.textContent = `${timeTerminals}x جهاز حضور وانصراف`;
+    if (oCards) oCards.textContent = `${emp} كارت / بصمة مشفرة`;
+    if (oSum) {
+        oSum.textContent = `التقنية المختارة: ${type} — تشمل تأمين ${doors} باب بكوالين مغناطيسية وحساسات فتح الباب وربطها ببرنامج الموارد البشرية والفتح التلقائي مع إنذار الحريق.`;
+    }
+}
+
+// 7. LC-05: Sound, PA & Nurse Call Simulator
+function calcSoundPa() {
+    const areaEl = document.getElementById('pa-area');
+    const zonesEl = document.getElementById('pa-zones');
+    const modeEl = document.getElementById('pa-mode');
+    if (!areaEl || !zonesEl) return;
+
+    const area = parseInt(areaEl.value, 10) || 1200;
+    const zones = parseInt(zonesEl.value, 10) || 4;
+    const mode = modeEl ? modeEl.value : 'PA & Voice Evacuation';
+
+    document.getElementById('pa-area-val').textContent = area;
+    document.getElementById('pa-zones-val').textContent = zones;
+
+    const speakers = Math.ceil(area / 25);
+    const wattage = speakers * 6;
+    const ampPower = Math.ceil((wattage * 1.35) / 120) * 120;
+
+    const oSpk = document.getElementById('pa-out-spk');
+    const oAmp = document.getElementById('pa-out-amp');
+    const oMic = document.getElementById('pa-out-mic');
+    const oNurse = document.getElementById('pa-out-nurse');
+    const oSum = document.getElementById('pa-out-summary');
+
+    if (oSpk) oSpk.textContent = `${speakers} سماعة سقفية/حائطية`;
+    if (oAmp) oAmp.textContent = `${ampPower}W Matrix Amplifier`;
+    if (oMic) oMic.textContent = `${zones} Zones + Paging Mic`;
+    if (oNurse) oNurse.textContent = mode.includes('Nurse') ? `${zones * 8} نقاط استدعاء ممرضات` : `ربط إخلاء صوتي تلقائي`;
+    if (oSum) {
+        oSum.textContent = `النظام: ${mode} — يغطي مساحة ${area} م² موزعة على ${zones} مناطق صوتية مستقلة بقدرة إجمالية ${ampPower} وات.`;
+    }
+}
+
+// 8. LC-06: IP-PBX & Intercom Sizer
+function calcPbx() {
+    const extEl = document.getElementById('pbx-ext');
+    const aptsEl = document.getElementById('pbx-apts');
+    const typeEl = document.getElementById('pbx-type');
+    if (!extEl || !aptsEl) return;
+
+    const ext = parseInt(extEl.value, 10) || 40;
+    const apts = parseInt(aptsEl.value, 10) || 20;
+    const type = typeEl ? typeEl.value : 'IP-PBX + Video Intercom';
+
+    document.getElementById('pbx-ext-val').textContent = ext;
+    document.getElementById('pbx-apts-val').textContent = apts;
+
+    const pbxModel = ext <= 50 ? 'IP-PBX 60 Users' : (ext <= 150 ? 'IP-PBX 200 Users' : 'Enterprise PBX 500+');
+    const poeSw = Math.ceil((ext + apts) / 24);
+
+    const oSrv = document.getElementById('pbx-out-srv');
+    const oPhones = document.getElementById('pbx-out-phones');
+    const oIntercom = document.getElementById('pbx-out-intercom');
+    const oSw = document.getElementById('pbx-out-sw');
+    const oSum = document.getElementById('pbx-out-summary');
+
+    if (oSrv) oSrv.textContent = pbxModel;
+    if (oPhones) oPhones.textContent = `${ext} عدة تليفون IP HD`;
+    if (oIntercom) oIntercom.textContent = `${apts} شاشة داخلية + لوحة باب`;
+    if (oSw) oSw.textContent = `${poeSw}x سويتش PoE للربط`;
+    if (oSum) {
+        oSum.textContent = `المنظومة (${type}) تدعم الربط الصوتي والمرئي الكامل، الرد الآلي IVR، وتسجيل المكالمات.`;
+    }
+}
+
+// 9. LC-07: Live Interactive Queue Ticket & Display Simulator
+let currentQueueTicket = 104;
+function issueQueueTicket(servicePrefix, serviceName) {
+    currentQueueTicket++;
+    const code = `${servicePrefix}-${currentQueueTicket}`;
+    const numEl = document.getElementById('q-sim-ticket-num');
+    const srvEl = document.getElementById('q-sim-ticket-srv');
+    const winEl = document.getElementById('q-sim-window');
+    const waitEl = document.getElementById('q-sim-wait');
+
+    if (numEl) numEl.textContent = code;
+    if (srvEl) srvEl.textContent = serviceName;
+    if (winEl) winEl.textContent = `شباك رقم ${(currentQueueTicket % 6) + 1}`;
+    if (waitEl) waitEl.textContent = `تم إصدار التذكرة ${code} بنجاح — يظهر النداء الآن على الشاشة الرئيسية وشاشة الشباك الفرعية مع نداء صوتي آلي باللغتين.`;
+}
+
+// 10. LC-08: Security Gates & Checkpoint Configurator
+function calcSecurityGates() {
+    const lanesEl = document.getElementById('sg-lanes');
+    const fenceEl = document.getElementById('sg-fence');
+    const levelEl = document.getElementById('sg-level');
+    if (!lanesEl || !fenceEl) return;
+
+    const lanes = parseInt(lanesEl.value, 10) || 2;
+    const fence = parseInt(fenceEl.value, 10) || 450;
+    const level = levelEl ? levelEl.value : 'High Security';
+
+    document.getElementById('sg-lanes-val').textContent = lanes;
+    document.getElementById('sg-fence-val').textContent = fence;
+
+    const oGates = document.getElementById('sg-out-gates');
+    const oXray = document.getElementById('sg-out-xray');
+    const oBarriers = document.getElementById('sg-out-barriers');
+    const oFence = document.getElementById('sg-out-fence');
+    const oSum = document.getElementById('sg-out-summary');
+
+    if (oGates) oGates.textContent = `${lanes}x بوابة كشف معادن 33-Zone`;
+    if (oXray) oXray.textContent = `${Math.ceil(lanes / 2)}x جهاز X-Ray لفحص الحقائب`;
+    if (oBarriers) oBarriers.textContent = `${lanes}x حاجز سيارات + قارئ لوحات`;
+    if (oFence) oFence.textContent = `${fence} متر تأمين أسوار ضد التسلل`;
+    if (oSum) {
+        oSum.textContent = `مستوى التأمين (${level}): يحاكي منظومة تأمين محطة محولات المساعيد بالعريش (${fence}م أسوار + بوابات أفراد ومركبات + أجهزة تفتيش بالأشعة).`;
+    }
+}
+
+// 11. LV/MV Electrical Grid Sizer
+function calcLvMv() {
+    const transEl = document.getElementById('lv-trans');
+    const mvKmEl = document.getElementById('lv-mvkm');
+    const lvKmEl = document.getElementById('lv-lvkm');
+    const typeEl = document.getElementById('lv-type');
+    if (!transEl || !mvKmEl || !lvKmEl) return;
+
+    const trans = parseInt(transEl.value, 10) || 12;
+    const mvKm = parseInt(mvKmEl.value, 10) || 8;
+    const lvKm = parseInt(lvKmEl.value, 10) || 15;
+    const type = typeEl ? typeEl.value : 'شبكة 11kV / 0.4kV';
+
+    document.getElementById('lv-trans-val').textContent = trans;
+    document.getElementById('lv-mvkm-val').textContent = mvKm;
+    document.getElementById('lv-lvkm-val').textContent = lvKm;
+
+    const dist = Math.max(1, Math.ceil(trans / 40));
+    const totalKm = mvKm + lvKm;
+    const joints = (trans * 4) + (mvKm * 3) + (lvKm * 2);
+    const poles = lvKm * 25;
+
+    const oDist = document.getElementById('lv-out-dist');
+    const oCables = document.getElementById('lv-out-cables');
+    const oJoints = document.getElementById('lv-out-joints');
+    const oPoles = document.getElementById('lv-out-poles');
+    const oSum = document.getElementById('lv-out-summary');
+
+    if (oDist) oDist.textContent = `${dist} موزع + ${trans} محول`;
+    if (oCables) oCables.textContent = `${totalKm} كم (${mvKm} MV + ${lvKm} LV)`;
+    if (oJoints) oJoints.textContent = `${joints} علبة نهاية ولحام`;
+    if (oPoles) oPoles.textContent = `${poles} عمود إنارة + لوحات`;
+    if (oSum) {
+        oSum.textContent = `نطاق التنفيذ: ${type} — يشمل أعمال الحفر، مد ${mvKm} كم جهد متوسط و${lvKm} كم جهد منخفض، تركيب ${trans} محول، واختبارات العزل Megger & Hi-Pot.`;
+    }
+}
+
+// 12. LC-09: Smart Villa Interactive Sandbox
+function applySmartScene(scene, btn) {
+    document.querySelectorAll('.scene-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    const badge = document.getElementById('villa-scene-badge');
+    const pwr = document.getElementById('villa-power-val');
+    const tmp = document.getElementById('villa-temp-val');
+    const sec = document.getElementById('villa-sec-val');
+    const log = document.getElementById('villa-live-log');
+
+    const states = {
+        welcome: {
+            badge: 'وضع الاستقبال النهاري',
+            pwr: '1.4 kW',
+            tmp: '22°C',
+            sec: 'مؤمّن 100%',
+            log: '☀️ تم تفعيل وضع الاستقبال: فتح الستائر 100%، ضبط التكييف على 22°C، تشغيل الإضاءة الترحيبية وموسيقى الاستقبال الهادئة.',
+            devs: { lights: true, ac: true, curtains: true, lock: true, audio: true, cctv: true }
+        },
+        cinema: {
+            badge: 'وضع السينما المسائي',
+            pwr: '0.9 kW',
+            tmp: '21°C',
+            sec: 'مؤمّن 100%',
+            log: '🎬 تم تفعيل وضع السينما: إغلاق الستائر بالكامل، خفض الإضاءة إلى 15% Ambient، وتوجيه النظام الصوتي المحيطي لشاشة العرض.',
+            devs: { lights: true, ac: true, curtains: false, lock: true, audio: true, cctv: true }
+        },
+        away: {
+            badge: 'وضع المغادرة والتأمين الشامل',
+            pwr: '0.2 kW',
+            tmp: '26°C Eco',
+            sec: 'حراسة مشددة',
+            log: '🛡️ تم تفعيل وضع المغادرة: إغلاق كافة الإضاءات والتكييفات والستائر، قفل الأبواب بالبصمة، وتفعيل إنذار الحركة وكاميرات الأسوار.',
+            devs: { lights: false, ac: false, curtains: false, lock: true, audio: false, cctv: true }
+        },
+        eco: {
+            badge: 'وضع توفير الطاقة الذكي',
+            pwr: '0.6 kW (-45%)',
+            tmp: '24°C Auto',
+            sec: 'مؤمّن 100%',
+            log: '🌿 تم تفعيل وضع توفير الطاقة: ضبط التكييف تلقائياً على 24°C والاستفادة من الإضاءة الطبيعية لتقليل استهلاك الكهرباء بنسبة 45%.',
+            devs: { lights: false, ac: true, curtains: true, lock: true, audio: false, cctv: true }
+        }
+    };
+
+    const st = states[scene] || states.welcome;
+    if (badge) badge.textContent = st.badge;
+    if (pwr) pwr.textContent = st.pwr;
+    if (tmp) tmp.textContent = st.tmp;
+    if (sec) sec.textContent = st.sec;
+    if (log) log.textContent = st.log;
+
+    Object.keys(st.devs).forEach(k => {
+        const card = document.getElementById('vdev-' + k);
+        if (card) {
+            card.classList.toggle('active', st.devs[k]);
+        }
+    });
+}
+
+function toggleVillaDevice(devKey) {
+    const card = document.getElementById('vdev-' + devKey);
+    if (!card) return;
+    card.classList.toggle('active');
+    const isOn = card.classList.contains('active');
+    const statusEl = document.getElementById('vdev-' + devKey + '-status');
+    if (statusEl) {
+        statusEl.textContent = isOn ? 'نشط ويعمل الآن (ON)' : 'متوقف مؤقتاً (STANDBY)';
+    }
+}
+
+// 13. Projects Filter Page
+function filterProjectsPage(cat, btn) {
+    document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    document.querySelectorAll('.project-full-case').forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// 14. Enterprise Multi-System BOQ Form Submission
+function collectBoqMessage() {
+    const checked = Array.from(document.querySelectorAll('input[name="boq_systems"]:checked')).map(i => i.value);
+    const systemsStr = checked.length ? checked.join(' + ') : 'لم يتم تحديد نظام بعينه (استشارة عامة)';
+    const projType = (document.getElementById('boq-proj-type') || {}).value || '';
+    const projStage = (document.getElementById('boq-proj-stage') || {}).value || '';
+    const loc = (document.getElementById('boq-location') || {}).value || '';
+    const name = (document.getElementById('boq-name') || {}).value || '';
+    const company = (document.getElementById('boq-company') || {}).value || '';
+    const phone = (document.getElementById('boq-phone') || {}).value || '';
+    const notes = (document.getElementById('boq-notes') || {}).value || '';
+
+    return `مرحباً الإدارة الهندسية بشركة بيوت تك (Beyout Tech)،
+أرغب في طلب مقايسة فنية / عرض سعر رسمي:
+• الاسم: ${name} ${company ? '(' + company + ')' : ''}
+• رقم التواصل: ${phone}
+• الأنظمة المطلوبة: ${systemsStr}
+• نوع المشروع: ${projType}
+• حالة المشروع: ${projStage}
+• الموقع: ${loc}
+• ملاحظات فنية: ${notes || 'لا توجد'}`;
+}
+
+function submitEnterpriseBoq(e) {
+    e.preventDefault();
+    const msg = collectBoqMessage();
+    const waUrl = `https://wa.me/201064334334?text=${encodeURIComponent(msg)}`;
+    window.open(waUrl, '_blank');
+}
+
+function submitEnterpriseBoqEmail() {
+    const msg = collectBoqMessage();
+    const mailUrl = `mailto:info@beyouttech.com?subject=${encodeURIComponent('طلب مقايسة فنية وعرض سعر - Beyout Tech')}&body=${encodeURIComponent(msg)}`;
+    window.location.href = mailUrl;
+}
+
+function submitQuickContact(e) {
+    e.preventDefault();
+    const name = (document.getElementById('q-name') || {}).value || '';
+    const phone = (document.getElementById('q-phone') || {}).value || '';
+    const dept = (document.getElementById('q-dept') || {}).value || '';
+    const msg = (document.getElementById('q-msg') || {}).value || '';
+    const text = `مرحباً بيوت تك، رسالة جديدة من الموقع:
+• الاسم: ${name}
+• الهاتف: ${phone}
+• القسم: ${dept}
+• الرسالة: ${msg}`;
+    window.open(`https://wa.me/201064334334?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+// Auto-initialize on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Pre-check system on quote.html if ?system=... is in URL
+    const params = new URLSearchParams(window.location.search);
+    const sysParam = params.get('system');
+    if (sysParam) {
+        const chk = document.querySelector(`input[data-sysid="${sysParam}"]`);
+        if (chk) chk.checked = true;
+    }
+
+    // Apply saved language if English was chosen
+    const savedLang = localStorage.getItem('beyout_lang');
+    if (savedLang === 'en') {
+        applySiteLanguage('en');
+    }
+});
+
+
+// Exact Match Functions for systems_data.py Simulators
+function calcDataFiber() {
+    const pts = parseInt((document.getElementById('df-points') || {}).value, 10) || 90;
+    const bldgs = parseInt((document.getElementById('df-bldgs') || {}).value, 10) || 3;
+    const cat = (document.getElementById('df-cat') || {}).value || 'Cat6a';
+
+    if (document.getElementById('df-points-val')) document.getElementById('df-points-val').textContent = pts;
+    if (document.getElementById('df-bldgs-val')) document.getElementById('df-bldgs-val').textContent = bldgs;
+
+    const racks = Math.max(1, bldgs);
+    const sw24 = Math.ceil(pts / 22);
+    const patch = Math.ceil(pts / 24);
+    const rolls = Math.ceil((pts * 55) / 305);
+    const cores = bldgs * 8;
+
+    if (document.getElementById('df-out-racks')) document.getElementById('df-out-racks').textContent = `${racks}x Rack 27U/42U`;
+    if (document.getElementById('df-out-switches')) document.getElementById('df-out-switches').textContent = `${sw24}x Switch 24P PoE`;
+    if (document.getElementById('df-out-patch')) document.getElementById('df-out-patch').textContent = `${patch}x Patch Panel 24P`;
+    if (document.getElementById('df-out-cables')) document.getElementById('df-out-cables').textContent = `${rolls} رول كابل (${rolls * 305}م)`;
+    if (document.getElementById('df-out-fiber')) document.getElementById('df-out-fiber').textContent = `${cores} Core لحام + OTDR`;
+    if (document.getElementById('df-out-summary')) {
+        document.getElementById('df-out-summary').textContent = `التكوين المقترح (${cat}): يشمل سحب وتأريج ${pts} مخرج داتا، تجميع ${racks} راك، لحام ${cores} فرعة فايبر، وتسليم تقارير اختبار Fluke & OTDR المعتمدة.`;
+    }
+}
+
+function calcCctv() {
+    const cams = parseInt((document.getElementById('cctv-count') || {}).value, 10) || 32;
+    const days = parseInt((document.getElementById('cctv-days') || {}).value, 10) || 30;
+    const res = parseInt((document.getElementById('cctv-res') || {}).value, 10) || 4;
+
+    if (document.getElementById('cctv-count-val')) document.getElementById('cctv-count-val').textContent = cams;
+    if (document.getElementById('cctv-days-val')) document.getElementById('cctv-days-val').textContent = days;
+
+    const mbps = res === 8 ? 6 : (res === 5 ? 4 : (res === 4 ? 3 : 1.8));
+    const bw = (cams * mbps).toFixed(0);
+    const tb = Math.max(4, Math.ceil((cams * mbps * 86400 * days) / (8 * 1024 * 1024) * 0.65));
+    const hdds = Math.ceil(tb / 8);
+    const nvrCh = cams <= 16 ? 16 : (cams <= 32 ? 32 : (cams <= 64 ? 64 : 128));
+    const poe = Math.ceil(cams / 16);
+
+    if (document.getElementById('cctv-out-nvr')) document.getElementById('cctv-out-nvr').textContent = `1x NVR ${nvrCh}-Ch 4K`;
+    if (document.getElementById('cctv-out-tb')) document.getElementById('cctv-out-tb').textContent = `${tb} TB Storage`;
+    if (document.getElementById('cctv-out-hdd')) document.getElementById('cctv-out-hdd').textContent = `${hdds}x HDD 8TB Enterprise`;
+    if (document.getElementById('cctv-out-bw')) document.getElementById('cctv-out-bw').textContent = `${bw} Mbps`;
+    if (document.getElementById('cctv-out-poe')) document.getElementById('cctv-out-poe').textContent = `${poe}x PoE Switch`;
+    if (document.getElementById('cctv-out-summary')) {
+        document.getElementById('cctv-out-summary').textContent = `المنظومة تدعم ${cams} كاميرا مراقبة بدقة ${res}MP مع تسجيل مستمر 24/7 لمدة ${days} يوم بضغط ذكي H.265+ ومساحة إجمالية ${tb} تيرابايت.`;
+    }
+}
+
+function simFireAlarm() {
+    const area = parseInt((document.getElementById('fa-area') || {}).value, 10) || 1200;
+    const floors = parseInt((document.getElementById('fa-floors') || {}).value, 10) || 3;
+    const type = (document.getElementById('fa-type') || {}).value || 'Addressable';
+
+    if (document.getElementById('fa-area-val')) document.getElementById('fa-area-val').textContent = area;
+    if (document.getElementById('fa-floors-val')) document.getElementById('fa-floors-val').textContent = floors;
+
+    const smoke = Math.ceil((area * floors) / 45);
+    const heat = floors * 3;
+    const siren = floors * 4;
+    const mcp = floors * 2;
+    const mod = floors * 2;
+    const loops = Math.max(1, Math.ceil((smoke + heat + siren + mcp + mod) / 125));
+
+    if (document.getElementById('fa-out-panel')) document.getElementById('fa-out-panel').textContent = `${loops}-Loop Panel`;
+    if (document.getElementById('fa-out-smoke')) document.getElementById('fa-out-smoke').textContent = `${smoke} Smoke`;
+    if (document.getElementById('fa-out-heat')) document.getElementById('fa-out-heat').textContent = `${heat} Heat`;
+    if (document.getElementById('fa-out-siren')) document.getElementById('fa-out-siren').textContent = `${siren} Sirens`;
+    if (document.getElementById('fa-out-mcp')) document.getElementById('fa-out-mcp').textContent = `${mcp} Break Glass`;
+    if (document.getElementById('fa-out-mod')) document.getElementById('fa-out-mod').textContent = `${mod} Modules`;
+    if (document.getElementById('fa-out-summary')) {
+        document.getElementById('fa-out-summary').textContent = `التكوين (${type}): يغطي ${floors} طوابق بمساحة إجمالية ${area * floors} م² شامل لوحة الإنذار، ${smoke} حساس دخان، ${heat} حساس حرارة، ووحدات الربط مع المصاعد والتكييف.`;
+    }
+}
+
+function simAccessZone() {
+    const emp = parseInt((document.getElementById('ac-emp') || {}).value, 10) || 150;
+    const doors = parseInt((document.getElementById('ac-doors') || {}).value, 10) || 8;
+    const fac = (document.getElementById('ac-facility') || {}).value || 'مقر إداري';
+
+    if (document.getElementById('ac-emp-val')) document.getElementById('ac-emp-val').textContent = emp;
+    if (document.getElementById('ac-doors-val')) document.getElementById('ac-doors-val').textContent = doors;
+
+    const terms = Math.max(1, Math.ceil(emp / 100));
+    const ctrls = Math.ceil(doors / 4);
+
+    if (document.getElementById('ac-out-term')) document.getElementById('ac-out-term').textContent = `${terms}x AI Face/Bio`;
+    if (document.getElementById('ac-out-ctrl')) document.getElementById('ac-out-ctrl').textContent = `${ctrls}x 4-Door Panel`;
+    if (document.getElementById('ac-out-locks')) document.getElementById('ac-out-locks').textContent = `${doors}x EM Locks`;
+    if (document.getElementById('ac-out-exit')) document.getElementById('ac-out-exit').textContent = `${doors}x Touchless Exit`;
+    if (document.getElementById('ac-out-cards')) document.getElementById('ac-out-cards').textContent = `${emp}x RFID Cards`;
+    if (document.getElementById('ac-out-summary')) {
+        document.getElementById('ac-out-summary').textContent = `منظومة متكاملة لـ (${fac}) تشمل ${terms} جهاز بصمة وجه وحضور وانصراف، وتأمين ${doors} أبواب بكوالين مغناطيسية مربوطة بنظام إنذار الحريق.`;
+    }
+}
+
+function simSoundZone() {
+    const type = (document.getElementById('snd-type') || {}).value || 'pa';
+    const size = parseInt((document.getElementById('snd-size') || {}).value, 10) || 35;
+    const zones = parseInt((document.getElementById('snd-zones') || {}).value, 10) || 4;
+
+    if (document.getElementById('snd-size-val')) document.getElementById('snd-size-val').textContent = size;
+    if (document.getElementById('snd-zones-val')) document.getElementById('snd-zones-val').textContent = zones;
+
+    if (type === 'nurse') {
+        if (document.getElementById('snd-out-spk')) document.getElementById('snd-out-spk').textContent = `${size}x Bed Unit`;
+        if (document.getElementById('snd-lbl-1')) document.getElementById('snd-lbl-1').textContent = 'وحدات استدعاء سرير';
+        if (document.getElementById('snd-out-amp')) document.getElementById('snd-out-amp').textContent = `${size}x Pull Cord`;
+        if (document.getElementById('snd-lbl-2')) document.getElementById('snd-lbl-2').textContent = 'شدادات طوارئ حمام';
+        if (document.getElementById('snd-out-mic')) document.getElementById('snd-out-mic').textContent = `${zones}x Master Console`;
+        if (document.getElementById('snd-lbl-3')) document.getElementById('snd-lbl-3').textContent = 'لوحات كاونتر التمريض';
+        if (document.getElementById('snd-out-evac')) document.getElementById('snd-out-evac').textContent = `${size}x Over-Door LED`;
+        if (document.getElementById('snd-lbl-4')) document.getElementById('snd-lbl-4').textContent = 'لمبات بيان أعلى الغرف';
+        if (document.getElementById('snd-out-zones')) document.getElementById('snd-out-zones').textContent = `${zones} أقسام طبية`;
+        if (document.getElementById('snd-out-summary')) {
+            document.getElementById('snd-out-summary').textContent = `منظومة استدعاء ممرضات رقمية (Nurse Call) تغطي ${size} غرفة/سرير موزعة على ${zones} أقسام تمريض شاملة شدادات الحمام ولمبات البيان.`;
+        }
+    } else {
+        const watts = size * 6;
+        const ampW = Math.ceil((watts * 1.3) / 120) * 120;
+        if (document.getElementById('snd-out-spk')) document.getElementById('snd-out-spk').textContent = `${size}x Speakers 6W`;
+        if (document.getElementById('snd-lbl-1')) document.getElementById('snd-lbl-1').textContent = 'سماعات سقفية وحائطية';
+        if (document.getElementById('snd-out-amp')) document.getElementById('snd-out-amp').textContent = `${ampW}W Amplifier`;
+        if (document.getElementById('snd-lbl-2')) document.getElementById('snd-lbl-2').textContent = 'مكبر صوت مركزي';
+        if (document.getElementById('snd-out-mic')) document.getElementById('snd-out-mic').textContent = `2x Paging Mic`;
+        if (document.getElementById('snd-lbl-3')) document.getElementById('snd-lbl-3').textContent = 'ميكروفون نداء مناطق';
+        if (document.getElementById('snd-out-evac')) document.getElementById('snd-out-evac').textContent = `EN54 Voice Evac`;
+        if (document.getElementById('snd-lbl-4')) document.getElementById('snd-lbl-4').textContent = 'وحدة رسائل الإخلاء';
+        if (document.getElementById('snd-out-zones')) document.getElementById('snd-out-zones').textContent = `${zones} Zones`;
+        if (document.getElementById('snd-out-summary')) {
+            document.getElementById('snd-out-summary').textContent = `نظام إذاعة داخلية وإخلاء صوتي يضم ${size} سماعة موزعة على ${zones} مناطق مستقلة بقدرة تكبير إجمالية ${ampW} وات.`;
+        }
+    }
+}
+
+function calcPbx() {
+    const ext = parseInt((document.getElementById('pbx-ext') || {}).value, 10) || 50;
+    const br = parseInt((document.getElementById('pbx-br') || {}).value, 10) || 2;
+    const mode = (document.getElementById('pbx-mode') || {}).value || 'IP-PBX';
+
+    if (document.getElementById('pbx-ext-val')) document.getElementById('pbx-ext-val').textContent = ext;
+    if (document.getElementById('pbx-br-val')) document.getElementById('pbx-br-val').textContent = br;
+
+    const core = ext <= 100 ? '1x IP-PBX 100U' : (ext <= 300 ? '1x IP-PBX 300U' : 'Enterprise PBX 500U');
+    const calls = Math.max(15, Math.ceil(ext * 0.4));
+    const sw = Math.ceil(ext / 22);
+
+    if (document.getElementById('pbx-out-core')) document.getElementById('pbx-out-core').textContent = core;
+    if (document.getElementById('pbx-out-calls')) document.getElementById('pbx-out-calls').textContent = `${calls} مكالمة متزامنة`;
+    if (document.getElementById('pbx-out-phones')) document.getElementById('pbx-out-phones').textContent = `${ext}x IP Phones`;
+    if (document.getElementById('pbx-out-sw')) document.getElementById('pbx-out-sw').textContent = `${sw}x PoE Switch`;
+    if (document.getElementById('pbx-out-gw')) document.getElementById('pbx-out-gw').textContent = `${br}x VoIP Gateway`;
+    if (document.getElementById('pbx-out-summary')) {
+        document.getElementById('pbx-out-summary').textContent = `النظام (${mode}): يربط ${ext} تحويلة داخلية عبر ${br} فروع/مباني مع دعم الرد الآلي IVR وتسجيل المكالمات والإنتركم.`;
+    }
+}
+
+let qTicketCounter = 101;
+let qWaitingCount = 3;
+let lastIssuedPrefix = 'A';
+let lastIssuedSrv = 'خدمات المواطنين والشهر العقاري';
+
+function issueQueueTicket(prefix, srvName) {
+    qTicketCounter++;
+    qWaitingCount++;
+    lastIssuedPrefix = prefix;
+    lastIssuedSrv = srvName;
+    const code = `${prefix}-${qTicketCounter}`;
+    const counterNum = ((qTicketCounter % 8) + 1).toString().padStart(2, '0');
+
+    if (document.getElementById('q-live-ticket')) document.getElementById('q-live-ticket').textContent = code;
+    if (document.getElementById('q-live-counter')) document.getElementById('q-live-counter').textContent = `⬅ التوجه إلى شباك رقم (${counterNum})`;
+    if (document.getElementById('q-live-srv')) document.getElementById('q-live-srv').textContent = srvName;
+    if (document.getElementById('q-live-wait')) document.getElementById('q-live-wait').textContent = `${qWaitingCount} عملاء`;
+    if (document.getElementById('q-live-voice')) {
+        document.getElementById('q-live-voice').textContent = `🖨️ تم طباعة التذكرة رقم (${code}) — الخدمة: ${srvName}. اضغط "نداء العميل التالي" لاستدعائها على الشاشة.`;
+    }
+}
+
+function callNextQueueTicket() {
+    if (qWaitingCount > 1) qWaitingCount--;
+    const code = `${lastIssuedPrefix}-${qTicketCounter}`;
+    const counterNum = ((qTicketCounter % 8) + 1).toString().padStart(2, '0');
+    if (document.getElementById('q-live-ticket')) document.getElementById('q-live-ticket').textContent = code;
+    if (document.getElementById('q-live-counter')) document.getElementById('q-live-counter').textContent = `🔔 الآن على شباك رقم (${counterNum})`;
+    if (document.getElementById('q-live-wait')) document.getElementById('q-live-wait').textContent = `${qWaitingCount} عملاء`;
+    if (document.getElementById('q-live-voice')) {
+        document.getElementById('q-live-voice').textContent = `🔊 النداء الصوتي الآلي: "العميل رقم ${code} (${lastIssuedSrv})، برجاء التوجه إلى شباك رقم ${parseInt(counterNum, 10)}".`;
+    }
+}
+
+function simSecurityGate() {
+    const ped = parseInt((document.getElementById('sg-ped') || {}).value, 10) || 2;
+    const car = parseInt((document.getElementById('sg-car') || {}).value, 10) || 2;
+    const wall = parseInt((document.getElementById('sg-wall') || {}).value, 10) || 450;
+
+    if (document.getElementById('sg-ped-val')) document.getElementById('sg-ped-val').textContent = ped;
+    if (document.getElementById('sg-car-val')) document.getElementById('sg-car-val').textContent = car;
+    if (document.getElementById('sg-wall-val')) document.getElementById('sg-wall-val').textContent = wall;
+
+    if (document.getElementById('sg-out-metal')) document.getElementById('sg-out-metal').textContent = `${ped}x Metal Gate`;
+    if (document.getElementById('sg-out-xray')) document.getElementById('sg-out-xray').textContent = `${ped}x X-Ray Scanner`;
+    if (document.getElementById('sg-out-barrier')) document.getElementById('sg-out-barrier').textContent = `${car}x Car Barrier`;
+    if (document.getElementById('sg-out-fence')) document.getElementById('sg-out-fence').textContent = `${wall}m PIDS`;
+    if (document.getElementById('sg-out-hand')) document.getElementById('sg-out-hand').textContent = `${ped * 2}x Hand-Held`;
+    if (document.getElementById('sg-out-summary')) {
+        document.getElementById('sg-out-summary').textContent = `منظومة تأمين متكاملة تشمل ${ped} بوابة كشف معادن وأجهزة X-Ray، ${car} بوابة سيارات أوتوماتيكية، وتأمين سور بطول ${wall} متر ضد التسلل.`;
+    }
+}
