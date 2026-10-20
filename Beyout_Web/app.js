@@ -161,6 +161,10 @@ function changeAcTemp(offset) {
 
 // Package Selection
 function selectPackage(packageName) {
+    const smartCard = document.getElementById('select-card-lumora');
+    if (typeof chooseFormTrack === 'function') {
+        chooseFormTrack('smart_home_b2c', smartCard);
+    }
     const notesField = document.getElementById('cust_notes');
     if (notesField) {
         notesField.value = `أريد الاستفسار وحجز الباقة الذكية: ${packageName}`;
@@ -173,6 +177,101 @@ function selectPackage(packageName) {
     const demoSection = document.getElementById('demo-section');
     if (demoSection) demoSection.scrollIntoView({ behavior: 'smooth' });
 }
+
+// Portfolio Gallery & Filtering + Catalog Navigation + Service Track Selection
+function swapProjectImg(mainImgId, thumbEl) {
+    const mainImg = document.getElementById(mainImgId);
+    if (mainImg && thumbEl && thumbEl.src) {
+        mainImg.src = thumbEl.src;
+        const parentThumbs = thumbEl.parentElement;
+        if (parentThumbs) {
+            parentThumbs.querySelectorAll('img').forEach(img => img.classList.remove('active'));
+        }
+        thumbEl.classList.add('active');
+    }
+}
+
+function filterPortfolio(category, btnEl) {
+    document.querySelectorAll('.port-filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+
+    document.querySelectorAll('.project-card').forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'all' || cardCat === category) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+function scrollCatalog(direction) {
+    const container = document.querySelector('.products-scroll-container');
+    if (!container) return;
+    const isRtl = document.documentElement.dir === 'rtl';
+    const scrollAmount = 680 * direction * (isRtl ? -1 : 1);
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+
+function jumpToCategory(catId, btnEl) {
+    document.querySelectorAll('.cat-jump-pill').forEach(pill => pill.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+
+    const container = document.querySelector('.products-scroll-container');
+    const targetHeader = document.getElementById(catId);
+    if (container && targetHeader) {
+        const groupEl = targetHeader.closest('.category-group') || targetHeader;
+        const containerRect = container.getBoundingClientRect();
+        const groupRect = groupEl.getBoundingClientRect();
+        const offset = groupRect.left - containerRect.left + container.scrollLeft;
+        container.scrollTo({ left: offset, behavior: 'smooth' });
+    }
+}
+
+function chooseFormTrack(trackCode, cardEl) {
+    selectedFormProduct = trackCode;
+    const hiddenInput = document.getElementById('target_product_input');
+    if (hiddenInput) hiddenInput.value = trackCode;
+
+    document.querySelectorAll('.three-tracks-grid .select-card').forEach(c => c.classList.remove('selected'));
+    if (cardEl) cardEl.classList.add('selected');
+}
+
+function selectServiceTrack(serviceKey) {
+    const serviceNamesAr = {
+        lc_data_fiber: 'أنظمة شبكات المعلومات والألياف الضوئية (Data & Fiber)',
+        lc_cctv: 'أنظمة كاميرات المراقبة الأمنية (CCTV)',
+        lc_fire_alarm: 'أنظمة إنذار الحريق المعتمدة (Fire Alarm)',
+        lc_access_control: 'أنظمة التحكم في الدخول والحضور والانصراف (Access Control)',
+        lc_sound_pa: 'الأنظمة الصوتية والإذاعة الداخلية واستدعاء الممرضات (Sound & Nurse Call)',
+        lc_telephone_pbx: 'أنظمة السنترالات والاتصالات والإنتركم (IP-PBX & Intercom)',
+        lc_queuing: 'أنظمة نداء العملاء والشاشات الرقمية (Queuing & Digital Signage)',
+        lc_security_gates: 'البوابات الأمنية وأجهزة التفتيش والحواجز (Security Gates & X-Ray)'
+    };
+    const serviceNamesEn = {
+        lc_data_fiber: 'Data Networks & Fiber Optic Systems',
+        lc_cctv: 'CCTV Video Surveillance Systems',
+        lc_fire_alarm: 'Addressable & Conventional Fire Alarm Systems',
+        lc_access_control: 'Access Control & Time Attendance Systems',
+        lc_sound_pa: 'Sound, Voice Evacuation & Nurse Call Systems',
+        lc_telephone_pbx: 'IP-PBX Telephone & Intercom Systems',
+        lc_queuing: 'Queue Management & Digital Signage Systems',
+        lc_security_gates: 'Security Gates, X-Ray & Car Barriers'
+    };
+
+    const lcCard = document.getElementById('select-card-lc');
+    chooseFormTrack('light_current_b2b', lcCard);
+
+    const notesField = document.getElementById('cust_notes');
+    if (notesField) {
+        const srvName = (currentLanguage === 'ar') ? (serviceNamesAr[serviceKey] || serviceKey) : (serviceNamesEn[serviceKey] || serviceKey);
+        notesField.value = (currentLanguage === 'ar')
+            ? `أرغب في طلب مقايسة فنية / استشارة بخصوص: ${srvName}`
+            : `I would like to request a technical quotation / consultation for: ${srvName}`;
+    }
+    nextStep(2);
+}
+
 
 // Form steps
 function updateProgressBar() {
@@ -859,3 +958,448 @@ const translations = {
         "footer_copyright": "&copy; 2026 Beyout Tech (Light Current & Contracting). All Rights Reserved.", "footer_address_val": "42 Ankara St., Sheraton, Cairo, Egypt"
     }
 };
+
+
+// Enterprise Light Current & Portfolio Translations (v3.0.0)
+Object.assign(translations.ar, {
+    "nav_home": "الرئيسية",
+    "nav_about_us": "من نحن",
+    "nav_lc_services": "أنظمة التيار الخفيف",
+    "nav_lvmv": "الجهد المنخفض والمتوسط",
+    "nav_solutions": "السمارت هوم",
+    "nav_packages": "باقات بيوت سمارت هوم",
+    "nav_products": "المنتجات",
+    "nav_portfolio": "سابقة الأعمال",
+    "nav_clients": "عملاؤنا",
+    "nav_contact": "اطلب مقايسة",
+    "beyout_page_title": "بيوت تك | مقاولات أنظمة التيار الخفيف والهندسة الكهربائية والحلول الذكية",
+    "hero_kicker": "مقاولات التيار الخفيف • البنية التحتية • الأنظمة الأمنية • المباني الذكية",
+    "beyout_hero_title": "شريكك الهندسي المتكامل لأنظمة التيار الخفيف والمقاولات الذكية",
+    "beyout_hero_subtitle": "نُصمم وننفذ منظومات التيار الخفيف المتكاملة للمشروعات القومية، الصناعية، الإدارية، والسكنية بمعايير عالمية: من شبكات الألياف الضوئية والداتا، كاميرات المراقبة، إنذار الحريق، الصوتيات، والبوابات الأمنية، إلى شبكات الجهد المتوسط والمنخفض وأتمتة المباني والبيوت الذكية (BMS & Smart Home).",
+    "btn_explore_lc": "استكشف أنظمة التيار الخفيف",
+    "btn_view_portfolio": "<i class=\"fas fa-briefcase\"></i> سابقة الأعمال والمشروعات",
+    "btn_smarthome_pkgs": "باقات السمارت هوم <i class=\"fas fa-arrow-left\"></i>",
+    "hero_cert_1": "اختبارات قياسية معتمدة (Fluke & OTDR)",
+    "hero_cert_2": "أعلى معايير السلامة والجودة الهندسية",
+    "hero_cert_3": "توريد وتركيب وصيانة شاملة (Turnkey)",
+    "mosaic_tag_1": "مشروعات قومية وبنية تحتية",
+    "mosaic_title_1": "شبكات ألياف ضوئية وتيار خفيف بمعايير عالمية",
+    "mosaic_mini_1": "شبكات الداتا والفايبر",
+    "mosaic_mini_2": "إنذار الحريق والأمن",
+    "mosaic_mini_3": "أتمتة المباني والسمارت هوم",
+    "stat_lbl_1": "عميل ومشروع منفذ بنجاح",
+    "stat_lbl_2": "كابلات ألياف ضوئية وشبكات داتا",
+    "stat_lbl_3": "محول وموزع جهد منخفض ومتوسط",
+    "stat_lbl_4": "اعتمادية واختبارات قياسية (Fluke & OTDR)",
+    "about_sec_subtitle": "الهوية المؤسسية • من نحن",
+    "about_sec_title": "الحل الهندسي المتكامل (One-Stop-Shop) للمقاولات والتيار الخفيف",
+    "about_sec_desc": "نحن شركة هندسية متكاملة متخصصة في أنظمة التيار الخفيف، الأنظمة الأمنية، الشبكات الكهربائية، والمقاولات. بفضل سنوات من الخبرة الميدانية وفريق هندسي وفني عالي الكفاءة، نُنفذ المشروعات الكبرى والمتوسطة والصغيرة من مرحلة الدراسة والتصميم وحتى التوريد والتركيب والاختبار والتسليم النهائي.",
+    "vm_about_title": "من نحن (About Us)",
+    "vm_about_desc": "وجهة هندسية شاملة تجمع بين مقاولات التيار الخفيف، الأنظمة الأمنية المتطورة، أتمتة المباني، وشبكات القوى الكهربائية، لتلبية كافة احتياجات المنشآت بأعلى درجات الأمان والاعتمادية.",
+    "vm_vision_title": "رؤيتنا (Our Vision)",
+    "vm_vision_desc": "الريادة في تقديم أعلى مستويات الهندسة الكهربائية وحلول التيار الخفيف والأمن المتكامل والإنشاءات، لحماية عملائنا وممتلكاتهم وتعزيز استدامة وكفاءة المباني بأحدث التقنيات العالمية.",
+    "vm_mission_title": "رسالتنا وهدفنا (Our Mission & Goal)",
+    "vm_mission_desc": "تقديم خدمات هندسية استثنائية وحلول متكاملة تتجاوز توقعات عملائنا وبناء شراكات طويلة الأمد، مع الالتزام الصارم بتسليم المشروعات في الموعد المحدد، وضمن الميزانية، وبأعلى معايير الجودة.",
+    "vm_safety_title": "أولويتنا القصوى: السلامة (Safety First)",
+    "vm_safety_desc": "الأولوية رقم واحد في كافة مواقعنا هي ضمان سلامة المهندسين والفنيين والجمهور والمنشآت، مع تطبيق صارم لمعايير السلامة المهنية (HSE) والاختبارات القياسية المعتمدة.",
+    "industries_strip_title": "القطاعات الحيوية التي نخدمها بحلول التيار الخفيف:",
+    "ind_1": "القطاع التجاري والإداري والبنوك",
+    "ind_2": "المصانع والمدن الصناعية",
+    "ind_3": "المستشفيات والرعاية الصحية",
+    "ind_4": "الجامعات والمؤسسات التعليمية",
+    "ind_5": "الفنادق والمنتجعات السياحية",
+    "ind_6": "المجمعات السكنية والفلل الذكية",
+    "lc_sec_subtitle": "خدمات وحلول التيار الخفيف المتكاملة (Light Current Systems)",
+    "lc_sec_title": "منظومة هندسية شاملة لأنظمة التيار الخفيف والاتصالات والأمن",
+    "lc_sec_desc": "نُعزز الكفاءة التشغيلية والراحة والتأمين الشامل لمباني ومشروعات عملائنا عبر دمج وأتمتة كافة أنظمة الجهد المنخفض والتيار الخفيف بحلول قابلة للتوسع وعالية الجدوى الاقتصادية.",
+    "lc_srv1_title": "أنظمة شبكات المعلومات والألياف الضوئية",
+    "lc_srv1_desc": "تأسيس وبناء البنية التحتية لشبكات الاتصالات ونقل البيانات فائقة السرعة للمباني والمشروعات القومية.",
+    "lc_srv1_b1": "كابلات النحاس UTP Cat6 / Cat6a والباتش كورد (سحب، تيرمينيشن، واختبار Fluke Test).",
+    "lc_srv1_b2": "كابلات الألياف الضوئية Fiber Optic ومشتملاتها (سحب، لحام Splicing، واختبار OTDR).",
+    "lc_srv1_b3": "توريد كابلات التحكم الصناعي RS485 وتنظيم وتقفيل كبائن الراكات Racks والمسارات.",
+    "lc_srv2_title": "أنظمة كاميرات المراقبة الأمنية (CCTV)",
+    "lc_srv2_desc": "حلول مراقبة مرئية متكاملة لتأمين وحماية كافة المواقع والمنشآت الحيوية والصناعية والتجارية على مدار الساعة.",
+    "lc_srv2_b1": "توريد وتركيب كاميرات المراقبة الشبكية IP Cameras والتناظرية والحرارية والمتحركة PTZ.",
+    "lc_srv2_b2": "تجهيز غرف المراقبة المركزية Control Rooms وأجهزة التسجيل الشبكي NVR وشاشات العرض.",
+    "lc_srv2_b3": "تحليلات الفيديو الذكية ورصد التسلل وحماية الأسوار المحيطية للمحطات والمصانع والكمبوندات.",
+    "lc_srv3_title": "أنظمة إنذار الحريق المعتمدة",
+    "lc_srv3_desc": "منظومات إنذار مبكر متكاملة لحماية الأرواح والممتلكات والتنبيه الفوري في حالات الحريق أو الدخان.",
+    "lc_srv3_b1": "لوحات تحكم إنذار الحريق المعنونة (Addressable) والتقليدية (Conventional) المعتمدة.",
+    "lc_srv3_b2": "حساسات دخان (Smoke Detectors)، حساسات حرارة (Heat Detectors)، وكواسر يدوية وسراين.",
+    "lc_srv3_b3": "وحدات المراقبة والتحكم (Control & Monitor Modules) للربط مع المصاعد والتكييف والإخلاء.",
+    "lc_srv4_title": "التحكم في الدخول والحضور والانصراف",
+    "lc_srv4_desc": "أنظمة ذكية لإدارة حركة الدخول والخروج للموظفين والزوار وتأمين الأبواب والمنشآت الحساسة.",
+    "lc_srv4_b1": "أجهزة الحضور والانصراف بالبصمة والوجه والكارت لحساب التأخيرات والإجازات والورديات بدقة.",
+    "lc_srv4_b2": "أنظمة التحكم في الأبواب (Access Doors) والكوالين المغناطيسية والكهربائية للبنوك والفنادق والشركات.",
+    "lc_srv4_b3": "برامج إدارة مركزية متكاملة للربط مع قواعد بيانات الموارد البشرية والأمن.",
+    "lc_srv5_title": "الأنظمة الصوتية والإخلاء واستدعاء الممرضات",
+    "lc_srv5_desc": "حلول صوتية احترافية للمولات والهيئات والشركات والمستشفيات مع ربط كامل بأنظمة الطوارئ.",
+    "lc_srv5_b1": "أنظمة الإذاعة الداخلية والصوتيات المركزية (PA Systems) للمولات التجارية والجامعات والمباني الإدارية.",
+    "lc_srv5_b2": "أنظمة الإخلاء الصوتي التلقائي في حالات الحريق أو الإنذار لتوجيه الأفراد بأمان.",
+    "lc_srv5_b3": "أنظمة استدعاء الممرضات (Nurse Call Systems) المتكاملة للمستشفيات والمراكز الطبية.",
+    "lc_srv6_title": "أنظمة السنترالات والاتصالات والإنتركم",
+    "lc_srv6_desc": "شبكات اتصالات صوتية ومرئية مستقلة ومدمجة عبر بروتوكول الإنترنت (IP) للمباني والمجمعات السكنية والإدارية.",
+    "lc_srv6_b1": "السنترالات الشبكية والرقمية (IP-PBX) وأنظمة الاتصالات الموحدة للشركات والفنادق.",
+    "lc_srv6_b2": "تجهيز مراكز الاتصال وخدمة العملاء (Call Centers) بأحدث تقنيات الـ VoIP والملتميديا.",
+    "lc_srv6_b3": "أنظمة الإنتركم الصوتي والمرئي (Talkback / Door Phone) للمباني والكمبوندات السكنية.",
+    "lc_srv7_title": "أنظمة نداء العملاء والشاشات الرقمية",
+    "lc_srv7_desc": "أنظمة تنظيم الطوابير واستدعاء العملاء بأحدث التصميمات العصرية للمراكز الخدمية والبنوك والمستشفيات.",
+    "lc_srv7_b1": "منصات سحب التذاكر التفاعلية (Touch Kiosks) وشاشات العرض الرئيسية والفرعية ولوحات النداء.",
+    "lc_srv7_b2": "أنظمة الشاشات الإعلانية والمعلوماتية الرقمية (Digital Signage & Visualization Modules).",
+    "lc_srv7_b3": "وحدات مراقبة الأداء وإصدار التقارير الإحصائية الشاملة (Full Reporting & Monitoring).",
+    "lc_srv8_title": "البوابات الأمنية وأجهزة التفتيش والحواجز",
+    "lc_srv8_desc": "أجهزة تفتيش وتأمين عالية الدقة للمواقع الحيوية، المحطات، المطارات، الفنادق، والمقرات الكبرى.",
+    "lc_srv8_b1": "بوابات كشف المعادن للأفراد (Walk-Through Metal Detectors) عالية الحساسية.",
+    "lc_srv8_b2": "أجهزة فحص وتفتيش الحقائب والطرود بالأشعة السينية (X-Ray Baggage Inspection).",
+    "lc_srv8_b3": "بوابات ومصدات السيارات الأوتوماتيكية (Car Barriers) وأنظمة تأمين الأسوار ضد التسلل.",
+    "lc_srv9_title": "أتمتة المباني والبيوت الذكية (Smart Home & BMS)",
+    "lc_srv9_desc": "قطاعنا المتخصص في تحويل المنازل والفلل والمباني الإدارية إلى منظومات ذكية متكاملة توفر الطاقة وترتقي بالرفاهية والأمان.",
+    "lc_srv9_b1": "تحكم ذكي في الإضاءة، التكييفات، الستائر الكهربائية، والأقفال الذكية بالبصمة وتطبيق الموبايل.",
+    "lc_srv9_b2": "منظومة حساسات الأمان (تسريب الغاز، المياه، الدخان، والحركة) والربط مع الأوامر الصوتية.",
+    "lc_srv9_b3": "أنظمة إدارة المباني (BMS) وترشيد استهلاك الطاقة للمنشآت التجارية والسكنية.",
+    "lc_req_quote_btn": "اطلب مقايسة فنية <i class=\"fas fa-arrow-left\"></i>",
+    "lc_explore_smart_btn": "تصفح باقات ومنتجات السمارت هوم <i class=\"fas fa-arrow-down\"></i>",
+    "lvmv_sec_subtitle": "هندسة القوى الكهربائية والمقاولات المتكاملة (LV & MV Electrical Engineering)",
+    "lvmv_sec_title": "شبكات الجهد المنخفض والمتوسط ومقاولات البنية التحتية",
+    "lvmv_sec_desc": "نُقدم خدمات هندسية ومقاولات متكاملة لشبكات الجهد المنخفض (LV) والجهد المتوسط (MV)، تشمل سحب الكابلات الأرضية والهوائية، عمل النهايات والوصلات، وتوريد وتركيب المحولات والموزعات وأعمدة الإنارة.",
+    "lvmv_c1_title": "سحب كابلات الجهد المتوسط (MV Pulling)",
+    "lvmv_c1_desc": "مد وسحب كابلات الجهد المتوسط الأرضية والهوائية للمشروعات القومية والمدن الجديدة وشبكات التوزيع المعتمدة.",
+    "lvmv_c2_title": "سحب كابلات الجهد المنخفض (LV Pulling)",
+    "lvmv_c2_desc": "تأسيس وسحب شبكات كابلات الجهد المنخفض باستخدام أحدث معدات السحب الهيدروليكية لتغذية المباني والمجمعات.",
+    "lvmv_c3_title": "توريد وتركيب المحولات والموزعات",
+    "lvmv_c3_desc": "إحلال وتجديد وتوريد وتركيب محولات القدرة الكهربائية ولوحات التوزيع والموزعات الرئيسية (Distributors & Transformers).",
+    "lvmv_c4_title": "نهايات ووصلات الكابلات وأعمدة الإنارة",
+    "lvmv_c4_desc": "تنفيذ علب النهايات والوصلات (Terminating Ends & Joints) لكابلات الجهد المتوسط والمنخفض، وتركيب وإحلال أعمدة الإنارة.",
+    "const_strip_title": "<i class=\"fas fa-compass-drafting\"></i> منظومة إدارة المشروعات والمقاولات المتكاملة (Turnkey Contracting Services)",
+    "const_strip_desc": "ندير مشروعك من الفكرة وحتى التسليم والتشغيل والصيانة وفق أعلى المعايير الهندسية:",
+    "const_s1_t": "خدمات ما قبل التنفيذ (Pre-Construction)",
+    "const_s1_d": "معاينة المواقع، إعداد الميزانيات والمقايسات والجداول الزمنية، واستخراج التصاريح والموافقات.",
+    "const_s2_t": "التصميم والهندسة (Design & Engineering)",
+    "const_s2_d": "تقديم الرسومات الهندسية والمعمارية والمخططات التنفيذية (Shop Drawings) لكافة الأنظمة.",
+    "const_s3_t": "إدارة المشروعات (Project Management)",
+    "const_s3_d": "الإشراف الكامل على التخطيط والتنفيذ ومراقبة الجودة والسلامة من البداية وحتى التسليم.",
+    "const_s4_t": "الإنشاءات والمباني (Building Construction)",
+    "const_s4_d": "أعمال الحفر، الأساسات، الهياكل الخرسانية، مد المرافق، والتشطيبات الداخلية والخارجية.",
+    "const_s5_t": "المقاولات التخصصية (Specialty MEP)",
+    "const_s5_d": "تنفيذ الأعمال التخصصية الدقيقة من كهرباء، تيار خفيف، ميكانيكا وسباكة، وتكييف مركزي (HVAC).",
+    "const_s6_t": "الصيانة والدعم الفني (Maintenance & Repair)",
+    "const_s6_d": "عقود صيانة دورية ووقائية وإصلاح شامل لضمان استمرارية عمل الأنظمة والمنشآت بكفاءة.",
+    "smarthome_division_badge": "🏠 قطاع أتمتة المنازل والمباني الذكية (أحد قطاعات التيار الخفيف)",
+    "catalog_sec_subtitle": "كتالوج الأجهزة والمنتجات الذكية",
+    "catalog_sec_title": "تصفح منتجات وأجهزة بيوت الذكية حسب الفئة",
+    "catalog_sec_desc": "اسحب يميناً ويساراً لتصفح الفئات والمنتجات بشكل مستمر، أو اضغط على الفئة للانتقال إليها مباشرة.",
+    "port_sec_subtitle": "سابقة الأعمال والمشروعات القومية (+1,000 عميل ومشروع)",
+    "port_sec_title": "مشروعات هندسية كبرى نفخر بتنفيذها على أرض الواقع",
+    "port_sec_desc": "سجل حافل من الإنجازات الموثقة في تنفيذ مشروعات التيار الخفيف، الأنظمة الأمنية، شبكات الألياف الضوئية، ومقاولات البنية التحتية الكهربائية في مختلف محافظات مصر.",
+    "port_flt_all": "جميع المشروعات (7)",
+    "port_flt_sec": "أنظمة أمنية وتيار خفيف",
+    "port_flt_fiber": "ألياف ضوئية وشبكات داتا",
+    "port_flt_lvmv": "بنية تحتية وجهد متوسط ومنخفض",
+    "proj1_cat": "أنظمة أمنية وبوابات تفتيش",
+    "proj1_loc": "العريش - شمال سيناء",
+    "proj1_title": "تأمين محطة محولات المساعيد (العريش - سيناء)",
+    "proj1_desc": "توريد وتركيب منظومة تأمين ومراقبة متكاملة لمحطة محولات المساعيد تشمل كاميرات مراقبة شبكية، نظام حماية الأسوار من التسلل، بوابات السيارات، وأجهزة التفتيش بالأشعة والمعادن.",
+    "proj1_m1": "35 كاميرا مراقبة IP",
+    "proj1_m2": "حماية سور بطول 450 متر",
+    "proj1_m3": "بوابات سيارات ومعادن + X-Ray",
+    "proj2_cat": "ألياف ضوئية - مشروعات قومية",
+    "proj2_loc": "العاصمة الإدارية الجديدة - القاهرة",
+    "proj2_title": "مد ولحام كابلات الألياف الضوئية – القطار الكهربائي الخفيف (LRT)",
+    "proj2_desc": "سحب ومد كابلات الألياف الضوئية لمسار مشروع القطار الكهربائي الخفيف بالعاصمة الإدارية الجديدة مع تنفيذ كافة أعمال اللحام والتجريح والاختبارات القياسية المعتمدة.",
+    "proj2_m1": "سحب 220 كم كابلات فايبر 4 Core",
+    "proj2_m2": "لحام وتجريح 7,000 فرعة (Core)",
+    "proj2_m3": "اختبارات OTDR شاملة",
+    "proj3_cat": "أنظمة نداء العملاء - حياة كريمة",
+    "proj3_loc": "أشمون - محافظة المنوفية",
+    "proj3_title": "أنظمة نداء العملاء بمجمعات خدمات المواطنين – مبادرة حياة كريمة",
+    "proj3_desc": "توريد وتركيب وتشغيل أنظمة استدعاء وترتيب العملاء الرقمية المتكاملة لعدد 14 مبنى من مجمعات خدمات المواطنين ضمن المبادرة الرئاسية حياة كريمة.",
+    "proj3_m1": "14 مجمع خدمات مواطنين",
+    "proj3_m2": "19 شاشة عرض لكل مبنى (266 شاشة)",
+    "proj3_m3": "جهاز Kiosk ولوحات تحكم لكل مبنى",
+    "proj4_cat": "إنذار حريق معنون - حياة كريمة",
+    "proj4_loc": "أشمون - محافظة المنوفية",
+    "proj4_title": "أنظمة إنذار الحريق بمجمعات خدمات المواطنين – مبادرة حياة كريمة",
+    "proj4_desc": "توريد وتركيب منظومة إنذار حريق معنونة (Addressable Fire Alarm) متكاملة لتأمين 14 مبنى من مجمعات خدمات المواطنين ضد أخطار الحريق.",
+    "proj4_m1": "14 مبنى (لوحة معنونة لكل مبنى)",
+    "proj4_m2": "41 حساس دخان + 3 حرارة لكل مبنى",
+    "proj4_m3": "5 سرينة + وحدة مراقبة وتحكم لكل مبنى",
+    "proj5_cat": "شبكات داتا وراكات - حياة كريمة",
+    "proj5_loc": "أشمون - محافظة المنوفية",
+    "proj5_title": "شبكات الداتا بمجمعات الخدمات الزراعية – مبادرة حياة كريمة",
+    "proj5_desc": "توريد وتأسيس البنية التحتية لشبكات المعلومات والاتصالات لعدد 14 مجمع خدمات زراعية وبيطرية شاملة الراكات والسويتشات ونقاط الداتا واختبارات الفلوك.",
+    "proj5_m1": "14 مبنى (راك + 3 سويتش لكل مبنى)",
+    "proj5_m2": "45 مخرج داتا Cat6a لكل مبنى",
+    "proj5_m3": "تيرمينيشن واختبار Fluke Test",
+    "proj6_cat": "بنية تحتية وجهد متوسط ومنخفض",
+    "proj6_loc": "إدفو - محافظة أسوان",
+    "proj6_title": "إحلال وتجديد البنية التحتية والأعمال الكهربائية (إدفو - أسوان)",
+    "proj6_desc": "مشروع ضخم لإحلال وتجديد شبكات الكهرباء والمحولات والكابلات الأرضية والهوائية والموزعات وأعمدة الإنارة وعمل النهايات والوصلات بمركز إدفو.",
+    "proj6_m1": "360 محول قدرة + 2 موزع رئيسي",
+    "proj6_m2": "33 كم كابلات MV + 45 كم كابلات LV",
+    "proj6_m3": "1,230 عمود إنارة + النهايات والوصلات",
+    "proj7_cat": "بنية تحتية وجهد متوسط ومنخفض",
+    "proj7_loc": "المراغة - محافظة سوهاج",
+    "proj7_title": "إحلال وتجديد البنية التحتية والأعمال الكهربائية (المراغة - سوهاج)",
+    "proj7_desc": "إحلال وتجديد شامل للمحولات والكابلات الأرضية والهوائية والموزعات وأعمدة الإنارة العامة، بالإضافة إلى أعمال الصيانة والتجهيزات الفنية للفروع والمنشآت.",
+    "proj7_m1": "65 محول قدرة + 1 موزع رئيسي",
+    "proj7_m2": "18 كم كابلات MV + 22 كم كابلات LV",
+    "proj7_m3": "720 عمود إنارة + النهايات والوصلات",
+    "clients_sec_subtitle": "شركاء النجاح والثقة (Our Valued Clients)",
+    "clients_sec_title": "نفخر بثقة كبرى الشركات والمؤسسات في مصر",
+    "clients_sec_desc": "شراكات استراتيجية ناجحة مع نخبة من رواد قطاع المقاولات، الطاقة، البنية التحتية، والمؤسسات الكبرى.",
+    "client_name_1": "السويدي إليكتريك (Elsewedy Electric)",
+    "client_name_2": "الخرافي ناشيونال (Kharafi National)",
+    "client_name_3": "مدكور للمشروعات (Madkour)",
+    "client_name_4": "مجموعة التوكل (GTCI - Altawakol Group)",
+    "client_name_5": "مؤسسة أهل مصر (Ahl Masr)",
+    "client_name_6": "كومباك جلاس (Compac Glass)",
+    "client_name_7": "إنبلوم (Enblom)",
+    "client_name_8": "فري إير (Free Air)",
+    "form_section_title": "اطلب مقايسة فنية أو استشارة هندسية مجانية",
+    "form_section_subtitle": "سواء كنت تبحث عن مقاول تيار خفيف لمشروعك، أعمال شبكات وكهرباء، أو باقة سمارت هوم لمنزلك، فريقنا الهندسي جاهز للتواصل معك فوراً",
+    "form_step1_lbl": "القطاع المطلوب",
+    "form_step1_title_beyout": "اختر القطاع الهندسي أو الخدمة المطلوبة:",
+    "form_track1_title": "مقاولات وأنظمة التيار الخفيف (Light Current)",
+    "form_track1_desc": "شبكات داتا وفايبر، كاميرات مراقبة، إنذار حريق، صوتيات، سنترالات، نداء عملاء، وبوابات أمنية.",
+    "form_track2_title": "شبكات الجهد المنخفض والمتوسط والمقاولات",
+    "form_track2_desc": "سحب كابلات LV/MV، توريد وتركيب محولات وموزعات، أعمدة إنارة، وصيانة منشآت.",
+    "form_track3_title": "بيوت سمارت هوم (Smart Home & BMS)",
+    "form_product_lumora_desc": "باقات أتمتة المنازل والفلل والشقق الفاخرة والمكاتب الذكية.",
+    "form_lbl_name": "الاسم بالكامل / اسم الشركة ",
+    "form_step3_title": "حدد الموعد المناسب للمعاينة أو المكالمة الاستشارية",
+    "form_lbl_notes_beyout": "تفاصيل المشروع أو الأنظمة والباقات المطلوبة:",
+    "form_btn_submit": "إرسال الطلب وتأكيد الموعد 🚀",
+    "form_success_desc_beyout": "تم تسجيل طلبك بنجاح لدى الإدارة الهندسية بشركة بيوت تك.",
+    "form_success_whatsapp": "سيتواصل معك مهندسونا عبر واتساب وهاتف رقم ",
+    "form_success_whatsapp_sub": " لمناقشة كافة التفاصيل الفنية والمالية.",
+    "form_success_reset_btn": "إرسال طلب جديد",
+    "footer_about_text_beyout": "شركة بيوت تك للمقاولات وأنظمة التيار الخفيف (Light Current)، الهندسة الكهربائية (LV/MV)، والحلول الذكية المتكاملة (Smart Home & BMS).",
+    "footer_addr_lbl": "المقرات:",
+    "footer_address_val": "42 ش أنقرة، شيراتون | 17 أ عمارات العبور، صلاح سالم، القاهرة، مصر",
+    "footer_links_title": "الأقسام والقطاعات الهندسية",
+    "footer_social_title": "تواصل معنا وتابعنا",
+    "footer_cert_box_title": "اعتمادات واختبارات قياسية",
+    "footer_cert_box_desc": "جميع مشروعات الشبكات والألياف الضوئية والأنظمة الأمنية يتم تسليمها باختبارات Fluke & OTDR المعتمدة.",
+    "footer_copyright": "© 2026 شركة بيوت تك للمقاولات وأنظمة التيار الخفيف والحلول الذكية (Beyout Tech). جميع الحقوق محفوظة."
+});
+Object.assign(translations.en, {
+    "nav_home": "Home",
+    "nav_about_us": "About Us",
+    "nav_lc_services": "Light Current",
+    "nav_lvmv": "LV & MV Works",
+    "nav_solutions": "Smart Home",
+    "nav_packages": "Smart Home Packages",
+    "nav_products": "Products",
+    "nav_portfolio": "Portfolio",
+    "nav_clients": "Our Clients",
+    "nav_contact": "Request Quote",
+    "beyout_page_title": "Beyout Tech | Light Current Contracting, Electrical Engineering & Smart Systems",
+    "hero_kicker": "Light Current Contracting • Infrastructure • Security Systems • Smart Buildings",
+    "beyout_hero_title": "Your Integrated Engineering Partner for Light Current & Smart Infrastructure",
+    "beyout_hero_subtitle": "We design, supply, and execute world-class Light Current systems for national, industrial, corporate, and residential projects: from Fiber Optics & Data Networks, CCTV Surveillance, Fire Alarm, Public Address, and Security Gates, to LV/MV Electrical Networks & Building Automation (BMS & Smart Home).",
+    "btn_explore_lc": "Explore Light Current Systems",
+    "btn_view_portfolio": "<i class=\"fas fa-briefcase\"></i> View Portfolio & Projects",
+    "btn_smarthome_pkgs": "Smart Home Packages <i class=\"fas fa-arrow-right\"></i>",
+    "hero_cert_1": "Certified Testing (Fluke & OTDR)",
+    "hero_cert_2": "Highest HSE & Engineering Quality",
+    "hero_cert_3": "Turnkey Supply, Installation & Maintenance",
+    "mosaic_tag_1": "National & Infrastructure Projects",
+    "mosaic_title_1": "World-Class Fiber Optic & Light Current Systems",
+    "mosaic_mini_1": "Data & Fiber Networks",
+    "mosaic_mini_2": "Fire Alarm & Security",
+    "mosaic_mini_3": "Smart Home & BMS",
+    "stat_lbl_1": "Clients & Delivered Projects",
+    "stat_lbl_2": "Fiber Optic & Data Cabling",
+    "stat_lbl_3": "LV & MV Transformers & Distributors",
+    "stat_lbl_4": "Certified Testing (Fluke & OTDR)",
+    "about_sec_subtitle": "CORPORATE IDENTITY • ABOUT US",
+    "about_sec_title": "Your All-In-One Engineering Partner for Contracting & Light Current",
+    "about_sec_desc": "We are an integrated engineering solution provider for construction, security, light current, and electrical engineering services. With years of field experience and a highly skilled team, we deliver projects of every scale from start to finish.",
+    "vm_about_title": "About Us",
+    "vm_about_desc": "A one-stop-shop combining Light Current contracting, advanced security systems, building automation, and electrical power networks while ensuring top safety and reliability.",
+    "vm_vision_title": "Our Vision",
+    "vm_vision_desc": "Providing the highest quality electrical engineering, industry-leading security, mechanical, and construction solutions utilizing cutting-edge sustainable technology.",
+    "vm_mission_title": "Our Mission & Goal",
+    "vm_mission_desc": "Delivering exceptional engineering services and integral solutions that exceed expectations on time, within budget, and with the highest level of quality and safety.",
+    "vm_safety_title": "Our Priority is Safety",
+    "vm_safety_desc": "The number one priority for Beyout Tech is ensuring the safety of workers, clients, and facilities while delivering high-quality, certified engineering services.",
+    "industries_strip_title": "Key Industries We Serve with Light Current Solutions:",
+    "ind_1": "Commercial, Corporate & Banking",
+    "ind_2": "Industrial Plants & Factories",
+    "ind_3": "Healthcare & Hospitals",
+    "ind_4": "Universities & Education",
+    "ind_5": "Hospitality, Hotels & Resorts",
+    "ind_6": "Residential Compounds & Smart Villas",
+    "lc_sec_subtitle": "LIGHT CURRENT ENGINEERING SERVICES",
+    "lc_sec_title": "Comprehensive Light Current, Telecom & Security Ecosystem",
+    "lc_sec_desc": "Enhancing operational efficiency, comfort, and security across buildings by integrating and automating low-voltage systems with scalable, cost-effective solutions.",
+    "lc_srv1_title": "Data Networks & Fiber Optic Systems",
+    "lc_srv1_desc": "End-to-end passive and active network infrastructure for enterprise buildings and national projects.",
+    "lc_srv1_b1": "UTP Cabling (Cat6 / Cat6a), Patch cords & accessories (Pulling, Termination & Fluke Testing).",
+    "lc_srv1_b2": "Fiber Optical Cabling, Patch cords & accessories (Pulling, Splicing & OTDR Testing).",
+    "lc_srv1_b3": "RS485 Cabling supply, Server Racks & Pipes organization and structured handling.",
+    "lc_srv2_title": "Surveillance Systems (CCTV)",
+    "lc_srv2_desc": "Advanced IP and AI video surveillance systems to secure and monitor all facilities 24/7.",
+    "lc_srv2_b1": "Supply and installation of IP, HD, Thermal, and PTZ security surveillance cameras.",
+    "lc_srv2_b2": "Central Control Rooms, NVR storage servers, and video wall monitoring solutions.",
+    "lc_srv2_b3": "Smart perimeter intrusion detection for substations, factories, and residential compounds.",
+    "lc_srv3_title": "Certified Fire Alarm Systems",
+    "lc_srv3_desc": "Complete early-warning life safety systems to alert occupants and protect properties from fire hazards.",
+    "lc_srv3_b1": "Addressable and Conventional Fire Alarm Control Panels.",
+    "lc_srv3_b2": "Smoke detectors, heat detectors, manual call points, and alarm sirens.",
+    "lc_srv3_b3": "Control and Monitor Modules integrated with elevators, HVAC, and voice evacuation.",
+    "lc_srv4_title": "Access Control & Time Attendance",
+    "lc_srv4_desc": "Smart biometric and card access solutions for employee attendance and high-security doors.",
+    "lc_srv4_b1": "Fingerprint, Face ID, and Card attendance devices tracking shifts, delays, and vacations.",
+    "lc_srv4_b2": "Door Access Control systems for hotels, banks, server rooms, and corporate offices.",
+    "lc_srv4_b3": "Centralized management software integrated with HR and security databases.",
+    "lc_srv5_title": "Sound, PA & Nurse Call Systems",
+    "lc_srv5_desc": "Professional audio, public address, emergency voice evacuation, and hospital nurse call solutions.",
+    "lc_srv5_b1": "Public Address (PA) and commercial audio systems for malls, universities, and offices.",
+    "lc_srv5_b2": "Automated Voice Evacuation systems linked to fire alarm panels for safe emergency egress.",
+    "lc_srv5_b3": "Advanced Nurse Call Systems for hospitals and medical centers.",
+    "lc_srv6_title": "Telephone, IP-PBX & Intercom Systems",
+    "lc_srv6_desc": "Standalone and IP-converged voice and video communication networks for buildings and compounds.",
+    "lc_srv6_b1": "IP-PBX telephone systems and unified communications over IP networks.",
+    "lc_srv6_b2": "Complete Call Center technologies for voice and multimedia session delivery.",
+    "lc_srv6_b3": "Talkback and Video Door Phone (Intercom) systems for residential and office buildings.",
+    "lc_srv7_title": "Queuing & Digital Signage Systems",
+    "lc_srv7_desc": "Modern queue management and digital signage solutions for service centers, banks, and hospitals.",
+    "lc_srv7_b1": "Interactive ticket dispensing Kiosks, counter displays, and customer call monitors.",
+    "lc_srv7_b2": "Digital Signage, customer identification, and interactive visualization modules.",
+    "lc_srv7_b3": "Full Reporting and real-time performance monitoring modules.",
+    "lc_srv8_title": "Security Gates, X-Ray & Barriers",
+    "lc_srv8_desc": "High-security inspection and access screening systems for airports, hotels, substations, and headquarters.",
+    "lc_srv8_b1": "High-sensitivity Walk-Through Metal Detector security gates.",
+    "lc_srv8_b2": "X-Ray baggage and parcel inspection scanners.",
+    "lc_srv8_b3": "Automatic Car Barriers, bollards, and perimeter intrusion detection systems.",
+    "lc_srv9_title": "Smart Home & Building Automation (BMS)",
+    "lc_srv9_desc": "Our specialized division transforming villas, apartments, and offices into intelligent, energy-efficient spaces.",
+    "lc_srv9_b1": "Smart lighting, AC, motorized curtains, and biometric smart door locks via mobile app.",
+    "lc_srv9_b2": "Safety sensors (Gas, Water leak, Smoke, Motion) and voice control integration (Alexa/Siri).",
+    "lc_srv9_b3": "Building Management Systems (BMS) and energy management solutions.",
+    "lc_req_quote_btn": "Request Technical Quote <i class=\"fas fa-arrow-right\"></i>",
+    "lc_explore_smart_btn": "Explore Smart Home Packages & Catalog <i class=\"fas fa-arrow-down\"></i>",
+    "lvmv_sec_subtitle": "LOW & MEDIUM VOLTAGE ELECTRICAL ENGINEERING",
+    "lvmv_sec_title": "LV & MV Power Networks & Infrastructure Contracting",
+    "lvmv_sec_desc": "Comprehensive electrical engineering services including pulling ground and aerial cables, terminating ends and joints, transformers and distributors setup, and lighting poles renovation.",
+    "lvmv_c1_title": "Medium Voltage Cable Pulling (MV Pulling)",
+    "lvmv_c1_desc": "Ground and aerial MV cable pulling and installation for national infrastructure and power networks.",
+    "lvmv_c2_title": "Low Voltage Cable Pulling (LV Pulling)",
+    "lvmv_c2_desc": "LV cable pulling and distribution networks feeding residential, commercial, and industrial facilities.",
+    "lvmv_c3_title": "Distributors & Transformers Setup",
+    "lvmv_c3_desc": "Supply, installation, replacement, and renovation of electrical power transformers and main distributors.",
+    "lvmv_c4_title": "Cable Ends, Joints & Lighting Poles",
+    "lvmv_c4_desc": "Terminating MV/LV cable ends and joints, plus installation and renovation of street lighting poles.",
+    "const_strip_title": "<i class=\"fas fa-compass-drafting\"></i> Turnkey Construction & Engineering Project Lifecycle",
+    "const_strip_desc": "Overseeing your project from initial assessment and design to construction, testing, and maintenance:",
+    "const_s1_t": "Pre-Construction Services",
+    "const_s1_d": "Conducting site assessments, creating budgets and schedules, and obtaining necessary permits.",
+    "const_s2_t": "Design & Engineering Services",
+    "const_s2_d": "Providing architectural, electrical, and shop drawing engineering services.",
+    "const_s3_t": "Project Management",
+    "const_s3_d": "Overseeing planning, design, quality control, and execution from start to finish.",
+    "const_s4_t": "Building Construction",
+    "const_s4_d": "Excavation, pouring foundations, structural framing, utilities installation, and interior/exterior finishing.",
+    "const_s5_t": "Specialty MEP Contracting",
+    "const_s5_d": "Dedicated electrical, light current, plumbing, HVAC, and specialty engineering works.",
+    "const_s6_t": "Maintenance & Repair Services",
+    "const_s6_d": "Performing routine preventive maintenance and repairs on existing systems and facilities.",
+    "smarthome_division_badge": "🏠 Smart Home & Building Automation Division (Part of Our Light Current Ecosystem)",
+    "catalog_sec_subtitle": "SMART HOME & LIGHT CURRENT PRODUCT CATALOG",
+    "catalog_sec_title": "Browse Beyout Smart Devices by Category",
+    "catalog_sec_desc": "Swipe horizontally to explore all product categories, or click any category pill below to jump directly.",
+    "port_sec_subtitle": "PROVEN TRACK RECORD & PORTFOLIO (+1,000 CLIENTS)",
+    "port_sec_title": "Major National & Engineering Projects Delivered",
+    "port_sec_desc": "A documented track record of executing Light Current, Security, Fiber Optic, and Electrical Infrastructure projects across Egypt.",
+    "port_flt_all": "All Projects (7)",
+    "port_flt_sec": "Security & Light Current",
+    "port_flt_fiber": "Fiber Optics & Data",
+    "port_flt_lvmv": "LV & MV Infrastructure",
+    "proj1_cat": "Security & Inspection Systems",
+    "proj1_loc": "Arish - North Sinai",
+    "proj1_title": "Security Systems for Almassed Sub-Station (Arish - Sinai)",
+    "proj1_desc": "Supply and installation of 35 IP cameras and perimeter intrusion system for the 450m substation wall, plus car barriers, metal detector gates, and X-Ray scanner.",
+    "proj1_m1": "35 IP Surveillance Cameras",
+    "proj1_m2": "450m Perimeter Intrusion System",
+    "proj1_m3": "Car Barrier, Metal Gate & X-Ray",
+    "proj2_cat": "Fiber Optics - National Projects",
+    "proj2_loc": "New Administrative Capital - Cairo",
+    "proj2_title": "Pulling & Termination of Fiber Optic Cable – LRT Train",
+    "proj2_desc": "Pulling approximately 220 km of 4-core fiber optic cable with complete splicing and termination of ~7,000 cores and certified OTDR testing.",
+    "proj2_m1": "220 KM 4-Core Fiber Pulling",
+    "proj2_m2": "7,000 Cores Terminated & Spliced",
+    "proj2_m3": "Full Certified OTDR Testing",
+    "proj3_cat": "Queue Systems - Haya Karima",
+    "proj3_loc": "Ashmoun - Menoufia",
+    "proj3_title": "Queue System in Citizen Service Centers – Haya Karima",
+    "proj3_desc": "Supply and installation of complete queue management systems for 14 citizen service center buildings, each equipped with 19 monitors, 1 kiosk, and counter keypads.",
+    "proj3_m1": "14 Citizen Service Buildings",
+    "proj3_m2": "19 Monitors per Building (266 Total)",
+    "proj3_m3": "1 Kiosk & Keypads per Building",
+    "proj4_cat": "Addressable Fire Alarm - Haya Karima",
+    "proj4_loc": "Ashmoun - Menoufia",
+    "proj4_title": "Fire Alarm System in Citizen Service Centers – Haya Karima",
+    "proj4_desc": "Supply and installation of addressable fire alarm systems for 14 citizen service center buildings with full detection and control coverage.",
+    "proj4_m1": "14 Buildings (Addressable Panel each)",
+    "proj4_m2": "41 Smoke + 3 Heat Detectors / Bldg",
+    "proj4_m3": "5 Sirens + 1 Control Monitor Module / Bldg",
+    "proj5_cat": "Data Networks - Haya Karima",
+    "proj5_loc": "Ashmoun - Menoufia",
+    "proj5_title": "Data System in Agricultural Service Centers – Haya Karima",
+    "proj5_desc": "Supply and installation of structured data cabling systems for 14 agricultural service center buildings including racks, switches, termination, and Fluke testing.",
+    "proj5_m1": "14 Buildings (1 Rack + 3 Switches each)",
+    "proj5_m2": "45 Cat6a Endpoints per Building",
+    "proj5_m3": "Full Termination & Fluke Testing",
+    "proj6_cat": "LV & MV Electrical Infrastructure",
+    "proj6_loc": "Edfu - Aswan",
+    "proj6_title": "Replacing & Renovation of Electrical Infrastructure (Edfu, Aswan)",
+    "proj6_desc": "Replacing and renewing transformers, ground and aerial cables, lighting poles, distributors, and cable ends and joints across Edfu.",
+    "proj6_m1": "360 Transformers + 2 Distributors",
+    "proj6_m2": "33 KM MV Cable + 45 KM LV Cable",
+    "proj6_m3": "1,230 Lighting Poles + Ends & Joints",
+    "proj7_cat": "LV & MV Electrical Infrastructure",
+    "proj7_loc": "Maragha - Sohag",
+    "proj7_title": "Replacing & Renovation of Electrical Infrastructure (Maragha, Sohag)",
+    "proj7_desc": "Replacing and renewing transformers, ground and aerial cables, lighting poles, distributors, and making ends and connectors in Maragha.",
+    "proj7_m1": "65 Transformers + 1 Distributor",
+    "proj7_m2": "18 KM MV Cable + 22 KM LV Cable",
+    "proj7_m3": "720 Lighting Poles + Ends & Joints",
+    "clients_sec_subtitle": "OUR VALUED CLIENTS & PARTNERS",
+    "clients_sec_title": "Trusted by Leading Corporations & Institutions in Egypt",
+    "clients_sec_desc": "Proudly partnering with top industry leaders in construction, energy, infrastructure, and public projects.",
+    "client_name_1": "Elsewedy Electric",
+    "client_name_2": "Kharafi National",
+    "client_name_3": "Madkour Group",
+    "client_name_4": "GTCI - Altawakol Group",
+    "client_name_5": "Ahl Masr Foundation",
+    "client_name_6": "Compac Glass",
+    "client_name_7": "Enblom",
+    "client_name_8": "Free Air",
+    "form_section_title": "Request a Technical Quotation or Free Engineering Consultation",
+    "form_section_subtitle": "Whether you need a Light Current contractor for a major project, LV/MV works, or a Smart Home package, our engineering team is ready to assist.",
+    "form_step1_lbl": "Service Sector",
+    "form_step1_title_beyout": "Select the Required Engineering Sector or Service:",
+    "form_track1_title": "Light Current Systems & Contracting (B2B)",
+    "form_track1_desc": "Data & Fiber networks, CCTV, Fire Alarm, Sound/PA, IP-PBX, Queuing, and Security Gates.",
+    "form_track2_title": "LV & MV Electrical Networks & Contracting",
+    "form_track2_desc": "LV/MV cable pulling, transformers & distributors setup, lighting poles, and facility maintenance.",
+    "form_track3_title": "Beyout Smart Home & BMS (B2C)",
+    "form_product_lumora_desc": "Complete smart automation packages for villas, apartments, offices, and warehouses.",
+    "form_lbl_name": "Full Name / Company Name ",
+    "form_step3_title": "Schedule Your Consultation Call or Site Survey",
+    "form_lbl_notes_beyout": "Project Scope, Required Systems, or Package Details:",
+    "form_btn_submit": "Submit Request & Confirm Schedule 🚀",
+    "form_success_desc_beyout": "Your request has been registered with Beyout Tech's Engineering Department.",
+    "form_success_whatsapp": "Our engineers will reach out via WhatsApp and phone at ",
+    "form_success_whatsapp_sub": " to discuss all technical and financial details.",
+    "form_success_reset_btn": "Submit Another Request",
+    "footer_about_text_beyout": "Beyout Tech for Contracting, Light Current Systems, Electrical Engineering (LV/MV), and Smart Automation Solutions (Smart Home & BMS).",
+    "footer_addr_lbl": "Offices:",
+    "footer_address_val": "42 Ankara St., Sheraton | 17A El Obour Bldgs., Salah Salem, Cairo, Egypt",
+    "footer_links_title": "Engineering Divisions & Links",
+    "footer_social_title": "Connect With Us",
+    "footer_cert_box_title": "Certified Engineering Standards",
+    "footer_cert_box_desc": "All fiber optic, data network, and security projects are delivered with certified Fluke & OTDR testing.",
+    "footer_copyright": "© 2026 Beyout Tech (Light Current, Electrical Engineering & Smart Systems). All Rights Reserved."
+});

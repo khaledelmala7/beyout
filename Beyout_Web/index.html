@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-
 <html dir="rtl" lang="ar">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="beyout_page_title">بيوت تك | مقاولات التيار الخفيف والأنظمة الذكية</title>
+<title data-i18n="beyout_page_title">بيوت تك | مقاولات أنظمة التيار الخفيف والهندسة الكهربائية والحلول الذكية</title>
 <!-- SEO Meta Tags -->
-<meta content="بيوت تقدم باقات أتمتة وتحكم ذكي بالكامل للمنازل والفلل والشقق الفاخرة في مصر. اختر باقتك المفضلة وسنتواصل معك فوراً." name="description"/>
-<meta content="سمارت هوم, منزل ذكي, بيوت, Beyout, باقات سمارت هوم, تشطيب شقق, مصر" name="keywords"/>
+<meta content="شركة بيوت تك للمقاولات وأنظمة التيار الخفيف والحلول الهندسية المتكاملة: شبكات الداتا والألياف الضوئية، كاميرات المراقبة، إنذار الحريق، الصوتيات، السنترالات، البوابات الأمنية، الجهد المنخفض والمتوسط، والسمارت هوم." name="description"/>
+<meta content="تيار خفيف, Light Current, شبكات فايبر, إنذار حريق, كاميرات مراقبة, سمارت هوم, جهد متوسط ومنخفض, بيوت تك, Beyout Tech, مقاولات كهرباء" name="keywords"/>
 <!-- Google Fonts: Alexandria & Cairo -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&amp;family=Cairo:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=2.0.0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<!-- FontAwesome 6 Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="style.css?v=3.0.0" rel="stylesheet"/>
 </head>
 <body class="theme-beyout">
-<!-- Sticky Frosted Header -->
+<!-- Sticky Frosted Executive Header -->
 <header class="main-header">
 <div class="container header-container">
-<!-- Left: Globe Language Selector -->
-<!-- Middle: Navigation Links -->
 <nav class="nav-links">
 <a class="nav-link active" data-i18n="nav_home" href="#about">الرئيسية</a>
-<a class="nav-link" data-i18n="nav_solutions" href="#packages-section">الحلول</a>
+<a class="nav-link" data-i18n="nav_about_us" href="#company-overview">من نحن</a>
+<a class="nav-link" data-i18n="nav_lc_services" href="#lc-services-section">أنظمة التيار الخفيف</a>
+<a class="nav-link" data-i18n="nav_lvmv" href="#lvmv-section">الجهد المنخفض والمتوسط</a>
+<a class="nav-link" data-i18n="nav_solutions" href="#packages-section">السمارت هوم</a>
 <a class="nav-link" data-i18n="nav_products" href="#products-section">المنتجات</a>
-<a class="nav-link" data-i18n="nav_contact" href="#demo-section">اتصل بنا</a>
+<a class="nav-link" data-i18n="nav_portfolio" href="#portfolio-section">سابقة الأعمال</a>
+<a class="nav-link" data-i18n="nav_clients" href="#clients-section">عملاؤنا</a>
+<a class="nav-link nav-cta-pill" data-i18n="nav_contact" href="#demo-section">اطلب مقايسة</a>
 <div class="lang-selector" id="lang-switch-btn" onclick="toggleLanguage()">
-<svg class="globe-icon" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+<svg class="globe-icon" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
 <span id="lang-switch-text">English</span>
-<svg class="chevron-down" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
+<svg class="chevron-down" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 </nav>
-<!-- Right: Logo with Home Icon -->
+<!-- Logo -->
 <div class="header-right">
 <a class="logo-link" href="#" style="display:flex; align-items:center;">
-<img alt="Beyout Tech - Light Current" src="logo_beyout.png" style="height: 56px; border-radius: 8px;"/>
+<img alt="Beyout Tech - Light Current & Engineering" src="logo_beyout.png" style="height: 54px; border-radius: 8px;"/>
 </a>
 </div>
 <button aria-label="Toggle Menu" class="menu-toggle" id="menu-toggle-btn" onclick="toggleMobileMenu()">
@@ -44,28 +48,446 @@
 </button>
 </div>
 </header>
-<!-- Custom Hero Banner -->
-<section class="mockup-hero" id="about">
+
+<!-- Enterprise Hero Banner -->
+<section class="mockup-hero enterprise-hero" id="about">
 <div class="hero-bg-overlay"></div>
 <div class="container hero-container-grid">
-<!-- Left: Premium Gold Switch Panel -->
-<div class="hero-visual-col">
-<div class="switch-glowing-frame">
-<img alt="Beyout Smart Switch Panel" class="switch-mock-img" src="assets/smart_switch.jpg"/>
-</div>
-</div>
-<!-- Right: Hero Text & CTA -->
+<!-- Right in RTL: Hero Text & Executive Messaging -->
 <div class="hero-text-col">
-<h1 class="hero-main-title" data-i18n="beyout_hero_title">عيش الذكاء والأناقة في منزلك</h1>
-<p class="hero-sub-text" data-i18n="beyout_hero_subtitle">حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.</p>
-<a class="hero-cta-btn" data-i18n="btn_start_now" href="#packages-section">ابدأ الآن</a>
+<div class="hero-kicker-badge">
+<i class="fas fa-bolt"></i>
+<span data-i18n="hero_kicker">مقاولات التيار الخفيف • البنية التحتية • الأنظمة الأمنية • المباني الذكية</span>
+</div>
+<h1 class="hero-main-title" data-i18n="beyout_hero_title">شريكك الهندسي المتكامل لأنظمة التيار الخفيف والمقاولات الذكية</h1>
+<p class="hero-sub-text" data-i18n="beyout_hero_subtitle">نُصمم وننفذ منظومات التيار الخفيف المتكاملة للمشروعات القومية، الصناعية، الإدارية، والسكنية بمعايير عالمية: من شبكات الألياف الضوئية والداتا، كاميرات المراقبة، إنذار الحريق، الصوتيات، والبوابات الأمنية، إلى شبكات الجهد المتوسط والمنخفض وأتمتة المباني والبيوت الذكية (BMS & Smart Home).</p>
+<div class="hero-cta-group">
+<a class="hero-cta-btn" data-i18n="btn_explore_lc" href="#lc-services-section">استكشف أنظمة التيار الخفيف</a>
+<a class="hero-secondary-btn" data-i18n="btn_view_portfolio" href="#portfolio-section"><i class="fas fa-briefcase"></i> سابقة الأعمال والمشروعات</a>
+<a class="hero-tertiary-link" data-i18n="btn_smarthome_pkgs" href="#packages-section">باقات السمارت هوم <i class="fas fa-arrow-left"></i></a>
+</div>
+<div class="hero-cert-badges">
+<div class="cert-pill"><i class="fas fa-check-double"></i> <span data-i18n="hero_cert_1">اختبارات قياسية معتمدة (Fluke & OTDR)</span></div>
+<div class="cert-pill"><i class="fas fa-shield-halved"></i> <span data-i18n="hero_cert_2">أعلى معايير السلامة والجودة الهندسية</span></div>
+<div class="cert-pill"><i class="fas fa-building-shield"></i> <span data-i18n="hero_cert_3">توريد وتركيب وصيانة شاملة (Turnkey)</span></div>
+</div>
+</div>
+
+<!-- Left in RTL: Multi-System Engineering Visual Showcase -->
+<div class="hero-visual-col">
+<div class="hero-enterprise-mosaic">
+<div class="mosaic-main-card switch-glowing-frame">
+<img alt="Light Current & Fiber Infrastructure" class="switch-mock-img" src="portfolio_assets/p16_img2_xref434.jpeg"/>
+<div class="mosaic-caption">
+<span class="mosaic-tag" data-i18n="mosaic_tag_1">مشروعات قومية وبنية تحتية</span>
+<strong data-i18n="mosaic_title_1">شبكات ألياف ضوئية وتيار خفيف بمعايير عالمية</strong>
+</div>
+</div>
+<div class="mosaic-sub-grid">
+<div class="mosaic-mini-card">
+<img alt="Data & Fiber Cabling" src="portfolio_assets/p7_img2_xref257.jpeg"/>
+<div class="mosaic-mini-info">
+<span data-i18n="mosaic_mini_1">شبكات الداتا والفايبر</span>
+<small>Cat6a / Fiber OTDR</small>
+</div>
+</div>
+<div class="mosaic-mini-card">
+<img alt="Fire Alarm & Security Systems" src="portfolio_assets/p14_img3_xref407.jpeg"/>
+<div class="mosaic-mini-info">
+<span data-i18n="mosaic_mini_2">إنذار الحريق والأمن</span>
+<small>Addressable & CCTV</small>
+</div>
+</div>
+<div class="mosaic-mini-card">
+<img alt="Smart Home Automation" src="assets/smart_switch.jpg"/>
+<div class="mosaic-mini-info">
+<span data-i18n="mosaic_mini_3">أتمتة المباني والسمارت هوم</span>
+<small>BMS & Smart Living</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Executive Stats Ribbon -->
+<div class="container">
+<div class="stats-ribbon glass-card">
+<div class="stat-item">
+<div class="stat-number">+1,000</div>
+<div class="stat-label" data-i18n="stat_lbl_1">عميل ومشروع منفذ بنجاح</div>
+</div>
+<div class="stat-divider"></div>
+<div class="stat-item">
+<div class="stat-number" dir="ltr">+220 KM</div>
+<div class="stat-label" data-i18n="stat_lbl_2">كابلات ألياف ضوئية وشبكات داتا</div>
+</div>
+<div class="stat-divider"></div>
+<div class="stat-item">
+<div class="stat-number">+425</div>
+<div class="stat-label" data-i18n="stat_lbl_3">محول وموزع جهد منخفض ومتوسط</div>
+</div>
+<div class="stat-divider"></div>
+<div class="stat-item">
+<div class="stat-number">100%</div>
+<div class="stat-label" data-i18n="stat_lbl_4">اعتمادية واختبارات قياسية (Fluke & OTDR)</div>
+</div>
 </div>
 </div>
 </section>
-<!-- 6 Packages Section -->
-<section class="packages-section-wrapper" id="packages-section">
+
+<!-- Corporate Identity: About Us, Vision, Mission, Safety & Sectors -->
+<section class="company-overview-section" id="company-overview">
 <div class="container">
 <div class="section-header text-center">
+<span class="section-subtitle" data-i18n="about_sec_subtitle">الهوية المؤسسية • من نحن</span>
+<h2 class="section-title" data-i18n="about_sec_title">الحل الهندسي المتكامل (One-Stop-Shop) للمقاولات والتيار الخفيف</h2>
+<p class="section-desc max-w-800" data-i18n="about_sec_desc">نحن شركة هندسية متكاملة متخصصة في أنظمة التيار الخفيف، الأنظمة الأمنية، الشبكات الكهربائية، والمقاولات. بفضل سنوات من الخبرة الميدانية وفريق هندسي وفني عالي الكفاءة، نُنفذ المشروعات الكبرى والمتوسطة والصغيرة من مرحلة الدراسة والتصميم وحتى التوريد والتركيب والاختبار والتسليم النهائي.</p>
+</div>
+
+<div class="vision-mission-grid">
+<div class="vm-card glass-card">
+<div class="vm-icon"><i class="fas fa-building-columns"></i></div>
+<h3 data-i18n="vm_about_title">من نحن (About Us)</h3>
+<p data-i18n="vm_about_desc">وجهة هندسية شاملة تجمع بين مقاولات التيار الخفيف، الأنظمة الأمنية المتطورة، أتمتة المباني، وشبكات القوى الكهربائية، لتلبية كافة احتياجات المنشآت بأعلى درجات الأمان والاعتمادية.</p>
+</div>
+<div class="vm-card glass-card">
+<div class="vm-icon"><i class="fas fa-eye"></i></div>
+<h3 data-i18n="vm_vision_title">رؤيتنا (Our Vision)</h3>
+<p data-i18n="vm_vision_desc">الريادة في تقديم أعلى مستويات الهندسة الكهربائية وحلول التيار الخفيف والأمن المتكامل والإنشاءات، لحماية عملائنا وممتلكاتهم وتعزيز استدامة وكفاءة المباني بأحدث التقنيات العالمية.</p>
+</div>
+<div class="vm-card glass-card">
+<div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+<h3 data-i18n="vm_mission_title">رسالتنا وهدفنا (Our Mission & Goal)</h3>
+<p data-i18n="vm_mission_desc">تقديم خدمات هندسية استثنائية وحلول متكاملة تتجاوز توقعات عملائنا وبناء شراكات طويلة الأمد، مع الالتزام الصارم بتسليم المشروعات في الموعد المحدد، وضمن الميزانية، وبأعلى معايير الجودة.</p>
+</div>
+<div class="vm-card glass-card vm-safety-highlight">
+<div class="vm-icon"><i class="fas fa-helmet-safety"></i></div>
+<h3 data-i18n="vm_safety_title">أولويتنا القصوى: السلامة (Safety First)</h3>
+<p data-i18n="vm_safety_desc">الأولوية رقم واحد في كافة مواقعنا هي ضمان سلامة المهندسين والفنيين والجمهور والمنشآت، مع تطبيق صارم لمعايير السلامة المهنية (HSE) والاختبارات القياسية المعتمدة.</p>
+</div>
+</div>
+
+<!-- Industries Served Strip -->
+<div class="industries-served-box">
+<div class="industries-title" data-i18n="industries_strip_title">القطاعات الحيوية التي نخدمها بحلول التيار الخفيف:</div>
+<div class="industries-pills">
+<span class="industry-pill"><i class="fas fa-city"></i> <span data-i18n="ind_1">القطاع التجاري والإداري والبنوك</span></span>
+<span class="industry-pill"><i class="fas fa-industry"></i> <span data-i18n="ind_2">المصانع والمدن الصناعية</span></span>
+<span class="industry-pill"><i class="fas fa-hospital"></i> <span data-i18n="ind_3">المستشفيات والرعاية الصحية</span></span>
+<span class="industry-pill"><i class="fas fa-graduation-cap"></i> <span data-i18n="ind_4">الجامعات والمؤسسات التعليمية</span></span>
+<span class="industry-pill"><i class="fas fa-hotel"></i> <span data-i18n="ind_5">الفنادق والمنتجعات السياحية</span></span>
+<span class="industry-pill"><i class="fas fa-house-signal"></i> <span data-i18n="ind_6">المجمعات السكنية والفلل الذكية</span></span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Core Light Current Systems Section (9 Flagship Pillars) -->
+<section class="lc-services-section" id="lc-services-section">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle" data-i18n="lc_sec_subtitle">خدمات وحلول التيار الخفيف المتكاملة (Light Current Systems)</span>
+<h2 class="section-title" data-i18n="lc_sec_title">منظومة هندسية شاملة لأنظمة التيار الخفيف والاتصالات والأمن</h2>
+<p class="section-desc max-w-800" data-i18n="lc_sec_desc">نُعزز الكفاءة التشغيلية والراحة والتأمين الشامل لمباني ومشروعات عملائنا عبر دمج وأتمتة كافة أنظمة الجهد المنخفض والتيار الخفيف بحلول قابلة للتوسع وعالية الجدوى الاقتصادية.</p>
+</div>
+
+<div class="lc-services-grid">
+<!-- Service 1: Data & Fiber -->
+<div class="lc-service-card glass-card">
+<div class="lc-card-media">
+<img alt="Data & Fiber Optic Systems" loading="lazy" src="portfolio_assets/p7_img2_xref257.jpeg"/>
+<span class="lc-sys-code">LC-01</span>
+<div class="lc-floating-icon"><i class="fas fa-network-wired"></i></div>
+</div>
+<div class="lc-card-body">
+<h3 data-i18n="lc_srv1_title">أنظمة شبكات المعلومات والألياف الضوئية</h3>
+<div class="lc-en-sub">Data Networks & Fiber Optic Infrastructure</div>
+<p class="lc-card-desc" data-i18n="lc_srv1_desc">تأسيس وبناء البنية التحتية لشبكات الاتصالات ونقل البيانات فائقة السرعة للمباني والمشروعات القومية.</p>
+<ul class="lc-spec-list">
+<li data-i18n="lc_srv1_b1">كابلات النحاس UTP Cat6 / Cat6a والباتش كورد (سحب، تيرمينيشن، واختبار Fluke Test).</li>
+<li data-i18n="lc_srv1_b2">كابلات الألياف الضوئية Fiber Optic ومشتملاتها (سحب، لحام Splicing، واختبار OTDR).</li>
+<li data-i18n="lc_srv1_b3">توريد كابلات التحكم الصناعي RS485 وتنظيم وتقفيل كبائن الراكات Racks والمسارات.</li>
+</ul>
+<a class="lc-card-cta" data-i18n="lc_req_quote_btn" href="#demo-section" onclick="selectServiceTrack('lc_data_fiber')">اطلب مقايسة فنية <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
+
+<!-- Service 2: CCTV -->
+<div class="lc-service-card glass-card">
+<div class="lc-card-media">
+<img alt="CCTV Surveillance Systems" loading="lazy" src="portfolio_assets/p12_img4_xref372.jpeg"/>
+<span class="lc-sys-code">LC-02</span>
+<div class="lc-floating-icon"><i class="fas fa-video"></i></div>
+</div>
+<div class="lc-card-body">
+<h3 data-i18n="lc_srv2_title">أنظمة كاميرات المراقبة الأمنية (CCTV)</h3>
+<div class="lc-en-sub">IP & AI Video Surveillance Systems</div>
+<p class="lc-card-desc" data-i18n="lc_srv2_desc">حلول مراقبة مرئية متكاملة لتأمين وحماية كافة المواقع والمنشآت الحيوية والصناعية والتجارية على مدار الساعة.</p>
+<ul class="lc-spec-list">
+<li data-i18n="lc_srv2_b1">توريد وتركيب كاميرات المراقبة الشبكية IP Cameras والتناظرية والحرارية والمتحركة PTZ.</li>
+<li data-i18n="lc_srv2_b2">تجهيز غرف المراقبة المركزية Control Rooms وأجهزة التسجيل الشبكي NVR وشاشات العرض.</li>
+<li data-i18n="lc_srv2_b3">تحليلات الفيديو الذكية ورصد التسلل وحماية الأسوار المحيطية للمحطات والمصانع والكمبوندات.</li>
+</ul>
+<a class="lc-card-cta" data-i18n="lc_req_quote_btn" href="#demo-section" onclick="selectServiceTrack('lc_cctv')">اطلب مقايسة فنية <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
+
+<!-- Service 3: Fire Alarm -->
+<div class="lc-service-card glass-card">
+<div class="lc-card-media">
+<img alt="Fire Alarm Systems" loading="lazy" src="portfolio_assets/p14_img3_xref407.jpeg"/>
+<span class="lc-sys-code">LC-03</span>
+<div class="lc-floating-icon"><i class="fas fa-fire-extinguisher"></i></div>
+</div>
+<div class="lc-card-body">
+<h3 data-i18n="lc_srv3_title">أنظمة إنذار الحريق المعتمدة</h3>
+<div class="lc-en-sub">Addressable & Conventional Fire Alarm Systems</div>
+<p class="lc-card-desc" data-i18n="lc_srv3_desc">منظومات إنذار مبكر متكاملة لحماية الأرواح والممتلكات والتنبيه الفوري في حالات الحريق أو الدخان.</p>
+<ul class="lc-spec-list">
+<li data-i18n="lc_srv3_b1">لوحات تحكم إنذار الحريق المعنونة (Addressable) والتقليدية (Conventional) المعتمدة.</li>
+<li data-i18n="lc_srv3_b2">حساسات دخان (Smoke Detectors)، حساسات حرارة (Heat Detectors)، وكواسر يدوية وسراين.</li>
+<li data-i18n="lc_srv3_b3">وحدات المراقبة والتحكم (Control & Monitor Modules) للربط مع المصاعد والتكييف والإخلاء.</li>
+</ul>
+<a class="lc-card-cta" data-i18n="lc_req_quote_btn" href="#demo-section" onclick="selectServiceTrack('lc_fire_alarm')">اطلب مقايسة فنية <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
+
+<!-- Service 4: Access Control -->
+<div class="lc-service-card glass-card">
+<div class="lc-card-media">
+<img alt="Access Control & Time Attendance" loading="lazy" src="portfolio_assets/p7_img1_xref255.jpeg"/>
+<span class="lc-sys-code">LC-04</span>
+<div class="lc-floating-icon"><i class="fas fa-fingerprint"></i></div>
+</div>
+<div class="lc-card-body">
+<h3 data-i18n="lc_srv4_title">التحكم في الدخول والحضور والانصراف</h3>
+<div class="lc-en-sub">Access Control & Biometric Time Attendance</div>
+<p class="lc-card-desc" data-i18n="lc_srv4_desc">أنظمة ذكية لإدارة حركة الدخول والخروج للموظفين والزوار وتأمين الأبواب والمنشآت الحساسة.</p>
+<ul class="lc-spec-list">
+<li data-i18n="lc_srv4_b1">أجهزة الحضور والانصراف بالبصمة والوجه والكارت لحساب التأخيرات والإجازات والورديات بدقة.</li>
+<li data-i18n="lc_srv4_b2">أنظمة التحكم في الأبواب (Access Doors) والكوالين المغناطيسية والكهربائية للبنوك والفنادق والشركات.</li>
+<li data-i18n="lc_srv4_b3">برامج إدارة مركزية متكاملة للربط مع قواعد بيانات الموارد البشرية والأمن.</li>
+</ul>
+<a class="lc-card-cta" data-i18n="lc_req_quote_btn" href="#demo-section" onclick="selectServiceTrack('lc_access_control')">اطلب مقايسة فنية <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
+
+<!-- Service 5: Sound & Nurse Call -->
+<div class="lc-service-card glass-card">
+<div class="lc-card-media">
+<img alt="Sound & Voice Evacuation Systems" loading="lazy" src="portfolio_assets/p8_img1_xref269.jpeg"/>
+<span class="lc-sys-code">LC-05</span>
+<div class="lc-floating-icon"><i class="fas fa-bullhorn"></i></div>
+</div>
+<div class="lc-card-body">
+<h3 data-i18n="lc_srv5_title">الأنظمة الصوتية والإخلاء واستدعاء الممرضات</h3>
+<div class="lc-en-sub">Public Address, Voice Evacuation & Nurse Call</div>
+<p class="lc-card-desc" data-i18n="lc_srv5_desc">حلول صوتية احترافية للمولات والهيئات والشركات والمستشفيات مع ربط كامل بأنظمة الطوارئ.</p>
+<ul class="lc-spec-list">
+<li data-i18n="lc_srv5_b1">أنظمة الإذاعة الداخلية والصوتيات المركزية (PA Systems) للمولات التجارية والجامعات والمباني الإدارية.</li>
+<li data-i18n="lc_srv5_b2">أنظمة الإخلاء الصوتي التلقائي في حالات الحريق أو الإنذار لتوجيه الأفراد بأمان.</li>
+<li data-i18n="lc_srv5_b3">أنظمة استدعاء الممرضات (Nurse Call Systems) المتكاملة للمستشفيات والمراكز الطبية.</li>
+</ul>
+<a class="lc-card-cta" data-i18n="lc_req_quote_btn" href="#demo-section" onclick="selectServiceTrack('lc_sound_pa')">اطلب مقايسة فنية <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
+
+<!-- Service 6: Telephone & IP-PBX -->
+<div class="lc-service-card glass-card">
+<div class="lc-card-media">
+<img alt="Telephone & IP-PBX Systems" loading="lazy" src="portfolio_assets/p8_img2_xref271.jpeg"/>
+<span class="lc-sys-code">LC-06</span>
+<div class="lc-floating-icon"><i class="fas fa-phone-volume"></i></div>
+</div>
+<div class="lc-card-body">
+<h3 data-i18n="lc_srv6_title">أنظمة السنترالات والاتصالات والإنتركم</h3>
+<div class="lc-en-sub">IP-PBX Telephony, Call Centers & Intercom</div>
+<p class="lc-card-desc" data-i18n="lc_srv6_desc">شبكات اتصالات صوتية ومرئية مستقلة ومدمجة عبر بروتوكول الإنترنت (IP) للمباني والمجمعات السكنية والإدارية.</p>
+<ul class="lc-spec-list">
+<li data-i18n="lc_srv6_b1">السنترالات الشبكية والرقمية (IP-PBX) وأنظمة الاتصالات الموحدة للشركات والفنادق.</li>
+<li data-i18n="lc_srv6_b2">تجهيز مراكز الاتصال وخدمة العملاء (Call Centers) بأحدث تقنيات الـ VoIP والملتميديا.</li>
+<li data-i18n="lc_srv6_b3">أنظمة الإنتركم الصوتي والمرئي (Talkback / Door Phone) للمباني والكمبوندات السكنية.</li>
+</ul>
+<a class="lc-card-cta" data-i18n="lc_req_quote_btn" href="#demo-section" onclick="selectServiceTrack('lc_telephone_pbx')">اطلب مقايسة فنية <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
+
+<!-- Service 7: Queuing & Digital Signage -->
+<div class="lc-service-card glass-card">
+<div class="lc-card-media">
+<img alt="Queuing & Digital Signage Systems" loading="lazy" src="portfolio_assets/p13_img4_xref394.jpeg"/>
+<span class="lc-sys-code">LC-07</span>
+<div class="lc-floating-icon"><i class="fas fa-tv"></i></div>
+</div>
+<div class="lc-card-body">
+<h3 data-i18n="lc_srv7_title">أنظمة نداء العملاء والشاشات الرقمية</h3>
+<div class="lc-en-sub">Queue Management & Digital Signage Systems</div>
+<p class="lc-card-desc" data-i18n="lc_srv7_desc">أنظمة تنظيم الطوابير واستدعاء العملاء بأحدث التصميمات العصرية للمراكز الخدمية والبنوك والمستشفيات.</p>
+<ul class="lc-spec-list">
+<li data-i18n="lc_srv7_b1">منصات سحب التذاكر التفاعلية (Touch Kiosks) وشاشات العرض الرئيسية والفرعية ولوحات النداء.</li>
+<li data-i18n="lc_srv7_b2">أنظمة الشاشات الإعلانية والمعلوماتية الرقمية (Digital Signage & Visualization Modules).</li>
+<li data-i18n="lc_srv7_b3">وحدات مراقبة الأداء وإصدار التقارير الإحصائية الشاملة (Full Reporting & Monitoring).</li>
+</ul>
+<a class="lc-card-cta" data-i18n="lc_req_quote_btn" href="#demo-section" onclick="selectServiceTrack('lc_queuing')">اطلب مقايسة فنية <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
+
+<!-- Service 8: Security Gates & X-Ray -->
+<div class="lc-service-card glass-card">
+<div class="lc-card-media">
+<img alt="Security Gates & X-Ray Inspection" loading="lazy" src="portfolio_assets/p12_img1_xref362.jpeg"/>
+<span class="lc-sys-code">LC-08</span>
+<div class="lc-floating-icon"><i class="fas fa-archway"></i></div>
+</div>
+<div class="lc-card-body">
+<h3 data-i18n="lc_srv8_title">البوابات الأمنية وأجهزة التفتيش والحواجز</h3>
+<div class="lc-en-sub">Security Gates, X-Ray Scanners & Car Barriers</div>
+<p class="lc-card-desc" data-i18n="lc_srv8_desc">أجهزة تفتيش وتأمين عالية الدقة للمواقع الحيوية، المحطات، المطارات، الفنادق، والمقرات الكبرى.</p>
+<ul class="lc-spec-list">
+<li data-i18n="lc_srv8_b1">بوابات كشف المعادن للأفراد (Walk-Through Metal Detectors) عالية الحساسية.</li>
+<li data-i18n="lc_srv8_b2">أجهزة فحص وتفتيش الحقائب والطرود بالأشعة السينية (X-Ray Baggage Inspection).</li>
+<li data-i18n="lc_srv8_b3">بوابات ومصدات السيارات الأوتوماتيكية (Car Barriers) وأنظمة تأمين الأسوار ضد التسلل.</li>
+</ul>
+<a class="lc-card-cta" data-i18n="lc_req_quote_btn" href="#demo-section" onclick="selectServiceTrack('lc_security_gates')">اطلب مقايسة فنية <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
+
+<!-- Service 9: Smart Home & BMS -->
+<div class="lc-service-card glass-card lc-featured-smart">
+<div class="lc-card-media">
+<img alt="Smart Home & Building Automation" loading="lazy" src="assets/smart_switch.jpg"/>
+<span class="lc-sys-code">LC-09</span>
+<div class="lc-floating-icon"><i class="fas fa-house-laptop"></i></div>
+</div>
+<div class="lc-card-body">
+<h3 data-i18n="lc_srv9_title">أتمتة المباني والبيوت الذكية (Smart Home & BMS)</h3>
+<div class="lc-en-sub">Building Automation, Smart Home & Energy Management</div>
+<p class="lc-card-desc" data-i18n="lc_srv9_desc">قطاعنا المتخصص في تحويل المنازل والفلل والمباني الإدارية إلى منظومات ذكية متكاملة توفر الطاقة وترتقي بالرفاهية والأمان.</p>
+<ul class="lc-spec-list">
+<li data-i18n="lc_srv9_b1">تحكم ذكي في الإضاءة، التكييفات، الستائر الكهربائية، والأقفال الذكية بالبصمة وتطبيق الموبايل.</li>
+<li data-i18n="lc_srv9_b2">منظومة حساسات الأمان (تسريب الغاز، المياه، الدخان، والحركة) والربط مع الأوامر الصوتية.</li>
+<li data-i18n="lc_srv9_b3">أنظمة إدارة المباني (BMS) وترشيد استهلاك الطاقة للمنشآت التجارية والسكنية.</li>
+</ul>
+<a class="lc-card-cta lc-gold-cta" data-i18n="lc_explore_smart_btn" href="#packages-section">تصفح باقات ومنتجات السمارت هوم <i class="fas fa-arrow-down"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Low & Medium Voltage Electrical Engineering & Construction Section -->
+<section class="lvmv-section" id="lvmv-section">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle" data-i18n="lvmv_sec_subtitle">هندسة القوى الكهربائية والمقاولات المتكاملة (LV & MV Electrical Engineering)</span>
+<h2 class="section-title" data-i18n="lvmv_sec_title">شبكات الجهد المنخفض والمتوسط ومقاولات البنية التحتية</h2>
+<p class="section-desc max-w-800" data-i18n="lvmv_sec_desc">نُقدم خدمات هندسية ومقاولات متكاملة لشبكات الجهد المنخفض (LV) والجهد المتوسط (MV)، تشمل سحب الكابلات الأرضية والهوائية، عمل النهايات والوصلات، وتوريد وتركيب المحولات والموزعات وأعمدة الإنارة.</p>
+</div>
+
+<div class="lvmv-grid">
+<div class="lvmv-card glass-card">
+<div class="lvmv-img-wrap">
+<img alt="MV Cable Pulling" loading="lazy" src="portfolio_assets/p10_img1_xref285.jpeg"/>
+<span class="lvmv-badge">MV Pulling</span>
+</div>
+<div class="lvmv-body">
+<h3 data-i18n="lvmv_c1_title">سحب كابلات الجهد المتوسط (MV Pulling)</h3>
+<p data-i18n="lvmv_c1_desc">مد وسحب كابلات الجهد المتوسط الأرضية والهوائية للمشروعات القومية والمدن الجديدة وشبكات التوزيع المعتمدة.</p>
+</div>
+</div>
+
+<div class="lvmv-card glass-card">
+<div class="lvmv-img-wrap">
+<img alt="LV Cable Pulling" loading="lazy" src="portfolio_assets/p10_img3_xref293.jpeg"/>
+<span class="lvmv-badge">LV Pulling</span>
+</div>
+<div class="lvmv-body">
+<h3 data-i18n="lvmv_c2_title">سحب كابلات الجهد المنخفض (LV Pulling)</h3>
+<p data-i18n="lvmv_c2_desc">تأسيس وسحب شبكات كابلات الجهد المنخفض باستخدام أحدث معدات السحب الهيدروليكية لتغذية المباني والمجمعات.</p>
+</div>
+</div>
+
+<div class="lvmv-card glass-card">
+<div class="lvmv-img-wrap">
+<img alt="Distributors & Transformers" loading="lazy" src="portfolio_assets/p10_img4_xref299.jpeg"/>
+<span class="lvmv-badge">Transformers</span>
+</div>
+<div class="lvmv-body">
+<h3 data-i18n="lvmv_c3_title">توريد وتركيب المحولات والموزعات</h3>
+<p data-i18n="lvmv_c3_desc">إحلال وتجديد وتوريد وتركيب محولات القدرة الكهربائية ولوحات التوزيع والموزعات الرئيسية (Distributors & Transformers).</p>
+</div>
+</div>
+
+<div class="lvmv-card glass-card">
+<div class="lvmv-img-wrap">
+<img alt="Cable Ends, Joints & Lighting Poles" loading="lazy" src="portfolio_assets/p10_img2_xref289.jpeg"/>
+<span class="lvmv-badge">Ends & Joints</span>
+</div>
+<div class="lvmv-body">
+<h3 data-i18n="lvmv_c4_title">نهايات ووصلات الكابلات وأعمدة الإنارة</h3>
+<p data-i18n="lvmv_c4_desc">تنفيذ علب النهايات والوصلات (Terminating Ends & Joints) لكابلات الجهد المتوسط والمنخفض، وتركيب وإحلال أعمدة الإنارة.</p>
+</div>
+</div>
+</div>
+
+<!-- Construction & Project Management Services Strip (From Page 5) -->
+<div class="construction-lifecycle glass-card">
+<div class="lifecycle-header">
+<h3 data-i18n="const_strip_title"><i class="fas fa-compass-drafting"></i> منظومة إدارة المشروعات والمقاولات المتكاملة (Turnkey Contracting Services)</h3>
+<p data-i18n="const_strip_desc">ندير مشروعك من الفكرة وحتى التسليم والتشغيل والصيانة وفق أعلى المعايير الهندسية:</p>
+</div>
+<div class="lifecycle-steps-grid">
+<div class="lc-step-item">
+<span class="step-num">01</span>
+<div>
+<h4 data-i18n="const_s1_t">خدمات ما قبل التنفيذ (Pre-Construction)</h4>
+<p data-i18n="const_s1_d">معاينة المواقع، إعداد الميزانيات والمقايسات والجداول الزمنية، واستخراج التصاريح والموافقات.</p>
+</div>
+</div>
+<div class="lc-step-item">
+<span class="step-num">02</span>
+<div>
+<h4 data-i18n="const_s2_t">التصميم والهندسة (Design & Engineering)</h4>
+<p data-i18n="const_s2_d">تقديم الرسومات الهندسية والمعمارية والمخططات التنفيذية (Shop Drawings) لكافة الأنظمة.</p>
+</div>
+</div>
+<div class="lc-step-item">
+<span class="step-num">03</span>
+<div>
+<h4 data-i18n="const_s3_t">إدارة المشروعات (Project Management)</h4>
+<p data-i18n="const_s3_d">الإشراف الكامل على التخطيط والتنفيذ ومراقبة الجودة والسلامة من البداية وحتى التسليم.</p>
+</div>
+</div>
+<div class="lc-step-item">
+<span class="step-num">04</span>
+<div>
+<h4 data-i18n="const_s4_t">الإنشاءات والمباني (Building Construction)</h4>
+<p data-i18n="const_s4_d">أعمال الحفر، الأساسات، الهياكل الخرسانية، مد المرافق، والتشطيبات الداخلية والخارجية.</p>
+</div>
+</div>
+<div class="lc-step-item">
+<span class="step-num">05</span>
+<div>
+<h4 data-i18n="const_s5_t">المقاولات التخصصية (Specialty MEP)</h4>
+<p data-i18n="const_s5_d">تنفيذ الأعمال التخصصية الدقيقة من كهرباء، تيار خفيف، ميكانيكا وسباكة، وتكييف مركزي (HVAC).</p>
+</div>
+</div>
+<div class="lc-step-item">
+<span class="step-num">06</span>
+<div>
+<h4 data-i18n="const_s6_t">الصيانة والدعم الفني (Maintenance & Repair)</h4>
+<p data-i18n="const_s6_d">عقود صيانة دورية ووقائية وإصلاح شامل لضمان استمرارية عمل الأنظمة والمنشآت بكفاءة.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="packages-section-wrapper" id="packages-section">
+<div class="container">
+<div class="section-header text-center division-header-block"><div class="division-pill" data-i18n="smarthome_division_badge">🏠 قطاع أتمتة المنازل والمباني الذكية (أحد قطاعات التيار الخفيف)</div>
 <span class="section-subtitle" data-i18n="packages_subtitle">باقات بيوت المخصصة</span>
 <h2 class="section-title" data-i18n="packages_title">اختر الباقة المناسبة لمساحة منزلك</h2>
 <p class="section-desc max-w-600" data-i18n="packages_desc">نقدم حلولاً ذكية متكاملة تناسب جميع المساحات بأسعار مرنة وعروض مخصصة بعد الاستشارة.</p>
@@ -224,9 +646,34 @@
 </div>
 </div>
 </section>
-<!-- Sandbox Testing Ground (Playground) -->
+
+<!-- Products Catalog Section (Smart Home & Light Current Devices) -->
 <section class="products-section" id="products-section">
 <div class="container">
+<div class="catalog-top-banner">
+<div class="catalog-top-text">
+<span class="section-subtitle" data-i18n="catalog_sec_subtitle">كتالوج الأجهزة والمنتجات الذكية</span>
+<h2 class="section-title" data-i18n="catalog_sec_title">تصفح منتجات وأجهزة بيوت الذكية حسب الفئة</h2>
+<p class="section-desc" data-i18n="catalog_sec_desc">اسحب يميناً ويساراً لتصفح الفئات والمنتجات بشكل مستمر، أو اضغط على الفئة للانتقال إليها مباشرة.</p>
+</div>
+<div class="catalog-scroll-btns">
+<button type="button" class="scroll-nav-btn" onclick="scrollCatalog(-1)" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+<button type="button" class="scroll-nav-btn" onclick="scrollCatalog(1)" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+</div>
+</div>
+<div class="catalog-category-pills">
+<button type="button" class="cat-jump-pill active" onclick="jumpToCategory('smart-switches-and-dimmers', this)">Smart Switches</button>
+<button type="button" class="cat-jump-pill" onclick="jumpToCategory('mini-smart-modules', this)">Mini Modules</button>
+<button type="button" class="cat-jump-pill" onclick="jumpToCategory('smart-breakers', this)">Smart Breakers</button>
+<button type="button" class="cat-jump-pill" onclick="jumpToCategory('smart-plugs-and-sockets', this)">Plugs & Sockets</button>
+<button type="button" class="cat-jump-pill" onclick="jumpToCategory('smart-curtain-systems', this)">Curtain Systems</button>
+<button type="button" class="cat-jump-pill" onclick="jumpToCategory('smart-control-panels', this)">Control Panels</button>
+<button type="button" class="cat-jump-pill" onclick="jumpToCategory('smart-gateways-and-controllers', this)">Gateways</button>
+<button type="button" class="cat-jump-pill" onclick="jumpToCategory('smart-safety-and-security-sensors', this)">Security Sensors</button>
+<button type="button" class="cat-jump-pill" onclick="jumpToCategory('smart-video-doorbells', this)">Video Doorbells</button>
+<button type="button" class="cat-jump-pill" onclick="jumpToCategory('smart-door-locks', this)">Smart Door Locks</button>
+</div>
+
 <div class="products-scroll-container">
 <div class="category-group">
 <div class="section-header" id="smart-switches-and-dimmers">
@@ -2338,16 +2785,276 @@
 </div>
 </div>
 
-
-
 </section>
-<!-- Multi-Step Demo Booking Form Section -->
+
+<!-- Mega Portfolio / Delivered Projects Section (All 7 Projects from Brochure) -->
+<section class="portfolio-section" id="portfolio-section">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle" data-i18n="port_sec_subtitle">سابقة الأعمال والمشروعات القومية (+1,000 عميل ومشروع)</span>
+<h2 class="section-title" data-i18n="port_sec_title">مشروعات هندسية كبرى نفخر بتنفيذها على أرض الواقع</h2>
+<p class="section-desc max-w-800" data-i18n="port_sec_desc">سجل حافل من الإنجازات الموثقة في تنفيذ مشروعات التيار الخفيف، الأنظمة الأمنية، شبكات الألياف الضوئية، ومقاولات البنية التحتية الكهربائية في مختلف محافظات مصر.</p>
+</div>
+
+<!-- Portfolio Filter Tabs -->
+<div class="portfolio-filters">
+<button type="button" class="port-filter-btn active" data-filter="all" onclick="filterPortfolio('all', this)" data-i18n="port_flt_all">جميع المشروعات (7)</button>
+<button type="button" class="port-filter-btn" data-filter="security-lc" onclick="filterPortfolio('security-lc', this)" data-i18n="port_flt_sec">أنظمة أمنية وتيار خفيف</button>
+<button type="button" class="port-filter-btn" data-filter="fiber-data" onclick="filterPortfolio('fiber-data', this)" data-i18n="port_flt_fiber">ألياف ضوئية وشبكات داتا</button>
+<button type="button" class="port-filter-btn" data-filter="lv-mv" onclick="filterPortfolio('lv-mv', this)" data-i18n="port_flt_lvmv">بنية تحتية وجهد متوسط ومنخفض</button>
+</div>
+
+<div class="portfolio-grid">
+<!-- Project 1: Almassed Sub-Station (Arish - Sinai) -->
+<div class="project-card glass-card" data-category="security-lc">
+<div class="project-gallery">
+<div class="project-main-img-wrap">
+<img id="proj-main-1" alt="Security Systems for Almassed Sub-Station Arish" src="portfolio_assets/p12_img3_xref368.jpeg"/>
+<span class="project-cat-badge" data-i18n="proj1_cat">أنظمة أمنية وبوابات تفتيش</span>
+<span class="project-date-badge" dir="ltr"><i class="far fa-calendar-alt"></i> Mar 2022 – Oct 2022</span>
+</div>
+<div class="project-thumbs">
+<img class="active" onclick="swapProjectImg('proj-main-1', this)" alt="Substation View" src="portfolio_assets/p12_img3_xref368.jpeg"/>
+<img onclick="swapProjectImg('proj-main-1', this)" alt="Car Barrier" src="portfolio_assets/p12_img2_xref364.jpeg"/>
+<img onclick="swapProjectImg('proj-main-1', this)" alt="IP Camera" src="portfolio_assets/p12_img4_xref372.jpeg"/>
+<img onclick="swapProjectImg('proj-main-1', this)" alt="X-Ray & Metal Detector" src="portfolio_assets/p12_img1_xref362.jpeg"/>
+</div>
+</div>
+<div class="project-content">
+<div class="project-loc"><i class="fas fa-location-dot"></i> <span data-i18n="proj1_loc">العريش - شمال سيناء</span></div>
+<h3 data-i18n="proj1_title">تأمين محطة محولات المساعيد (العريش - سيناء)</h3>
+<div class="project-en-title">Security Systems for Almassed Sub-Station (Arish - Sinai)</div>
+<p class="project-desc" data-i18n="proj1_desc">توريد وتركيب منظومة تأمين ومراقبة متكاملة لمحطة محولات المساعيد تشمل كاميرات مراقبة شبكية، نظام حماية الأسوار من التسلل، بوابات السيارات، وأجهزة التفتيش بالأشعة والمعادن.</p>
+<div class="project-metrics">
+<span class="metric-chip"><i class="fas fa-camera"></i> <span data-i18n="proj1_m1">35 كاميرا مراقبة IP</span></span>
+<span class="metric-chip"><i class="fas fa-shield-halved"></i> <span data-i18n="proj1_m2">حماية سور بطول 450 متر</span></span>
+<span class="metric-chip"><i class="fas fa-road-barrier"></i> <span data-i18n="proj1_m3">بوابات سيارات ومعادن + X-Ray</span></span>
+</div>
+</div>
+</div>
+
+<!-- Project 2: Fiber Cable LRT (New Capital, Cairo) -->
+<div class="project-card glass-card" data-category="fiber-data">
+<div class="project-gallery">
+<div class="project-main-img-wrap">
+<img id="proj-main-2" alt="Fiber Cable LRT New Capital Cairo" src="portfolio_assets/p16_img2_xref434.jpeg"/>
+<span class="project-cat-badge" data-i18n="proj2_cat">ألياف ضوئية - مشروعات قومية</span>
+<span class="project-date-badge" dir="ltr"><i class="far fa-calendar-alt"></i> Feb 2022 – Jul 2022</span>
+</div>
+<div class="project-thumbs">
+<img class="active" onclick="swapProjectImg('proj-main-2', this)" alt="LRT Train Line" src="portfolio_assets/p16_img2_xref434.jpeg"/>
+<img onclick="swapProjectImg('proj-main-2', this)" alt="Fiber Termination Panel" src="portfolio_assets/p16_img4_xref442.jpeg"/>
+<img onclick="swapProjectImg('proj-main-2', this)" alt="Fiber Cable Engineer" src="portfolio_assets/p16_img3_xref438.jpeg"/>
+<img onclick="swapProjectImg('proj-main-2', this)" alt="Trench Pulling" src="portfolio_assets/p16_img1_xref432.jpeg"/>
+</div>
+</div>
+<div class="project-content">
+<div class="project-loc"><i class="fas fa-location-dot"></i> <span data-i18n="proj2_loc">العاصمة الإدارية الجديدة - القاهرة</span></div>
+<h3 data-i18n="proj2_title">مد ولحام كابلات الألياف الضوئية – القطار الكهربائي الخفيف (LRT)</h3>
+<div class="project-en-title">Pulling & Termination Fiber Cable – LRT (New Capital, Cairo)</div>
+<p class="project-desc" data-i18n="proj2_desc">سحب ومد كابلات الألياف الضوئية لمسار مشروع القطار الكهربائي الخفيف بالعاصمة الإدارية الجديدة مع تنفيذ كافة أعمال اللحام والتجريح والاختبارات القياسية المعتمدة.</p>
+<div class="project-metrics">
+<span class="metric-chip"><i class="fas fa-route"></i> <span data-i18n="proj2_m1">سحب 220 كم كابلات فايبر 4 Core</span></span>
+<span class="metric-chip"><i class="fas fa-microchip"></i> <span data-i18n="proj2_m2">لحام وتجريح 7,000 فرعة (Core)</span></span>
+<span class="metric-chip"><i class="fas fa-check-circle"></i> <span data-i18n="proj2_m3">اختبارات OTDR شاملة</span></span>
+</div>
+</div>
+</div>
+
+<!-- Project 3: Queue System - Haya Karima (Ashmoun, Menoufia) -->
+<div class="project-card glass-card" data-category="security-lc">
+<div class="project-gallery">
+<div class="project-main-img-wrap">
+<img id="proj-main-3" alt="Queue System Citizen Service Centers Haya Karima" src="portfolio_assets/p13_img4_xref394.jpeg"/>
+<span class="project-cat-badge" data-i18n="proj3_cat">أنظمة نداء العملاء - حياة كريمة</span>
+<span class="project-date-badge" dir="ltr"><i class="far fa-calendar-alt"></i> Jan 2022 – May 2022</span>
+</div>
+<div class="project-thumbs">
+<img class="active" onclick="swapProjectImg('proj-main-3', this)" alt="Queue Monitors" src="portfolio_assets/p13_img4_xref394.jpeg"/>
+<img onclick="swapProjectImg('proj-main-3', this)" alt="Service Hall" src="portfolio_assets/p13_img3_xref390.jpeg"/>
+<img onclick="swapProjectImg('proj-main-3', this)" alt="Ticket Keypad" src="portfolio_assets/p13_img2_xref386.jpeg"/>
+<img onclick="swapProjectImg('proj-main-3', this)" alt="Interactive Kiosk" src="portfolio_assets/p13_img1_xref384.jpeg"/>
+</div>
+</div>
+<div class="project-content">
+<div class="project-loc"><i class="fas fa-location-dot"></i> <span data-i18n="proj3_loc">أشمون - محافظة المنوفية</span></div>
+<h3 data-i18n="proj3_title">أنظمة نداء العملاء بمجمعات خدمات المواطنين – مبادرة حياة كريمة</h3>
+<div class="project-en-title">Queue System in Citizen Service Centers – Haya Karima (Ashmoun)</div>
+<p class="project-desc" data-i18n="proj3_desc">توريد وتركيب وتشغيل أنظمة استدعاء وترتيب العملاء الرقمية المتكاملة لعدد 14 مبنى من مجمعات خدمات المواطنين ضمن المبادرة الرئاسية حياة كريمة.</p>
+<div class="project-metrics">
+<span class="metric-chip"><i class="fas fa-building"></i> <span data-i18n="proj3_m1">14 مجمع خدمات مواطنين</span></span>
+<span class="metric-chip"><i class="fas fa-tv"></i> <span data-i18n="proj3_m2">19 شاشة عرض لكل مبنى (266 شاشة)</span></span>
+<span class="metric-chip"><i class="fas fa-desktop"></i> <span data-i18n="proj3_m3">جهاز Kiosk ولوحات تحكم لكل مبنى</span></span>
+</div>
+</div>
+</div>
+
+<!-- Project 4: Fire Alarm System - Haya Karima (Ashmoun, Menoufia) -->
+<div class="project-card glass-card" data-category="security-lc">
+<div class="project-gallery">
+<div class="project-main-img-wrap">
+<img id="proj-main-4" alt="Fire Alarm System Citizen Service Centers Haya Karima" src="portfolio_assets/p14_img3_xref407.jpeg"/>
+<span class="project-cat-badge" data-i18n="proj4_cat">إنذار حريق معنون - حياة كريمة</span>
+<span class="project-date-badge" dir="ltr"><i class="far fa-calendar-alt"></i> Jan 2022 – May 2022</span>
+</div>
+<div class="project-thumbs">
+<img class="active" onclick="swapProjectImg('proj-main-4', this)" alt="Fire Control Panels" src="portfolio_assets/p14_img3_xref407.jpeg"/>
+<img onclick="swapProjectImg('proj-main-4', this)" alt="Project Signboard" src="portfolio_assets/p14_img4_xref409.jpeg"/>
+<img onclick="swapProjectImg('proj-main-4', this)" alt="Smoke Detector Installation" src="portfolio_assets/p14_img1_xref401.jpeg"/>
+<img onclick="swapProjectImg('proj-main-4', this)" alt="Control Monitor Module" src="portfolio_assets/p14_img2_xref403.jpeg"/>
+</div>
+</div>
+<div class="project-content">
+<div class="project-loc"><i class="fas fa-location-dot"></i> <span data-i18n="proj4_loc">أشمون - محافظة المنوفية</span></div>
+<h3 data-i18n="proj4_title">أنظمة إنذار الحريق بمجمعات خدمات المواطنين – مبادرة حياة كريمة</h3>
+<div class="project-en-title">Fire Alarm System in Citizen Service Centers – Haya Karima (Ashmoun)</div>
+<p class="project-desc" data-i18n="proj4_desc">توريد وتركيب منظومة إنذار حريق معنونة (Addressable Fire Alarm) متكاملة لتأمين 14 مبنى من مجمعات خدمات المواطنين ضد أخطار الحريق.</p>
+<div class="project-metrics">
+<span class="metric-chip"><i class="fas fa-building-shield"></i> <span data-i18n="proj4_m1">14 مبنى (لوحة معنونة لكل مبنى)</span></span>
+<span class="metric-chip"><i class="fas fa-bell"></i> <span data-i18n="proj4_m2">41 حساس دخان + 3 حرارة لكل مبنى</span></span>
+<span class="metric-chip"><i class="fas fa-sliders"></i> <span data-i18n="proj4_m3">5 سرينة + وحدة مراقبة وتحكم لكل مبنى</span></span>
+</div>
+</div>
+</div>
+
+<!-- Project 5: Data System - Agricultural Service Centers Haya Karima (Ashmoun) -->
+<div class="project-card glass-card" data-category="fiber-data">
+<div class="project-gallery">
+<div class="project-main-img-wrap">
+<img id="proj-main-5" alt="Data System Agricultural Service Centers Haya Karima" src="portfolio_assets/p15_img1_xref414.jpeg"/>
+<span class="project-cat-badge" data-i18n="proj5_cat">شبكات داتا وراكات - حياة كريمة</span>
+<span class="project-date-badge" dir="ltr"><i class="far fa-calendar-alt"></i> May 2022 – Sep 2022</span>
+</div>
+<div class="project-thumbs">
+<img class="active" onclick="swapProjectImg('proj-main-5', this)" alt="Server Rack Termination" src="portfolio_assets/p15_img1_xref414.jpeg"/>
+<img onclick="swapProjectImg('proj-main-5', this)" alt="Agricultural Service Building" src="portfolio_assets/p15_img2_xref418.jpeg"/>
+</div>
+</div>
+<div class="project-content">
+<div class="project-loc"><i class="fas fa-location-dot"></i> <span data-i18n="proj5_loc">أشمون - محافظة المنوفية</span></div>
+<h3 data-i18n="proj5_title">شبكات الداتا بمجمعات الخدمات الزراعية – مبادرة حياة كريمة</h3>
+<div class="project-en-title">Data System in Agricultural Service Centers – Haya Karima (Ashmoun)</div>
+<p class="project-desc" data-i18n="proj5_desc">توريد وتأسيس البنية التحتية لشبكات المعلومات والاتصالات لعدد 14 مجمع خدمات زراعية وبيطرية شاملة الراكات والسويتشات ونقاط الداتا واختبارات الفلوك.</p>
+<div class="project-metrics">
+<span class="metric-chip"><i class="fas fa-server"></i> <span data-i18n="proj5_m1">14 مبنى (راك + 3 سويتش لكل مبنى)</span></span>
+<span class="metric-chip"><i class="fas fa-ethernet"></i> <span data-i18n="proj5_m2">45 مخرج داتا Cat6a لكل مبنى</span></span>
+<span class="metric-chip"><i class="fas fa-vial-circle-check"></i> <span data-i18n="proj5_m3">تيرمينيشن واختبار Fluke Test</span></span>
+</div>
+</div>
+</div>
+
+<!-- Project 6: Infrastructure & Electrical Works (Edfu, Aswan) -->
+<div class="project-card glass-card" data-category="lv-mv">
+<div class="project-gallery">
+<div class="project-main-img-wrap">
+<img id="proj-main-6" alt="Electrical Works Infrastructure Edfu Aswan" src="portfolio_assets/p18_img3_xref490.jpeg"/>
+<span class="project-cat-badge" data-i18n="proj6_cat">بنية تحتية وجهد متوسط ومنخفض</span>
+<span class="project-date-badge" dir="ltr"><i class="far fa-calendar-alt"></i> May 2022 – Jan 2023</span>
+</div>
+<div class="project-thumbs">
+<img class="active" onclick="swapProjectImg('proj-main-6', this)" alt="Distribution Panel Wiring" src="portfolio_assets/p18_img3_xref490.jpeg"/>
+<img onclick="swapProjectImg('proj-main-6', this)" alt="Overhead Towers & Poles" src="portfolio_assets/p18_img2_xref486.jpeg"/>
+<img onclick="swapProjectImg('proj-main-6', this)" alt="Cable Trench Excavation" src="portfolio_assets/p18_img4_xref494.jpeg"/>
+<img onclick="swapProjectImg('proj-main-6', this)" alt="Ground Cable Laying" src="portfolio_assets/p18_img1_xref484.jpeg"/>
+</div>
+</div>
+<div class="project-content">
+<div class="project-loc"><i class="fas fa-location-dot"></i> <span data-i18n="proj6_loc">إدفو - محافظة أسوان</span></div>
+<h3 data-i18n="proj6_title">إحلال وتجديد البنية التحتية والأعمال الكهربائية (إدفو - أسوان)</h3>
+<div class="project-en-title">Replacing & Renovation of Electrical Infrastructure (Edfu, Aswan)</div>
+<p class="project-desc" data-i18n="proj6_desc">مشروع ضخم لإحلال وتجديد شبكات الكهرباء والمحولات والكابلات الأرضية والهوائية والموزعات وأعمدة الإنارة وعمل النهايات والوصلات بمركز إدفو.</p>
+<div class="project-metrics">
+<span class="metric-chip"><i class="fas fa-bolt"></i> <span data-i18n="proj6_m1">360 محول قدرة + 2 موزع رئيسي</span></span>
+<span class="metric-chip"><i class="fas fa-cable-car"></i> <span data-i18n="proj6_m2">33 كم كابلات MV + 45 كم كابلات LV</span></span>
+<span class="metric-chip"><i class="fas fa-lightbulb"></i> <span data-i18n="proj6_m3">1,230 عمود إنارة + النهايات والوصلات</span></span>
+</div>
+</div>
+</div>
+
+<!-- Project 7: Infrastructure & Electrical Works (Maragha, Sohag) -->
+<div class="project-card glass-card" data-category="lv-mv">
+<div class="project-gallery">
+<div class="project-main-img-wrap">
+<img id="proj-main-7" alt="Electrical Works Infrastructure Maragha Sohag" src="portfolio_assets/p17_img2_xref461.jpeg"/>
+<span class="project-cat-badge" data-i18n="proj7_cat">بنية تحتية وجهد متوسط ومنخفض</span>
+<span class="project-date-badge" dir="ltr"><i class="far fa-calendar-alt"></i> Oct 2022 – Feb 2023</span>
+</div>
+<div class="project-thumbs">
+<img class="active" onclick="swapProjectImg('proj-main-7', this)" alt="Site & Agricultural Bank" src="portfolio_assets/p17_img2_xref461.jpeg"/>
+<img onclick="swapProjectImg('proj-main-7', this)" alt="Aerial Lines & Lighting Pole" src="portfolio_assets/p17_img1_xref459.jpeg"/>
+<img onclick="swapProjectImg('proj-main-7', this)" alt="Terminal Busbar" src="portfolio_assets/p17_img3_xref465.jpeg"/>
+<img onclick="swapProjectImg('proj-main-7', this)" alt="Project Map Sohag" src="portfolio_assets/p17_img4_xref469.jpeg"/>
+</div>
+</div>
+<div class="project-content">
+<div class="project-loc"><i class="fas fa-location-dot"></i> <span data-i18n="proj7_loc">المراغة - محافظة سوهاج</span></div>
+<h3 data-i18n="proj7_title">إحلال وتجديد البنية التحتية والأعمال الكهربائية (المراغة - سوهاج)</h3>
+<div class="project-en-title">Replacing & Renovation of Electrical Infrastructure (Maragha, Sohag)</div>
+<p class="project-desc" data-i18n="proj7_desc">إحلال وتجديد شامل للمحولات والكابلات الأرضية والهوائية والموزعات وأعمدة الإنارة العامة، بالإضافة إلى أعمال الصيانة والتجهيزات الفنية للفروع والمنشآت.</p>
+<div class="project-metrics">
+<span class="metric-chip"><i class="fas fa-bolt"></i> <span data-i18n="proj7_m1">65 محول قدرة + 1 موزع رئيسي</span></span>
+<span class="metric-chip"><i class="fas fa-cable-car"></i> <span data-i18n="proj7_m2">18 كم كابلات MV + 22 كم كابلات LV</span></span>
+<span class="metric-chip"><i class="fas fa-lightbulb"></i> <span data-i18n="proj7_m3">720 عمود إنارة + النهايات والوصلات</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Our Clients & Strategic Partners Section (Page 19) -->
+<section class="clients-section" id="clients-section">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle" data-i18n="clients_sec_subtitle">شركاء النجاح والثقة (Our Valued Clients)</span>
+<h2 class="section-title" data-i18n="clients_sec_title">نفخر بثقة كبرى الشركات والمؤسسات في مصر</h2>
+<p class="section-desc max-w-600" data-i18n="clients_sec_desc">شراكات استراتيجية ناجحة مع نخبة من رواد قطاع المقاولات، الطاقة، البنية التحتية، والمؤسسات الكبرى.</p>
+</div>
+
+<div class="clients-logo-grid">
+<div class="client-logo-card glass-card">
+<div class="client-img-box"><img alt="Elsewedy Electric" loading="lazy" src="portfolio_assets/p19_img3_xref520.jpeg"/></div>
+<span class="client-name" data-i18n="client_name_1">السويدي إليكتريك (Elsewedy Electric)</span>
+</div>
+<div class="client-logo-card glass-card">
+<div class="client-img-box"><img alt="Kharafi National" loading="lazy" src="portfolio_assets/p19_img1_xref512.jpeg"/></div>
+<span class="client-name" data-i18n="client_name_2">الخرافي ناشيونال (Kharafi National)</span>
+</div>
+<div class="client-logo-card glass-card">
+<div class="client-img-box"><img alt="Madkour" loading="lazy" src="portfolio_assets/p19_img4_xref524.jpeg"/></div>
+<span class="client-name" data-i18n="client_name_3">مدكور للمشروعات (Madkour)</span>
+</div>
+<div class="client-logo-card glass-card">
+<div class="client-img-box"><img alt="GTCI Altawakol Group" loading="lazy" src="portfolio_assets/p19_img6_xref532.jpeg"/></div>
+<span class="client-name" data-i18n="client_name_4">مجموعة التوكل (GTCI - Altawakol Group)</span>
+</div>
+<div class="client-logo-card glass-card">
+<div class="client-img-box"><img alt="Ahl Masr" loading="lazy" src="portfolio_assets/p19_img7_xref536.jpeg"/></div>
+<span class="client-name" data-i18n="client_name_5">مؤسسة أهل مصر (Ahl Masr)</span>
+</div>
+<div class="client-logo-card glass-card">
+<div class="client-img-box"><img alt="Compac Glass" loading="lazy" src="portfolio_assets/p19_img5_xref528.jpeg"/></div>
+<span class="client-name" data-i18n="client_name_6">كومباك جلاس (Compac Glass)</span>
+</div>
+<div class="client-logo-card glass-card">
+<div class="client-img-box"><img alt="Enblom" loading="lazy" src="portfolio_assets/p19_img8_xref540.jpeg"/></div>
+<span class="client-name" data-i18n="client_name_7">إنبلوم (Enblom)</span>
+</div>
+<div class="client-logo-card glass-card">
+<div class="client-img-box"><img alt="Free Air" loading="lazy" src="portfolio_assets/p19_img2_xref516.jpeg"/></div>
+<span class="client-name" data-i18n="client_name_8">فري إير (Free Air)</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Multi-Step Consultation / Quotation Booking Form Section -->
 <section class="demo-booking-section" id="demo-section">
 <div class="container">
 <div class="form-wrapper glass-card">
 <div class="form-header text-center">
-<h2 class="form-title" data-i18n="form_section_title">ابدأ رحلتك معنا اليوم</h2>
-<p class="form-subtitle" data-i18n="form_section_subtitle">احجز نسختك التجريبية والمجانية (Demo) وسيتواصل معك مستشارونا فورياً</p>
+<h2 class="form-title" data-i18n="form_section_title">اطلب مقايسة فنية أو استشارة هندسية مجانية</h2>
+<p class="form-subtitle" data-i18n="form_section_subtitle">سواء كنت تبحث عن مقاول تيار خفيف لمشروعك، أعمال شبكات وكهرباء، أو باقة سمارت هوم لمنزلك، فريقنا الهندسي جاهز للتواصل معك فوراً</p>
 <div class="form-progress">
 <div class="progress-bar" id="progress-bar"></div>
 <div class="progress-steps">
@@ -2357,7 +3064,7 @@
 <div class="step-node" data-step="4">✓</div>
 </div>
 <div class="progress-labels">
-<span data-i18n="form_step1_lbl">المنتج المطلوب</span>
+<span data-i18n="form_step1_lbl">القطاع المطلوب</span>
 <span data-i18n="form_step2_lbl">بياناتك</span>
 <span data-i18n="form_step3_lbl">التفاصيل والوقت</span>
 <span data-i18n="form_step4_lbl">تأكيد الطلب</span>
@@ -2366,21 +3073,36 @@
 </div>
 <form data-netlify="true" id="demoForm" name="demo-requests" onsubmit="handleFormSubmit(event)">
 <input name="form-name" type="hidden" value="demo-requests"/>
-<input name="target_product" type="hidden" value="lumora"/>
+<input id="target_product_input" name="target_product" type="hidden" value="light_current_b2b"/>
 <!-- Step 1 -->
 <div class="form-step active" data-step="1">
-<h3 class="step-section-title" data-i18n="form_step1_title_beyout">هل ترغب في ترقية منزلك بالكامل؟</h3>
-<div class="cards-select-grid single-card-center">
-<div class="select-card selected" id="select-card-lumora">
+<h3 class="step-section-title" data-i18n="form_step1_title_beyout">اختر القطاع الهندسي أو الخدمة المطلوبة:</h3>
+<div class="cards-select-grid three-tracks-grid">
+<div class="select-card selected" id="select-card-lc" onclick="chooseFormTrack('light_current_b2b', this)">
 <div class="select-card-logo">
-<svg class="form-logo-svg" fill="none" height="32" stroke="#d4af37" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-<polyline points="9 22 9 12 15 12 15 22"></polyline>
-</svg>
+<i class="fas fa-network-wired" style="font-size: 28px; color: #d4af37;"></i>
 </div>
-<h4>بيوت (Beyout Smart Home)</h4>
-<p data-i18n="form_product_lumora_desc">أنظمة التحكم الكاملة والمنازل الذكية الفاخرة.</p>
-<span class="badge">B2C</span>
+<h4 data-i18n="form_track1_title">مقاولات وأنظمة التيار الخفيف (Light Current)</h4>
+<p data-i18n="form_track1_desc">شبكات داتا وفايبر، كاميرات مراقبة، إنذار حريق، صوتيات، سنترالات، نداء عملاء، وبوابات أمنية.</p>
+<span class="badge">B2B / Projects</span>
+</div>
+
+<div class="select-card" id="select-card-lvmv" onclick="chooseFormTrack('lvmv_contracting', this)">
+<div class="select-card-logo">
+<i class="fas fa-bolt" style="font-size: 28px; color: #38bdf8;"></i>
+</div>
+<h4 data-i18n="form_track2_title">شبكات الجهد المنخفض والمتوسط والمقاولات</h4>
+<p data-i18n="form_track2_desc">سحب كابلات LV/MV، توريد وتركيب محولات وموزعات، أعمدة إنارة، وصيانة منشآت.</p>
+<span class="badge">Infrastructure</span>
+</div>
+
+<div class="select-card" id="select-card-lumora" onclick="chooseFormTrack('smart_home_b2c', this)">
+<div class="select-card-logo">
+<i class="fas fa-house-signal" style="font-size: 28px; color: #10b981;"></i>
+</div>
+<h4 data-i18n="form_track3_title">بيوت سمارت هوم (Smart Home & BMS)</h4>
+<p data-i18n="form_product_lumora_desc">باقات أتمتة المنازل والفلل والشقق الفاخرة والمكاتب الذكية.</p>
+<span class="badge">B2C / Smart Living</span>
 </div>
 </div>
 <div class="form-actions-row">
@@ -2393,14 +3115,14 @@
 <h3 class="step-section-title" data-i18n="form_step2_title">أخبرنا بالمزيد عنك لنتمكن من التواصل معك</h3>
 <div class="form-fields-grid">
 <div class="input-group">
-<label for="cust_name"><span data-i18n="form_lbl_name">الاسم بالكامل </span><span class="required">*</span></label>
-<input data-placeholder-ar="أدخل اسمك الكريم" data-placeholder-en="Enter your full name" id="cust_name" name="name" placeholder="أدخل اسمك الكريم" required="" type="text"/>
+<label for="cust_name"><span data-i18n="form_lbl_name">الاسم بالكامل / اسم الشركة </span><span class="required">*</span></label>
+<input data-placeholder-ar="أدخل اسمك أو اسم شركتك" data-placeholder-en="Enter your full name or company" id="cust_name" name="name" placeholder="أدخل اسمك أو اسم شركتك" required="" type="text"/>
 </div>
 <div class="input-group">
 <label for="cust_email"><span data-i18n="form_lbl_email">البريد الإلكتروني </span><span class="required">*</span></label>
 <input data-placeholder-ar="name@company.com" data-placeholder-en="name@company.com" id="cust_email" name="email" placeholder="name@company.com" required="" type="email"/>
 </div>
-<div class="input-group">
+<div class="input-group span-2">
 <label for="cust_phone"><span data-i18n="form_lbl_phone">رقم الهاتف / الواتساب </span><span class="required">*</span></label>
 <input data-placeholder-ar="+20 100 000 0000" data-placeholder-en="+20 100 000 0000" id="cust_phone" name="phone" placeholder="+20 100 000 0000" required="" type="tel"/>
 </div>
@@ -2412,7 +3134,7 @@
 </div>
 <!-- Step 3 -->
 <div class="form-step" data-step="3">
-<h3 class="step-section-title" data-i18n="form_step3_title">متى ترغب في عقد جلسة العرض (الديمو)؟</h3>
+<h3 class="step-section-title" data-i18n="form_step3_title">حدد الموعد المناسب للمعاينة أو المكالمة الاستشارية</h3>
 <div class="form-fields-grid">
 <div class="input-group">
 <label for="demo_date"><span data-i18n="form_lbl_date">التاريخ المفضل </span><span class="required">*</span></label>
@@ -2428,77 +3150,89 @@
 </select>
 </div>
 <div class="input-group span-2">
-<label data-i18n="form_lbl_notes_beyout" for="cust_notes">أكبر تحدي أو متطلبات معينة تود مناقشتها؟</label>
-<textarea data-placeholder-ar="مثال: أريد حجز الباقة وحساب الأتمتة..." data-placeholder-en="E.g., I want to book the package..." id="cust_notes" name="notes" placeholder="مثال: أريد حجز الباقة وحساب الأتمتة..." rows="3"></textarea>
+<label data-i18n="form_lbl_notes_beyout" for="cust_notes">تفاصيل المشروع أو الأنظمة والباقات المطلوبة:</label>
+<textarea data-placeholder-ar="مثال: مطلوب مقايسة شبكات وكاميرات وإنذار حريق لمبنى إداري / أو حجز باقة سمارت هوم..." data-placeholder-en="E.g., Requesting BOQ for CCTV, Fire Alarm & Data network / or Smart Home package..." id="cust_notes" name="notes" placeholder="مثال: مطلوب مقايسة شبكات وكاميرات وإنذار حريق لمبنى إداري / أو حجز باقة سمارت هوم..." rows="3"></textarea>
 </div>
 </div>
 <div class="form-actions-row">
 <button class="btn-prev" data-i18n="form_btn_prev" onclick="prevStep(2)" type="button">→ السابق</button>
-<button class="btn-submit" data-i18n="form_btn_submit" type="submit">تأكيد طلب الديمو مجاناً 🚀</button>
+<button class="btn-submit" data-i18n="form_btn_submit" type="submit">إرسال الطلب وتأكيد الموعد 🚀</button>
 </div>
 </div>
 <!-- Step 4 (Success) -->
 <div class="form-step" data-step="4">
 <div class="success-card text-center">
 <div class="success-animation-circle">
-<svg class="checkmark" viewbox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+<svg class="checkmark" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
 <circle class="checkmark__circle" cx="26" cy="26" fill="none" r="25"></circle>
 <path class="checkmark__check" d="M14.1 27.2l7.1 7.2 16.7-16.8" fill="none"></path>
 </svg>
 </div>
-<h3 class="text-success"><span data-i18n="form_success_thanks">شكراً لطلبك، </span><span id="success-user-name"></span>!</h3>
-<p class="success-desc"><span data-i18n="form_success_desc_beyout">تم تسجيل طلبك بنجاح لحجز ديمو خاص بأنظمة بيوت الذكية.</span></p>
+<h3 class="text-success"><span data-i18n="form_success_thanks">شكراً لتواصلك معنا، </span><span id="success-user-name"></span>!</h3>
+<p class="success-desc"><span data-i18n="form_success_desc_beyout">تم تسجيل طلبك بنجاح لدى الإدارة الهندسية بشركة بيوت تك.</span></p>
 <div class="success-summary glass-card">
 <p><strong data-i18n="form_success_schedule">موعدك المقترح:</strong> <span id="success-date"></span> <span data-i18n="form_success_period"> في الفترة الـ </span> <span id="success-time"></span></p>
-<p><span data-i18n="form_success_whatsapp">سنقوم بإرسال رسالة تأكيد على واتساب برقم </span><strong><span id="success-phone"></span></strong><span data-i18n="form_success_whatsapp_sub"> وتفاصيل الاجتماع خلال ساعة.</span></p>
+<p><span data-i18n="form_success_whatsapp">سيتواصل معك مهندسونا عبر واتساب وهاتف رقم </span><strong><span id="success-phone"></span></strong><span data-i18n="form_success_whatsapp_sub"> لمناقشة كافة التفاصيل الفنية والمالية.</span></p>
 </div>
-<button class="btn-reset" data-i18n="form_success_reset_btn" onclick="resetForm()" type="button">طلب حجز جديد</button>
+<button class="btn-reset" data-i18n="form_success_reset_btn" onclick="resetForm()" type="button">إرسال طلب جديد</button>
 </div>
 </div>
 </form>
 </div>
 </div>
 </section>
-<!-- Footer -->
+
+<!-- Executive Footer -->
 <footer class="main-footer">
 <div class="container footer-grid">
 <div class="footer-about">
 <a class="logo-link" href="#" style="display:flex; align-items:center;">
 <img alt="Beyout Tech - Light Current" src="logo_beyout.png" style="height: 60px; border-radius: 8px;"/>
 </a>
-<p data-i18n="footer_about_text_beyout">شركة بيوت تك للمقاولات وأنظمة التيار الخفيف (Light Current) والحلول الذكية المتكاملة.</p>
-<div style="margin-top: 14px; font-size: 13.5px; color: var(--text-secondary); line-height: 1.9;">
-<div>👤 <strong style="color: #fff;">CEO:</strong> Khaled Elmalah</div>
-<div>📞 <strong style="color: #fff;">Phone / WhatsApp:</strong> <a href="tel:+201064334334" style="color: var(--accent-color); text-decoration: none;" dir="ltr">01064334334</a></div>
+<p data-i18n="footer_about_text_beyout">شركة بيوت تك للمقاولات وأنظمة التيار الخفيف (Light Current)، الهندسة الكهربائية (LV/MV)، والحلول الذكية المتكاملة (Smart Home & BMS).</p>
+<div style="margin-top: 14px; font-size: 13.5px; color: var(--text-secondary); line-height: 2;">
+<div>👤 <strong style="color: #fff;">CEO:</strong> Eng. Khaled Elmalah</div>
+<div>📞 <strong style="color: #fff;">Phone / WhatsApp:</strong> <a href="tel:+201064334334" style="color: var(--accent-color); text-decoration: none;" dir="ltr">010-6433-4334</a> | <a href="tel:0222618108" style="color: var(--accent-color); text-decoration: none;" dir="ltr">02-2261-8108</a></div>
 <div>✉️ <strong style="color: #fff;">Email:</strong> <a href="mailto:info@beyouttech.com" style="color: var(--accent-color); text-decoration: none;" dir="ltr">info@beyouttech.com</a> | <a href="mailto:ceo@beyouttech.com" style="color: var(--accent-color); text-decoration: none;" dir="ltr">ceo@beyouttech.com</a></div>
-<div>📍 <strong style="color: #fff;">Address:</strong> <span data-i18n="footer_address_val">42 شارع أنقرة، شيراتون، القاهرة، مصر</span></div>
+<div>📍 <strong style="color: #fff;" data-i18n="footer_addr_lbl">المقرات:</strong> <span data-i18n="footer_address_val">42 ش أنقرة، شيراتون | 17 أ عمارات العبور، صلاح سالم، القاهرة، مصر</span></div>
 </div>
 </div>
 <div class="footer-links">
-<h4 data-i18n="footer_links_title">روابط سريعة</h4>
+<h4 data-i18n="footer_links_title">الأقسام والقطاعات الهندسية</h4>
 <ul>
-<li><a data-i18n="nav_about" href="#about">من نحن</a></li>
-<li><a data-i18n="nav_packages" href="#packages-section">باقات الأتمتة</a></li>
-<li><a data-i18n="nav_simulator" href="#products-section">المحاكاة التفاعلية</a></li>
+<li><a data-i18n="nav_about_us" href="#company-overview">من نحن ورؤيتنا</a></li>
+<li><a data-i18n="nav_lc_services" href="#lc-services-section">أنظمة التيار الخفيف (9 قطاعات)</a></li>
+<li><a data-i18n="nav_lvmv" href="#lvmv-section">شبكات الجهد المنخفض والمتوسط</a></li>
+<li><a data-i18n="nav_packages" href="#packages-section">باقات بيوت سمارت هوم</a></li>
+<li><a data-i18n="nav_products" href="#products-section">كتالوج الأجهزة والمنتجات</a></li>
+<li><a data-i18n="nav_portfolio" href="#portfolio-section">سابقة الأعمال والمشروعات</a></li>
+<li><a data-i18n="nav_clients" href="#clients-section">شركاء النجاح والعملاء</a></li>
 </ul>
 </div>
 <div class="footer-social">
-<h4 data-i18n="footer_social_title">تابعنا على شبكاتنا الاجتماعية</h4>
+<h4 data-i18n="footer_social_title">تواصل معنا وتابعنا</h4>
 <div class="social-icons">
 <a aria-label="Facebook" class="social-icon" href="https://www.facebook.com/share/1CKj8D5ygW/?mibextid=wwXIfr" target="_blank">
-<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+<i class="fab fa-facebook-f"></i>
 </a>
-<a aria-label="Instagram" class="social-icon" href="#">
-<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+<a aria-label="WhatsApp" class="social-icon" href="https://api.whatsapp.com/send?phone=201064334334" target="_blank">
+<i class="fab fa-whatsapp"></i>
 </a>
+<a aria-label="Call Us" class="social-icon" href="tel:+201064334334">
+<i class="fas fa-phone"></i>
+</a>
+</div>
+<div class="footer-cert-box">
+<div class="footer-cert-title" data-i18n="footer_cert_box_title">اعتمادات واختبارات قياسية</div>
+<p data-i18n="footer_cert_box_desc">جميع مشروعات الشبكات والألياف الضوئية والأنظمة الأمنية يتم تسليمها باختبارات Fluke & OTDR المعتمدة.</p>
 </div>
 </div>
 </div>
 <div class="footer-bottom text-center">
-<p data-i18n="footer_copyright">© 2026 شركة بيوت تك للمقاولات وأنظمة التيار الخفيف (Beyout Tech). جميع الحقوق محفوظة.</p>
+<p data-i18n="footer_copyright">© 2026 شركة بيوت تك للمقاولات وأنظمة التيار الخفيف والحلول الذكية (Beyout Tech). جميع الحقوق محفوظة.</p>
 </div>
 </footer>
 <!-- App Script -->
-<script src="app.js?v=2.0.0"></script>
+<script src="app.js?v=3.0.0"></script>
 </body>
 </html>
