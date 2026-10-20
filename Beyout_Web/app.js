@@ -304,7 +304,7 @@ function handleFormSubmit(event) {
     localStorage.setItem('beyout_leads', JSON.stringify(existingLeads));
 
     // Submit form data to FormSubmit (free email form provider)
-    fetch("https://formsubmit.co/ajax/khaledelmala7@gmail.com", {
+    fetch("https://formsubmit.co/ajax/info@beyouttech.com", {
         method: "POST",
         headers: { 
             "Content-Type": "application/json",
@@ -316,7 +316,7 @@ function handleFormSubmit(event) {
     .catch((error) => console.error("Error submitting to FormSubmit:", error));
 
     // Redirect to WhatsApp with pre-filled details to the owner
-    const ownerPhone = "201100400082";
+    const ownerPhone = "201064334334";
     const msg = `مرحباً بيوت، أود حجز موعد استشارة:
 الاسم: ${name}
 الهاتف: ${phone}
@@ -529,7 +529,7 @@ const translations = {
         "nav_contact": "اتصل بنا",
         "nav_to_vexora": "فيكسورا للأمن (B2B)",
         
-        "beyout_page_title": "بيوت | أنظمة المنازل الذكية الفاخرة",
+        "beyout_page_title": "بيوت تك | مقاولات التيار الخفيف والأنظمة الذكية",
         "beyout_hero_title": "عيش الذكاء والأناقة في منزلك",
         "beyout_hero_subtitle": "حلول بيوت الذكية المتكاملة لحياة عصرية مريحة.",
         "btn_start_now": "ابدأ الآن",
@@ -637,9 +637,9 @@ const translations = {
         "form_success_whatsapp_sub": " وتفاصيل الاجتماع خلال ساعة.",
         "form_success_reset_btn": "طلب حجز جديد",
         
-        "footer_about_text_beyout": "مستشارك وشريكك التكنولوجي الموثوق لتصميم وبناء أنظمة التحكم والمنازل الذكية الفاخرة.",
+        "footer_about_text_beyout": "شركة بيوت تك للمقاولات وأنظمة التيار الخفيف (Light Current) والحلول الذكية المتكاملة.",
         "footer_links_title": "روابط سريعة",
-        "footer_copyright": "&copy; 2026 شركة بيوت (Beyout). جميع الحقوق محفوظة."
+        "footer_copyright": "&copy; 2026 شركة بيوت تك للمقاولات وأنظمة التيار الخفيف (Beyout Tech). جميع الحقوق محفوظة.", "footer_address_val": "42 شارع أنقرة، شيراتون، القاهرة، مصر"
     },
     en: {
         "nav_dashboard": "Control Panel",
@@ -746,7 +746,7 @@ const translations = {
         "nav_contact": "Contact Us",
         "nav_to_vexora": "Vexora Security (B2B)",
         
-        "beyout_page_title": "Beyout | Luxury Smart Home Systems",
+        "beyout_page_title": "Beyout Tech | Light Current & Smart Systems",
         "beyout_hero_title": "Live Intelligence & Elegance inside Your Home",
         "beyout_hero_subtitle": "Integrated Beyout smart solutions for a comfortable modern life.",
         "btn_start_now": "Start Now",
@@ -854,8 +854,8 @@ const translations = {
         "form_success_whatsapp_sub": " with meeting details within an hour.",
         "form_success_reset_btn": "Request a New Booking",
         
-        "footer_about_text_beyout": "Your trusted technology partner and consultant for smart home control and luxury automation.",
+        "footer_about_text_beyout": "Beyout Tech for Contracting, Light Current Systems & Smart Automation Solutions.",
         "footer_links_title": "Quick Links",
-        "footer_copyright": "&copy; 2026 Beyout. All Rights Reserved."
+        "footer_copyright": "&copy; 2026 Beyout Tech (Light Current & Contracting). All Rights Reserved.", "footer_address_val": "42 Ankara St., Sheraton, Cairo, Egypt"
     }
 };
